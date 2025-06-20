@@ -1,5 +1,5 @@
 ![A blue and black logo AI-generated content may be
-incorrect.](./media/image1.png){width="5.30283573928259in"
+incorrect.](.images/media/image1.png){width="5.30283573928259in"
 height="2.138885608048994in"}
 
 **CSE6224 SOFTWARE REQUIREMENTS ENGINEERING**
