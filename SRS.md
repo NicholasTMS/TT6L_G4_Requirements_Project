@@ -1,5 +1,5 @@
 ![A blue and black logo AI-generated content may be
-incorrect.](media/image1.png){width="5.30283573928259in"
+incorrect.](./media/image1.png){width="5.30283573928259in"
 height="2.138885608048994in"}
 
 **CSE6224 SOFTWARE REQUIREMENTS ENGINEERING**
@@ -605,7 +605,8 @@ Satisfaction-Functionality with Results
 > wellness tools into a single, accessible platform.
 
 <figure>
-<img src="media/image2.png" style="width:6.26806in;height:3.05486in"
+<img src="./images/media/image2.png"
+style="width:6.26806in;height:3.05486in"
 alt="A diagram of a campus wellness portal AI-generated content may be incorrect." />
 <figcaption><p><span id="_Toc199101114" class="anchor"></span>Figure 1.1
 – Campus Wellness Portal Context Diagram</p></figcaption>
@@ -1125,7 +1126,8 @@ to test it during the entire system lifecycle.
 ### Use Case Diagram
 
 <figure>
-<img src="media/image3.png" style="width:6.01667in;height:5.61667in"
+<img src="./images/media/image3.png"
+style="width:6.01667in;height:5.61667in"
 alt="A diagram of a health care system AI-generated content may be incorrect." />
 <figcaption><p><span id="_Toc199101115" class="anchor"></span>Figure 4.1
 - Use Case Diagram</p></figcaption>
@@ -1226,7 +1228,7 @@ requirements.
 #####  Sequence Diagram
 
 ![[]{#_Toc199101116 .anchor}Figure 4.2 - Login Sequence
-Diagram](media/image4.png){width="6.268055555555556in"
+Diagram](./images/media/image4.png){width="6.268055555555556in"
 height="3.94375in"}
 
 **Figure 4.2** is the sequence diagram for Login portraying the dialogue
@@ -1247,7 +1249,7 @@ and all the various scenarios are covered.
 ##### Activity Diagram
 
 ![[]{#_Toc199101117 .anchor}Figure 4.3 - Login Activity
-Diagram](media/image5.png){width="6.213098206474191in"
+Diagram](./images/media/image5.png){width="6.213098206474191in"
 height="4.401388888888889in"}
 
 **Figure 4.3** portrays the Login activity diagram that illustrates the
@@ -1360,7 +1362,8 @@ Case
 ##### Sequence Diagram
 
 <figure>
-<img src="media/image6.png" style="width:6.26806in;height:3.31111in"
+<img src="./images/media/image6.png"
+style="width:6.26806in;height:3.31111in"
 alt="A diagram of a diagram AI-generated content may be incorrect." />
 <figcaption><p><span id="_Toc199101118" class="anchor"></span>Figure 4.4
 - View Available Medical Slots Sequence Diagram</p></figcaption>
@@ -1386,7 +1389,8 @@ support the viewing of medical slot availability.
 ##### Activity Diagram
 
 <figure>
-<img src="media/image7.png" style="width:6.26806in;height:4.37639in"
+<img src="./images/media/image7.png"
+style="width:6.26806in;height:4.37639in"
 alt="A screenshot of a computer AI-generated content may be incorrect." />
 <figcaption><p><span id="_Toc199101119" class="anchor"></span>Figure 4.5
 - View Available Medical Slots Activity Diagram</p></figcaption>
@@ -1507,7 +1511,8 @@ Appointment Use Case
 ##### Sequence Diagram
 
 <figure>
-<img src="media/image8.png" style="width:6.26806in;height:2.90139in"
+<img src="./images/media/image8.png"
+style="width:6.26806in;height:2.90139in"
 alt="A diagram of a company AI-generated content may be incorrect." />
 <figcaption><p><span id="_Toc199101120" class="anchor"></span>Figure 4.6
 - Book Medical Counselling Appointment Sequence Diagram</p></figcaption>
@@ -1534,7 +1539,8 @@ appointment booking process.
 ##### Activity Diagram
 
 <figure>
-<img src="media/image9.png" style="width:6.26806in;height:5.23056in"
+<img src="./images/media/image9.png"
+style="width:6.26806in;height:5.23056in"
 alt="A diagram of a flowchart AI-generated content may be incorrect." />
 <figcaption><p><span id="_Toc199101121" class="anchor"></span>Figure 4.7
 - Book Medical Counselling Appointment Activity Diagram</p></figcaption>
@@ -1643,7 +1649,8 @@ unsuccessful efforts or a confirmation message for successful bookings.
 ##### Sequence Diagram
 
 <figure>
-<img src="media/image10.png" style="width:6.26806in;height:2.84861in"
+<img src="./images/media/image10.png"
+style="width:6.26806in;height:2.84861in"
 alt="A diagram of a project AI-generated content may be incorrect." />
 <figcaption><p><span id="_Toc199101122" class="anchor"></span>Figure 4.8
 - Cancelling Appointment Sequence Diagram</p></figcaption>
@@ -1670,7 +1677,8 @@ system responsibilities involved in cancelling an appointment.
 ##### Activity Diagram
 
 <figure>
-<img src="media/image11.png" style="width:6.26806in;height:3.96528in"
+<img src="./images/media/image11.png"
+style="width:6.26806in;height:3.96528in"
 alt="A screenshot of a computer AI-generated content may be incorrect." />
 <figcaption><p><span id="_Toc199101123" class="anchor"></span>Figure 4.9
 - Cancelling Appointment Activity Diagram</p></figcaption>
@@ -1785,7 +1793,8 @@ appointment cancellation functionality.
 ##### Sequence Diagram
 
 <figure>
-<img src="media/image12.png" style="width:6.26806in;height:3.39028in"
+<img src="./images/media/image12.png"
+style="width:6.26806in;height:3.39028in"
 alt="A diagram of a diagram AI-generated content may be incorrect." />
 <figcaption><p><span id="_Toc199101124" class="anchor"></span>Figure
 4.10 - Reschedule Appointment Sequence Diagram</p></figcaption>
@@ -1811,7 +1820,8 @@ rescheduling process.
 ##### Activity Diagram
 
 <figure>
-<img src="media/image13.png" style="width:6.26806in;height:6.19028in"
+<img src="./images/media/image13.png"
+style="width:6.26806in;height:6.19028in"
 alt="A diagram of a company AI-generated content may be incorrect." />
 <figcaption><p><span id="_Toc199101125" class="anchor"></span>Figure
 4.11 - Reschedule Appointment Activity Diagram</p></figcaption>
@@ -1895,7 +1905,8 @@ Case
 ##### Sequence Diagram
 
 <figure>
-<img src="media/image14.png" style="width:6.26806in;height:4.28958in"
+<img src="./images/media/image14.png"
+style="width:6.26806in;height:4.28958in"
 alt="A diagram of a diagram AI-generated content may be incorrect." />
 <figcaption><p><span id="_Toc199101126" class="anchor"></span>Figure
 4.12 - View Counselling History Sequence Diagram</p></figcaption>
@@ -1916,7 +1927,8 @@ outcomes.
 ##### Activity Diagram
 
 <figure>
-<img src="media/image15.png" style="width:5.13462in;height:4.13568in"
+<img src="./images/media/image15.png"
+style="width:5.13462in;height:4.13568in"
 alt="A diagram of a program AI-generated content may be incorrect." />
 <figcaption><p><span id="_Toc199101127" class="anchor"></span>Figure
 4.13 - View Counselling History Activity Diagram</p></figcaption>
@@ -2039,7 +2051,8 @@ Case
 ##### Sequence Diagram
 
 <figure>
-<img src="media/image16.png" style="width:6.26806in;height:3.32986in"
+<img src="./images/media/image16.png"
+style="width:6.26806in;height:3.32986in"
 alt="A diagram of a project AI-generated content may be incorrect." />
 <figcaption><p><span id="_Toc199101128" class="anchor"></span>Figure
 4.14 - View Gym Available Sessions Sequence Diagram</p></figcaption>
@@ -2065,7 +2078,8 @@ viewing gym schedules.
 ##### Activity Diagram
 
 <figure>
-<img src="media/image17.png" style="width:6.26806in;height:5.07847in"
+<img src="./images/media/image17.png"
+style="width:6.26806in;height:5.07847in"
 alt="A diagram of a workflow AI-generated content may be incorrect." />
 <figcaption><p><span id="_Toc199101129" class="anchor"></span>Figure
 4.15 - View Gym Available Sessions Activity Diagram</p></figcaption>
@@ -2171,7 +2185,8 @@ dynamic, filtered access to gym session data.
 ##### Sequence Diagram
 
 <figure>
-<img src="media/image18.png" style="width:6.26806in;height:3.02292in"
+<img src="./images/media/image18.png"
+style="width:6.26806in;height:3.02292in"
 alt="A diagram of a class AI-generated content may be incorrect." />
 <figcaption><p><span id="_Toc199101130" class="anchor"></span>Figure
 4.16 - Book Fitness Session Sequence Diagram</p></figcaption>
@@ -2199,7 +2214,8 @@ involved in the fitness class booking process.
 ##### Activity Diagram
 
 <figure>
-<img src="media/image19.png" style="width:6.26806in;height:3.91528in"
+<img src="./images/media/image19.png"
+style="width:6.26806in;height:3.91528in"
 alt="A diagram of a company AI-generated content may be incorrect." />
 <figcaption><p><span id="_Toc199101131" class="anchor"></span>Figure
 4.17 - Book Fitness Session Activity Diagram</p></figcaption>
@@ -2299,7 +2315,8 @@ point.
 ##### Sequence Diagram
 
 <figure>
-<img src="media/image20.png" style="width:6.26806in;height:2.87431in"
+<img src="./images/media/image20.png"
+style="width:6.26806in;height:2.87431in"
 alt="A screenshot of a diagram AI-generated content may be incorrect." />
 <figcaption><p><span id="_Toc199101132" class="anchor"></span>Figure
 4.18 - Track Wellness Progress Sequence Diagram</p></figcaption>
@@ -2325,7 +2342,8 @@ milestones, and goal completion status in a user-friendly interface.
 ##### Activity Diagram
 
 <figure>
-<img src="media/image21.png" style="width:6.26806in;height:2.82569in"
+<img src="./images/media/image21.png"
+style="width:6.26806in;height:2.82569in"
 alt="A diagram of a computer AI-generated content may be incorrect." />
 <figcaption><p><span id="_Toc199101133" class="anchor"></span>Figure
 4.19 - Track Wellness Progress Activity Diagram</p></figcaption>
@@ -2422,7 +2440,8 @@ their wellness achievements.
 ##### Sequence Diagram
 
 <figure>
-<img src="media/image22.png" style="width:6.26806in;height:2.99306in"
+<img src="./images/media/image22.png"
+style="width:6.26806in;height:2.99306in"
 alt="A diagram of a company AI-generated content may be incorrect." />
 <figcaption><p><span id="_Toc199101134" class="anchor"></span>Figure
 4.20 - Set Wellness Goals Sequence Diagram</p></figcaption>
@@ -2450,7 +2469,8 @@ with real-time feedback.
 ##### Activity Diagram
 
 <figure>
-<img src="media/image23.png" style="width:6.09825in;height:3.57292in"
+<img src="./images/media/image23.png"
+style="width:6.09825in;height:3.57292in"
 alt="A diagram of a workflow AI-generated content may be incorrect." />
 <figcaption><p><span id="_Toc199101135" class="anchor"></span>Figure
 4.21 - Set Wellness Goals Activity Diagram</p></figcaption>
@@ -2551,7 +2571,7 @@ feedback to the user.
 ##### Sequence Diagram
 
 ![[]{#_Toc199101136 .anchor}Figure 4.22 - Get AI Wellness Tips Sequence
-Diagram](media/image24.jpeg){width="6.268055555555556in"
+Diagram](./images/media/image24.jpeg){width="6.268055555555556in"
 height="4.183926071741032in"}
 
 **Figure 4.22** illustrates the sequence diagram for the "Get AI
@@ -2568,7 +2588,8 @@ wellness journey.
 ##### Activity Diagram
 
 <figure>
-<img src="media/image25.png" style="width:4.875in;height:5.08186in"
+<img src="./images/media/image25.png"
+style="width:4.875in;height:5.08186in"
 alt="A screenshot of a computer AI-generated content may be incorrect." />
 <figcaption><p><span id="_Toc199101137" class="anchor"></span>Figure
 4.23 - Get AI Wellness Tips Activity Diagram</p></figcaption>
@@ -2703,7 +2724,7 @@ exit the interface.
 ##### Sequence Diagram
 
 ![[]{#_Toc199101138 .anchor}Figure 4.24 - Receive Notification Sequence
-Diagram](media/image26.jpeg){width="3.9529549431321085in"
+Diagram](./images/media/image26.jpeg){width="3.9529549431321085in"
 height="8.870588363954505in"}
 
 **Figure 4.24** illustrates the sequence diagram for the "Receive
@@ -2724,7 +2745,8 @@ ensures timely, relevant, and personalized communication with students.
 ##### Activity Diagram
 
 <figure>
-<img src="media/image27.png" style="width:6.26806in;height:5.03333in"
+<img src="./images/media/image27.png"
+style="width:6.26806in;height:5.03333in"
 alt="A screenshot of a computer AI-generated content may be incorrect." />
 <figcaption><p><span id="_Toc199101139" class="anchor"></span>Figure
 4.25 - Receive Notification Activity Diagram</p></figcaption>
@@ -2824,7 +2846,7 @@ timely and actionable notifications.
 ##### Sequence Diagram
 
 ![[]{#_Toc199101140 .anchor}Figure 4.26 - Manage Notification Sequence
-Diagram](media/image28.jpeg){width="6.257070209973754in"
+Diagram](./images/media/image28.jpeg){width="6.257070209973754in"
 height="6.810416666666667in"}
 
 **Figure 4.26** illustrates the sequence diagram for the "Manage
@@ -2846,7 +2868,8 @@ notifications.
 ##### Activity Diagram
 
 <figure>
-<img src="media/image29.png" style="width:5.23333in;height:5.93722in"
+<img src="./images/media/image29.png"
+style="width:5.23333in;height:5.93722in"
 alt="A black background with white text AI-generated content may be incorrect." />
 <figcaption><p><span id="_Toc199101141" class="anchor"></span>Figure
 4.27 - Manage Notification Activity Diagram</p></figcaption>
@@ -2928,7 +2951,8 @@ Use Case
 ##### Sequence Diagram
 
 <figure>
-<img src="media/image30.png" style="width:6.26806in;height:3.83194in"
+<img src="./images/media/image30.png"
+style="width:6.26806in;height:3.83194in"
 alt="A diagram of a computer program AI-generated content may be incorrect." />
 <figcaption><p><span id="_Toc199101142" class="anchor"></span>Figure
 4.28 - View Student Wellness Report Sequence Diagram</p></figcaption>
@@ -2953,7 +2977,8 @@ lines.
 ##### Activity Diagram
 
 <figure>
-<img src="media/image31.png" style="width:6.26806in;height:4.75694in"
+<img src="./images/media/image31.png"
+style="width:6.26806in;height:4.75694in"
 alt="A diagram of a program AI-generated content may be incorrect." />
 <figcaption><p><span id="_Toc199101143" class="anchor"></span>Figure
 4.29 - View Student Wellness Report Activity Diagram</p></figcaption>
@@ -3036,7 +3061,8 @@ a message that no records exist for the given parameters.
 ##### Sequence Diagram
 
 <figure>
-<img src="media/image32.png" style="width:6.26806in;height:5.10069in"
+<img src="./images/media/image32.png"
+style="width:6.26806in;height:5.10069in"
 alt="A diagram with text and images AI-generated content may be incorrect." />
 <figcaption><p><span id="_Toc199101144" class="anchor"></span>Figure
 4.30 - Manage Fitness Class Sequence Diagram</p></figcaption>
@@ -3057,7 +3083,8 @@ on the outcome.
 ##### Activity Diagram
 
 <figure>
-<img src="media/image33.png" style="width:6.26806in;height:3.57569in"
+<img src="./images/media/image33.png"
+style="width:6.26806in;height:3.57569in"
 alt="A diagram of a company AI-generated content may be incorrect." />
 <figcaption><p><span id="_Toc199101145" class="anchor"></span>Figure
 4.31 - Manage Fitness Class Activity Diagram</p></figcaption>
@@ -3159,7 +3186,8 @@ Case
 ##### Sequence Diagram
 
 ![[]{#_Toc199101146 .anchor}Figure 4.32 - Manage Medical Schedule
-Sequence Diagram](media/image34.jpeg){width="6.264818460192476in"
+Sequence
+Diagram](./images/media/image34.jpeg){width="6.264818460192476in"
 height="8.465972222222222in"}
 
 **Figure 4.32** illustrates the sequence diagram for the "Manage Medical
@@ -3180,7 +3208,8 @@ management of medical schedules.
 ##### Activity Diagram
 
 <figure>
-<img src="media/image35.png" style="width:5.38542in;height:6.1211in"
+<img src="./images/media/image35.png"
+style="width:5.38542in;height:6.1211in"
 alt="A black background with white dots AI-generated content may be incorrect." />
 <figcaption><p><span id="_Toc199101147" class="anchor"></span>Figure
 4.33 - Manage Medical Schedule Activity Diagram</p></figcaption>
@@ -3962,7 +3991,7 @@ each sprint providing testable features and components.
 > Mohd Zamri
 
 ![Figure 6.1 -- uml Class diagram for campus wellness
-portal](media/image36.png){width="7.421386701662292in"
+portal](./images/media/image36.png){width="7.421386701662292in"
 height="5.781052055993001in"}
 
 []{#_Toc199101148 .anchor}Figure 6.1- UML Class Diagram For Campus
@@ -4207,7 +4236,8 @@ guide system design, implementation, and verification activities.
 ### Kano Model Questionnaire Results
 
 <figure>
-<img src="media/image37.png" style="width:6.26806in;height:1.30303in"
+<img src="./images/media/image37.png"
+style="width:6.26806in;height:1.30303in"
 alt="A screenshot of a computer AI-generated content may be incorrect." />
 <figcaption><p><span id="_Toc199101149" class="anchor"></span>Figure 6.2
 - Questionnaire Board</p></figcaption>
@@ -4217,7 +4247,8 @@ Responses were collected using the questionnaire shown in *Figure 6.2:
 Questionnaire Board.*
 
 <figure>
-<img src="media/image37.png" style="width:6.26806in;height:2.07576in"
+<img src="./images/media/image37.png"
+style="width:6.26806in;height:2.07576in"
 alt="A screenshot of a computer AI-generated content may be incorrect." />
 <figcaption><p><span id="_Toc199101150" class="anchor"></span>Figure 6.3
 - Questionnaire Results (User Satisfaction With SSO)</p></figcaption>
@@ -4230,7 +4261,8 @@ single click. Out of 20 respondents, 16 (80%) \"like it,\" 2 (10%)
 respondents \"dislike it.\"
 
 <figure>
-<img src="media/image37.png" style="width:6.26806in;height:2.07443in"
+<img src="./images/media/image37.png"
+style="width:6.26806in;height:2.07443in"
 alt="A screenshot of a computer AI-generated content may be incorrect." />
 <figcaption><p><span id="_Toc199101151" class="anchor"></span>Figure 6.4
 - Questionnaire Results (User Satisfaction With Slots
@@ -4244,7 +4276,8 @@ Out of 20 respondents, 12 (60%) \"like it,\" 7 (35%) \"expect it,\" and
 it.\"
 
 <figure>
-<img src="media/image38.png" style="width:6.26806in;height:1.90385in"
+<img src="./images/media/image38.png"
+style="width:6.26806in;height:1.90385in"
 alt="A screenshot of a computer AI-generated content may be incorrect." />
 <figcaption><p><span id="_Toc199101152" class="anchor"></span>Figure 6.5
 - Questionnaire Results (User Satisfaction With Appointment
@@ -4257,7 +4290,8 @@ respondents, 17 (85%) \"like it\" and 3 (15%) \"expect it.\" No
 respondents are \"neutral,\" \"can tolerate it,\" or \"dislike it.\"
 
 <figure>
-<img src="media/image38.png" style="width:6.26712in;height:2.00641in"
+<img src="./images/media/image38.png"
+style="width:6.26712in;height:2.00641in"
 alt="A screenshot of a computer AI-generated content may be incorrect." />
 <figcaption><p><span id="_Toc199101153" class="anchor"></span>Figure 6.6
 - Questionnaire Results (User Satisfaction With Cancel/Reschedule
@@ -4271,7 +4305,8 @@ it,\" and 2 (10%) are \"neutral.\" No respondents \"can tolerate it\" or
 \"dislike it.\"
 
 <figure>
-<img src="media/image38.png" style="width:6.26806in;height:1.9563in"
+<img src="./images/media/image38.png"
+style="width:6.26806in;height:1.9563in"
 alt="A screenshot of a computer AI-generated content may be incorrect." />
 <figcaption><p><span id="_Toc199101154" class="anchor"></span>Figure 6.7
 - Questionnaire Results (User Satisfaction With History
@@ -4285,7 +4320,8 @@ it,\" and 2 (10%) are \"neutral.\" No respondents \"can tolerate it\" or
 \"dislike it.\"
 
 <figure>
-<img src="media/image39.png" style="width:6.26806in;height:1.85256in"
+<img src="./images/media/image39.png"
+style="width:6.26806in;height:1.85256in"
 alt="A screenshot of a cell phone AI-generated content may be incorrect." />
 <figcaption><p><span id="_Toc199101155" class="anchor"></span>Figure 6.8
 - Questionnaire Results (User Satisfaction With Tracking Wellness
@@ -4299,7 +4335,8 @@ Wellness Portal. Out of 20 respondents, 15 (75%) \"like it,\" 3 (15%)
 tolerate it\" or \"dislike it.\"
 
 <figure>
-<img src="media/image39.png" style="width:6.26744in;height:2.00604in"
+<img src="./images/media/image39.png"
+style="width:6.26744in;height:2.00604in"
 alt="A screenshot of a cell phone AI-generated content may be incorrect." />
 <figcaption><p><span id="_Toc199101156" class="anchor"></span>Figure 6.9
 - Questionnaire Results (User Satisfaction With Setting Personal
@@ -4313,7 +4350,8 @@ it,\" and 4 (20%) are \"neutral.\" No respondents \"can tolerate it\" or
 \"dislike it.\"
 
 <figure>
-<img src="media/image39.png" style="width:6.26667in;height:1.86471in"
+<img src="./images/media/image39.png"
+style="width:6.26667in;height:1.86471in"
 alt="A screenshot of a cell phone AI-generated content may be incorrect." />
 <figcaption><p><span id="_Toc199101157" class="anchor"></span>Figure
 6.10 - Questionnaire Results (User Satisfaction With Provided
@@ -4326,7 +4364,8 @@ wellness tips through the Campus Wellness Portal. Out of 20 respondents,
 and 2 (10%) \"can tolerate it.\" No respondents \"dislike it.\"
 
 <figure>
-<img src="media/image40.png" style="width:6.26599in;height:1.86538in"
+<img src="./images/media/image40.png"
+style="width:6.26599in;height:1.86538in"
 alt="A screenshot of a test AI-generated content may be incorrect." />
 <figcaption><p><span id="_Toc199101158" class="anchor"></span>Figure
 6.11 - Questionnaire Results (User Satisfaction With Sessions
@@ -4339,7 +4378,8 @@ respondents, 14 (70%) \"like it,\" 3 (15%) \"expect it,\" and 3 (15%)
 are \"neutral.\" No respondents \"can tolerate it\" or \"dislike it.\"
 
 <figure>
-<img src="media/image40.png" style="width:6.26512in;height:2.00609in"
+<img src="./images/media/image40.png"
+style="width:6.26512in;height:2.00609in"
 alt="A screenshot of a test AI-generated content may be incorrect." />
 <figcaption><p><span id="_Toc199101159" class="anchor"></span>Figure
 6.12 - Questionnaire Results (User Satisfaction With Sessions
@@ -4352,7 +4392,8 @@ sessions through the Campus Wellness Portal. Out of 20 respondents, 14
 No respondents \"can tolerate it\" or \"dislike it.\"
 
 <figure>
-<img src="media/image40.png" style="width:6.26528in;height:1.84583in"
+<img src="./images/media/image40.png"
+style="width:6.26528in;height:1.84583in"
 alt="A screenshot of a test AI-generated content may be incorrect." />
 <figcaption><p><span id="_Toc199101160" class="anchor"></span>Figure
 6.13 - Questionnaire Results (User Satisfaction With Notification And
@@ -4366,7 +4407,8 @@ Wellness Portal. Out of 20 respondents, 14 (70%) \"like it,\" 4 (20%)
 (0%) \"dislike it.\"
 
 <figure>
-<img src="media/image41.png" style="width:6.2674in;height:1.82051in"
+<img src="./images/media/image41.png"
+style="width:6.2674in;height:1.82051in"
 alt="A screenshot of a graph AI-generated content may be incorrect." />
 <figcaption><p><span id="_Toc199101161" class="anchor"></span>Figure
 6.14 - Questionnaire Results (User Satisfaction With Gender-Specific
@@ -4380,7 +4422,8 @@ Campus Wellness Portal. Out of 20 respondents, 17 (85%) \"like it,\" 3
 disliked it.
 
 <figure>
-<img src="media/image41.png" style="width:6.26797in;height:1.82051in"
+<img src="./images/media/image41.png"
+style="width:6.26797in;height:1.82051in"
 alt="A screenshot of a graph AI-generated content may be incorrect." />
 <figcaption><p><span id="_Toc199101162" class="anchor"></span>Figure
 6.15 - Questionnaire Results (Dysfunction of SSO)</p></figcaption>
@@ -4394,7 +4437,8 @@ misinterpreted), 1 (5%) \"expecting it\" (likely misinterpreted), and 1
 (5%) able to \"tolerate it.\"
 
 <figure>
-<img src="media/image41.png" style="width:6.26623in;height:2.01282in"
+<img src="./images/media/image41.png"
+style="width:6.26623in;height:2.01282in"
 alt="A screenshot of a graph AI-generated content may be incorrect." />
 <figcaption><p><span id="_Toc199101163" class="anchor"></span>Figure
 6.16 - Questionnaire Results (Dysfunction of Slots
@@ -4409,7 +4453,8 @@ it\" and 7 (35%) able to \"tolerate it.\" 2 respondents (10%) \"like
 it\" (likely misinterpreted), and 0 \"expect it\" or are \"neutral.\"
 
 <figure>
-<img src="media/image42.png" style="width:6.26806in;height:1.78846in"
+<img src="./images/media/image42.png"
+style="width:6.26806in;height:1.78846in"
 alt="A screenshot of a computer screen AI-generated content may be incorrect." />
 <figcaption><p><span id="_Toc199101164" class="anchor"></span>Figure
 6.17 - Questionnaire Results (Dysfunction of Appointment
@@ -4424,7 +4469,8 @@ and 6 (30%) able to \"tolerate it.\" 2 respondents (10%) \"like it\"
 (likely misinterpreted), and 0 \"expect it\" or are \"neutral.\"
 
 <figure>
-<img src="media/image42.png" style="width:6.26731in;height:1.96154in"
+<img src="./images/media/image42.png"
+style="width:6.26731in;height:1.96154in"
 alt="A screenshot of a computer screen AI-generated content may be incorrect." />
 <figcaption><p><span id="_Toc199101165" class="anchor"></span>Figure
 6.18 - Questionnaire Results (Dysfunction of Cancel/Rescheduling
@@ -4438,7 +4484,8 @@ tolerate it,\" 1 (5%) is \"neutral,\" 1 (5%) \"expect it,\" and 1 (5%)
 \"like it.\"
 
 <figure>
-<img src="media/image42.png" style="width:6.26756in;height:2.01725in"
+<img src="./images/media/image42.png"
+style="width:6.26756in;height:2.01725in"
 alt="A screenshot of a computer screen AI-generated content may be incorrect." />
 <figcaption><p><span id="_Toc199101166" class="anchor"></span>Figure
 6.19 - Questionnaire Results (Dysfunction of History
@@ -4451,7 +4498,8 @@ history securely on the Campus Wellness Portal. Out of 20 respondents, 8
 (15%) are \"neutral,\" and 2 (10%) \"like it.\"
 
 <figure>
-<img src="media/image43.png" style="width:6.26806in;height:1.90385in"
+<img src="./images/media/image43.png"
+style="width:6.26806in;height:1.90385in"
 alt="A screenshot of a survey AI-generated content may be incorrect." />
 <figcaption><p><span id="_Toc199101167" class="anchor"></span>Figure
 6.20 - Questionnaire Results (Dysfunction of Tracking Wellness
@@ -4464,7 +4512,7 @@ progress on the Campus Wellness Portal. Out of 20 respondents, 9 (45%)
 3 (15%) are \"neutral,\" 2 (10%) \"like it,\" and 0 (0%) \"expect it.\"
 
 <figure>
-<img src="media/image43.png" style="width:6.26728in;height:2in"
+<img src="./images/media/image43.png" style="width:6.26728in;height:2in"
 alt="A screenshot of a survey AI-generated content may be incorrect." />
 <figcaption><p><span id="_Toc199101168" class="anchor"></span>Figure
 6.21 - Questionnaire Results (Dysfunction of Setting Personal
@@ -4478,7 +4526,8 @@ it,\" 2 (10%) are \"neutral,\" 2 (10%) \"like it,\" and 0 (0%) \"expect
 it.\"
 
 <figure>
-<img src="media/image43.png" style="width:6.26664in;height:1.80128in"
+<img src="./images/media/image43.png"
+style="width:6.26664in;height:1.80128in"
 alt="A screenshot of a survey AI-generated content may be incorrect." />
 <figcaption><p><span id="_Toc199101169" class="anchor"></span>Figure
 6.22 - Questionnaire Results (Dysfunction of Providing
@@ -4491,7 +4540,8 @@ it\" if not receiving tips, 4 (20%) \"can tolerate it,\" 5 (25%) are
 \"neutral,\" 2 (10%) \"like it,\" and 1 (5%) \"expect it.\"
 
 <figure>
-<img src="media/image44.png" style="width:6.26806in;height:1.92308in"
+<img src="./images/media/image44.png"
+style="width:6.26806in;height:1.92308in"
 alt="A screenshot of a test AI-generated content may be incorrect." />
 <figcaption><p><span id="_Toc199101170" class="anchor"></span>Figure
 6.23 - Questionnaire Results (Dysfunction of Sessions
@@ -4505,7 +4555,8 @@ it,\" 3 (15%) are \"neutral,\" 2 (10%) \"like it,\" and 0 (0%) \"expect
 it.\"
 
 <figure>
-<img src="media/image44.png" style="width:6.26797in;height:1.96154in"
+<img src="./images/media/image44.png"
+style="width:6.26797in;height:1.96154in"
 alt="A screenshot of a test AI-generated content may be incorrect." />
 <figcaption><p><span id="_Toc199101171" class="anchor"></span>Figure
 6.24 - Questionnaire Results (Dysfunction of Sessions
@@ -4518,7 +4569,8 @@ through the Campus Wellness Portal. Out of 20 respondents, 8 (40%)
 3 (15%) are \"neutral,\" 1 (5%) \"like it,\" and 1 (5%) \"expect it.\"
 
 <figure>
-<img src="media/image44.png" style="width:6.26667in;height:1.74903in"
+<img src="./images/media/image44.png"
+style="width:6.26667in;height:1.74903in"
 alt="A screenshot of a test AI-generated content may be incorrect." />
 <figcaption><p><span id="_Toc199101172" class="anchor"></span>Figure
 6.25 - Questionnaire Results (Dysfunction of Notification and
@@ -4532,7 +4584,8 @@ tolerate it,\" 2 (10%) are \"neutral,\" 2 (10%) \"like it,\" and 0 (0%)
 \"expect it.\"
 
 <figure>
-<img src="media/image45.png" style="width:6.26806in;height:1.90385in"
+<img src="./images/media/image45.png"
+style="width:6.26806in;height:1.90385in"
 alt="A purple circle with black text AI-generated content may be incorrect." />
 <figcaption><p><span id="_Toc199101173" class="anchor"></span>Figure
 6.26 - Questionnaire Results (Dysfunction of Gender-Specific Sessions
@@ -4593,7 +4646,8 @@ gender-specific sessions, 5 (25%) \"can tolerate it,\" 1 (5%) is
   with Satisfaction-Functionality with Results
 
 <figure>
-<img src="media/image46.png" style="width:6.26528in;height:4.16667in"
+<img src="./images/media/image46.png"
+style="width:6.26528in;height:4.16667in"
 alt="A graph of different colored lines AI-generated content may be incorrect." />
 <figcaption><p><span id="_Toc199101174" class="anchor"></span>Figure
 6.27 - Kano Model Diagram</p></figcaption>
