@@ -1,5 +1,5 @@
-![A blue and black logo AI-generated content may be
-incorrect.](.images/media/image1.png){width="5.30283573928259in"
+![A blue and black logo AI-generated content may be incorrect.](images/media/image1.png) 
+{width="5.30283573928259in"
 height="2.138885608048994in"}
 
 **CSE6224 SOFTWARE REQUIREMENTS ENGINEERING**
@@ -29,8 +29,8 @@ height="2.138885608048994in"}
 | Role         | Name                            | Student ID |
 | ------------ | ------------------------------- | ---------- |
 | Group Leader | Muhammad Anas bin Khairul Azman | 241UC2401Z |
-| Group Member | Nicholas Thong Meng Shui        |            |
-| Group Member |                                 |            |
+| Group Member | Nicholas Thong Meng Shui        | 241UC2415Y |
+| Group Member | Fikrul Amsyar bin Azmi          | 241UC24167 |
 
 
 # Table of Contents
@@ -642,33 +642,17 @@ Overall, the system must accommodate a broad student population with varying sch
 The following limitations have been identified for the Campus Wellness
 Portal during the initial development phase:
 
-- **Dependency on External Systems**: The system relies on real-time
-  integration with the CLiC Health and Counselling modules and the
-  Campus Fitness Centre scheduling system. Any downtime or data
-  unavailability in these external systems will affect portal
-  functionality.
+- **Dependency on External Systems**: The system relies on real-time   integration with the CLiC Health and Counselling modules and the   Campus Fitness Centre scheduling system. Any downtime or data   unavailability in these external systems will affect portal   functionality.
 
-- **No Offline Functionality**: The portal requires an active internet
-  connection to operate. Offline access or synchronization is not
-  supported in the current scope.
+- **No Offline Functionality**: The portal requires an active internet   connection to operate. Offline access or synchronization is not   supported in the current scope.
 
-- **Exclusion of Emergency Features**: The portal is not designed for
-  emergency response scenarios. It cannot be used to request urgent
-  medical attention, ambulance dispatch, or crisis counselling
-  intervention.
+- **Exclusion of Emergency Features**: The portal is not designed for   emergency response scenarios. It cannot be used to request urgent   medical attention, ambulance dispatch, or crisis counselling   intervention.
 
-- **Limited Personalization of AI Tips**: AI-generated wellness
-  recommendations are based on rule-based heuristics. Advanced
-  personalization through machine learning is not implemented in the
-  current release.
+- **Limited Personalization of AI Tips**: AI-generated wellness   recommendations are based on rule-based heuristics. Advanced   personalization through machine learning is not implemented in the   current release.
 
-- **Mobile Optimization Limitations**: While the user interface is
-  responsive, the initial release may provide a more complete experience
-  on desktop browsers compared to mobile devices.
+- **Mobile Optimization Limitations**: While the user interface is   responsive, the initial release may provide a more complete experience   on desktop browsers compared to mobile devices.
 
-- **Partial Notification Preferences**: User control over notification
-  preferences is limited to basic on/off toggles. Granular control
-  (e.g., channel selection, frequency) may not be available in the MVP.
+- **Partial Notification Preferences**: User control over notification   preferences is limited to basic on/off toggles. Granular control   (e.g., channel selection, frequency) may not be available in the MVP.
 
 ### Definitions, Acronyms, and Abbreviations 
 
@@ -765,11 +749,7 @@ throughout this document:
 
 # Overall Description 
 
-This section provides the high-level operational context, technical
-environment, and architectural assumptions for the Campus Wellness
-Portal. It offers an integrated view of the system's purpose, target
-users, deployment environment, and external dependencies that inform
-subsequent functional and non-functional requirements.
+This section provides the high-level operational context, technical environment, and architectural assumptions for the Campus Wellness Portal. It offers an integrated view of the system's purpose, target users, deployment environment, and external dependencies that inform subsequent functional and non-functional requirements.
 
 ## System Environment
 
@@ -782,53 +762,39 @@ The Campus Wellness Portal will operate in a hybrid environment composed of inst
 **Client Environment:**
 
 - Devices: Any modern web-enabled device (smartphones, tablets,
-  desktops).
-
+  desktops). 
 - Browsers: Latest versions of Chrome, Firefox, Safari, and Microsoft
   Edge.
-
 - Connectivity: Stable internet access (minimum 10 Mbps recommended).
 
 **Server Environment:**
 
-- **Backend:** Django framework (Python-based), adhering to REST API
-  principles.
+- **Backend:** Django framework (Python-based), adhering to REST API principles.
 
-- **Frontend:** HTML5, CSS3, JavaScript with ReactJS framework for
-  dynamic and responsive UI.
+- **Frontend:** HTML5, CSS3, JavaScript with ReactJS framework for   dynamic and responsive UI.
 
-- **Database:** PostgreSQL for secure and scalable relational data
-  storage.
+- **Database:** PostgreSQL for secure and scalable relational data   storage.
 
-- **APIs:** RESTful APIs for interaction between internal modules and
-  external systems such as CLiC.
+- **APIs:** RESTful APIs for interaction between internal modules and   external systems such as CLiC.
 
-- **Hosting:** MMU\'s internal data centers or secured
-  university-approved cloud provider.
+- **Hosting:** MMU\'s internal data centers or secured   university-approved cloud provider.
 
-- **Network:** All network communication must be secured via HTTPS using
-  TLS and operate on both the MMU intranet and general Internet with
+- **Network:** All network communication must be secured via HTTPS using   TLS and operate on both the MMU intranet and general Internet with
   VPN/firewall protection and valid SSL certificates.
 
 ## Design and Implementation Constraints 
 
 The following constraints apply to the system's development and deployment:
 
-- **Compliance:** The system must adhere to MMU's branding, data
-  governance, accessibility, and cybersecurity policies.
+- **Compliance:** The system must adhere to MMU's branding, data   governance, accessibility, and cybersecurity policies.
 
-- **Cross-platform Support:** Full responsiveness is required across
-  devices, with consistent functionality on mobile and desktop
-  environments.
+- **Cross-platform Support:** Full responsiveness is required across   devices, with consistent functionality on mobile and desktop   environments.
 
-- **Integration:** The portal must interact with existing legacy systems
-  (e.g., CLiC, SIS) using API adapters or middleware.
+- **Integration:** The portal must interact with existing legacy systems   (e.g., CLiC, SIS) using API adapters or middleware.
 
-- **Security:** Role-Based Access Control (RBAC) is mandatory for access
-  to sensitive data (e.g., counselling or medical information).
+- **Security:** Role-Based Access Control (RBAC) is mandatory for access   to sensitive data (e.g., counselling or medical information).
 
-- **Performance Expectations:** Real-time features such as appointment
-  slot availability must update dynamically without degrading response
+- **Performance Expectations:** Real-time features such as appointment   slot availability must update dynamically without degrading response
   time.
 
 # Requirements 
@@ -1070,71 +1036,22 @@ alt="A screenshot of a computer AI-generated content may be incorrect." />
 
 #### Reschedule Appointment
 
-| **No.**                   | **Section**      | **Context/Explanation**         |
-| ----- | ----- | ----- |
-| **ID**         | 1.1      | Use Case ID      | UC05                            |
-|                | 1.2      | Name             | Reschedule Appointment          |
-| **Management** | 2.1      | Author(s)        | Mohammed Yousef Mohammed        |
-|                |          |                  | Abdulkarem                      |
-|                | 2.2      | Version          | 1.0                             |
-| **Context**    | 3.1      | Source(s)        | Questionnaire (Microsoft Forms) |
-| **Use Case     | 4.1      | Short            | Allows students to change an    |
-| Definition**   |          | Description      | existing appointment to a       |
-|                |          |                  | different available slot.       |
-|                | 4.2      | Associated       | - G1.1 -- CLiC Integration      |
-|                |          | Goal(s)          |                                 |
-|                |          |                  | - G1.2 -- Manage Appointments   |
-|                | 4.3      | Primary Actor(s) | Student                         |
-|                | 4.4      | Other Actor(s)   | Admin                           |
-|                | 4.5      | Precondition(s)  | - Student is authenticated via  |
-|                |          |                  |   the portal.                   |
-|                |          |                  |                                 |
-|                |          |                  | - At least one valid upcoming   |
-|                |          |                  |   appointment exists.           |
-|                | 4.6      | Postcondition(s) | - Original appointment is       |
-|                |          |                  |   cancelled.                    |
-|                |          |                  |                                 |
-|                |          |                  | - New appointment is confirmed. |
-|                |          |                  |                                 |
-|                |          |                  | - Student is notified of the    |
-|                |          |                  |   updated appointment.          |
-|                | 4.7      | Result           | The system updates the          |
-|                |          |                  | appointment to the new selected |
-|                |          |                  | date and time, replacing the    |
-|                |          |                  | previous schedule, and updates  |
-|                |          |                  | its availability on the system. |
-|                | 4.8      | Main Scenario    | 1\. Student accesses "My        |
-|                |          |                  | Appointments" dashboard.\       |
-|                |          |                  | 2. System validates session and |
-|                |          |                  | fetches scheduled               |
-|                |          |                  | appointments.\                  |
-|                |          |                  | 3. Student clicks on            |
-|                |          |                  | "Reschedule" button on          |
-|                |          |                  | appointment.\                   |
-|                |          |                  | 4. System displays updated list |
-|                |          |                  | of available slots.\            |
-|                |          |                  | 5. Student selects a new        |
-|                |          |                  | preferred slot.\                |
-|                |          |                  | 6. System validates slot        |
-|                |          |                  | availability and checks for     |
-|                |          |                  | conflicts.\                     |
-|                |          |                  | 7. System performs a            |
-|                |          |                  | transaction to cancel the old   |
-|                |          |                  | appointment and confirm the new |
-|                |          |                  | one.\                           |
-|                |          |                  | 8. Notification Service sends   |
-|                |          |                  | updated confirmation email.\    |
-|                |          |                  | 9. System displays rescheduling |
-|                |          |                  | success message.                |
-|                | 4.9      | Alternative      | \- 4a. No Suitable Slots        |
-|                |          | Scenario(s)      | Available:\                     |
-|                |          |                  |  4a1. System displays: "No     |
-|                |          |                  | suitable slots found---please   |
-|                |          |                  | try again later."\              |
-|                |          |                  | - 6a. Time Conflict with        |
-|                |          |                  | Another Appointment:\           |
-|                |          |                  |  6a1. System prompts student to |
-|                |          |                  | select an alternative slot.     |
+| **No.**                 | **Section** | **Context/Explanation**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
+| ----------------------- | ----------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| **ID**                  | 1.1         | Use Case ID: UC05                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
+|                         | 1.2         | Name: Reschedule Appointment                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
+| **Management**          | 2.1         | Author(s): Mohammed Yousef Mohammed Abdulkarem                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
+|                         | 2.2         | Version: 1.0                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
+| **Context**             | 3.1         | Source(s): Questionnaire (Microsoft Forms)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
+| **Use Case Definition** | 4.1         | Short Description: Allows students to change an existing appointment to a different available slot.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+|                         | 4.2         | Associated Goal(s): <br>- G1.1 -- CLiC Integration<br>- G1.2 -- Manage Appointments                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+|                         | 4.3         | Primary Actor(s): Student                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
+|                         | 4.4         | Other Actor(s): Admin                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
+|                         | 4.5         | Precondition(s): <br>- Student is authenticated via the portal.<br>- At least one valid upcoming appointment exists.                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+|                         | 4.6         | Postcondition(s): <br>- Original appointment is cancelled.<br>- New appointment is confirmed.<br>- Student is notified of the updated appointment.                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+|                         | 4.7         | Result: The system updates the appointment to the new selected date and time, replacing the previous schedule, and updates its availability on the system.                                                                                                                                                                                                                                                                                                                                                                                                                           |
+|                         | 4.8         | Main Scenario: <br>1. Student accesses "My Appointments" dashboard.<br>2. System validates session and fetches scheduled appointments.<br>3. Student clicks on "Reschedule" button on appointment.<br>4. System displays updated list of available slots.<br>5. Student selects a new preferred slot.<br>6. System validates slot availability and checks for conflicts.<br>7. System performs a transaction to cancel the old appointment and confirm the new one.<br>8. Notification Service sends updated confirmation email.<br>9. System displays rescheduling success message. |
+|                         | 4.9         | Alternative Scenario(s): <br>- 4a. No Suitable Slots Available:<br> 4a1. System displays: "No suitable slots found---please try again later."<br>- 6a. Time Conflict with Another Appointment:<br> 6a1. System prompts student to select an alternative slot.                                                                                                                                                                                                                                                                                                                        |
 
 : []{#_Toc199101182 .anchor}Table 4.5 - Reschedule Appointment Use Case
 
@@ -1160,50 +1077,29 @@ alt="A diagram of a company AI-generated content may be incorrect." />
 4.11 - Reschedule Appointment Activity Diagram</p></figcaption>
 </figure>
 
-**Figure 4.11** presents an activity diagram outlining the workflow fora Student to reschedule an appointment via the Campus Wellness Portal, involving the Medical Center Service and the Appointment Database. The process starts with the Student opening the \"My Appointment\" page. The Campus Wellness Portal requests and displays upcoming appointments byquerying the Medical Center Service, which retrieves data from the Appointment Database. The Student selects an appointment to reschedule, prompting the portal to request alternative available slots from the Medical Center Service. These slots are fetched from the Appointment Database and displayed to the Student. Upon selecting a new slot, the Student submits a reschedule request, which the portal forwards to theMedical Center Service. The Medical Center Service updates the appointment in the Appointment Database by replacing the old slot with the new one. The database confirms success or failure, and this status is returned to the portal. The portal then displays either a confirmation message for a successful update or an error message if the update fails, completing the process.
+**Figure 4.11** presents an activity diagram outlining the workflow for
+a Student to reschedule an appointment via the Campus Wellness Portal, involving the Medical Center Service and the Appointment Database. The process starts with the Student opening the \"My Appointment\" page. The Campus Wellness Portal requests and displays upcoming appointments by
+querying the Medical Center Service, which retrieves data from the Appointment Database. The Student selects an appointment to reschedule, prompting the portal to request alternative available slots from the Medical Center Service. These slots are fetched from the Appointment Database and displayed to the Student. Upon selecting a new slot, the Student submits a reschedule request, which the portal forwards to theMedical Center Service. The Medical Center Service updates the appointment in the Appointment Database by replacing the old slot with the new one. The database confirms success or failure, and this status is returned to the portal. The portal then displays either a confirmation message for a successful update or an error message if the update fails, completing the process.
+
 #### View Counselling History
 
-| **No.**                     | **Section**      | **Context/Explanation**                                                   |
-| **ID**         | 1.1        | Use Case ID      | UC06                                                                      |
-|                | 1.2        | Name             | View Counselling History                                                  |
-| **Management** | 2.1        | Author(s)        | Farah Hanim binti Mohd Zamri                                              |
-|                | 2.2        | Version          | 1.0                                                                       |
-| **Context**    | 3.1        | Source(s)        | Questionnaire (Microsoft Forms)                                           |
-| **Use Case     | 4.1        | Short            |   ----------------------------------------------------------------------- |
-| Definition**   |            | Description      |                                                                           |
-|                |            |                  |   ----------------------------------------------------------------------- |
-|                |            |                  |                                                                           |
-|                |            |                  | The student views their past counselling sessions by selecting a date     |
-|                |            |                  | range                                                                     |
-|                +------------+------------------+---------------------------------------------------------------------------+
-|                | 4.2        | Associated       | - G2.2 -- View Counselling History                                        |
-|                |            | Goal(s)          |                                                                           |
-|                +------------+------------------+---------------------------------------------------------------------------+
-|                | 4.3        | Primary Actor(s) | Student                                                                   |
-|                +------------+------------------+---------------------------------------------------------------------------+
-|                | 4.4        | Other Actor(s)   | Health Center System, MMU Online Portal                                   |
-|                +------------+------------------+---------------------------------------------------------------------------+
-|                | 4.5        | Precondition(s)  | - Student must be logged in via SSO                                       |
-|                |            |                  |                                                                           |
-|                |            |                  | - The system is connected to the counselling database.                    |
-|                +------------+------------------+---------------------------------------------------------------------------+
-|                | 4.6        | Postcondition(s) | - Student sees a list of past sessions or a message that no records were  |
-|                |            |                  |   found.                                                                  |
-|                +------------+------------------+---------------------------------------------------------------------------+
-|                | 4.7        | Result           | Counselling records are retrieved and displayed based on the selected     |
-|                |            |                  | date range.                                                               |
-|                +------------+------------------+---------------------------------------------------------------------------+
-|                | 4.8        | Main Scenario    | 1.  Student selects "View Counselling History".                           |
-|                |            |                  |                                                                           |
-|                |            |                  | 2.  System checks authentication.                                         |
-|                |            |                  |                                                                           |
-|                |            |                  | 3.  System queries counselling records for the selected date range.       |
-|                |            |                  |                                                                           |
-|                |            |                  | 4.  System displays the results.                                          |
-|                | 4.9        | Alternate        | - No records found: A message is shown.                                   |
-|                |            | Scenario(s)      |                                                                           |
-|                | 4.10       | Exception        | - Student is not authenticated: Prompted to log in first.                 |
-|                |            | Scenario(s)      |                                                                           |
+|**No.**|**Section**|**Context/Explanation**|
+|---|---|---|
+|**ID**|1.1|Use Case ID: UC06|
+||1.2|Name: View Counselling History|
+|**Management**|2.1|Author(s): Farah Hanim binti Mohd Zamri|
+||2.2|Version: 1.0|
+|**Context**|3.1|Source(s): Questionnaire (Microsoft Forms)|
+|**Use Case Definition**|4.1|Short Description: <br>The student views their past counselling sessions by selecting a date range|
+||4.2|Associated Goal(s): <br>- G2.2 -- View Counselling History|
+||4.3|Primary Actor(s): Student|
+||4.4|Other Actor(s): Health Center System, MMU Online Portal|
+||4.5|Precondition(s): <br>- Student must be logged in via SSO<br>- The system is connected to the counselling database.|
+||4.6|Postcondition(s): <br>- Student sees a list of past sessions or a message that no records were found.|
+||4.7|Result: Counselling records are retrieved and displayed based on the selected date range.|
+||4.8|Main Scenario: <br>1. Student selects "View Counselling History".<br>2. System checks authentication.<br>3. System queries counselling records for the selected date range.<br>4. System displays the results.|
+||4.9|Alternate Scenario(s): <br>- No records found: A message is shown.|
+||4.10|Exception Scenario(s): <br>- Student is not authenticated: Prompted to log in first.|                                                                 |
 
 : []{#_Toc199101183 .anchor}Table 4.6 - View Counselling History Use
 Case
@@ -1234,85 +1130,22 @@ alt="A diagram of a program AI-generated content may be incorrect." />
 
 #### View Gym Available Sessions
 
-| No.                       | Section          | Context/Explanation           |
-| ID            | 1.1       | Use Case ID      | UC07                          |
-|               | 1.2       | Name             | View Gym Available Sessions   |
-| Management    | 2.1       | Author(s)        | Mohammed Aamena Mohammed      |
-|               |           |                  | Abdulkarem                    |
-|               | 2.2       | Version          | 1.0                           |
-| Context       | 3.1       | Source(s)        | Questionnaire (Microsoft      |
-|               |           |                  | Forms)                        |
-| Use Case      | 4.1       | Short            | Enables a student to view     |
-| Definition    |           | Description      | real-time gym session         |
-|               |           |                  | availability through the      |
-|               |           |                  | Campus Wellness Portal,       |
-|               |           |                  | including capacity, timing,   |
-|               |           |                  | and gender-specific           |
-|               |           |                  | constraints.                  |
-|               | 4.2       | Associated       | - G3.2 -- Gym Schedules       |
-|               |           | Goal(s)          |                               |
-|               | 4.3       | Primary Actor(s) | Student                       |
-|               | 4.4       | Other Actor(s)   | Admin                         |
-|               | 4.5       | Precondition(s)  | \- Student is successfully    |
-|               |           |                  | authenticated through the     |
-|               |           |                  | Campus Wellness Portal.\      |
-|               |           |                  | - Gym session data is         |
-|               |           |                  | available from backend        |
-|               |           |                  | fitness services.             |
-|               | 4.6       | Postcondition(s) | \- Student successfully views |
-|               |           |                  | available sessions with       |
-|               |           |                  | real-time status and          |
-|               |           |                  | constraints.                  |
-|               | 4.7       | Result           | The system displays a list of |
-|               |           |                  | available gym sessions with   |
-|               |           |                  | date, time, and session type  |
-|               |           |                  | details to be viewed by the   |
-|               |           |                  | user.                         |
-|               | 4.8       | Main Scenario    | 1\. Student accesses the      |
-|               |           |                  | "View Gym Schedule"           |
-|               |           |                  | interface.\                   |
-|               |           |                  | 2. System validates user      |
-|               |           |                  | session via the               |
-|               |           |                  | Authentication Service.\      |
-|               |           |                  | 3. System retrieves real-time |
-|               |           |                  | gym schedule data, including  |
-|               |           |                  | session timing, capacity,     |
-|               |           |                  | gender restrictions, and      |
-|               |           |                  | current availability.\        |
-|               |           |                  | 4. System displays the data   |
-|               |           |                  | in an organized calendar or   |
-|               |           |                  | list format.\                 |
-|               |           |                  | 5. Student applies            |
-|               |           |                  | filters (e.g., by date,       |
-|               |           |                  | gender, session type) to      |
-|               |           |                  | narrow down the displayed     |
-|               |           |                  | options *(optional)*.\        |
-|               |           |                  | 6. System processes the       |
-|               |           |                  | filters and retrieves updated |
-|               |           |                  | session data.\                |
-|               |           |                  | 7. System reviews the         |
-|               |           |                  | filtered sessions and         |
-|               |           |                  | optionally selects a session  |
-|               |           |                  | to book, triggering UC08:     |
-|               |           |                  | Book Fitness Class.           |
-|               | 4.9       | Alternative      | - 5a. No Filters Applied\     |
-|               |           | Scenario(s)      |    5a1. System defaults to    |
-|               |           |                  |   displaying all sessions     |
-|               |           |                  |   scheduled within the        |
-|               |           |                  |   current week.               |
-|               |           |                  |                               |
-|               |           |                  | - 6a. No Sessions Available\  |
-|               |           |                  |    6a1. System displays: "No  |
-|               |           |                  |   available sessions at this  |
-|               |           |                  |   time."                      |
-|               |           |                  |                               |
-|               |           |                  | - 6b. Filtered Results Yield  |
-|               |           |                  |   No Matches\                 |
-|               |           |                  |    6b1. System displays: "No  |
-|               |           |                  |   sessions match your         |
-|               |           |                  |   selected criteria. Please   |
-|               |           |                  |   adjust filters and try      |
-|               |           |                  |   again."                     |
+| **No.**                 | **Section** | **Context/Explanation**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
+| ----------------------- | ----------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| **ID**                  | 1.1         | Use Case ID: UC07                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
+|                         | 1.2         | Name: View Gym Available Sessions                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
+| **Management**          | 2.1         | Author(s): Mohammed Aamena Mohammed Abdulkarem                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
+|                         | 2.2         | Version: 1.0                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
+| **Context**             | 3.1         | Source(s): Questionnaire (Microsoft Forms)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
+| **Use Case Definition** | 4.1         | Short Description: Enables a student to view real-time gym session availability through the Campus Wellness Portal, including capacity, timing, and gender-specific constraints.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
+|                         | 4.2         | Associated Goal(s): <br>- G3.2 -- Gym Schedules                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
+|                         | 4.3         | Primary Actor(s): Student                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
+|                         | 4.4         | Other Actor(s): Admin                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
+|                         | 4.5         | Precondition(s): <br>- Student is successfully authenticated through the Campus Wellness Portal.<br>- Gym session data is available from backend fitness services.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+|                         | 4.6         | Postcondition(s): <br>- Student successfully views available sessions with real-time status and constraints.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
+|                         | 4.7         | Result: The system displays a list of available gym sessions with date, time, and session type details to be viewed by the user.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
+|                         | 4.8         | Main Scenario: <br>1. Student accesses the "View Gym Schedule" interface.<br>2. System validates user session via the Authentication Service.<br>3. System retrieves real-time gym schedule data, including session timing, capacity, gender restrictions, and current availability.<br>4. System displays the data in an organized calendar or list format.<br>5. Student applies filters (e.g., by date, gender, session type) to narrow down the displayed options _(optional)_.<br>6. System processes the filters and retrieves updated session data.<br>7. System reviews the filtered sessions and optionally selects a session to book, triggering UC08: Book Fitness Class. |
+|                         | 4.9         | Alternative Scenario(s): <br>- 5a. No Filters Applied<br> 5a1. System defaults to displaying all sessions scheduled within the current week.<br><br>- 6a. No Sessions Available<br> 6a1. System displays: "No available sessions at this time."<br><br>- 6b. Filtered Results Yield No Matches<br> 6b1. System displays: "No sessions match your selected criteria. Please adjust filters and try again."                                                                                                                                                                                                                                                                            |
 
 : []{#_Toc199101184 .anchor}Table 4.7 - View Gym Available Sessions Use
 Case
@@ -1343,64 +1176,22 @@ alt="A diagram of a workflow AI-generated content may be incorrect." />
 
 #### Book Fitness Session
 
-| **No.**                   | **Section**      | **Context/Explanation**         |
-| **ID**         | 1.1      | Use Case ID      | UC08                            |
-|                | 1.2      | Name             | Book Fitness Session            |
-| **Management** | 2.1      | Author(s)        | Mohammed Aamena Mohammed        |
-|                |          |                  | Abdulkarem                      |
-|                | 2.2      | Version          | 1.0                             |
-| **Context**    | 3.1      | Source(s)        | Questionnaire (Microsoft Forms) |
-| **Use Case     | 4.1      | Short            | Allows a student to reserve a   |
-| Definition**   |          | Description      | slot in an available fitness    |
-|                |          |                  | session through the Campus      |
-|                |          |                  | Wellness Portal.                |
-|                | 4.2      | Associated       | - G3.1 -- Class Booking         |
-|                |          | Goal(s)          |                                 |
-|                | 4.3      | Primary Actor(s) | Student                         |
-|                | 4.4      | Other Actor(s)   | Admin                           |
-|                | 4.5      | Precondition(s)  | \- Student is authenticated via |
-|                |          |                  | the Campus Wellness Portal.\    |
-|                |          |                  | - Real-time fitness class       |
-|                |          |                  | schedule is accessible.         |
-|                | 4.6      | Postcondition(s) | \- Success: Student is          |
-|                |          |                  | registered for the selected     |
-|                |          |                  | session.\                       |
-|                |          |                  | - Failure: Student receives     |
-|                |          |                  | feedback regarding errors       |
-|                |          |                  | (e.g., session full, schedule   |
-|                |          |                  | conflict).                      |
-|                | 4.7      | Result           | The system confirms and records |
-|                |          |                  | the user's booking for the      |
-|                |          |                  | selected fitness session and    |
-|                |          |                  | updates its availability in the |
-|                |          |                  | system.                         |
-|                | 4.8      | Main Scenario    | 1\. Student accesses the "Book  |
-|                |          |                  | Fitness Class" interface.\      |
-|                |          |                  | 2. System displays current      |
-|                |          |                  | classes, including time,        |
-|                |          |                  | location, and capacity.\        |
-|                |          |                  | 3. Student selects a desired    |
-|                |          |                  | class.\                         |
-|                |          |                  | 4. System checks for            |
-|                |          |                  | availability and any scheduling |
-|                |          |                  | conflicts.\                     |
-|                |          |                  | 5. If valid, system registers   |
-|                |          |                  | the student and updates the     |
-|                |          |                  | class list.\                    |
-|                |          |                  | 6. Notification Service sends a |
-|                |          |                  | booking confirmation via        |
-|                |          |                  | email.\                         |
-|                |          |                  | 7. System displays a success    |
-|                |          |                  | message to the student.         |
-|                | 4.9      | Alternative      | \- 3a. Class Full:\             |
-|                |          | Scenario(s)      |  3a1. System notifies: "Class   |
-|                |          |                  | is full -- join waitlist?"\     |
-|                |          |                  |  3a2. Student may choose to     |
-|                |          |                  | join the waitlist.\             |
-|                |          |                  | - 4a. Schedule Conflict:\       |
-|                |          |                  |  4a1. System alerts user about  |
-|                |          |                  | the conflict with an existing   |
-|                |          |                  | booking.                        |
+| **No.**                 | **Section** | **Context/Explanation**                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+| ----------------------- | ----------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **ID**                  | 1.1         | Use Case ID: UC08                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
+|                         | 1.2         | Name: Book Fitness Session                                                                                                                                                                                                                                                                                                                                                                                                                                              |
+| **Management**          | 2.1         | Author(s): Mohammed Aamena Mohammed Abdulkarem                                                                                                                                                                                                                                                                                                                                                                                                                          |
+|                         | 2.2         | Version: 1.0                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
+| **Context**             | 3.1         | Source(s): Questionnaire (Microsoft Forms)                                                                                                                                                                                                                                                                                                                                                                                                                              |
+| **Use Case Definition** | 4.1         | Short Description: Allows a student to reserve a slot in an available fitness session through the Campus Wellness Portal.                                                                                                                                                                                                                                                                                                                                               |
+|                         | 4.2         | Associated Goal(s): <br>- G3.1 -- Class Booking                                                                                                                                                                                                                                                                                                                                                                                                                         |
+|                         | 4.3         | Primary Actor(s): Student                                                                                                                                                                                                                                                                                                                                                                                                                                               |
+|                         | 4.4         | Other Actor(s): Admin                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+|                         | 4.5         | Precondition(s): <br>- Student is authenticated via the Campus Wellness Portal.<br>- Real-time fitness class schedule is accessible.                                                                                                                                                                                                                                                                                                                                    |
+|                         | 4.6         | Postcondition(s): <br>- Success: Student is registered for the selected session.<br>- Failure: Student receives feedback regarding errors (e.g., session full, schedule conflict).                                                                                                                                                                                                                                                                                      |
+|                         | 4.7         | Result: The system confirms and records the user's booking for the selected fitness session and updates its availability in the system.                                                                                                                                                                                                                                                                                                                                 |
+|                         | 4.8         | Main Scenario: <br>1. Student accesses the "Book Fitness Class" interface.<br>2. System displays current classes, including time, location, and capacity.<br>3. Student selects a desired class.<br>4. System checks for availability and any scheduling conflicts.<br>5. If valid, system registers the student and updates the class list.<br>6. Notification Service sends a booking confirmation via email.<br>7. System displays a success message to the student. |
+|                         | 4.9         | Alternative Scenario(s): <br>- 3a. Class Full:<br> 3a1. System notifies: "Class is full -- join waitlist?"<br> 3a2. Student may choose to join the waitlist.<br>- 4a. Schedule Conflict:<br> 4a1. System alerts user about the conflict with an existing booking.                                                                                                                                                                                                       |
 
 : []{#_Toc199101185 .anchor}Table 4.8 - Book Fitness Session Use Case
 
@@ -1429,58 +1220,22 @@ alt="A diagram of a company AI-generated content may be incorrect." />
 **Figure 4.17** illustrates the activity diagram for the process of booking a fitness class through the Campus Wellness Portal. The sequence begins when the student selects the \"Book Fitness Class\" option. The system verifies the student\'s login status; if the student is not authenticated, they are redirected to the login page. Once logged in, the portal requests available fitness classes from the Fitness Center Service, which retrieves class schedules and capacity data from the Fitness Database. If classes are available, the portal displays the list for the student to select from; otherwise, a \"No classes available\" message is shown. Upon selecting a desired class, the student submits a booking request, which the portal forwards to the Fitness Center Service. The service checks availability in the Fitness Database and, if a slot is free and there are no conflicts, reserves the slot, sends confirmation back to the portal, and triggers the Notification Service to email a booking confirmation to the student. The portal then displays a \"Booking Successful\" message. If the class is full or a conflict exists, the request is rejected, and the portal informs the student with a relevant error message and the option to join a waitlist. This process ensures efficient interaction and clear communication at each decision point.
 
 #### Track Wellness Progress
-
-| **No.**                    | **Section**      | **Context/Explanation**       |
-| ---- | ---- | ---- |
-| **ID**         | 1.1       | Use Case ID      | UC09                          |
-|                | 1.2       | Name             | Track Wellness Progress       |
-| **Management** | 2.1       | Author(s)        | Mohammed Aamena Mohammed      |
-|                |           |                  | Abdulkarem                    |
-|                | 2.2       | Version          | 1.0                           |
-| **Context**    | 3.1       | Source(s)        | Questionnaire (Microsoft      |
-|                |           |                  | Forms)                        |
-| **Use Case     | 4.1       | Short            | Enables students to monitor   |
-| Definition**   |           | Description      | their wellness trends through |
-|                |           |                  | interactive dashboards that   |
-|                |           |                  | visualize participation,      |
-|                |           |                  | goals, and appointments.      |
-|                | 4.2       | Associated       | - G3.3 -- Fitness Tracking    |
-|                |           | Goal(s)          |                               |
-|                | 4.3       | Primary Actor(s) | Student                       |
-|                | 4.4       | Other Actor(s)   | Admins                        |
-|                | 4.5       | Precondition(s)  | \- Student is authenticated   |
-|                |           |                  | via the Campus Wellness       |
-|                |           |                  | Portal.\                      |
-|                |           |                  | - System and data sources are |
-|                |           |                  | operational and up to date.   |
-|                | 4.6       | Postcondition(s) | \- Student receives a visual  |
-|                |           |                  | summary of wellness           |
-|                |           |                  | activities and progress.      |
-|                | 4.7       | Result           | The system displays the       |
-|                |           |                  | user's wellness data and      |
-|                |           |                  | progress over time in a       |
-|                |           |                  | clear, summarized format.     |
-|                | 4.8       | Main Scenario    | 1\. Student opens "Track      |
-|                |           |                  | Wellness Progress"            |
-|                |           |                  | interface.\                   |
-|                |           |                  | 2. System validates the       |
-|                |           |                  | session.\                     |
-|                |           |                  | 3. System retrieves data from |
-|                |           |                  | the Medical Centre, Fitness   |
-|                |           |                  | Centre, and Wellness Goals    |
-|                |           |                  | database.\                    |
-|                |           |                  | 4. Analytics Service analyses |
-|                |           |                  | trends, achievements, and     |
-|                |           |                  | participation.\               |
-|                |           |                  | 5. System displays wellness   |
-|                |           |                  | insights using charts and     |
-|                |           |                  | progress bars.                |
-|                | 4.9       | Alternative      | \- 4a. Milestone Achieved:\   |
-|                |           | Scenario(s)      |  4a1. If a milestone is       |
-|                |           |                  | achieved, the Notification    |
-|                |           |                  | Service sends a motivational  |
-|                |           |                  | email message to the student. |
-
+| **No.**                 | **Section** | **Context/Explanation** | **Details**                                                                                                                                                                                                                                                                                                                                   |
+| ----------------------- | ----------- | ----------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **ID**                  | 1.1         | Use Case ID             | UC09                                                                                                                                                                                                                                                                                                                                          |
+|                         | 1.2         | Name                    | Track Wellness Progress                                                                                                                                                                                                                                                                                                                       |
+| **Management**          | 2.1         | Author(s)               | Mohammed Aamena Mohammed Abdulkarem                                                                                                                                                                                                                                                                                                           |
+|                         | 2.2         | Version                 | 1.0                                                                                                                                                                                                                                                                                                                                           |
+| **Context**             | 3.1         | Source(s)               | Questionnaire (Microsoft Forms)                                                                                                                                                                                                                                                                                                               |
+| **Use Case Definition** | 4.1         | Short Description       | Enables students to monitor their wellness trends through interactive dashboards that visualize participation, goals, and appointments.                                                                                                                                                                                                       |
+|                         | 4.2         | Associated Goal(s)      | - G3.3 -- Fitness Tracking                                                                                                                                                                                                                                                                                                                    |
+|                         | 4.3         | Primary Actor(s)        | Student                                                                                                                                                                                                                                                                                                                                       |
+|                         | 4.4         | Other Actor(s)          | Admins                                                                                                                                                                                                                                                                                                                                        |
+|                         | 4.5         | Precondition(s)         | - Student is authenticated via the Campus Wellness Portal.<br>- System and data sources are operational and up to date.                                                                                                                                                                                                                       |
+|                         | 4.6         | Postcondition(s)        | - Student receives a visual summary of wellness activities and progress.                                                                                                                                                                                                                                                                      |
+|                         | 4.7         | Result                  | The system displays the user's wellness data and progress over time in a clear, summarized format.                                                                                                                                                                                                                                            |
+|                         | 4.8         | Main Scenario           | 1. Student opens "Track Wellness Progress" interface.<br>2. System validates the session.<br>3. System retrieves data from the Medical Centre, Fitness Centre, and Wellness Goals database.<br>4. Analytics Service analyses trends, achievements, and participation.<br>5. System displays wellness insights using charts and progress bars. |
+|                         | 4.9         | Alternative Scenario(s) | - 4a. Milestone Achieved:<br> 4a1. If a milestone is achieved, the Notification Service sends a motivational email message to the student.                                                                                                                                                                                                    |
 : []{#_Toc199101186 .anchor}Table 4.9 - Track Wellness Progress Use Case
 
 ##### Sequence Diagram
@@ -1509,71 +1264,22 @@ alt="A diagram of a computer AI-generated content may be incorrect." />
 
 #### Set Wellness Goals
 
-+----------------------------+------------------+---------------------------------+
-| **No.**                    | **Section**      | **Context/Explanation**         |
-+:===============+:==========+:=================+:================================+
-| **ID**         | 1.1       | Use Case ID      | UC10                            |
-|                +-----------+------------------+---------------------------------+
-|                | 1.2       | Name             | Set Wellness Goals              |
-+----------------+-----------+------------------+---------------------------------+
-| **Management** | 2.1       | Author(s)        | Mohammed Aamena Mohammed        |
-|                |           |                  | Abdulkarem                      |
-|                +-----------+------------------+---------------------------------+
-|                | 2.2       | Version          | 1.0                             |
-+----------------+-----------+------------------+---------------------------------+
-| **Context**    | 3.1       | Source(s)        | Questionnaire (Microsoft Forms) |
-+----------------+-----------+------------------+---------------------------------+
-| **Use Case     | 4.1       | Short            | Allows students to set and      |
-| Definition**   |           | Description      | track personal wellness goals   |
-|                |           |                  | such as fitness routines or     |
-|                |           |                  | mental health targets.          |
-|                +-----------+------------------+---------------------------------+
-|                | 4.2       | Associated       | - G4.1 -- Goal Tracking         |
-|                |           | Goal(s)          |                                 |
-|                +-----------+------------------+---------------------------------+
-|                | 4.3       | Primary Actor(s) | Student                         |
-|                +-----------+------------------+---------------------------------+
-|                | 4.4       | Other Actor(s)   | ---                             |
-|                +-----------+------------------+---------------------------------+
-|                | 4.5       | Precondition(s)  | \- Student is authenticated and |
-|                |           |                  | has access to goal-setting      |
-|                |           |                  | functionality.                  |
-|                +-----------+------------------+---------------------------------+
-|                | 4.6       | Postcondition(s) | \- Success: Goal is saved and   |
-|                |           |                  | tracked by the system.\         |
-|                |           |                  | - Failure: Input error is       |
-|                |           |                  | presented to the student for    |
-|                |           |                  | correction.                     |
-|                +-----------+------------------+---------------------------------+
-|                | 4.7       | Result           | The system saves the user's     |
-|                |           |                  | personalized wellness goals and |
-|                |           |                  | updates the progress tracking   |
-|                |           |                  | accordingly.                    |
-|                +-----------+------------------+---------------------------------+
-|                | 4.8       | Main Scenario    | 1\. Student navigates to the    |
-|                |           |                  | "Set Wellness Goal" interface.\ |
-|                |           |                  | 2. System authenticates the     |
-|                |           |                  | session.\                       |
-|                |           |                  | 3. Student enters goal details, |
-|                |           |                  | including activity type (e.g.,  |
-|                |           |                  | steps, workout, gym sessions),  |
-|                |           |                  | target frequency (e.g., 3       |
-|                |           |                  | times/week), and duration       |
-|                |           |                  | (e.g., 30 minutes/session).\    |
-|                |           |                  | 4. System validates the goal    |
-|                |           |                  | format.\                        |
-|                |           |                  | 5. System stores the goal in    |
-|                |           |                  | the database.\                  |
-|                |           |                  | 6. Notification Service sends a |
-|                |           |                  | confirmation message.\          |
-|                |           |                  | 7. System displays the success  |
-|                |           |                  | message and summary.            |
-|                +-----------+------------------+---------------------------------+
-|                | 4.9       | Alternative      | \- 4a. Invalid Input Format:\   |
-|                |           | Scenario(s)      |  4a1. System highlights input   |
-|                |           |                  | error and prompts for           |
-|                |           |                  | correction.                     |
-+----------------+-----------+------------------+---------------------------------+
+|**No.**|**Section**|**Context/Explanation**|**Details**|
+|---|---|---|---|
+|**ID**|1.1|Use Case ID|UC10|
+||1.2|Name|Set Wellness Goals|
+|**Management**|2.1|Author(s)|Mohammed Aamena Mohammed Abdulkarem|
+||2.2|Version|1.0|
+|**Context**|3.1|Source(s)|Questionnaire (Microsoft Forms)|
+|**Use Case Definition**|4.1|Short Description|Allows students to set and track personal wellness goals such as fitness routines or mental health targets.|
+||4.2|Associated Goal(s)|- G4.1 -- Goal Tracking|
+||4.3|Primary Actor(s)|Student|
+||4.4|Other Actor(s)|---|
+||4.5|Precondition(s)|- Student is authenticated and has access to goal-setting functionality.|
+||4.6|Postcondition(s)|- Success: Goal is saved and tracked by the system.<br>- Failure: Input error is presented to the student for correction.|
+||4.7|Result|The system saves the user's personalized wellness goals and updates the progress tracking accordingly.|
+||4.8|Main Scenario|1. Student navigates to the "Set Wellness Goal" interface.<br>2. System authenticates the session.<br>3. Student enters goal details, including activity type (e.g., steps, workout, gym sessions), target frequency (e.g., 3 times/week), and duration (e.g., 30 minutes/session).<br>4. System validates the goal format.<br>5. System stores the goal in the database.<br>6. Notification Service sends a confirmation message.<br>7. System displays the success message and summary.|
+||4.9|Alternative Scenario(s)|- 4a. Invalid Input Format:<br> 4a1. System highlights input error and prompts for correction.|
 
 : []{#_Toc199101187 .anchor}Table 4.10 - Set Wellness Goals Use Case
 
@@ -1604,78 +1310,25 @@ feedback to the user.
 
 #### Get AI Wellness Tips
 
-+-----------------------------+------------------+---------------------------------------------------------------------------+
-| **No.**                     | **Section**      | **Context/Explanation**                                                   |
-+:===============+:===========+:=================+:==========================================================================+
-| **ID**         | 1.1        | Use Case ID      | UC11                                                                      |
-|                +------------+------------------+---------------------------------------------------------------------------+
-|                | 1.2        | Name             | Get AI Wellness Tips                                                      |
-+----------------+------------+------------------+---------------------------------------------------------------------------+
-| **Management** | 2.1        | Author(s)        | Nur Thayiebah Binti Hamdan                                                |
-|                +------------+------------------+---------------------------------------------------------------------------+
-|                | 2.2        | Version          | 1.0                                                                       |
-+----------------+------------+------------------+---------------------------------------------------------------------------+
-| **Context**    | 3.1        | Source(s)        | Brainstorming (Microsoft Teams), Questionnaire (Microsoft Forms)          |
-+----------------+------------+------------------+---------------------------------------------------------------------------+
-| **Use Case     | 4.1        | Short            |   ----------------------------------------------------------------------- |
-| Definition**   |            | Description      |                                                                           |
-|                |            |                  |   ----------------------------------------------------------------------- |
-|                |            |                  |                                                                           |
-|                |            |                  |   ----------------------------------------------------------------------- |
-|                |            |                  |                                                                           |
-|                |            |                  |   ----------------------------------------------------------------------- |
-|                |            |                  |                                                                           |
-|                |            |                  | Provides students with personalized health and wellness tips generated by |
-|                |            |                  | an AI engine using their wellness data and activity patterns.             |
-|                +------------+------------------+---------------------------------------------------------------------------+
-|                | 4.2        | Associated       | - G4.2 AI Tips                                                            |
-|                |            | Goal(s)          |                                                                           |
-|                |            |                  | - G6.1 Preventive Care                                                    |
-|                +------------+------------------+---------------------------------------------------------------------------+
-|                | 4.3        | Primary Actor(s) | Student                                                                   |
-|                +------------+------------------+---------------------------------------------------------------------------+
-|                | 4.4        | Other Actor(s)   | - AI Wellness Engine                                                      |
-|                |            |                  |                                                                           |
-|                |            |                  | - Wellness Tracking Module                                                |
-|                +------------+------------------+---------------------------------------------------------------------------+
-|                | 4.5        | Precondition(s)  | - Student is logged in through SSO                                        |
-|                |            |                  |                                                                           |
-|                |            |                  | - AI tip engine is functional                                             |
-|                |            |                  |                                                                           |
-|                |            |                  | - Student has a profile or activity data available                        |
-|                +------------+------------------+---------------------------------------------------------------------------+
-|                | 4.5        | Postcondition(s) | - Student has received one or more tips                                   |
-|                |            |                  |                                                                           |
-|                |            |                  | - System records interaction (viewed/saved/skipped)                       |
-|                +------------+------------------+---------------------------------------------------------------------------+
-|                | 4.6        | Result           | Student gains a customized recommendation to improve their health or      |
-|                |            |                  | habits.                                                                   |
-|                +------------+------------------+---------------------------------------------------------------------------+
-|                | 4.7        | Main Scenario    | 1.  Student logs in to the portal.                                        |
-|                |            |                  |                                                                           |
-|                |            |                  | 2.  Student navigates to the AI Tips section and clicks the "Get Tips"    |
-|                |            |                  |     button.                                                               |
-|                |            |                  |                                                                           |
-|                |            |                  | 3.  The system verifies the session and retrieves the student's wellness  |
-|                |            |                  |     data.                                                                 |
-|                |            |                  |                                                                           |
-|                |            |                  | 4.  If data is sufficient. The AI engine generates personalized wellness  |
-|                |            |                  |     tips.                                                                 |
-|                |            |                  |                                                                           |
-|                |            |                  | 5.  The system displays the tips on the student's dashboard.              |
-|                |            |                  |                                                                           |
-|                |            |                  | 6.  Student views the tips and may choose to save or dismiss them.        |
-|                +------------+------------------+---------------------------------------------------------------------------+
-|                | 4.8        | Exception        | - AI Engine Failure:                                                      |
-|                |            | Scenario         |                                                                           |
-|                |            |                  |   - System fails to generate tips; displays "Tips unavailable" and logs   |
-|                |            |                  |     the error.                                                            |
-|                |            |                  |                                                                           |
-|                |            |                  | - No Wellness Data Available:                                             |
-|                |            |                  |                                                                           |
-|                |            |                  |   - System prompts student to set wellness goals; may show default        |
-|                |            |                  |     advice.                                                               |
-+----------------+------------+------------------+---------------------------------------------------------------------------+
+| **No.**                 | **Section** | **Context/Explanation** | **Details**                                                                                                                                                                                                                                                                                                                                                                                                                     |
+| ----------------------- | ----------- | ----------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **ID**                  | 1.1         | Use Case ID             | UC11                                                                                                                                                                                                                                                                                                                                                                                                                            |
+|                         | 1.2         | Name                    | Get AI Wellness Tips                                                                                                                                                                                                                                                                                                                                                                                                            |
+| **Management**          | 2.1         | Author(s)               | Nur Thayiebah Binti Hamdan                                                                                                                                                                                                                                                                                                                                                                                                      |
+|                         | 2.2         | Version                 | 1.0                                                                                                                                                                                                                                                                                                                                                                                                                             |
+| **Context**             | 3.1         | Source(s)               | Brainstorming (Microsoft Teams), Questionnaire (Microsoft Forms)                                                                                                                                                                                                                                                                                                                                                                |
+| **Use Case Definition** | 4.1         | Short Description       | Provides students with personalized health and wellness tips generated by an AI engine using their wellness data and activity patterns.                                                                                                                                                                                                                                                                                         |
+|                         | 4.2         | Associated  Goal(s)     | - G4.2 AI Tips <br>- G6.1 Preventive Care                                                                                                                                                                                                                                                                                                                                                                                       |
+|                         | 4.3         | Primary Actor(s)        | Student                                                                                                                                                                                                                                                                                                                                                                                                                         |
+|                         | 4.4         | Other Actor(s)          | - AI Wellness Engine<br>- Wellness Tracking Module                                                                                                                                                                                                                                                                                                                                                                              |
+|                         | 4.5         | Precondition(s)         | - Student is logged in through SSO<br>- AI tip engine  is functional                                                                                                                                                                                                                                                                                                                                                            |
+|                         |             |                         | - Student has a profile or activity data available                                                                                                                                                                                                                                                                                                                                                                              |
+|                         | 4.5         | Postcondition(s)        | - Student has received one or more tips<br>- System records interaction (viewed/saved/skipped)                                                                                                                                                                                                                                                                                                                                  |
+|                         | 4.6         | Result                  | Student gains a customized recommendation to improve their health or habits.                                                                                                                                                                                                                                                                                                                                                    |
+|                         | 4.7         | Main Scenario           | 1.  Student logs in to the portal.<br>2.  Student navigates to the AI Tips section and clicks the "Get Tips" button.<br>3.  The system verifies the session and retrieves the student's wellness data. <br>4.  If data is sufficient. The AI engine generates personalized wellness tips.<br>5.  The system displays the tips on the student's dashboard.<br>6.  Student views the tips and may choose to save or dismiss them. |
+|                         | 4.8         | Exception Scenario      | - AI Engine Failure:<br>- System fails to generate tips; displays "Tips unavailable" and logs the error.<br>- No Wellness Data Available:<br>- System prompts student to set wellness goals; may show default advice.                                                                                                                                                                                                           |
+
+
 
 : []{#_Toc199101188 .anchor}Table 4.11 - Get AI Wellness Tips Use Case
 
@@ -1701,113 +1354,22 @@ alt="A screenshot of a computer AI-generated content may be incorrect." />
 
 #### Receive Notification
 
-+-----------------------------+------------------+--------------------------------+
-| **No.**                     | **Section**      | **Context/Explanation**        |
-+:===============+:===========+:=================+:===============================+
-| **ID**         | 1.1        | Use Case ID      | UC12                           |
-|                +------------+------------------+--------------------------------+
-|                | 1.2        | Name             | Receive Notification           |
-+----------------+------------+------------------+--------------------------------+
-| **Management** | 2.1        | Author(s)        | Nur Thayiebah Binti Hamdan     |
-|                +------------+------------------+--------------------------------+
-|                | 2.2        | Version          | 1.0                            |
-+----------------+------------+------------------+--------------------------------+
-| **Context**    | 3.1        | Source(s)        | Questionnaire (Microsoft       |
-|                |            |                  | Forms)                         |
-+----------------+------------+------------------+--------------------------------+
-| **Use Case     | 4.1        | Short            | Enables the system to deliver  |
-| Definition**   |            | Description      | time-sensitive notifications   |
-|                |            |                  | to students about their        |
-|                |            |                  | upcoming appointments,         |
-|                |            |                  | sessions, or health            |
-|                |            |                  | activities.                    |
-|                +------------+------------------+--------------------------------+
-|                | 4.2        | Associated       | - G1.3 Reminders,              |
-|                |            | Goal(s)          |                                |
-|                |            |                  | - G6.3 Promote Usage           |
-|                +------------+------------------+--------------------------------+
-|                | 4.3        | Primary Actor(s) | Student                        |
-|                +------------+------------------+--------------------------------+
-|                | 4.4        | Other Actor(s)   | - Notification Engine          |
-|                |            |                  |                                |
-|                |            |                  | - Campus Wellness Scheduler    |
-|                +------------+------------------+--------------------------------+
-|                | 4.5        | Precondition(s)  | - Student has scheduled events |
-|                |            |                  |   in the system                |
-|                |            |                  |                                |
-|                |            |                  | - notification settings are    |
-|                |            |                  |   enabled for the student      |
-|                |            |                  |                                |
-|                |            |                  | - background notification job  |
-|                |            |                  |   is running                   |
-|                +------------+------------------+--------------------------------+
-|                | 4.5        | Postcondition(s) | - Student receives and views   |
-|                |            |                  |   the notification             |
-|                |            |                  |                                |
-|                |            |                  | - Student may act upon the     |
-|                |            |                  |   notification or dismiss it   |
-|                +------------+------------------+--------------------------------+
-|                | 4.6        | Result           | Students are reminded of       |
-|                |            |                  | important events and prompted  |
-|                |            |                  | to take timely actions (e.g.,  |
-|                |            |                  | attend reschedule)             |
-|                +------------+------------------+--------------------------------+
-|                | 4.7        | Main Scenario    | 1.  Student initiates a        |
-|                |            |                  |     scheduled background job   |
-|                |            |                  |     to check upcoming student  |
-|                |            |                  |     events.                    |
-|                |            |                  |                                |
-|                |            |                  | 2.  System checks if there are |
-|                |            |                  |     any events scheduled for   |
-|                |            |                  |     each student.              |
-|                |            |                  |                                |
-|                |            |                  | 3.  If upcoming events exist,  |
-|                |            |                  |     the system checks if the   |
-|                |            |                  |     student has notifications  |
-|                |            |                  |     enabled.                   |
-|                |            |                  |                                |
-|                |            |                  | 4.  If enabled, the system     |
-|                |            |                  |     generates the notification |
-|                |            |                  |     content.                   |
-|                |            |                  |                                |
-|                |            |                  | 5.  System sends the           |
-|                |            |                  |     notification to the        |
-|                |            |                  |     student.                   |
-|                |            |                  |                                |
-|                |            |                  | 6.  Student receives the       |
-|                |            |                  |     notification.              |
-|                |            |                  |                                |
-|                |            |                  | 7.  Student views the          |
-|                |            |                  |     notification.              |
-|                |            |                  |                                |
-|                |            |                  | 8.  Student chooses to either  |
-|                |            |                  |     take action (e.g., open    |
-|                |            |                  |     schedule, reschedule,      |
-|                |            |                  |     cancel) or dismiss the     |
-|                |            |                  |     notification.              |
-|                +------------+------------------+--------------------------------+
-|                | 4.8        | Exception        | - No upcoming events:          |
-|                |            | Scenario         |                                |
-|                |            |                  |   - System finds no upcoming   |
-|                |            |                  |     events; no notification is |
-|                |            |                  |     generated.                 |
-|                |            |                  |                                |
-|                |            |                  | - Notifications disabled       |
-|                |            |                  |                                |
-|                |            |                  |   - Even if events exist, the  |
-|                |            |                  |     system detects that the    |
-|                |            |                  |     student has disabled       |
-|                |            |                  |     notifications and ends the |
-|                |            |                  |     process.                   |
-|                |            |                  |                                |
-|                |            |                  | - Delivery failure             |
-|                |            |                  |                                |
-|                |            |                  |   - System fails to send       |
-|                |            |                  |     notification (e.g.,        |
-|                |            |                  |     network or queue error);   |
-|                |            |                  |     message is logged for      |
-|                |            |                  |     retry or admin alert.      |
-+----------------+------------+------------------+--------------------------------+
+| **No.**                 | **Section** | **Context/Explanation** | **Details**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+| ----------------------- | ----------- | ----------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **ID**                  | 1.1         | Use Case ID             | UC12                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
+|                         | 1.2         | Name                    | Receive Notification                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
+| **Management**          | 2.1         | Author(s)               | Nur Thayiebah Binti Hamdan                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+|                         | 2.2         | Version                 | 1.0                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
+| **Context**             | 3.1         | Source(s)               | Questionnaire (Microsoft Forms)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
+| **Use Case Definition** | 4.1         | Short Description       | Enables the system to deliver time-sensitive notifications to students about their upcoming appointments, sessions, or health activities.                                                                                                                                                                                                                                                                                                                                                                                                                                    |
+|                         | 4.2         | Associated Goal(s)      | - G1.3 Reminders<br>- G6.3 Promote Usage                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
+|                         | 4.3         | Primary Actor(s)        | Student                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
+|                         | 4.4         | Other Actor(s)          | - Notification Engine<br>- Campus Wellness Scheduler                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
+|                         | 4.5         | Precondition(s)         | - Student has scheduled events in the system<br>- Notification settings are enabled for the student<br>- Background notification job is running                                                                                                                                                                                                                                                                                                                                                                                                                              |
+|                         | 4.6         | Postcondition(s)        | - Student receives and views the notification<br>- Student may act upon the notification or dismiss it                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
+|                         | 4.7         | Result                  | Students are reminded of important events and prompted to take timely actions (e.g., attend, reschedule)                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
+|                         | 4.8         | Main Scenario           | 1. Student initiates a scheduled background job to check upcoming student events.<br>2. System checks if there are any events scheduled for each student.<br>3. If upcoming events exist, the system checks if the student has notifications enabled.<br>4. If enabled, the system generates the notification content.<br>5. System sends the notification to the student.<br>6. Student receives the notification.<br>7. Student views the notification.<br>8. Student chooses to either take action (e.g., open schedule, reschedule, cancel) or dismiss the notification. |
+|                         | 4.9         | Exception Scenario      | - **No upcoming events**: System finds no upcoming events; no notification is generated.<br>- **Notifications disabled**: Even if events exist, the system detects that the student has disabled notifications and ends the process.<br>- **Delivery failure**: System fails to send notification (e.g., network or queue error); message is logged for retry or admin alert.                                                                                                                                                                                                |
 
 : []{#_Toc199101189 .anchor}Table 4.12 - Receive Notification Use Case
 
@@ -1833,78 +1395,22 @@ alt="A screenshot of a computer AI-generated content may be incorrect." />
 
 #### Manage Notification
 
-+-----------------------------+------------------+---------------------------------------------------------------------------+
-| **No.**                     | **Section**      | **Context/Explanation**                                                   |
-+:===============+:===========+:=================+:==========================================================================+
-| **ID**         | 1.1        | Use Case ID      | UC13                                                                      |
-|                +------------+------------------+---------------------------------------------------------------------------+
-|                | 1.2        | Name             | Manage Notification                                                       |
-+----------------+------------+------------------+---------------------------------------------------------------------------+
-| **Management** | 2.1        | Author(s)        | Nur Thayiebah Binti Hamdan                                                |
-|                +------------+------------------+---------------------------------------------------------------------------+
-|                | 2.2        | Version          | 1.0                                                                       |
-+----------------+------------+------------------+---------------------------------------------------------------------------+
-| **Context**    | 3.1        | Source(s)        | Brainstorming (Microsoft Teams), Observation                              |
-+----------------+------------+------------------+---------------------------------------------------------------------------+
-| **Use Case     | 4.1        | Short            |   ----------------------------------------------------------------------- |
-| Definition**   |            | Description      |                                                                           |
-|                |            |                  |   ----------------------------------------------------------------------- |
-|                |            |                  |                                                                           |
-|                |            |                  | Allows students to view and update their notification preferences, such   |
-|                |            |                  | as toggling appointment reminders or AI health tips, to personalize their |
-|                |            |                  | portal experience.                                                        |
-|                +------------+------------------+---------------------------------------------------------------------------+
-|                | 4.2        | Associated       | - G6.3 Promote Usage                                                      |
-|                |            | Goal(s)          |                                                                           |
-|                |            |                  | - G5.3 User-Friendly Interface                                            |
-|                +------------+------------------+---------------------------------------------------------------------------+
-|                | 4.3        | Primary Actor(s) | Student                                                                   |
-|                +------------+------------------+---------------------------------------------------------------------------+
-|                | 4.4        | Other Actor(s)   | Notification Preferences Manager (System component)                       |
-|                +------------+------------------+---------------------------------------------------------------------------+
-|                | 4.5        | Precondition(s)  | - Student is logged in via MMU SSO                                        |
-|                |            |                  |                                                                           |
-|                |            |                  | - Notification settings are already initialized for the student account   |
-|                +------------+------------------+---------------------------------------------------------------------------+
-|                | 4.5        | Postcondition(s) | - Notification preferences are updated and stored in the database         |
-|                |            |                  |                                                                           |
-|                |            |                  | - Confirmation is sent to the student                                     |
-|                +------------+------------------+---------------------------------------------------------------------------+
-|                | 4.6        | Result           | Student customizes their notification experience to match personal        |
-|                |            |                  | preferences.                                                              |
-|                +------------+------------------+---------------------------------------------------------------------------+
-|                | 4.7        | Main Scenario    | 1.  Student logs into the portal via MMU SSO.                             |
-|                |            |                  |                                                                           |
-|                |            |                  | 2.  System authenticated the student session.                             |
-|                |            |                  |                                                                           |
-|                |            |                  | 3.  Student navigates to the Notification Settings page.                  |
-|                |            |                  |                                                                           |
-|                |            |                  | 4.  System fetches current notification preferences and displays them.    |
-|                |            |                  |                                                                           |
-|                |            |                  | 5.  Student views existing preferences.                                   |
-|                |            |                  |                                                                           |
-|                |            |                  | 6.  Student decides to modify preferences.                                |
-|                |            |                  |                                                                           |
-|                |            |                  | 7.  Student submits the updated preferences.                              |
-|                |            |                  |                                                                           |
-|                |            |                  | 8.  System validates the input.                                           |
-|                |            |                  |                                                                           |
-|                |            |                  | 9.  If valid, preferences are saved to the database.                      |
-|                |            |                  |                                                                           |
-|                |            |                  | 10. System sends a confirmation message.                                  |
-|                |            |                  |                                                                           |
-|                |            |                  | 11. Student sees the confirmation.                                        |
-|                +------------+------------------+---------------------------------------------------------------------------+
-|                | 4.8        | Exception        | - Invalid input:                                                          |
-|                |            | Scenario         |                                                                           |
-|                |            |                  |   - If submitted preferences are invalid (e.g., incorrect format), the    |
-|                |            |                  |     system shows an error message and prompts the student to correct it.  |
-|                |            |                  |                                                                           |
-|                |            |                  | - No Changes Made:                                                        |
-|                |            |                  |                                                                           |
-|                |            |                  |   - If the student chooses not to modify preferences, the session ends    |
-|                |            |                  |     without updates.                                                      |
-+----------------+------------+------------------+---------------------------------------------------------------------------+
+| **No.**                 | **Section** | **Context/Explanation** | **Details**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
+| ----------------------- | ----------- | ----------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **ID**                  | 1.1         | Use Case ID             | UC13                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
+|                         | 1.2         | Name                    | Manage Notification                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
+| **Management**          | 2.1         | Author(s)               | Nur Thayiebah Binti Hamdan                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
+|                         | 2.2         | Version                 | 1.0                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
+| **Context**             | 3.1         | Source(s)               | Brainstorming (Microsoft Teams), Observation                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
+| **Use Case Definition** | 4.1         | Short Description       | Allows students to view and update their notification preferences, such as toggling appointment reminders or AI health tips, to personalize their portal experience.                                                                                                                                                                                                                                                                                                                                                                              |
+|                         | 4.2         | Associated Goal(s)      | - G6.3 Promote Usage<br>- G5.3 User-Friendly Interface                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
+|                         | 4.3         | Primary Actor(s)        | Student                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
+|                         | 4.4         | Other Actor(s)          | Notification Preferences Manager (System component)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
+|                         | 4.5         | Precondition(s)         | - Student is logged in via MMU SSO<br>- Notification settings are already initialized for the student account                                                                                                                                                                                                                                                                                                                                                                                                                                     |
+|                         | 4.6         | Postcondition(s)        | - Notification preferences are updated and stored in the database<br>- Confirmation is sent to the student                                                                                                                                                                                                                                                                                                                                                                                                                                        |
+|                         | 4.7         | Result                  | Student customizes their notification experience to match personal preferences.                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+|                         | 4.8         | Main Scenario           | 1. Student logs into the portal via MMU SSO.<br>2. System authenticates the student session.<br>3. Student navigates to the Notification Settings page.<br>4. System fetches current notification preferences and displays them.<br>5. Student views existing preferences.<br>6. Student decides to modify preferences.<br>7. Student submits the updated preferences.<br>8. System validates the input.<br>9. If valid, preferences are saved to the database.<br>10. System sends a confirmation message.<br>11. Student sees the confirmation. |
+|                         | 4.9         | Exception Scenario      | - **Invalid input**: If submitted preferences are invalid (e.g., incorrect format), the system shows an error message and prompts the student to correct it.<br>- **No Changes Made**: If the student chooses not to modify preferences, the session ends without updates.                                                                                                                                                                                                                                                                        |
 
 : []{#_Toc199101190 .anchor}Table 4.13 - Manage Notification Use Case
 
@@ -1931,58 +1437,23 @@ alt="A black background with white text AI-generated content may be incorrect." 
 
 #### View Student Wellness Report
 
-+-----------------------------+------------------+---------------------------------------------------------------------------+
-| **No.**                     | **Section**      | **Context/Explanation**                                                   |
-+:===============+:===========+:=================+:==========================================================================+
-| **ID**         | 1.1        | Use Case ID      | UC14                                                                      |
-|                +------------+------------------+---------------------------------------------------------------------------+
-|                | 1.2        | Name             | View Student Wellness Report                                              |
-+----------------+------------+------------------+---------------------------------------------------------------------------+
-| **Management** | 2.1        | Author(s)        | Farah Hanim binti Mohd Zamri                                              |
-|                +------------+------------------+---------------------------------------------------------------------------+
-|                | 2.2        | Version          | 1.0                                                                       |
-+----------------+------------+------------------+---------------------------------------------------------------------------+
-| **Context**    | 3.1        | Source(s)        | Brainstorming (Microsoft Teams), Observation                              |
-+----------------+------------+------------------+---------------------------------------------------------------------------+
-| **Use Case     | 4.1        | Short            |   ----------------------------------------------------------------------- |
-| Definition**   |            | Description      |                                                                           |
-|                |            |                  |   ----------------------------------------------------------------------- |
-|                |            |                  |                                                                           |
-|                |            |                  | The Admin views the wellness records of a student based on a specified    |
-|                |            |                  | date range.                                                               |
-|                +------------+------------------+---------------------------------------------------------------------------+
-|                | 4.2        | Associated       | - G4.3 -- Dashboard                                                       |
-|                |            | Goal(s)          |                                                                           |
-|                |            |                  | - G6.1 -- Preventive Care                                                 |
-|                +------------+------------------+---------------------------------------------------------------------------+
-|                | 4.3        | Primary Actor(s) | Student                                                                   |
-|                +------------+------------------+---------------------------------------------------------------------------+
-|                | 4.4        | Other Actor(s)   | Health Center System, MMU Online Portal                                   |
-|                +------------+------------------+---------------------------------------------------------------------------+
-|                | 4.5        | Precondition(s)  | - Admin must be logged in via SSO                                         |
-|                |            |                  |                                                                           |
-|                |            |                  | - Student ID and date range must be specified.                            |
-|                +------------+------------------+---------------------------------------------------------------------------+
-|                | 4.6        | Postcondition(s) | - Wellness report is displayed OR                                         |
-|                |            |                  |                                                                           |
-|                |            |                  | - Message: "No records available" is shown                                |
-|                +------------+------------------+---------------------------------------------------------------------------+
-|                | 4.7        | Result           | Student name, metrics, and summary are displayed if records exist         |
-|                +------------+------------------+---------------------------------------------------------------------------+
-|                | 4.8        | Main Scenario    | 1.  Admin selects "View Student Wellness Report".                         |
-|                |            |                  |                                                                           |
-|                |            |                  | 2.  Admin inputs Student ID and date range.                               |
-|                |            |                  |                                                                           |
-|                |            |                  | 3.  System authenticates admin.                                           |
-|                |            |                  |                                                                           |
-|                |            |                  | 4.  Wellness report is retrieved and displayed if available.              |
-|                +------------+------------------+---------------------------------------------------------------------------+
-|                | 4.9        | Alternate        | - If no records are found, system displays "No Wellness Records           |
-|                |            | Scenario(s)      |   Available".                                                             |
-|                +------------+------------------+---------------------------------------------------------------------------+
-|                | 4.10       | Exception        | - If not logged in: System displays "You must be logged in as Admin"      |
-|                |            | Scenario(s)      |   error.                                                                  |
-+----------------+------------+------------------+---------------------------------------------------------------------------+
+| **No.**                 | **Section** | **Context/Explanation** | **Details**                                                                                                                                                                                     |
+| ----------------------- | ----------- | ----------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **ID**                  | 1.1         | Use Case ID             | UC14                                                                                                                                                                                            |
+|                         | 1.2         | Name                    | View Student Wellness Report                                                                                                                                                                    |
+| **Management**          | 2.1         | Author(s)               | Farah Hanim binti Mohd Zamri                                                                                                                                                                    |
+|                         | 2.2         | Version                 | 1.0                                                                                                                                                                                             |
+| **Context**             | 3.1         | Source(s)               | Brainstorming (Microsoft Teams), Observation                                                                                                                                                    |
+| **Use Case Definition** | 4.1         | Short Description       | The Admin views the wellness records of a student based on a specified date range.                                                                                                              |
+|                         | 4.2         | Associated Goal(s)      | - G4.3 -- Dashboard<br>- G6.1 -- Preventive Care                                                                                                                                                |
+|                         | 4.3         | Primary Actor(s)        | Admin                                                                                                                                                                                           |
+|                         | 4.4         | Other Actor(s)          | Health Center System, MMU Online Portal                                                                                                                                                         |
+|                         | 4.5         | Precondition(s)         | - Admin must be logged in via SSO<br>- Student ID and date range must be specified                                                                                                              |
+|                         | 4.6         | Postcondition(s)        | - Wellness report is displayed OR<br>- Message: "No records available" is shown                                                                                                                 |
+|                         | 4.7         | Result                  | Student name, metrics, and summary are displayed if records exist                                                                                                                               |
+|                         | 4.8         | Main Scenario           | 1. Admin selects "View Student Wellness Report".<br>2. Admin inputs Student ID and date range.<br>3. System authenticates admin.<br>4. Wellness report is retrieved and displayed if available. |
+|                         | 4.9         | Alternate Scenario(s)   | - If no records are found, system displays "No Wellness Records Available".                                                                                                                     |
+|                         | 4.10        | Exception Scenario(s)   | - If not logged in: System displays "You must be logged in as Admin" error.                                                                                                                     |
 
 : []{#_Toc199101191 .anchor}Table 4.14 - View Student Wellness Report
 Use Case
@@ -2013,62 +1484,23 @@ alt="A diagram of a program AI-generated content may be incorrect." />
 
 #### Manage Fitness Class
 
-+-----------------------------+------------------+---------------------------------------------------------------------------+
-| **No.**                     | **Section**      | **Context/Explanation**                                                   |
-+:===============+:===========+:=================+:==========================================================================+
-| **ID**         | 1.1        | Use Case ID      | UC15                                                                      |
-|                +------------+------------------+---------------------------------------------------------------------------+
-|                | 1.2        | Name             | Manage Fitness Class                                                      |
-+----------------+------------+------------------+---------------------------------------------------------------------------+
-| **Management** | 2.1        | Author(s)        | Farah Hanim binti Mohd Zamri                                              |
-|                +------------+------------------+---------------------------------------------------------------------------+
-|                | 2.2        | Version          | 1.0                                                                       |
-+----------------+------------+------------------+---------------------------------------------------------------------------+
-| **Context**    | 3.1        | Source(s)        | Observation                                                               |
-+----------------+------------+------------------+---------------------------------------------------------------------------+
-| **Use Case     | 4.1        | Short            |   ----------------------------------------------------------------------- |
-| Definition**   |            | Description      |                                                                           |
-|                |            |                  |   ----------------------------------------------------------------------- |
-|                |            |                  |                                                                           |
-|                |            |                  | Enables the Admin to add, edit, or remove fitness classes from the        |
-|                |            |                  | schedule.                                                                 |
-|                +------------+------------------+---------------------------------------------------------------------------+
-|                | 4.2        | Associated       | - G6.2 -- Administrative Efficiency                                       |
-|                |            | Goal(s)          |                                                                           |
-|                +------------+------------------+---------------------------------------------------------------------------+
-|                | 4.3        | Primary Actor(s) | Admin                                                                     |
-|                +------------+------------------+---------------------------------------------------------------------------+
-|                | 4.4        | Other Actor(s)   | Fitness Center System, MMU Online Portal                                  |
-|                +------------+------------------+---------------------------------------------------------------------------+
-|                | 4.5        | Precondition(s)  | - Admin must be authenticated via SSO                                     |
-|                |            |                  |                                                                           |
-|                |            |                  | - Admin must have access to class management.                             |
-|                +------------+------------------+---------------------------------------------------------------------------+
-|                | 4.6        | Postcondition(s) | - Class data is added, updated, or deleted in the system.                 |
-|                |            |                  |                                                                           |
-|                |            |                  | - Success or error message is shown.                                      |
-|                +------------+------------------+---------------------------------------------------------------------------+
-|                | 4.7        | Result           | Counselling records are retrieved and displayed based on the selected     |
-|                |            |                  | date range.                                                               |
-|                +------------+------------------+---------------------------------------------------------------------------+
-|                | 4.8        | Main Scenario    | 1.  Admin selects "Manage Fitness Class".                                 |
-|                |            |                  |                                                                           |
-|                |            |                  | 2.  Admin chooses to add/edit/delete class.                               |
-|                |            |                  |                                                                           |
-|                |            |                  | 3.  Admin fills/modifies class details.                                   |
-|                |            |                  |                                                                           |
-|                |            |                  | 4.  System updates class database.                                        |
-|                |            |                  |                                                                           |
-|                |            |                  | 5.  Success message is shown.                                             |
-|                +------------+------------------+---------------------------------------------------------------------------+
-|                | 4.9        | Alternate        | - Admin cancels the operation.                                            |
-|                |            | Scenario(s)      |                                                                           |
-|                |            |                  | - Class data validation fails.                                            |
-|                +------------+------------------+---------------------------------------------------------------------------+
-|                | 4.10       | Exception        | - SSO Authentication fails: "Login Required" message.                     |
-|                |            | Scenario(s)      |                                                                           |
-|                |            |                  | - Backend update fails: "Unable to process request. Please try again."    |
-+----------------+------------+------------------+---------------------------------------------------------------------------+
+|**No.**|**Section**|**Context/Explanation**|**Details**|
+|---|---|---|---|
+|**ID**|1.1|Use Case ID|UC15|
+||1.2|Name|Manage Fitness Class|
+|**Management**|2.1|Author(s)|Farah Hanim binti Mohd Zamri|
+||2.2|Version|1.0|
+|**Context**|3.1|Source(s)|Observation|
+|**Use Case Definition**|4.1|Short Description|Enables the Admin to add, edit, or remove fitness classes from the schedule.|
+||4.2|Associated Goal(s)|- G6.2 -- Administrative Efficiency|
+||4.3|Primary Actor(s)|Admin|
+||4.4|Other Actor(s)|Fitness Center System, MMU Online Portal|
+||4.5|Precondition(s)|- Admin must be authenticated via SSO<br>- Admin must have access to class management|
+||4.6|Postcondition(s)|- Class data is added, updated, or deleted in the system<br>- Success or error message is shown|
+||4.7|Result|Fitness class schedule is updated with the new, modified, or removed class information.|
+||4.8|Main Scenario|1. Admin selects "Manage Fitness Class".<br>2. Admin chooses to add/edit/delete class.<br>3. Admin fills/modifies class details.<br>4. System updates class database.<br>5. Success message is shown.|
+||4.9|Alternate Scenario(s)|- Admin cancels the operation<br>- Class data validation fails|
+||4.10|Exception Scenario(s)|- SSO Authentication fails: "Login Required" message<br>- Backend update fails: "Unable to process request. Please try again."|
 
 : []{#_Toc199101192 .anchor}Table 4.15 - Manage Fitness Class Use Case
 
@@ -2099,79 +1531,24 @@ operation fails.
 
 #### Manage Medical Schedule 
 
-+-----------------------------+------------------+---------------------------------------------------------------------------+
-| **No.**                     | **Section**      | **Context/Explanation**                                                   |
-+:===============+:===========+:=================+:==========================================================================+
-| **ID**         | 1.1        | Use Case ID      | UC16                                                                      |
-|                +------------+------------------+---------------------------------------------------------------------------+
-|                | 1.2        | Name             | Manage Medical Schedule                                                   |
-+----------------+------------+------------------+---------------------------------------------------------------------------+
-| **Management** | 2.1        | Author(s)        | Nur Thayiebah Binti Hamdan                                                |
-|                +------------+------------------+---------------------------------------------------------------------------+
-|                | 2.2        | Version          | 1.0                                                                       |
-+----------------+------------+------------------+---------------------------------------------------------------------------+
-| **Context**    | 3.1        | Source(s)        | Observation                                                               |
-+----------------+------------+------------------+---------------------------------------------------------------------------+
-| **Use Case     | 4.1        | Short            |   ----------------------------------------------------------------------- |
-| Definition**   |            | Description      |                                                                           |
-|                |            |                  |   ----------------------------------------------------------------------- |
-|                |            |                  |                                                                           |
-|                |            |                  |   ----------------------------------------------------------------------- |
-|                |            |                  |                                                                           |
-|                |            |                  |   ----------------------------------------------------------------------- |
-|                |            |                  |                                                                           |
-|                |            |                  | Allow staff to add, edit, or remove medical appointment slots through the |
-|                |            |                  | Campus Wellness Portal, enabling better control over medical availability |
-|                |            |                  | scheduling.                                                               |
-|                +------------+------------------+---------------------------------------------------------------------------+
-|                | 4.2        | Associated       | - G6.2 Administrative Efficiency                                          |
-|                |            | Goal(s)          |                                                                           |
-|                +------------+------------------+---------------------------------------------------------------------------+
-|                | 4.3        | Primary Actor(s) | Staff                                                                     |
-|                +------------+------------------+---------------------------------------------------------------------------+
-|                | 4.4        | Other Actor(s)   | Medical Scheduling System                                                 |
-|                +------------+------------------+---------------------------------------------------------------------------+
-|                | 4.5        | Precondition(s)  | - Staff is logged in through MMU SSO                                      |
-|                |            |                  |                                                                           |
-|                |            |                  | - Medical schedule data is available in the system                        |
-|                +------------+------------------+---------------------------------------------------------------------------+
-|                | 4.5        | Postcondition(s) | - Schedule updates are saved and confirmed                                |
-|                |            |                  |                                                                           |
-|                |            |                  | - Confirmation is sent to the staff interface                             |
-|                +------------+------------------+---------------------------------------------------------------------------+
-|                | 4.6        | Result           | Medical appointment slots are accurately updated for student booking.     |
-|                +------------+------------------+---------------------------------------------------------------------------+
-|                | 4.7        | Main Scenario    | 1.  Staff logs into the portal via MMU SSO.                               |
-|                |            |                  |                                                                           |
-|                |            |                  | 2.  System verifies the staff session.                                    |
-|                |            |                  |                                                                           |
-|                |            |                  | 3.  Staff navigates to the Medical Schedule Module.                       |
-|                |            |                  |                                                                           |
-|                |            |                  | 4.  System fetches and displays the current schedule.                     |
-|                |            |                  |                                                                           |
-|                |            |                  | 5.  Staff chooses to add, edit, or delete an appointment slot.            |
-|                |            |                  |                                                                           |
-|                |            |                  | 6.  Staff enters or updates the slot details.                             |
-|                |            |                  |                                                                           |
-|                |            |                  | 7.  System validates the submitted input.                                 |
-|                |            |                  |                                                                           |
-|                |            |                  | 8.  If input is valid, the system attempts to update the schedule in the  |
-|                |            |                  |     database.                                                             |
-|                |            |                  |                                                                           |
-|                |            |                  | 9.  If update is successful, system sends a confirmation message.         |
-|                |            |                  |                                                                           |
-|                |            |                  | 10. Staff sees the confirmation message.                                  |
-|                +------------+------------------+---------------------------------------------------------------------------+
-|                | 4.8        | Exception        | - Invalid Input:                                                          |
-|                |            | Scenario         |                                                                           |
-|                |            |                  |   - System detects errors (e.g., missing date/time) in the slot details   |
-|                |            |                  |     and prompts staff to correct them.                                    |
-|                |            |                  |                                                                           |
-|                |            |                  | - Update failure:                                                         |
-|                |            |                  |                                                                           |
-|                |            |                  |   - Database fails to apply the changes (e.g., due to system error);      |
-|                |            |                  |     system displays error message and returns staff to input form.        |
-+----------------+------------+------------------+---------------------------------------------------------------------------+
+# Use Case UC16 - Manage Medical Schedule
+
+| **Section**             | **No.** | **Field**          | **Details**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
+| ----------------------- | ------- | ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **ID**                  | 1.1     | Use Case ID        | UC16                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
+|                         | 1.2     | Name               | Manage Medical Schedule                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
+| **Management**          | 2.1     | Author(s)          | Nur Thayiebah Binti Hamdan                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
+|                         | 2.2     | Version            | 1.0                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+| **Context**             | 3.1     | Source(s)          | Observation                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
+| **Use Case Definition** | 4.1     | Short Description  | Allow staff to add, edit, or remove medical appointment slots through the Campus Wellness Portal, enabling better control over medical availability scheduling.                                                                                                                                                                                                                                                                                                                                                                                                     |
+|                         | 4.2     | Associated Goal(s) | - G6.2 Administrative Efficiency                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
+|                         | 4.3     | Primary Actor(s)   | Staff                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
+|                         | 4.4     | Other Actor(s)     | Medical Scheduling System                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
+|                         | 4.5     | Precondition(s)    | - Staff is logged in through MMU SSO<br>- Medical schedule data is available in the system                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
+|                         | 4.5     | Postcondition(s)   | - Schedule updates are saved and confirmed<br>- Confirmation is sent to the staff interface                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
+|                         | 4.6     | Result             | Medical appointment slots are accurately updated for student booking.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
+|                         | 4.7     | Main Scenario      | 1. Staff logs into the portal via MMU SSO.<br>2. System verifies the staff session.<br>3. Staff navigates to the Medical Schedule Module.<br>4. System fetches and displays the current schedule.<br>5. Staff chooses to add, edit, or delete an appointment slot.<br>6. Staff enters or updates the slot details.<br>7. System validates the submitted input.<br>8. If input is valid, the system attempts to update the schedule in the database.<br>9. If update is successful, system sends a confirmation message.<br>10. Staff sees the confirmation message. |
+|                         | 4.8     | Exception Scenario | **Invalid Input:**<br>- System detects errors (e.g., missing date/time) in the slot details and prompts staff to correct them.<br><br>**Update failure:**<br>- Database fails to apply the changes (e.g., due to system error); system displays error message and returns staff to input form.                                                                                                                                                                                                                                                                      |
 
 : []{#_Toc199101193 .anchor}Table 4.16 - Manage Medical Schedule Use
 Case
@@ -2199,13 +1576,7 @@ alt="A black background with white dots AI-generated content may be incorrect." 
 
 ## Interface Requirements 
 
-> This section outlines the key interfaces that enable interaction
-> between the Campus Wellness Portal and its users, external systems,
-> and internal modules. All interfaces shall comply with MMU's IT
-> policies, Malaysia PDPA, and where applicable, international
-> regulations such as GDPR. Interfaces are classified as System
-> Interfaces, User Interfaces, Hardware Interfaces, Software Interfaces,
-> and Communication Interfaces.
+This section outlines the key interfaces that enable interaction between the Campus Wellness Portal and its users, external systems, and internal modules. All interfaces shall comply with MMU's IT policies, Malaysia PDPA, and where applicable, international regulations such as GDPR. Interfaces are classified as System Interfaces, User Interfaces, Hardware Interfaces, Software Interfaces, and Communication Interfaces.
 
 ### System Interfaces
 
@@ -2240,11 +1611,9 @@ alt="A black background with white dots AI-generated content may be incorrect." 
 
 - Real-time appointment booking workflows are optimized as follows:
 
-  - **Booking**: Maximum of **3 steps **to schedule an appointment
-    (select service → choose slot → confirm).
+- **Booking**: Maximum of **3 steps **to schedule an appointment (select service → choose slot → confirm).
 
-  - **Slot Display**: Dynamic, real-time listings with **color-coded
-    indicators** (e.g., green = available, red = full).
+- **Slot Display**: Dynamic, real-time listings with **color-coded indicators** (e.g., green = available, red = full).
 
 - The user interface adheres to WCAG 2.1 Level AA accessibility
   standards, ensuring inclusivity for users with visual or motor
@@ -2280,61 +1649,34 @@ alt="A black background with white dots AI-generated content may be incorrect." 
 
 - **Protocols**:
 
-  - All communications between the client and server use **HTTPS over
-    TLS** to ensure encryption and secure data transmission.
+  - All communications between the client and server use **HTTPS over TLS** to ensure encryption and secure data transmission.
 
-  - **RESTful APIs** using JSON are employed for standardized data
-    exchange between system modules and third-party services.
+  - **RESTful APIs** using JSON are employed for standardized data exchange between system modules and third-party services.
 
 - **Message Formats**:
 
-  - **Appointment Notifications** use predefined templates, e.g., "Your
-    gym session is confirmed for \[date\] at \[time\]."
+  - **Appointment Notifications** use predefined templates, e.g., "Your gym session is confirmed for \[date\] at \[time\]."
 
-  - **Error Messages** are clear and contextual, e.g., "Slot
-    unavailable. Please refresh or try again."
+  - **Error Messages** are clear and contextual, e.g., "Slot unavailable. Please refresh or try again."
 
 - **Network Requirements**:
 
-  - A **minimum bandwidth of 10 Mbps** is required to support real-time
-    interactions.
+  - A **minimum bandwidth of 10 Mbps** is required to support real-time interactions.
 
-  - In case of limited connectivity, the system supports a **fallback
-    offline mode**, which provides access to previously cached booking
-    history and schedules.
+  - In case of limited connectivity, the system supports a **fallback offline mode**, which provides access to previously cached booking history and schedules.
 
 ## Performance Requirements
 
-> The system shall meet the following performance goals to ensure
-> responsiveness, scalability, and real-time interaction quality under
-> academic load conditions:
+The system shall meet the following performance goals to ensure responsiveness, scalability, and real-time interaction quality under academic load conditions:
 
-  ----------------------------------------------------------------------------
-  **ID**   **Performance     **Description**
-           Requirement**     
-  -------- ----------------- -------------------------------------------------
-  PR-01    **System Response The system shall respond to 95% of user actions
-           Time**            (e.g., booking, viewing data) within 2 seconds
-                             under normal load conditions.
 
-  PR-02    **Concurrent      The system shall support at least 300 concurrent
-           Users**           users without performance degradation during peak
-                             hours (e.g., enrolment and registration periods).
-
-  PR-03    **Real-time       Availability data for medical slots and gym
-           Updates**         sessions shall be refreshed every 5 minutes to
-                             ensure accurate user-facing information.
-
-  PR-04    **Notification    Confirmation emails and SMS notifications shall
-           Latency**         be dispatched within 30 seconds of completing
-                             booking, rescheduling, or cancellation
-                             operations.
-
-  PR-05    **Scalability**   The system architecture shall be scalable to
-                             support a projected 20% annual increase in
-                             concurrent users and transactions without
-                             requiring full system redesign.
-  ----------------------------------------------------------------------------
+|  **ID**  |  **Performance Requirement**  |   **Description** |
+| ---- | ----- | ----- |
+| PR-01   | **System Response Time** | The system shall respond to 95% of user actions (e.g., booking, viewing data) within 2 seconds under normal load conditions. |
+| PR-02 |   **Concurrent Users** |    The system shall support at least 300 concurrent users without performance degradation during peak hours (e.g., enrolment and registration periods). |
+| PR-03  |  **Real-time Updates**  |    Availability data for medical slots and gym sessions shall be refreshed every 5 minutes to ensure accurate user-facing information. |
+|  PR-04 |   **Notification Latency**  |   Confirmation emails and SMS notifications shall be dispatched within 30 seconds of completing booking, rescheduling, or cancellation operations. |
+|  PR-05 |   **Scalability** | The system architecture shall be scalable to support a projected 20% annual increase in concurrent users and transactions without requiring full system redesign. |
 
   : []{#_Toc199101194 .anchor}Table 4.17 - Performance Requirements
 
@@ -2362,41 +1704,18 @@ alt="A black background with white dots AI-generated content may be incorrect." 
 
 ## Usability Requirements
 
-> These requirements define the system's ease of use, accessibility, and
-> user support capabilities. Usability expectations are guided by ISO
-> 9241-210 for user-centred design and WCAG 2.1 Level AA for digital
-> accessibility compliance. All key features must be accessible within a
-> minimal interaction path (ideally 3 steps) and provide inclusive
-> interaction experiences for diverse users.
+These requirements define the system's ease of use, accessibility, and user support capabilities. Usability expectations are guided by ISO 9241-210 for user-centred design and WCAG 2.1 Level AA for digital accessibility compliance. All key features must be accessible within a minimal interaction path (ideally 3 steps) and provide inclusive interaction experiences for diverse users.
 
-  --------------------------------------------------------------------------
-  **ID**   **Usability        **Description**
-           Requirement**      
-  -------- ------------------ ----------------------------------------------
-  UR-01    **Minimal          All primary user tasks (e.g., booking an
-           Navigation Steps** appointment, viewing sessions) shall be
-                              achievable within 3 clicks from the dashboard.
+# Usability Requirements
 
-  UR-02    **Accessible       The system shall comply with WCAG 2.1 Level
-           Interface**        AA accessibility standards to accommodate
-                              users with visual and motor impairments.
-
-  UR-03    **Mobile           The user interface shall provide a fully
-           Responsiveness**   responsive layout optimized for mobile,
-                              tablet, and desktop screens.
-
-  UR-04    **Error Handling** Clear and context-sensitive error messages
-                              shall be displayed for all failed actions
-                              (e.g., booking conflict, slot unavailable).
-
-  UR-05    **Help &           Contextual tooltips and brief help popups
-           Tooltips**         shall be available on all input fields and
-                              actions.
-
-  UR-06    **User             A first-time user tutorial or walkthrough
-           Onboarding**       shall be available to guide students in using
-                              major features of the portal.
-  --------------------------------------------------------------------------
+| **ID** | **Usability Requirement**    | **Description**                                                                                                                  |
+| ------ | ---------------------------- | -------------------------------------------------------------------------------------------------------------------------------- |
+| UR-01  | **Minimal Navigation Steps** | All primary user tasks (e.g., booking an appointment, viewing sessions) shall be achievable within 3 clicks from the dashboard.  |
+| UR-02  | **Accessible Interface**     | The system shall comply with WCAG 2.1 Level AA accessibility standards to accommodate users with visual and motor impairments.   |
+| UR-03  | **Mobile Responsiveness**    | The user interface shall provide a fully responsive layout optimized for mobile, tablet, and desktop screens.                    |
+| UR-04  | **Error Handling**           | Clear and context-sensitive error messages shall be displayed for all failed actions (e.g., booking conflict, slot unavailable). |
+| UR-05  | **Help & Tooltips**          | Contextual tooltips and brief help popups shall be available on all input fields and actions.                                    |
+| UR-06  | **User Onboarding**          | A first-time user tutorial or walkthrough shall be available to guide students in using major features of the portal.            |
 
   : []{#_Toc199101195 .anchor}Table 4.18 - Usability Requirements
 
@@ -2422,27 +1741,19 @@ alt="A black background with white dots AI-generated content may be incorrect." 
 
 - Session management plans will include:
 
-<!-- -->
-
-- Automatic logout after inactivity such as 15 minutes.
-
-- Secure handling of authentication tokens.
-
-- Following key practices to avoid Cross-Site Request Forgery
-  (CSRF) and Cross-Site Scripting (XSS).
-
-<!-- -->
-
-- The system shall comply with Malaysia Personal Data Protection Act
-  (PDPA) and relevant international standards such as GDPR.
+	- Automatic logout after inactivity such as 15 minutes.
+	
+	- Secure handling of authentication tokens.
+	
+	- Following key practices to avoid Cross-Site Request Forgery
+	  (CSRF) and Cross-Site Scripting (XSS).
+	
+	- The system shall comply with Malaysia Personal Data Protection Act
+	  (PDPA) and relevant international standards such as GDPR.
 
 ## Logical Database Requirements
 
-> The Campus Wellness Portal shall utilize a secure, relational database
-> management system (PostgreSQL) to store, retrieve, and manage
-> structured wellness data. The schema shall support transactional
-> integrity, data security, and efficient query execution for both
-> synchronous and asynchronous operations.
+The Campus Wellness Portal shall utilize a secure, relational database management system (PostgreSQL) to store, retrieve, and manage structured wellness data. The schema shall support transactional integrity, data security, and efficient query execution for both synchronous and asynchronous operations.
 
 ### Entities
 
@@ -2482,8 +1793,7 @@ alt="A black background with white dots AI-generated content may be incorrect." 
 
 - **Optional One-to-One**:
 
-  - Appointment → CounsellingSession (if appointment is
-    counselling-related)
+  - Appointment → CounsellingSession (if appointment is counselling-related)
 
 ### Data Integrity Constraints
 
@@ -2530,104 +1840,54 @@ used:
 
 - **How**: Verification will be conducted through a combination of:
 
-  - **Functional Testing** -- to confirm correct behaviour for each use
-    case
+  - **Functional Testing** -- to confirm correct behaviour for each use case
 
-  - **Unit Testing** -- to validate individual components or functions
-    (e.g., login logic, notification handler)
+  - **Unit Testing** -- to validate individual components or functions (e.g., login logic, notification handler)
 
-  - **Integration Testing** -- to ensure smooth interaction between
-    modules (e.g., login + role routing to admin or student dashboard)
+  - **Integration Testing** -- to ensure smooth interaction between modules (e.g., login + role routing to admin or student dashboard)
 
-  - **System Testing** -- for end-to-end validation of feature
-    workflows(e.g., booking and cancelling appointments)
+  - **System Testing** -- for end-to-end validation of feature workflows(e.g., booking and cancelling appointments)
 
-  - **User Acceptance Testing (UAT)** -- conducted with real student
-    users to validate usability and satisfaction.
+  - **User Acceptance Testing (UAT)** -- conducted with real student users to validate usability and satisfaction.
 
 - **Who:**
 
-  - The Product Team (project developers and analysts) will be
-    responsible for conducting functional, unit, and integration
-    testing.
+  - The Product Team (project developers and analysts) will be responsible for conducting functional, unit, and integration testing.
 
-  - The Quality Assurance (QA) Team or Advisors will lead UAT and
-    document validation results.
+  - The Quality Assurance (QA) Team or Advisors will lead UAT and document validation results.
 
 - **When:**
 
-  - After each major sprint or milestone (e.g., Sprint 1: Medical
-    Services, Sprint 2: Fitness, Sprint 3: Notifications and Reporting).
+  - After each major sprint or milestone (e.g., Sprint 1: Medical Services, Sprint 2: Fitness, Sprint 3: Notifications and Reporting).
 
 - **Where:**
 
-  - All tests will be conducted in a controlled staging environment
-    simulating MMU's infrastructure and access control protocols.
+  - All tests will be conducted in a controlled staging environment simulating MMU's infrastructure and access control protocols.
 
 ## Verification Criteria
 
 Each of the following use cases will have specific success criteria for
 verification:
 
-+-----------+--------------------+---------------------------------------------------------------------------+
-| **Use     | **Use Case Title** | **Verification Criteria**                                                 |
-| Case ID** |                    |                                                                           |
-+:==========+:===================+:==========================================================================+
-| UC01      | Login              | User credentials must be authenticated via SSO, and redirect must occur   |
-|           |                    | within 3 seconds.                                                         |
-+-----------+--------------------+---------------------------------------------------------------------------+
-| UC02      | View Available     | Accurate slot data must be retrieved from database with correct           |
-|           | Medical Slots      | doctor/session mapping.                                                   |
-+-----------+--------------------+---------------------------------------------------------------------------+
-| UC03      | Book Medical       | Slot must be updated in database; confirmation displayed to user          |
-|           | Counselling        | immediately.                                                              |
-|           | Appointment        |                                                                           |
-+-----------+--------------------+---------------------------------------------------------------------------+
-| UC04      | Cancel Appointment | Record must be updated; cancelled slot reappears in availability.         |
-+-----------+--------------------+---------------------------------------------------------------------------+
-| UC05      | Reschedule         | Old appointment is removed, new one added; double-booking is not allowed. |
-|           | Appointment        |                                                                           |
-+-----------+--------------------+---------------------------------------------------------------------------+
-| UC06      | View Counselling   | History is retrieved securely and accurately per student ID.              |
-|           | History            |                                                                           |
-+-----------+--------------------+---------------------------------------------------------------------------+
-| UC07      | View Gym Available | Gym session data must be displayed with date, time, and quota info.       |
-|           | Sessions           |                                                                           |
-+-----------+--------------------+---------------------------------------------------------------------------+
-| UC08      | Book Fitness       | Session booking must update availability count correctly.                 |
-|           | Session            |                                                                           |
-+-----------+--------------------+---------------------------------------------------------------------------+
-| UC09      | Track Wellness     | Metrics shown must match backend calculations (e.g., weight goals, sleep  |
-|           | Progress           | logs).                                                                    |
-+-----------+--------------------+---------------------------------------------------------------------------+
-| UC10      | Set Wellness Goals |   ----------------------------------------------------------------------- |
-|           |                    |                                                                           |
-|           |                    |   ----------------------------------------------------------------------- |
-|           |                    |                                                                           |
-|           |                    |   ----------------------------------------------------------------------- |
-|           |                    |   Goal inputs must be stored and retrieved correctly.                     |
-|           |                    |   ----------------------------------------------------------------------- |
-|           |                    |                                                                           |
-|           |                    |   ----------------------------------------------------------------------- |
-+-----------+--------------------+---------------------------------------------------------------------------+
-| UC11      | Get AI Wellness    | AI-generated tip is displayed within 2 seconds and is relevant to user    |
-|           | Tips               | profile.                                                                  |
-+-----------+--------------------+---------------------------------------------------------------------------+
-| UC12      | Receive            | Notification appears within 3 seconds of trigger condition (e.g., 24h     |
-|           | Notification       | before session).                                                          |
-+-----------+--------------------+---------------------------------------------------------------------------+
-| UC13      | Manage             | User preferences are saved and respected in subsequent notifications.     |
-|           | Notification       |                                                                           |
-+-----------+--------------------+---------------------------------------------------------------------------+
-| UC14      | View Student       | Data must aggregate accurately across goals, sessions, and counselling    |
-|           | Wellness Report    | logs.                                                                     |
-+-----------+--------------------+---------------------------------------------------------------------------+
-| UC15      | Manage Fitness     | Admin can create, update, and delete sessions with real-time effect on    |
-|           | Class              | student view.                                                             |
-+-----------+--------------------+---------------------------------------------------------------------------+
-| UC16      | Manage Medical     | Admin can add/edit slots and the frontend reflects changes within 5       |
-|           | Schedule           | seconds.                                                                  |
-+-----------+--------------------+---------------------------------------------------------------------------+
+| **Use Case ID** | **Use Case Title**                   | **Verification Criteria**                                                                 |
+| --------------- | ------------------------------------ | ----------------------------------------------------------------------------------------- |
+| UC01            | Login                                | User credentials must be authenticated via SSO, and redirect must occur within 3 seconds. |
+| UC02            | View Available Medical Slots         | Accurate slot data must be retrieved from database with correct doctor/session mapping.   |
+| UC03            | Book Medical Counselling Appointment | Slot must be updated in database; confirmation displayed to user immediately.             |
+| UC04            | Cancel Appointment                   | Record must be updated; cancelled slot reappears in availability.                         |
+| UC05            | Reschedule Appointment               | Old appointment is removed, new one added; double-booking is not allowed.                 |
+| UC06            | View Counselling History             | History is retrieved securely and accurately per student ID.                              |
+| UC07            | View Gym Available Sessions          | Gym session data must be displayed with date, time, and quota info.                       |
+| UC08            | Book Fitness Session                 | Session booking must update availability count correctly.                                 |
+| UC09            | Track Wellness Progress              | Metrics shown must match backend calculations (e.g., weight goals, sleep logs).           |
+| UC10            | Set Wellness Goals                   | Goal inputs must be stored and retrieved correctly.                                       |
+| UC11            | Get AI Wellness Tips                 | AI-generated tip is displayed within 2 seconds and is relevant to user profile.           |
+| UC12            | Receive Notification                 | Notification appears within 3 seconds of trigger condition (e.g., 24h before session).    |
+| UC13            | Manage Notification                  | User preferences are saved and respected in subsequent notifications.                     |
+| UC14            | View Student Wellness Report         | Data must aggregate accurately across goals, sessions, and counselling logs.              |
+| UC15            | Manage Fitness Class                 | Admin can create, update, and delete sessions with real-time effect on  student view.     |
+| UC16            | Manage Medical Schedule              | Admin can add/edit slots and the frontend reflects changes within 5 seconds.              |
+
 
 : []{#_Toc199101196 .anchor}Table 5.1 - Verification Criteria
 
@@ -2712,18 +1972,11 @@ The Testing Strategy describes how the Campus Wellness Portal shall be thoroughl
 
 ### Test Entry and Exit Criteria
 
-  -----------------------------------------------------------------------
-  **Entry Criteria**                  **Exit Criteria**
-  ----------------------------------- -----------------------------------
-  All planned features and            All test cases executed with ≥ 90%
-  functionally complete               pass rate
-
-  Test environment is properly set up All critical defects resolved or
-                                      mitigated
-
-  Unit and integration tests are      UAT feedback collected and
-  completed                           incorporated
-  -----------------------------------------------------------------------
+| **Entry Criteria**                             | **Exit Criteria**                            |
+| ---------------------------------------------- | -------------------------------------------- |
+| All planned features and functionally complete | All test cases executed with ≥ 90% pass rate |
+| Test environment is properly set up            | All critical defects resolved or mitigated   |
+| Unit and integration tests are completed       | UAT feedback collected and incorporated      |
 
   : []{#_Toc199101197 .anchor}Table 5.2 - Test Entry And Exit Criteria
 
@@ -2731,10 +1984,7 @@ The Testing Strategy describes how the Campus Wellness Portal shall be thoroughl
 
 ## Assumptions and Dependencies 
 
-> This section outlines the foundational assumptions made during the
-> requirements definition process and identifies critical external
-> dependencies that the successful development and operation of the
-> Campus Wellness Portal depends upon.
+This section outlines the foundational assumptions made during the requirements definition process and identifies critical external dependencies that the successful development and operation of the Campus Wellness Portal depends upon.
 
 ### Assumptions
 
@@ -2770,152 +2020,97 @@ The Testing Strategy describes how the Campus Wellness Portal shall be thoroughl
 
 - **System Integration APIs:**
 
-> The portal\'s functionality depends on real-time API availability from
-> the []{dir="rtl"}health system, []{dir="rtl"}fitness sessions
-> schedule, the university scheduling platform, and notification gateway
-> services (e.g., email and SMS dispatch systems).
+The portal\'s functionality depends on real-time API availability from
+the []{dir="rtl"}health system, []{dir="rtl"}fitness sessions
+schedule, the university scheduling platform, and notification gateway
+services (e.g., email and SMS dispatch systems).
 
 - **Institutional Data Feeds:**
 
-> The system relies on regular data synchronization with MMU\'s student
-> information system (CLiC) for user metadata such as program
-> enrollment, faculty assignment, and role designation.
+The system relies on regular data synchronization with MMU\'s student
+information system (CLiC) for user metadata such as program
+enrollment, faculty assignment, and role designation.
 
 - **Regulatory Compliance:**
 
-> Compliance with MMU IT governance, Malaysian Personal Data Protection
-> Act (PDPA), and other relevant privacy regulations is required to
-> deploy features involving personal health information (PHI).
+Compliance with MMU IT governance, Malaysian Personal Data Protection
+Act (PDPA), and other relevant privacy regulations is required to
+deploy features involving personal health information (PHI).
 
 - **Middleware Components:**
 
-> For legacy systems lacking modern RESTful interfaces (e.g., older
-> modules of CLiC), the portal depends on intermediate middleware or API
-> wrappers to bridge communication.
+For legacy systems lacking modern RESTful interfaces (e.g., older
+modules of CLiC), the portal depends on intermediate middleware or API
+wrappers to bridge communication.
 
 - **Future Expansion Modules:**
 
-> The design assumes future enhancement via AI-based modules (e.g.,
-> health coaching, smart goal suggestions) which will require access to
-> anonymized historical usage data and behavioural metrics.
+The design assumes future enhancement via AI-based modules (e.g.,
+health coaching, smart goal suggestions) which will require access to
+anonymized historical usage data and behavioural metrics.
 
 ## Glossary
 
-> This glossary provides the definitions for key terms that appear in
-> the SRS. These will help clarify technical or domain-specific
-> vocabulary used throughout the document.
+This glossary provides the definitions for key terms that appear in
+the SRS. These will help clarify technical or domain-specific
+vocabulary used throughout the document.
 
-  -------------------------------------------------------------------------
-  **Term**         **Definitions**
-  ---------------- --------------------------------------------------------
-  **Appointment    Backend system module responsible for scheduling,
-  Service**        booking, cancelling, and managing medical and
-                   counselling appointments.
-
-  **Wellness       A measurable target set by students related to their
-  Goal**           health (e.g., number of gym sessions/week).
-
-  **Notification   A system component that generates and dispatches
-  Service**        reminders, confirmations, and alerts via email or SMS.
-
-  **Fitness        A structured, scheduled activity (e.g., cardio, yoga)
-  Session**        available at the campus gym, bookable via the portal.
-
-  **Single Sign-On Authentication mechanism allowing users to log in once
-  (SSO)**          and gain access to multiple systems.
-
-  **OAuth 2.0**    An open protocol for secure delegated access, used for
-                   MMU SSO authentication.
-
-  **Counselling    A personal log of previous mental health support
-  History**        sessions attended by a student.
-
-  **AI Wellness    Data-driven recommendations generated by an AI module
-  Tips**           based on user behavior, goals, or trends.
-
-  **WellnessDB**   Central database that stores user goals, health metrics,
-                   and progress tracking information.
-
-  **SMART Goals**  Structured goal-setting framework ensuring goals are
-                   Specific, Measurable, Achievable, Relevant, and
-                   Time-bound.
-
-  **Student        A compiled overview of a student's activity and
-  Wellness         participation in wellness programs.
-  Report**         
-
-  **Appointment    A time window available for booking medical counselling
-  Slot**           services.
-
-  **Notification   Settings defined by the user for receiving alerts and
-  Preferences**    reminders.
-  -------------------------------------------------------------------------
+|  **Term**  |       **Definitions** |
+|  ----------- | -------------------------------------------------------- |
+|  **Appointment Service** |   Backend system module responsible for scheduling, booking, cancelling, and managing medical and counselling appointments. |
+|  **Wellness Goal** |      A measurable target set by students related to their health (e.g., number of gym sessions/week). |
+|  **Notification Service** |  A system component that generates and dispatches reminders, confirmations, and alerts via email or SMS. |
+|  **Fitness Session**   |    A structured, scheduled activity (e.g., cardio, yoga) available at the campus gym, bookable via the portal. |
+|  **Single Sign-On (SSO)** | Authentication mechanism allowing users to log in once and gain access to multiple systems. |
+|  **OAuth 2.0**  |  An open protocol for secure delegated access, used for MMU SSO authentication. |
+|  **Counselling History** |  A personal log of previous mental health support sessions attended by a student. |
+|  **AI Wellness Tips**  |  Data-driven recommendations generated by an AI module based on user behavior, goals, or trends. |
+| **WellnessDB**  | Central database that stores user goals, health metrics, and progress tracking information. |
+| **SMART Goals** | Structured goal-setting framework ensuring goals are Specific, Measurable, Achievable, Relevant, and Time-bound. |
+|  **Student Wellness Report** |     A compiled overview of a student's activity and participation in wellness programs. |
+|  **Appointment Slot** |   A time window available for booking medical counselling services. |
+|  **Notification Preferences** | Settings defined by the user for receiving alerts and reminders. |
 
   : []{#_Toc199101198 .anchor}Table 6.1 - Glossary
 
 ## Acronyms and Abbreviations
 
-  -------------------------------------------------------------------------
-  **Acronym**   **Full Term**
-  ------------- -----------------------------------------------------------
-  **SSO**       Single Sign-On
-
-  **AI**        Artificial Intelligence
-
-  **UAT**       User Acceptance Testing
-
-  **MVP**       Minimum Viable Product
-
-  **DB**        Database
-
-  **MMU**       Multimedia University
-
-  **UC**        Use Case
-
-  **SRS**       Software Requirements Specification
-
-  **UI/UX**     User Interface / User Experience
-
-  **API**       Application Programming Interface
-
-  **DBMS**      Database Management System
-
-  **HTTPS**     Hypertext Transfer Protocol Secure
-
-  **TLS**       Transport Layer Security
-
-  **OTP**       One-Time Password
-
-  **OTA**       One-Time Authentication
-
-  **PDPA**      Personal Data Protection Act (Malaysia)
-
-  **MVP**       Minimum Viable Product
-
-  **RBAC**      Role-Based Access Control
-
-  **CD**        Class Diagram
-
-  **RTM**       Requirements Traceability Matrix
-
-  **KPI**       Key Performance Indicator
-
-  **API**       Application Programming Interface
-  -------------------------------------------------------------------------
+| **Acronym** | **Full Term**                           |
+| ----------- | --------------------------------------- |
+| **API**     | Application Programming Interface       |
+| **AI**      | Artificial Intelligence                 |
+| **CD**      | Class Diagram                           |
+| **DB**      | Database                                |
+| **DBMS**    | Database Management System              |
+| **HTTPS**   | Hypertext Transfer Protocol Secure      |
+| **KPI**     | Key Performance Indicator               |
+| **MMU**     | Multimedia University                   |
+| **MVP**     | Minimum Viable Product                  |
+| **OTA**     | One-Time Authentication                 |
+| **OTP**     | One-Time Password                       |
+| **PDPA**    | Personal Data Protection Act (Malaysia) |
+| **RBAC**    | Role-Based Access Control               |
+| **RTM**     | Requirements Traceability Matrix        |
+| **SRS**     | Software Requirements Specification     |
+| **SSO**     | Single Sign-On                          |
+| **TLS**     | Transport Layer Security                |
+| **UAT**     | User Acceptance Testing                 |
+| **UC**      | Use Case                                |
+| **UI/UX**   | User Interface / User Experience        |
 
   : []{#_Toc199101199 .anchor}Table 6.2 - Acronyms and Abbreviations
 
 ## User Stories
 
-> User stories offer a simple but powerful way to understand what users
-> expect from the system. Instead of focusing on technical details, they
-> highlight real needs from the users' point of view. Including these
-> stories helps ensure that the system design remains focused on
-> providing meaningful value to the people who will use it every day.
-> They also support decision-making during development by showing what
-> matters most to different user groups.
->
-> **Example User Stories**
+User stories offer a simple but powerful way to understand what users
+expect from the system. Instead of focusing on technical details, they
+highlight real needs from the users' point of view. Including these
+stories helps ensure that the system design remains focused on
+providing meaningful value to the people who will use it every day.
+They also support decision-making during development by showing what
+matters most to different user groups.
+
+**Example User Stories**
 
 - I'm a student, and I want to see up-to-the-minute info on gym
   sessions---like, when they're happening, how full they are, and if
@@ -2937,20 +2132,20 @@ The Testing Strategy describes how the Campus Wellness Portal shall be thoroughl
   demographics---so I can prove the program's worth (or see what's
   flopping) and steer things in the right direction.
 
-> These user stories provide contextual insight into key system features
-> described in the Functional Requirements section and serve as a
-> reference point for validation during design, development, and user
-> acceptance testing.
+These user stories provide contextual insight into key system features
+described in the Functional Requirements section and serve as a
+reference point for validation during design, development, and user
+acceptance testing.
 
 ## Class Diagram 
 
-> **SRS Artifact**\
-> **Diagram ID:** CD-01\
-> **Version:** 1.0\
-> **Date:** 2025-05-23\
-> **Author:**  Mohammed Aamena Mohammed Abdulkarem, Mohammed Yousef
-> Mohammed Abdulkarem, Nur Thayiebah Binti Hamdan, Farah Hanim Binti
-> Mohd Zamri
+**SRS Artifact**
+**Diagram ID:** CD-01
+**Version:** 1.0
+**Date:** 2025-05-23
+**Author:**  Mohammed Aamena Mohammed Abdulkarem, Mohammed Yousef
+Mohammed Abdulkarem, Nur Thayiebah Binti Hamdan, Farah Hanim Binti
+Mohd Zamri
 
 ![Figure 6.1 -- uml Class diagram for campus wellness
 portal](./images/media/image36.png){width="7.421386701662292in"
@@ -2967,80 +2162,71 @@ The class diagram in *Figure 6.1* models the core domain entities and their stat
 
 - **User (Abstract Class)**
 
-> Represents a generic system user with common attributes such
-> as userID: String, name: String, email: String, and authentication
-> credentials (passwordHash: String). This abstract class provides a
-> common interface and behavior for all user types, promoting reuse and
-> consistent user management across the system.
+Represents a generic system user with common attributes such
+as userID: String, name: String, email: String, and authentication
+credentials (passwordHash: String). This abstract class provides a
+common interface and behavior for all user types, promoting reuse and
+consistent user management across the system.
 
 - **Student (Subclass of User)**
 
-> Models the primary actor interacting with wellness services. Students
-> can view and book appointments, set wellness goals, track progress,
-> and access fitness sessions. Attributes include studentID:
-> String, preferences: PreferencesType, and profileStatus: Enum.
-> Operations include booking management and goal tracking.
+Models the primary actor interacting with wellness services. Students
+can view and book appointments, set wellness goals, track progress,
+and access fitness sessions. Attributes include studentID:
+String, preferences: PreferencesType, and profileStatus: Enum.
+Operations include booking management and goal tracking.
 
 - **Admin (Subclass of User)**
 
-> Represents administrative staff responsible for managing schedules,
-> monitoring system usage, and maintaining data integrity. Admins have
-> elevated privileges for system configuration, user management, and
-> oversight.
+Represents administrative staff responsible for managing schedules,
+monitoring system usage, and maintaining data integrity. Admins have
+elevated privileges for system configuration, user management, and
+oversight.
 
 - **Appointment**
 
-> Encapsulates booking details for medical or counseling sessions, with
-> attributes such as appointmentID: String, dateTime: DateTime, status:
-> Enum {Scheduled, Cancelled, Completed}, and associatedUser: User.
-> Operations include creation, modification, cancellation, and
-> notification triggering.
+Encapsulates booking details for medical or counseling sessions, with
+attributes such as appointmentID: String, dateTime: DateTime, status:
+Enum {Scheduled, Cancelled, Completed}, and associatedUser: User.
+Operations include creation, modification, cancellation, and
+notification triggering.
 
 - **FitnessSession**
 
-> Defines gym or fitness class sessions with attributes like sessionID:
-> String, startTime: DateTime, capacity: Integer, genderRestriction:
-> Enum {Male, Female, None}, and currentEnrollment: Integer. Supports
-> availability checking and booking management.
+Defines gym or fitness class sessions with attributes like sessionID:
+String, startTime: DateTime, capacity: Integer, genderRestriction:
+Enum {Male, Female, None}, and currentEnrollment: Integer. Supports
+availability checking and booking management.
 
 - **WellnessGoal**
 
-> Represents personal wellness objectives set by students, characterized
-> by goalID: String, activityType: String, frequencyPerWeek:
-> Integer, durationInWeeks: Integer, and progress: Float. Supports
-> validation according to SMART goal principles and triggers
-> notification events upon progress milestones.
+Represents personal wellness objectives set by students, characterized by goalID: String, activityType: String, frequencyPerWeek: Integer, durationInWeeks: Integer, and progress: Float. Supports validation according to SMART goal principles and triggers notification events upon progress milestones.
 
 - **Notification**
 
-> Manages communication with users, including booking confirmations,
-> cancellations, reminders, and motivational messages. Attributes
-> include notificationID: String, type: Enum, deliveryStatus: Enum,
-> and timestamp: DateTime. Integrates with external email and SMS
-> services ensuring reliable and timely delivery with retry mechanisms.
+Manages communication with users, including booking confirmations,
+cancellations, reminders, and motivational messages. Attributes
+include notificationID: String, type: Enum, deliveryStatus: Enum,
+and timestamp: DateTime. Integrates with external email and SMS
+services ensuring reliable and timely delivery with retry mechanisms.
 
 ### Relationships
 
 - **Generalization (Inheritance)**
 
-> The abstract **User** class is specialized
-> into **Student** and **Admin** classes. This generalization
-> is *complete* and *disjoint*, ensuring every User instance is either a
-> Student or an Admin, but never both. This constraint is explicitly
-> modeled in UML with the {complete, disjoint} notation.
+The abstract **User** class is specialized
+into **Student** and **Admin** classes. This generalization
+is *complete* and *disjoint*, ensuring every User instance is either a
+Student or an Admin, but never both. This constraint is explicitly
+modeled in UML with the {complete, disjoint} notation.
 
 - **Associations**
 
-  - **Student** is associated with
-    multiple **Appointment**, **FitnessSession**,
-    and **WellnessGoal** instances, representing the student's
-    interactions with wellness services.
+  - **Student** is associated with multiple **Appointment**, **FitnessSession**, and **WellnessGoal** instances, representing the student's interactions with wellness services.
 
-  - **Appointment** is linked to a single **User** (either Student or
-    Admin), indicating booking ownership and administrative oversight.
+  - **Appointment** is linked to a single **User** (either Student or Admin), indicating booking ownership and administrative oversight.
 
-  - **Notification** is associated with **User**, representing
-    communication channels to individual users.
+  - **Notification** is associated with **User**, representing communication channels to individual users.
 
 - **Multiplicity and Navigability**
 
@@ -3048,141 +2234,69 @@ The class diagram in *Figure 6.1* models the core domain entities and their stat
 
   - An **Appointment** is linked to exactly one (1) **User**.
 
-  - A **FitnessSession** can have multiple enrolled Students up to its
-    capacity.
+  - A **FitnessSession** can have multiple enrolled Students up to its capacity.
 
-  - Navigability arrows indicate that the system can retrieve a
-    Student's appointments and send Notifications to Users.
+  - Navigability arrows indicate that the system can retrieve a Student's appointments and send Notifications to Users.
 
 ### Constraints and Business Rules
 
 - **Role Exclusivity:**
 
-> A User instance must be exclusively either a Student or an Admin,
-> never both, enforcing security and operational policies.
+A User instance must be exclusively either a Student or an Admin, never both, enforcing security and operational policies.
 
 - **Appointment Integrity:**
 
-> Appointments must be linked to authenticated Students and managed or
-> approved by Admins to ensure valid scheduling, avoid conflicts, and
-> maintain data consistency.
+Appointments must be linked to authenticated Students and managed or approved by Admins to ensure valid scheduling, avoid conflicts, and maintain data consistency.
 
 - **Session Capacity:**
 
-> FitnessSession enforces capacity limits and gender-specific
-> restrictions to comply with wellness center policies. Overbooking is
-> prevented.
+FitnessSession enforces capacity limits and gender-specific restrictions to comply with wellness center policies. Overbooking is prevented.
 
 - **Goal Validation:**
 
-> WellnessGoal entries must comply with predefined formats and ranges
-> (e.g., frequency per week must be a positive integer within allowed
-> limits), supporting SMART goal criteria.
+WellnessGoal entries must comply with predefined formats and ranges (e.g., frequency per week must be a positive integer within allowed limits), supporting SMART goal criteria.
 
 - **Notification Reliability:**
 
-> Notifications must be delivered reliably and timely, with automated
-> retry attempts for delivery failures and confirmation of receipt
-> logged.
+Notifications must be delivered reliably and timely, with automated retry attempts for delivery failures and confirmation of receipt logged.
 
 ### Traceability to Requirements
 
-> Each class and relationship supports specific functional and
-> non-functional requirements documented in the system requirements
-> specification (SRS):
+Each class and relationship supports specific functional and non-functional requirements documented in the system requirements specification (SRS):
 
-- The **Student** and **Appointment** classes directly fulfill use cases
-  related to booking, rescheduling, and cancelling appointments.
+- The **Student** and **Appointment** classes directly fulfill use cases related to booking, rescheduling, and cancelling appointments.
 
-- The **FitnessSession** class supports use cases for viewing and
-  booking fitness classes with real-time availability.
+- The **FitnessSession** class supports use cases for viewing and booking fitness classes with real-time availability.
 
-- The **WellnessGoal** and **Notification** classes enable personal goal
-  setting, progress tracking, and motivational feedback, supporting user
+- The **WellnessGoal** and **Notification** classes enable personal goal setting, progress tracking, and motivational feedback, supporting user
   engagement.
 
-> These mappings ensure traceability from system requirements through to
-> design artifacts, facilitating verification, validation, and impact
-> analysis.
+These mappings ensure traceability from system requirements through to design artifacts, facilitating verification, validation, and impact analysis.
 
 ### Compliance with ISO/IEC/IEEE 29148:2018
 
-> This class diagram description follows ISO/IEC/IEEE 29148:2018
-> guidelines for clarity, precision, and traceability, ensuring the
-> artifact supports verifiable and consistent system design aligned with
-> stakeholder requirements.
+This class diagram description follows ISO/IEC/IEEE 29148:2018 guidelines for clarity, precision, and traceability, ensuring the artifact supports verifiable and consistent system design aligned with stakeholder requirements.
 
 ## Requirement Traceability Matrix (RTM)
 
-  -----------------------------------------------------------------------------------
-  **Requirement   **Description**   **Use Case     **Source**       **Verification
-  ID**                              ID**                            Method**
-  --------------- ----------------- -------------- ---------------- -----------------
-  REQ-01          Secure SSO Login  UC-01          Questionnaire    System Test
-                                                                    (Valid/Invalid
-                                                                    Login Flow)
-
-  REQ-02          Real-time Medical UC-02          Questionnaire,   System Test (Slot
-                  Slot Viewing                     Observation      Retrieval)
-
-  REQ-03          Book Medical      UC-03          Questionnaire,   Integration Test
-                  Appointment                      Observation      (Booking and
-                                                                    Database)
-
-  REQ-04          Cancel            UC-04          Questionnaire    System Test
-                  Appointment                                       (Cancel +
-                                                                    Feedback Message)
-
-  REQ-05          Reschedule        UC-05          Questionnaire    System Test
-                  Appointment                                       (Rescheduling
-                                                                    Workflow)
-
-  REQ-06          View Counselling  UC-06          Questionnaire    System Test
-                  History                                           (Authenticated
-                                                                    Data Access)
-
-  REQ-07          View Fitness      UC-07          Questionnaire    System Test
-                  Sessions (Incl.                                   (Session Listing
-                  Gender-Specific                                   Logic)
-                  Options)                                          
-
-  REQ-08          Book Fitness      UC-08          Questionnaire    Integration Test
-                  Session                                           (Booking Module
-                                                                    and Database)
-
-  REQ-09          Track Wellness    UC-09          Questionnaire    System Test
-                  Progress                                          (Chart Display
-                                                                    Logic)
-
-  REQ-10          Set Wellness      UC-10          Questionnaire    System Test (Goal
-                  Goals                                             Saving + Update)
-
-  REQ-11          AI Wellness Tips  UC-11          Brainstorming,   Simulation/Unit
-                                                   Questionnaire    Testing (AI Tip
-                                                                    Generation)
-
-  REQ-12          Receive           UC-12          Questionnaire    System Test
-                  Notifications                                     (Trigger and
-                                                                    Delivery)
-
-  REQ-13          Manage            UC-13          Brainstorming,   System Test
-                  Notification                     Observation      (Preferences
-                  Preferences                                       Saved Correctly)
-
-  REQ-14          View Wellness     UC-14          Brainstorming,   System Test
-                  Report                           Observation      (Report
-                                                                    Generation and
-                                                                    Viewing)
-
-  REQ-15          Manage Fitness    UC-15          Observation      Integration Test
-                  Class                                             (Admin UI +DB
-                                                                    Update)
-
-  REQ-16          Manage Medical    UC-16          Observation      Integration Test
-                  Schedule                                          (Class
-                                                                    Scheduling +
-                                                                    Admin Interface)
-  -----------------------------------------------------------------------------------
+| **Requirement ID** | **Description**                                       | **Use Case ID** | **Source**                   | **Verification Method**                               |
+| ------------------ | ----------------------------------------------------- | --------------- | ---------------------------- | ----------------------------------------------------- |
+| REQ-01             | Secure SSO Login                                      | UC-01           | Questionnaire                | System Test (Valid/Invalid Login Flow)                |
+| REQ-02             | Real-time Medical Slot Viewing                        | UC-02           | Questionnaire, Observation   | System Test (Slot Retrieval)                          |
+| REQ-03             | Book Medical Appointment                              | UC-03           | Questionnaire, Observation   | Integration Test (Booking and Database)               |
+| REQ-04             | Cancel Appointment                                    | UC-04           | Questionnaire                | System Test (Cancel + Feedback Message)               |
+| REQ-05             | Reschedule Appointment                                | UC-05           | Questionnaire                | System Test (Rescheduling Workflow)                   |
+| REQ-06             | View Counselling History                              | UC-06           | Questionnaire                | System Test (Authenticated Data Access)               |
+| REQ-07             | View Fitness Sessions (Incl. Gender-Specific Options) | UC-07           | Questionnaire                | System Test (Session Listing Logic)                   |
+| REQ-08             | Book Fitness Session                                  | UC-08           | Questionnaire                | Integration Test (Booking Module and Database)        |
+| REQ-09             | Track Wellness Progress                               | UC-09           | Questionnaire                | System Test (Chart Display Logic)                     |
+| REQ-10             | Set Wellness Goals                                    | UC-10           | Questionnaire                | System Test (Goal Saving + Update)                    |
+| REQ-11             | AI Wellness Tips                                      | UC-11           | Brainstorming, Questionnaire | Simulation/Unit Testing (AI Tip Generation)           |
+| REQ-12             | Receive Notifications                                 | UC-12           | Questionnaire                | System Test (Trigger and Delivery)                    |
+| REQ-13             | Manage Notification Preferences                       | UC-13           | Brainstorming, Observation   | System Test (Preferences Saved Correctly)             |
+| REQ-14             | View Wellness Report                                  | UC-14           | Brainstorming, Observation   | System Test (Report Generation and Viewing)           |
+| REQ-15             | Manage Fitness Class                                  | UC-15           | Observation                  | Integration Test (Admin UI +DB Update)                |
+| REQ-16             | Manage Medical Schedule                               | UC-16           | Observation                  | Integration Test (Class Scheduling + Admin Interface) |
 
   : []{#_Toc199101200 .anchor}Table 6.3 - Requirement Traceability
   Matrix
@@ -3556,47 +2670,22 @@ gender-specific sessions, 5 (25%) \"can tolerate it,\" 1 (5%) is
 
 ###  Kano Model Analysis 
 
-  --------------------------------------------------------------------------------------
-  Features                  Satisfaction   Functionality   \"Consumer Need Level
-                                                           (\"\"Expected Need\"\",
-                                                           \"\"Normal Need\"\", and
-                                                           \"\"Exciting Need\"\")\"
-  ------------------------- -------------- --------------- -----------------------------
-  Wellness Goals Setting    3              3               Normal Need
+| Features                      | Satisfaction | Functionality | Consumer Need Level |
+| ----------------------------- | ------------ | ------------- | ------------------- |
+| Wellness Goals Setting        | 3            | 3             | Normal Need         |
+| Book Fitness Session          | 4            | 4             | Normal Need         |
+| Book Medical Appointment      | 1            | 5             | Expected Need       |
+| Cancel/Reschedule Appointment | 4            | 4             | Normal Need         |
+| View Counselling History      | 3            | 3             | Normal Need         |
+| Gender-Specific Gym Sessions  | 3            | 4             | Normal Need         |
+| Notifications/Reminders       | 3            | 4             | Normal Need         |
+| Real-time Medical Slots       | 1            | 3             | Expected Need       |
+| Secure SSO Login              | 1            | 4             | Expected Need       |
+| Track Wellness Progress       | 3            | 3             | Normal Need         |
+| View Fitness Sessions         | 3            | 5             | Normal Need         |
+| AI Wellness Tips              | 5            | 1             | Exciting Need       |
+| Manage Notification           | 5            | 3             | Exciting Need       |
 
-  Book Fitness Session      4              4               Normal Need
-
-  Book Medical Appointment  1              5               Expected Need
-
-  Cancel/Reschedule         4              4               Normal Need
-  Appointment                                              
-
-  View Counselling History  3              3               Normal Need
-
-  Gender-Specific Gym       3              4               Normal Need
-  Sessions                                                 
-
-  Notifications/Reminders   3              4               Normal Need
-
-  Real-time Medical Slots   1              3               Expected Need
-
-  Secure SSO Login          1              4               Expected Need
-
-  Track Wellness Progress   3              3               Normal Need
-
-  View Fitness Sessions     3              5               Normal Need
-
-  AI Wellness Tips          5              1               Exciting Need
-
-  Manage Notification       5              3               Exciting Need
-
-  View Student Wellness     5              2               Exciting Need
-  Report                                                   
-
-  Manage Fitness Class      5              4               Normal Need
-
-  Manage Medical Schedule   2              5               Expected Need
-  --------------------------------------------------------------------------------------
 
   : []{#_Toc199101201 .anchor}Table 6.4 - Kano Functional Classification
   with Satisfaction-Functionality with Results
@@ -3613,7 +2702,7 @@ alt="A graph of different colored lines AI-generated content may be incorrect." 
 
 #### Must-be (Basic) Requirements
 
-> These are essential for baseline functionality:
+These are essential for baseline functionality:
 
 - **REQ-01:** Secure SSO Login
 
@@ -3625,8 +2714,8 @@ alt="A graph of different colored lines AI-generated content may be incorrect." 
 
 #### One-dimensional (Satisfiers)
 
-> These features provide proportional increases in user satisfaction
-> based on the quality of implementation:
+These features provide proportional increases in user satisfaction
+based on the quality of implementation:
 
 - **REQ-04:** Cancel Appointment
 
@@ -3648,7 +2737,7 @@ alt="A graph of different colored lines AI-generated content may be incorrect." 
 
 #### Attractive (Delighters)
 
-> These features exceed baseline expectations and foster user delight:
+These features exceed baseline expectations and foster user delight:
 
 - **REQ-11:** AI Wellness Tips
 
@@ -3658,106 +2747,73 @@ alt="A graph of different colored lines AI-generated content may be incorrect." 
 
 ### Observation Checklist 
 
-> **MMU Online Portal and Campus Wellness Systems**
->
-> **Observation Team:**
->
-> FARAH HANIM BINTI MOHD ZAMRI
->
-> NUR THAYIEBAH BINTI HAMDAN
->
-> MOHAMMED AAMENA MOHAMMED ABDULKAREM
->
-> MOHAMMED YOUSEF MOHAMMED ABDULKAREM
->
-> **Date**: 25 April 2025
->
-> **Location**: MMU Center / Online Review
->
-> **Observation Method**: In-person / Video-Based Analysis
+**MMU Online Portal and Campus Wellness Systems**
 
-  -----------------------------------------------------------------------------------
-  **Observation Point**                                      **Status**   **Notes**
-  ---------------------------------------------------------- ------------ -----------
-  User successfully authenticates via MMU Online Portal      ☑            
+**Observation Team:**
 
-  User navigates to wellness-related features (e.g.,         ☑            
-  appointment booking, scheduling) with minimal support                   
+FARAH HANIM BINTI MOHD ZAMRI
 
-  System errors or delays encountered during interaction     ☑            
+NUR THAYIEBAH BINTI HAMDAN
 
-  User demonstrates understanding of key functionalities     ☑            
+MOHAMMED AAMENA MOHAMMED ABDULKAREM
 
-  Use of help/search functionality if difficulties arise     ☑            
+MOHAMMED YOUSEF MOHAMMED ABDULKAREM
 
-  Behavioural signs of confusion or hesitation observed      ☑            
+**Date**: 25 April 2025
 
-  Preference for real-time availability explicitly noted or  ☑            
-  implied                                                                 
-  -----------------------------------------------------------------------------------
+**Location**: MMU Center / Online Review
+
+**Observation Method**: In-person / Video-Based Analysis
+
+| **Observation Point**                                      | **Status** | **Notes** |
+|------------------------------------------------------------|------------|-----------|
+| User successfully authenticates via MMU Online Portal      | ☑          |           |
+| User navigates to wellness-related features (e.g., appointment booking, scheduling) with minimal support | ☑ |           |
+| System errors or delays encountered during interaction     | ☑          |           |
+| User demonstrates understanding of key functionalities     | ☑          |           |
+| Use of help/search functionality if difficulties arise     | ☑          |           |
+| Behavioural signs of confusion or hesitation observed      | ☑          |           |
+| Preference for real-time availability explicitly noted or implied | ☑    |           |
 
   : []{#_Toc199101202 .anchor}Table 6.5 - User Interaction and Behaviour
   Checklist
 
-  --------------------------------------------------------------------------------
-  **Observation Point**                                   **Status**   **Notes**
-  ------------------------------------------------------- ------------ -----------
-  User attempts to schedule/reschedule an appointment     ☑            
-
-  Interface design supports intuitive scheduling          ☑            
-
-  Bottlenecks in the appointment workflow identified      ☑            
-
-  Appointment details successfully confirmed by user      ☑            
-
-  User engages with reminder/calendar feature (if         ☑            
-  available)                                                           
-  --------------------------------------------------------------------------------
+| **Observation Point**                                   | **Status** | **Notes** |
+|---------------------------------------------------------|------------|-----------|
+| User attempts to schedule/reschedule an appointment     | ☑          |           |
+| Interface design supports intuitive scheduling          | ☑          |           |
+| Bottlenecks in the appointment workflow identified      | ☑          |           |
+| Appointment details successfully confirmed by user      | ☑          |           |
+| User engages with reminder/calendar feature (if available) | ☑      |           |
 
   : []{#_Toc199101203 .anchor}Table 6.6 - Scheduling and Appointment
   Management Checklist
 
-  -------------------------------------------------------------------------------
-  **Observation Point**                                  **Status**   **Notes**
-  ------------------------------------------------------ ------------ -----------
-  Portal operations align with standard clinical         ☑            
-  workflows                                                           
-
-  Devices and configurations function as per guidelines  ☑            
-
-  No significant workflow disruptions observed           ☑            
-  -------------------------------------------------------------------------------
+| **Observation Point**                                  | **Status** | **Notes** |
+|--------------------------------------------------------|------------|-----------|
+| Portal operations align with standard clinical workflows | ☑        |           |
+| Devices and configurations function as per guidelines  | ☑          |           |
+| No significant workflow disruptions observed           | ☑          |           |
 
   : []{#_Toc199101204 .anchor}Table 6.7 - Functional Workflow and CLiC
   Compliance Checklist
 
-  --------------------------------------------------------------------------------
-  **Observation Point**                                   **Status**   **Notes**
-  ------------------------------------------------------- ------------ -----------
-  UI layout and navigation are clear and accessible       ☑            
-
-  Text and iconography meet usability and legibility      ☑            
-  standards                                                            
-
-  Navigation structure aligns with user expectations      ☑            
-
-  System feedback messages are visible and meaningful     ☑            
-
-  System responsiveness meets performance thresholds      ☑            
-  --------------------------------------------------------------------------------
+| **Observation Point**                                   | **Status** | **Notes** |
+|---------------------------------------------------------|------------|-----------|
+| UI layout and navigation are clear and accessible       | ☑          |           |
+| Text and iconography meet usability and legibility standards | ☑      |           |
+| Navigation structure aligns with user expectations      | ☑          |           |
+| System feedback messages are visible and meaningful     | ☑          |           |
+| System responsiveness meets performance thresholds      | ☑          |           |
 
   : []{#_Toc199101205 .anchor}Table 6.8 - User Interface and Experience
   Checklist
 
-  --------------------------------------------------------------------------------
-  **Observation Point**                                   **Status**   **Notes**
-  ------------------------------------------------------- ------------ -----------
-  User actions in videos mirror live observations         ☑            
-
-  Key usability challenges consistently identified        ☑            
-
-  No major deviation between recorded and live behaviour  ☑            
-  --------------------------------------------------------------------------------
+| **Observation Point**                                   | **Status** | **Notes** |
+|---------------------------------------------------------|------------|-----------|
+| User actions in videos mirror live observations         | ☑          |           |
+| Key usability challenges consistently identified        | ☑          |           |
+| No major deviation between recorded and live behaviour  | ☑          |           |
 
   : []{#_Toc199101206 .anchor}Table 6.9 - Supplementary Video
   Observations Checklist
@@ -3779,26 +2835,14 @@ alt="A graph of different colored lines AI-generated content may be incorrect." 
 
 **Summary of Bottlenecks and Recommendations**
 
-  -----------------------------------------------------------------------
-  **Identified            **Observed Impact**   **Suggested
-  Bottleneck**                                  Recommendation**
-  ----------------------- --------------------- -------------------------
-  Portal-to-portal        User confusion and    Implement unified
-  navigation              inefficiency          navigation framework
-  inconsistency                                 
+| **Identified Bottleneck** | **Observed Impact** | **Suggested Recommendation** |
+| ------------------------- | ------------------- | ---------------------------- |
+| Portal-to-portal navigation inconsistency | User confusion and inefficiency | Implement unified navigation framework   |
+| Lack of real-time availability indicators | Inefficient booking process     | Integrate dynamic slot visibility        |
+| Complex appointment workflow  | User error and abandonment  | Simplify interface and reduce steps      |
+| Unclear access to wellness tools | Underutilization of features | Enhance tooltips/tutorials              |
+| Variable system load times    | Reduced satisfaction during peaks | Conduct performance optimization     |
 
-  Lack of real-time       Inefficient booking   Integrate dynamic slot
-  availability indicators process               visibility
-
-  Complex appointment     User error and        Simplify interface and
-  workflow                abandonment           reduce steps
-
-  Unclear access to       Underutilization of   Enhance
-  wellness tools          features              tooltips/tutorials
-
-  Variable system load    Reduced satisfaction  Conduct performance
-  times                   during peaks          optimization
-  -----------------------------------------------------------------------
 
   : []{#_Toc199101207 .anchor}Table 6.10 - Summary of Bottlenecks and
   Recommendations
