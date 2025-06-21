@@ -569,40 +569,16 @@ Satisfaction-Functionality with Results
 
 ## Product Overview
 
-> The Campus Wellness Portal is a cross-platform software system that
-> provides Multimedia University (MMU) students with centralized,
-> seamless access to campus health, counselling, and fitness services.
-> It enables users to book and manage medical appointments, counselling
-> sessions, and fitness classes while tracking personalized wellness
-> goals and receiving AI-generated health insights. The portal
-> integrates with MMU's Single Sign-On (SSO) for secure access and
-> interfaces with the CLiC Health and Counselling modules as well as the
-> Campus Fitness Centre's scheduling system. Designed for accessibility
-> across both desktop and mobile devices, the platform delivers a
-> unified, real-time dashboard that simplifies and enhances student
-> engagement with wellness resources.
+The Campus Wellness Portal is a cross-platform software system that provides Multimedia University (MMU) students with centralized, seamless access to campus health, counselling, and fitness services. It enables users to book and manage medical appointments, counselling sessions, and fitness classes while tracking personalized wellness goals and receiving AI-generated health insights. The portal
+integrates with MMU's Single Sign-On (SSO) for secure access and interfaces with the CLiC Health and Counselling modules as well as the Campus Fitness Centre's scheduling system. Designed for accessibility across both desktop and mobile devices, the platform delivers a unified, real-time dashboard that simplifies and enhances student engagement with wellness resources.
 
 ### Product Perspective (Relationship to Other Systems)
 
-> The Campus Wellness Portal operates as an integrated module within
-> Multimedia University's broader digital ecosystem. It serves as a
-> centralized platform through which students access health,
-> counselling, and fitness services. The portal communicates with
-> several external systems to support its core functionalities, as
-> illustrates in Figure 1.
->
-> Students interact directly with the portal to manage appointments, set
-> wellness goals, and receive personalized tips. Authentication handles
-> through the MMU Online Portal using a Single Sign-On (SSO) mechanism.
-> The system interfaces with the Health Centre System to enable booking
-> and viewing of medical appointments, and with the Fitness Centre
-> System to allow scheduling and cancellation of fitness sessions.
-> Administrative users can access the portal to view and update
-> available time slots across services.
->
-> This integration ensures seamless coordination between student actions
-> and back-end service availability, consolidating previously fragmented
-> wellness tools into a single, accessible platform.
+The Campus Wellness Portal operates as an integrated module within Multimedia University's broader digital ecosystem. It serves as a centralized platform through which students access health, counselling, and fitness services. The portal communicates with several external systems to support its core functionalities, as illustrates in Figure 1.
+
+Students interact directly with the portal to manage appointments, set wellness goals, and receive personalized tips. Authentication handles through the MMU Online Portal using a Single Sign-On (SSO) mechanism. The system interfaces with the Health Centre System to enable booking and viewing of medical appointments, and with the Fitness Centre System to allow scheduling and cancellation of fitness sessions. Administrative users can access the portal to view and update available time slots across services.
+
+This integration ensures seamless coordination between student actions and back-end service availability, consolidating previously fragmented wellness tools into a single, accessible platform.
 
 <figure>
 <img src="./images/media/image2.png"
@@ -614,13 +590,11 @@ alt="A diagram of a campus wellness portal AI-generated content may be incorrect
 
 ### Product Functions (high-level)
 
-> The Campus Wellness Portal supports student wellness through a range
-> of integrated functions, organized into the following core domains:
+The Campus Wellness Portal supports student wellness through a range of integrated functions, organized into the following core domains:
 
 - **Authentication and Access Control**
 
-  - Authenticate students securely via MMU's Single Sign-On (SSO)
-    mechanism (OAuth 2.0).
+  - Authenticate students securely via MMU's Single Sign-On (SSO) mechanism (OAuth 2.0).
 
   - Maintain session integrity and role-based access.
 
@@ -668,8 +642,7 @@ alt="A diagram of a campus wellness portal AI-generated content may be incorrect
 
 - **Cross-Platform Accessibility**
 
-  - Ensure consistent functionality and usability across web and mobile
-    platforms.
+  - Ensure consistent functionality and usability across web and mobile platforms.
 
   - Maintain a responsive, user-friendly interface.
 
@@ -681,33 +654,18 @@ alt="A diagram of a campus wellness portal AI-generated content may be incorrect
 
 ### User Characteristics
 
-> The primary users of the Campus Wellness Portal are undergraduate and
-> postgraduate students at Multimedia University (MMU), spanning various
-> faculties and academic disciplines. Users are generally comfortable
-> with digital platforms and possess basic to intermediate levels of
-> computer literacy. No specialized technical expertise is required to
-> use the system.
->
-> Most users primarily access services via smartphones, making mobile
-> responsiveness and intuitive design essential. Users expect tasks such
-> as appointment booking and class scheduling to be achievable within
-> two to three clicks. This expectation emphasizes the need for a
-> streamlined and user-friendly interface.
->
-> Given the sensitivity of health and counselling data, users place a
-> high priority on privacy and expect clear visibility into how their
-> data is used. While features such as AI-generated tips and wellness
-> recommendations are appreciated by some users, others prefer optional
-> control over such functionalities.
->
-> Overall, the system must accommodate a broad student population with
-> varying schedules, preferences, and comfort levels with technology,
-> requiring an accessible, responsive, and privacy-conscious design.
+The primary users of the Campus Wellness Portal are undergraduate and postgraduate students at Multimedia University (MMU), spanning various faculties and academic disciplines. Users are generally comfortable with digital platforms and possess basic to intermediate levels of computer literacy. No specialized technical expertise is required to use the system.
+
+Most users primarily access services via smartphones, making mobile responsiveness and intuitive design essential. Users expect tasks such as appointment booking and class scheduling to be achievable within two to three clicks. This expectation emphasizes the need for a streamlined and user-friendly interface.
+
+Given the sensitivity of health and counselling data, users place a high priority on privacy and expect clear visibility into how their data is used. While features such as AI-generated tips and wellness recommendations are appreciated by some users, others prefer optional control over such functionalities.
+
+Overall, the system must accommodate a broad student population with varying schedules, preferences, and comfort levels with technology, requiring an accessible, responsive, and privacy-conscious design.
 
 ### Limitations
 
-> The following limitations have been identified for the Campus Wellness
-> Portal during the initial development phase:
+The following limitations have been identified for the Campus Wellness
+Portal during the initial development phase:
 
 - **Dependency on External Systems**: The system relies on real-time
   integration with the CLiC Health and Counselling modules and the
@@ -739,162 +697,65 @@ alt="A diagram of a campus wellness portal AI-generated content may be incorrect
 
 ### Definitions, Acronyms, and Abbreviations 
 
-> The following definitions clarify key terms and abbreviations used
-> throughout this document:
+The following definitions clarify key terms and abbreviations used
+throughout this document:
 
-  -----------------------------------------------------------------------
-  **Term**               **Definition**
-  ---------------------- ------------------------------------------------
-  SRS                    Software Requirement Specification
+# Technical Glossary
 
-  MMU                    Multimedia University
-
-  SSO                    Single Sign-On -- A secure method of accessing
-                         multiple systems with one login
-
-  OAuth 2.0              An open standard for token-based authorization
-
-  AI                     Artificial Intelligence -- Automated algorithms
-                         that generate insights or recommendations
-
-  UI                     User Interface -- The visual components a user
-                         interacts with
-
-  UX                     User Experience -- The overall experience and
-                         usability of a system
-
-  CWP                    Campus Wellness Portal
-
-  UC                     Use Case -- A specific scenario of system
-                         interaction
-
-  HTTPS                  Hypertext Transfer Protocol Secure -- Secure
-                         communication protocol
-
-  TLS                    Transport Layer Security -- Cryptographic
-                         protocol for data security
-
-  REST API               Representational State Transfer API -- A web
-                         standard for system communication
-
-  HTML                   HyperText Markup Language -- Language used to
-                         create web pages
-
-  CSS                    Cascading Style Sheets -- Used for styling HTML
-                         content
-
-  JS                     JavaScript -- A scripting language for dynamic
-                         content on the web
-
-  LDAP                   Lightweight Directory Access Protocol -- Used
-                         for directory services authentication
-
-  SIS                    Student Information System -- Contains academic
-                         and enrolment data
-
-  DB                     Database -- Structured data storage used by
-                         backend systems
-
-  KPI                    Key Performance Indicator -- A metric to
-                         evaluate system success or user goals
-
-  RBAC                   Role-Based Access Control -- Authorization
-                         mechanism based on user roles
-
-  OTP                    One-Time Password -- A secure, time-limited code
-                         used for login or verification
-
-  OTA                    One-Time Authentication -- Used for sensitive or
-                         privileged user actions
-
-  PDPA                   Personal Data Protection Act -- Malaysian data
-                         privacy legislation
-
-  UAT                    User Acceptance Testing -- Final testing done by
-                         actual users
-
-  MVC                    Model-View-Controller -- A software architecture
-                         pattern
-
-  UUID                   Universally Unique Identifier -- A unique string
-                         used as a database key
-
-  WCAG                   Web Content Accessibility Guidelines --
-                         Standards for making content accessible
-
-  API                    Application Programming Interface -- Set of
-                         rules for system-to-system communication
-
-  DBMS                   Database Management System -- Software for
-                         managing databases
-
-  PII                    Personally Identifiable Information -- Data that
-                         can identify an individual
-
-  PHI                    Personal Health Information -- Sensitive
-                         health-related data of individuals
-
-  ReactJS                JavaScript library for building user interfaces
-
-  PostgreSQL             Open-source relational database management
-                         system
-
-  HTML5                  Version 5 of the HyperText Markup Language
-
-  CSS3                   Version 3 of Cascading Style Sheets
-
-  CD                     Class Diagram -- A visual representation of
-                         object relationships in software design
-
-  ISO/IEC/IEEE           ISO/IEC/IEEE 29148:2018
-  29148:2018             
-
-  MedicalDB              Backend database containing medical appointments
-                         and records
-
-  FitnessDB              Backend database for gym class schedules and
-                         bookings
-
-  WellnessDB             Database storing personal goals and health
-                         analytics
-
-  PEP-8                  Python Enhancement Proposal 8 -- Official Python
-                         code style guide
-
-  MVP                    Minimum Viable Product -- Basic version of the
-                         product with essential features
-
-  SSL                    Secure Sockets Layer -- cryptographic protocol
-                         for securing internet connections
-
-  AES-256                Advanced Encryption Standard (256-bit key) --
-                         strong data encryption algorithm
-
-  GDPR                   General Data Protection Regulation -- European
-                         law on personal data protection
-
-  QA                     Quality Assurance -- practices ensuring software
-                         meets requirements and standards
-
-  JSON                   JavaScript Object Notation -- lightweight format
-                         for data exchange
-
-  SMS                    Short Message Service -- text messaging protocol
-                         for mobile communication
-
-  VPN                    Virtual Private Network -- encrypted connection
-                         for secure remote access
-
-  SMART                  Specific, Measurable, Achievable, Relevant,
-                         Time-bound -- goal-setting framework
-
-  HTTP                   Hypertext Transfer Protocol -- protocol used for
-                         web data transmission
-
-  UML                    Unified Modelling Language - diagramming
-                         language used to model system structure and
-                         behavior
-  -----------------------------------------------------------------------
+| Term                    | Definition                                                                                    |
+| ----------------------- | --------------------------------------------------------------------------------------------- |
+| SRS                     | Software Requirement Specification                                                            |
+| MMU                     | Multimedia University                                                                         |
+| SSO                     | Single Sign-On -- A secure method of accessing multiple systems with one login                |
+| OAuth 2.0               | An open standard for token-based authorization                                                |
+| AI                      | Artificial Intelligence -- Automated algorithms that generate insights or recommendations     |
+| UI                      | User Interface -- The visual components a user interacts with                                 |
+| UX                      | User Experience -- The overall experience and usability of a system                           |
+| CWP                     | Campus Wellness Portal                                                                        |
+| UC                      | Use Case -- A specific scenario of system interaction                                         |
+| HTTPS                   | Hypertext Transfer Protocol Secure -- Secure communication protocol                           |
+| TLS                     | Transport Layer Security -- Cryptographic protocol for data security                          |
+| REST API                | Representational State Transfer API -- A web standard for system communication                |
+| HTML                    | HyperText Markup Language -- Language used to create web pages                                |
+| CSS                     | Cascading Style Sheets -- Used for styling HTML content                                       |
+| JS                      | JavaScript -- A scripting language for dynamic content on the web                             |
+| LDAP                    | Lightweight Directory Access Protocol -- Used for directory services authentication           |
+| SIS                     | Student Information System -- Contains academic and enrolment data                            |
+| DB                      | Database -- Structured data storage used by backend systems                                   |
+| KPI                     | Key Performance Indicator -- A metric to evaluate system success or user goals                |
+| RBAC                    | Role-Based Access Control -- Authorization mechanism based on user roles                      |
+| OTP                     | One-Time Password -- A secure, time-limited code used for login or verification               |
+| OTA                     | One-Time Authentication -- Used for sensitive or privileged user actions                      |
+| PDPA                    | Personal Data Protection Act -- Malaysian data privacy legislation                            |
+| UAT                     | User Acceptance Testing -- Final testing done by actual users                                 |
+| MVC                     | Model-View-Controller -- A software architecture pattern                                      |
+| UUID                    | Universally Unique Identifier -- A unique string used as a database key                       |
+| WCAG                    | Web Content Accessibility Guidelines -- Standards for making content accessible               |
+| API                     | Application Programming Interface -- Set of rules for system-to-system communication          |
+| DBMS                    | Database Management System -- Software for managing databases                                 |
+| PII                     | Personally Identifiable Information -- Data that can identify an individual                   |
+| PHI                     | Personal Health Information -- Sensitive health-related data of individuals                   |
+| ReactJS                 | JavaScript library for building user interfaces                                               |
+| PostgreSQL              | Open-source relational database management system                                             |
+| HTML5                   | Version 5 of the HyperText Markup Language                                                    |
+| CSS3                    | Version 3 of Cascading Style Sheets                                                           |
+| CD                      | Class Diagram -- A visual representation of object relationships in software design           |
+| ISO/IEC/IEEE 29148:2018 | ISO/IEC/IEEE 29148:2018                                                                       |
+| MedicalDB               | Backend database containing medical appointments and records                                  |
+| FitnessDB               | Backend database for gym class schedules and bookings                                         |
+| WellnessDB              | Database storing personal goals and health analytics                                          |
+| PEP-8                   | Python Enhancement Proposal 8 -- Official Python code style guide                             |
+| MVP                     | Minimum Viable Product -- Basic version of the product with essential features                |
+| SSL                     | Secure Sockets Layer -- cryptographic protocol for securing internet connections              |
+| AES-256                 | Advanced Encryption Standard (256-bit key) -- strong data encryption algorithm                |
+| GDPR                    | General Data Protection Regulation -- European law on personal data protection                |
+| QA                      | Quality Assurance -- practices ensuring software meets requirements and standards             |
+| JSON                    | JavaScript Object Notation -- lightweight format for data exchange                            |
+| SMS                     | Short Message Service -- text messaging protocol for mobile communication                     |
+| VPN                     | Virtual Private Network -- encrypted connection for secure remote access                      |
+| SMART                   | Specific, Measurable, Achievable, Relevant, Time-bound -- goal-setting framework              |
+| HTTP                    | Hypertext Transfer Protocol -- protocol used for web data transmission                        |
+| UML                     | Unified Modelling Language - diagramming language used to model system structure and behavior |
 
   : []{#_Toc199101175 .anchor}Table 1.1 -- Definitions, Acronyms, and
   Abbreviations
@@ -903,62 +764,27 @@ alt="A diagram of a campus wellness portal AI-generated content may be incorrect
 
 ## Document References
 
-  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  **Reference   **Title**                     **Author/Group**   **Source/Link**
-  ID**                                                           
-  ------------- ----------------------------- ------------------ -------------------------------------------------------------------------------------------------------------------------------
-  DOC-1         TT6L_G2_ProjectPreliminary    Group TT6L_G2      [Project Preliminary](https://github.com/thayiebah/TT6L_G2_Requirements_Project/tree/main/ProjectPreliminary)
+## Reference Documents
 
-  DOC-2         TT6L_G2_ContextSources        Group TT6L_G2      [Context Objects](https://github.com/thayiebah/TT6L_G2_Requirements_Project/tree/main/ContextObjects)
-
-  DOC-3         TT6L_G2_ElicitationPlan       Group TT6L_G2      [Elicitation
-                                                                 Plan](https://github.com/thayiebah/TT6L_G2_Requirements_Project/blob/main/Elicitation/TT6L_G2_ElicitationPlan.docx)
-
-  DOC-4         TT6L_G2_ElicitationExecuton   Group TT6L_G2      [Elicitation
-                                                                 Execution](https://github.com/thayiebah/TT6L_G2_Requirements_Project/blob/main/Elicitation/TT6L_G2_ElicitationExecution.docx)
-
-  DOC-5         Software Requirements         International      [ISO/IEC/IEEE 29148:2018](https://www.iso.org/standard/72089.html)
-                Specification (SRS) --        Organization for   
-                ISO/IEC/IEEE 29148:2018       Standardization    
-  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Reference ID | Title                                                                | Author/Group                                   | Source/Link                                                                                                                                |
+| ------------ | -------------------------------------------------------------------- | ---------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
+| DOC-1        | TT6L_G2_ProjectPreliminary                                           | Group TT6L_G2                                  | [Project Preliminary](https://github.com/thayiebah/TT6L_G2_Requirements_Project/tree/main/ProjectPreliminary)                              |
+| DOC-2        | TT6L_G2_ContextSources                                               | Group TT6L_G2                                  | [Context Objects](https://github.com/thayiebah/TT6L_G2_Requirements_Project/tree/main/ContextObjects)                                      |
+| DOC-3        | TT6L_G2_ElicitationPlan                                              | Group TT6L_G2                                  | [Elicitation Plan](https://github.com/thayiebah/TT6L_G2_Requirements_Project/blob/main/Elicitation/TT6L_G2_ElicitationPlan.docx)           |
+| DOC-4        | TT6L_G2_ElicitationExecuton                                          | Group TT6L_G2                                  | [Elicitation Execution](https://github.com/thayiebah/TT6L_G2_Requirements_Project/blob/main/Elicitation/TT6L_G2_ElicitationExecution.docx) |
+| DOC-5        | Software Requirements Specification (SRS) -- ISO/IEC/IEEE 29148:2018 | International Organization for Standardization | [ISO/IEC/IEEE 29148:2018](https://www.iso.org/standard/72089.html)                                                                         |
 
   : []{#_Toc199101176 .anchor}Table 2.1 - Document References
 
 ## Standards and Regulations
 
-  --------------------------------------------------------------------------------------
-  **Standard ID**   **Standard/Regulations**   **Publisher**     **Purpose/Relevance**
-  ----------------- -------------------------- ----------------- -----------------------
-  STD-1             ISO/IEC/IEEE 29148:2018 -- ISO/IEC/IEEE      Defines structure and
-                    Systems and Software                         best practices for
-                    Engineering -- Life Cycle                    software requirements
-                    Processes -- Requirements                    specification (SRS).
-                    Engineering                                  
-
-  STD-2             OAuth 2.0 Authorization    IETF (RFC 6749)   Provides secure and
-                    Framework                                    standardized protocol
-                                                                 for Single Sign-On
-                                                                 authentication.
-
-  STD-3             General Data Protection    European Union    Ensures proper handling
-                    Regulation (GDPR), EU                        of personal and
-                    Regulation 2016/679                          sensitive student
-                                                                 wellness data (if
-                                                                 applicable).
-
-  STD-4             **Malaysia Personal Data   Malaysian         Regulates the
-                    Protection Act (PDPA)      Government / PDPD processing of personal
-                    2010**                                       data in commercial
-                                                                 transactions and
-                                                                 protects users\'
-                                                                 privacy.
-
-  STD-5             **Web Content              World Wide Web    Ensures accessibility
-                    Accessibility Guidelines   Consortium (W3C)  of the web portal for
-                    (WCAG) 2.1 -- Level AA**                     all users, including
-                                                                 those with
-                                                                 disabilities.
-  --------------------------------------------------------------------------------------
+| Standard ID | Standard/Regulations                                                                                            | Publisher                       | Purpose/Relevance                                                                                 |
+| ----------- | --------------------------------------------------------------------------------------------------------------- | ------------------------------- | ------------------------------------------------------------------------------------------------- |
+| STD-1       | ISO/IEC/IEEE 29148:2018 -- Systems and Software Engineering -- Life Cycle Processes -- Requirements Engineering | ISO/IEC/IEEE                    | Defines structure and best practices for software requirements specification (SRS).               |
+| STD-2       | OAuth 2.0 Authorization Framework                                                                               | IETF (RFC 6749)                 | Provides secure and standardized protocol for Single Sign-On authentication.                      |
+| STD-3       | General Data Protection Regulation (GDPR), EU Regulation 2016/679                                               | European Union                  | Ensures proper handling of personal and sensitive student wellness data (if applicable).          |
+| STD-4       | Malaysia Personal Data Protection Act (PDPA) 2010                                                               | Malaysian Government / PDPD     | Regulates the processing of personal data in commercial transactions and protects users' privacy. |
+| STD-5       | Web Content Accessibility Guidelines (WCAG) 2.1 -- Level AA                                                     | World Wide Web Consortium (W3C) | Ensures accessibility of the web portal for all users, including those with disabilities.         |
 
   : []{#_Toc199101177 .anchor}Table 2.2 - Standards and regulations
 
@@ -972,29 +798,13 @@ subsequent functional and non-functional requirements.
 
 ## System Environment
 
-> Campus Wellness Portal is a web-based, holistic portal aimed at
-> promoting the overall wellness of the students at Multimedia
-> University (MMU). The portal is fully integrated with all the
-> institutional services to offer an aggregated and seamless user
-> experience. The portal is cross-device compatible, and the application
-> has been developed to deliver the same performance and accessibility
-> on desktops, tablets, and smartphones. Its strong architecture is
-> centred on maintainability, scalability, and interoperability, and
-> enables easy and secure user authentication using MMU\'s Single
-> Sign-On (SSO) system. The system is modelled on the best software
-> design and security principles and augments the university\'s vision
-> for secure and stable digital services. The system follows established
-> technology standards and security protocols, reflecting the
-> university\'s dedication to providing dependable and protected online
-> services for its academic community.
+Campus Wellness Portal is a web-based, holistic portal aimed at promoting the overall wellness of the students at Multimedia University (MMU). The portal is fully integrated with all the institutional services to offer an aggregated and seamless user experience. The portal is cross-device compatible, and the application has been developed to deliver the same performance and accessibility on desktops, tablets, and smartphones. Its strong architecture is centred on maintainability, scalability, and interoperability, and enables easy and secure user authentication using MMU's Single Sign-On (SSO) system. The system is modelled on the best software design and security principles and augments the university's vision for secure and stable digital services. The system follows established technology standards and security protocols, reflecting the university's dedication to providing dependable and protected online services for its academic community.
 
 ## Operating Environment 
 
-> The Campus Wellness Portal will operate in a hybrid environment
-> composed of institutional IT infrastructure and cloud services. It
-> requires the following setup for deployment and operational support:
->
-> **Client Environment:**
+The Campus Wellness Portal will operate in a hybrid environment composed of institutional IT infrastructure and cloud services. It requires the following setup for deployment and operational support:
+
+**Client Environment:**
 
 - Devices: Any modern web-enabled device (smartphones, tablets,
   desktops).
@@ -1004,7 +814,7 @@ subsequent functional and non-functional requirements.
 
 - Connectivity: Stable internet access (minimum 10 Mbps recommended).
 
-> **Server Environment:**
+**Server Environment:**
 
 - **Backend:** Django framework (Python-based), adhering to REST API
   principles.
@@ -1021,16 +831,13 @@ subsequent functional and non-functional requirements.
 - **Hosting:** MMU\'s internal data centers or secured
   university-approved cloud provider.
 
-<!-- -->
-
 - **Network:** All network communication must be secured via HTTPS using
   TLS and operate on both the MMU intranet and general Internet with
   VPN/firewall protection and valid SSL certificates.
 
 ## Design and Implementation Constraints 
 
-> The following constraints apply to the system\'s development and
-> deployment:
+The following constraints apply to the system's development and deployment:
 
 - **Compliance:** The system must adhere to MMU's branding, data
   governance, accessibility, and cybersecurity policies.
@@ -1051,77 +858,47 @@ subsequent functional and non-functional requirements.
 
 # Requirements 
 
-This section describes the detailed system requirements needed to
-develop the Campus Wellness Portal. These requirements follow the
-ISO/IEC/IEEE 29148:2018 standards and meet stakeholders needs. The list
-includes functional, interface, and non-functional needs. Each
-requirement ensures clarity, traceability, completeness, and the ability
-to test it during the entire system lifecycle.
+This section describes the detailed system requirements needed to develop the Campus Wellness Portal. These requirements follow the ISO/IEC/IEEE 29148:2018 standards and meet stakeholders needs. The list includes functional, interface, and non-functional needs. Each requirement ensures clarity, traceability, completeness, and the ability to test it during the entire system lifecycle.
 
 ## Functional Requirements 
 
 ### Overview of System Functions
 
-> The Campus Wellness Portal is designed to serve as a centralized
-> digital platform through which MMU students can access, monitor, and
-> manage services related to their physical and mental well-being. It
-> interfaces with existing institutional systems such as health
-> services, counselling center, and fitness management tools. The
-> system's functional scope includes:
->
-> **Authentication & Access Control**: 
->
-> Secure user access is ensured by MMU Single Sign-On (SSO) by
-> authentication and access control. Data accessibility and feature
-> visibility are controlled by Role-Based Access Control (RBAC), which
-> is based on roles such Administrator and Student.
->
-> **Medical Appointment Management**:
->
-> Students can view real-time availability of medical consultation
-> slots. They are able to book, cancel, and reschedule medical or
-> counselling appointments. The system sends confirmation notifications
-> for all appointment-related activities.
->
-> **Counselling Services Management**: 
->
-> Users can access their personal counselling history and manage future
-> health-related appointments through the portal.
->
-> **Fitness Class Integration**: 
->
-> The system provides real-time visibility of available fitness
-> sessions, including options to filter by gender. Students can book
-> fitness classes via the platform.
->
-> **Wellness Goal Management**:
->
-> Students are enabled to define, set, and track personal wellness
-> goals. Progress toward these goals is visualized through interactive
-> dashboards.
->
-> **AI-Based Personalized Recommendations**:
->
-> The system offers customized wellness tips and motivational prompts,
-> generated based on user interaction data and progress towards set
-> goals.
->
-> **Notification & Alerts System**:
->
-> The system sends notifications via email and SMS. These notifications
-> include reminders for upcoming bookings, confirmations, rescheduling
-> alerts, updates on goal progress, and other relevant activities.
->
-> **Administrative Operations**:
->
-> Administrators can manage user notifications, schedules, and system
-> logs. Additionally, the system supports the generation of wellness
-> reports for administrative review.
->
-> Each of these functions is supported by secure communication protocols
-> (HTTPS/TLS), real-time data synchronization, mobile-friendly interface
-> designs, and continuous backend monitoring to ensure reliability,
-> availability, and usability.
+The Campus Wellness Portal is designed to serve as a centralized digital platform through which MMU students can access, monitor, and manage services related to their physical and mental well-being. It interfaces with existing institutional systems such as health services, counselling center, and fitness management tools. The system's functional scope includes:
+
+**Authentication & Access Control**: 
+
+Secure user access is ensured by MMU Single Sign-On (SSO) by authentication and access control. Data accessibility and feature visibility are controlled by Role-Based Access Control (RBAC), which is based on roles such Administrator and Student.
+
+**Medical Appointment Management**:
+
+Students can view real-time availability of medical consultation slots. They are able to book, cancel, and reschedule medical or counselling appointments. The system sends confirmation notifications for all appointment-related activities.
+
+**Counselling Services Management**: 
+
+Users can access their personal counselling history and manage future health-related appointments through the portal.
+
+**Fitness Class Integration**: 
+
+The system provides real-time visibility of available fitness sessions, including options to filter by gender. Students can book fitness classes via the platform.
+
+**Wellness Goal Management**:
+
+Students are enabled to define, set, and track personal wellness goals. Progress toward these goals is visualized through interactive dashboards.
+
+**AI-Based Personalized Recommendations**:
+
+The system offers customized wellness tips and motivational prompts, generated based on user interaction data and progress towards set goals.
+
+**Notification & Alerts System**:
+
+The system sends notifications via email and SMS. These notifications include reminders for upcoming bookings, confirmations, rescheduling alerts, updates on goal progress, and other relevant activities.
+
+**Administrative Operations**:
+
+Administrators can manage user notifications, schedules, and system logs. Additionally, the system supports the generation of wellness reports for administrative review.
+
+Each of these functions is supported by secure communication protocols (HTTPS/TLS), real-time data synchronization, mobile-friendly interface designs, and continuous backend monitoring to ensure reliability, availability, and usability.
 
 ### Use Case Diagram
 
@@ -1133,95 +910,33 @@ alt="A diagram of a health care system AI-generated content may be incorrect." /
 - Use Case Diagram</p></figcaption>
 </figure>
 
-**Figure 4.1** illustrates the use case diagram for the Campus Wellness
-Portal, depicting interactions between system actors and core
-functionalities. The primary actors are the **Student** and
-the **Admin**. The Student interacts with the system to book and manage
-medical counselling and fitness sessions, track wellness progress, and
-access personalized recommendations. The Admin performs system oversight
-tasks, including the management of medical schedules, student wellness
-reports, notifications, and fitness classes.
+**Figure 4.1** illustrates the use case diagram for the Campus Wellness Portal, depicting interactions between system actors and core functionalities. The primary actors are the **Student* and the **Admin**. The Student interacts with the system to book and manage medical counselling and fitness sessions, track wellness progress, and access personalized recommendations. The Admin performs system oversight tasks, including the management of medical schedules, student wellness reports, notifications, and fitness classes.
 
-The diagram also includes external systems, namely the **Health Center
-System** and the **Fitness Center System**, which support medical
-appointment handling and fitness class scheduling, respectively. Use
-cases such as *Book Medical Counselling Appointment* incorporate related
-actions like *Cancel Appointment* and *Reschedule Appointment* through
-\"include\" relationships. Similarly, *Track Wellness
-Progress* includes *Set Wellness Goals* and *Get AI Wellness Tips*.
+The diagram also includes external systems, namely the **Health Center System** and the **Fitness Center System**, which support medical appointment handling and fitness class scheduling, respectively. Use cases such as *Book Medical Counselling Appointment* incorporate related actions like *Cancel Appointment* and *Reschedule Appointment* through "include" relationships. Similarly, *Track Wellness Progress* includes *Set Wellness Goals* and *Get AI Wellness Tips*.
 
-This diagram provides a visual representation of system functionality
-and actor interactions, supporting the identification of functional
-requirements.
+This diagram provides a visual representation of system functionality and actor interactions, supporting the identification of functional requirements.
 
 ### Use Case Descriptions
 
 #### Login
 
-+-----------------------------+------------------+---------------------------------------------------------------------------+
-| **No.**                     | **Section**      | **Context/Explanation**                                                   |
-+:===============+:===========+:=================+:==========================================================================+
-| **ID**         | 1.1        | Use Case ID      | UC01                                                                      |
-|                +------------+------------------+---------------------------------------------------------------------------+
-|                | 1.2        | Name             | Login                                                                     |
-+----------------+------------+------------------+---------------------------------------------------------------------------+
-| **Management** | 2.1        | Author(s)        | Farah Hanim binti Mohd Zamri                                              |
-|                +------------+------------------+---------------------------------------------------------------------------+
-|                | 2.2        | Version          | 1.0                                                                       |
-+----------------+------------+------------------+---------------------------------------------------------------------------+
-| **Context**    | 3.1        | Source(s)        | Questionnaire (Microsoft Forms)                                           |
-+----------------+------------+------------------+---------------------------------------------------------------------------+
-| **Use Case     | 4.1        | Short            |   ----------------------------------------------------------------------- |
-| Definition**   |            | Description      |                                                                           |
-|                |            |                  |   ----------------------------------------------------------------------- |
-|                |            |                  |                                                                           |
-|                |            |                  |   ----------------------------------------------------------------------- |
-|                |            |                  |   The user enters their credentials and logs into the portal via Single   |
-|                |            |                  |   Sign-On (OAuth 2.0).                                                    |
-|                |            |                  |   ----------------------------------------------------------------------- |
-|                |            |                  |                                                                           |
-|                |            |                  |   ----------------------------------------------------------------------- |
-|                +------------+------------------+---------------------------------------------------------------------------+
-|                | 4.2        | Associated       | - G5.2 -- MMU Single Sign-On (SSO)                                        |
-|                |            | Goal(s)          |                                                                           |
-|                +------------+------------------+---------------------------------------------------------------------------+
-|                | 4.3        | Primary Actor(s) | Student                                                                   |
-|                +------------+------------------+---------------------------------------------------------------------------+
-|                | 4.4        | Other Actor(s)   | MMU Online Portal                                                         |
-|                +------------+------------------+---------------------------------------------------------------------------+
-|                | 4.5        | Precondition(s)  | - The student must have a valid university account.                       |
-|                |            |                  |                                                                           |
-|                |            |                  | - The SSO Service must be available and responsive.                       |
-|                |            |                  |                                                                           |
-|                |            |                  | - Internet connection is available.                                       |
-|                +------------+------------------+---------------------------------------------------------------------------+
-|                | 4.5        | Postcondition(s) | - On success: Student is redirected to their personalized dashboard.      |
-|                |            |                  |                                                                           |
-|                |            |                  | - On failure: An error message is displayed                               |
-|                +------------+------------------+---------------------------------------------------------------------------+
-|                | 4.6        | Result           | User is authenticated and granted access to the Campus Wellness Portal.   |
-|                +------------+------------------+---------------------------------------------------------------------------+
-|                | 4.7        | Main Scenario    | 1.  Student navigates to the login page.                                  |
-|                |            |                  |                                                                           |
-|                |            |                  | 2.  Student enters username and password.                                 |
-|                |            |                  |                                                                           |
-|                |            |                  | 3.  System validates input format.                                        |
-|                |            |                  |                                                                           |
-|                |            |                  | 4.  Credentials sent to MMU Online Portal via OAuth 2.0.                  |
-|                |            |                  |                                                                           |
-|                |            |                  | 5.  If authentication succeeds, the system redirects to the dashboard.    |
-|                |            |                  |                                                                           |
-|                |            |                  | 6.  If authentication succeeds, the system redirects to the dashboard.    |
-|                +------------+------------------+---------------------------------------------------------------------------+
-|                | 4.8        | Alternate        | - Input fields are empty: System prompts user to fill in all fields.      |
-|                |            | Scenario(s)      |                                                                           |
-|                |            |                  | - Slow response from MMU SSO: System displays "Authenticating..."         |
-|                |            |                  |   message.                                                                |
-|                +------------+------------------+---------------------------------------------------------------------------+
-|                | 4.9        | Exception        | - Invalid Credentials Entered                                             |
-|                |            | Scenario(s)      |                                                                           |
-|                |            |                  | - SSO Service Unavailable                                                 |
-+----------------+------------+------------------+---------------------------------------------------------------------------+
+| Section                 | Field                      | Details                                                                                                                                                                                                                                                      |
+| ----------------------- | -------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| **ID**                  | 1.1 Use Case ID            | UC01                                                                                                                                                                                                                                                         |
+|                         | 1.2 Name                   | Login                                                                                                                                                                                                                                                        |
+| **Management**          | 2.1 Author(s)              | Farah Hanim binti Mohd Zamri                                                                                                                                                                                                                                 |
+|                         | 2.2 Version                | 1.0                                                                                                                                                                                                                                                          |
+| **Context**             | 3.1 Source(s)              | Questionnaire (Microsoft Forms)                                                                                                                                                                                                                              |
+| **Use Case Definition** | 4.1 Short Description      | The user enters their credentials and logs into the portal via Single Sign-On (OAuth 2.0).                                                                                                                                                                   |
+|                         | 4.2 Associated Goal(s)     | - G5.2 - MMU Single Sign-On (SSO)                                                                                                                                                                                                                            |
+|                         | 4.3 Primary Actor(s)       | Student                                                                                                                                                                                                                                                      |
+|                         | 4.4 Other Actor(s)         | MMU Online Portal                                                                                                                                                                                                                                            |
+|                         | 4.5 Precondition(s)        | - The student must have a valid university account.<br>- The SSO Service must be available and responsive.<br>- Internet connection is available.                                                                                                            |
+|                         | 4.6 Postcondition(s)       | - On success: Student is redirected to their personalized dashboard.<br>- On failure: An error message is displayed                                                                                                                                          |
+|                         | 4.7 Result                 | User is authenticated and granted access to the Campus Wellness Portal.                                                                                                                                                                                      |
+|                         | 4.8 Main Scenario          | 1. Student navigates to the login page.<br>2. Student enters username and password.<br>3. System validates input format.<br>4. Credentials sent to MMU Online Portal via OAuth 2.0.<br>5. If authentication succeeds, the system redirects to the dashboard. |
+|                         | 4.9 Alternate Scenario(s)  | - Input fields are empty: System prompts user to fill in all fields.<br>- Slow response from MMU SSO: System displays "Authenticating..." message.                                                                                                           |
+|                         | 4.10 Exception Scenario(s) | - Invalid Credentials Entered<br>- SSO Service Unavailable                                                                                                                                                                                                   |
 
 : []{#_Toc199101178 .anchor}Table 4.1 - Login Use Case
 
@@ -1231,20 +946,7 @@ requirements.
 Diagram](./images/media/image4.png){width="6.268055555555556in"
 height="3.94375in"}
 
-**Figure 4.2** is the sequence diagram for Login portraying the dialogue
-among various entities taking part in the logging process, i.e., the
-Student, Login Page, SSO Module, MMU Online Portal, and Dashboard. The
-process begins with the inputting of the student\'s credentials on the
-login page, which are verified. The alt block is used to verify if the
-input is complete or not. When the input is complete, then the
-credentials are forwarded to the SSO module, which further passes them
-to the MMU Online Portal for verification. Once a response token is
-received, access is provided, and the user is redirected to the
-dashboard or an error page if something goes wrong. If there\'s partial
-input, the system will bypass the authentication call and immediately
-return with a request for completion of missing fields. This diagram is
-perfect in specifying data flow and decision-making during the login,
-and all the various scenarios are covered.
+**Figure 4.2** is the sequence diagram for Login portraying the dialogue among various entities taking part in the logging process, i.e., the Student, Login Page, SSO Module, MMU Online Portal, and Dashboard. The process begins with the inputting of the student\'s credentials on the login page, which are verified. The alt block is used to verify if the input is complete or not. When the input is complete, then the credentials are forwarded to the SSO module, which further passes them to the MMU Online Portal for verification. Once a response token is received, access is provided, and the user is redirected to the dashboard or an error page if something goes wrong. If there's partial input, the system will bypass the authentication call and immediately return with a request for completion of missing fields. This diagram is perfect in specifying data flow and decision-making during the login, and all the various scenarios are covered.
 
 ##### Activity Diagram
 
@@ -1252,109 +954,26 @@ and all the various scenarios are covered.
 Diagram](./images/media/image5.png){width="6.213098206474191in"
 height="4.401388888888889in"}
 
-**Figure 4.3** portrays the Login activity diagram that illustrates the
-steps to be taken in order to log into the Campus Wellness Portal as a
-student. This follows after the input of the login
-credentials---username and password---and clicking the login button. The
-system first verifies if the credentials are both available. The system
-immediately provides an error message requesting the user to enter both
-fields in the event that either is left blank. The system proceeds to
-forward the credentials to the MMU Online Portal for authentication
-through OAuth 2.0 in the event that the credentials are correct.
-Feedback that authentication is in progress is provided to the user
-during this process. After authentication, the student is redirected to
-the student dashboard. If authentication fails because of incorrect
-submission of credentials, an error message is shown to try again. This
-sequence diagram follows successful and failed login attempts and
-incompleteness feedback.
+**Figure 4.3** portrays the Login activity diagram that illustrates the steps to be taken in order to log into the Campus Wellness Portal as a student. This follows after the input of the login credentials---username and password---and clicking the login button. The system first verifies if the credentials are both available. The system immediately provides an error message requesting the user to enter both fields in the event that either is left blank. The system proceeds to forward the credentials to the MMU Online Portal for authentication through OAuth 2.0 in the event that the credentials are correct. Feedback that authentication is in progress is provided to the user during this process. After authentication, the student is redirected to the student dashboard. If authentication fails because of incorrect submission of credentials, an error message is shown to try again. This sequence diagram follows successful and failed login attempts and incompleteness feedback.
 
 #### View Available Medical Slots
 
-+----------------------------+------------------+------------------------------+
-| **No.**                    | **Section**      | **Context/Explanation**      |
-+:===============+:==========+:=================+:=============================+
-| **ID**         | 1.1       | Use Case ID      | UC02                         |
-|                +-----------+------------------+------------------------------+
-|                | 1.2       | Name             | View Available Medical Slots |
-+----------------+-----------+------------------+------------------------------+
-| **Management** | 2.1       | Author(s)        | Mohammed Yousef Mohammed     |
-|                |           |                  | Abdulkarem                   |
-|                +-----------+------------------+------------------------------+
-|                | 2.2       | Version          | 1.0                          |
-+----------------+-----------+------------------+------------------------------+
-| **Context**    | 3.1       | Source(s)        | Questionnaire (Microsoft     |
-|                |           |                  | Forms), Observation          |
-+----------------+-----------+------------------+------------------------------+
-| **Use Case     | 4.1       | Short            | Enables students to view     |
-| Definition**   |           | Description      | real-time availability of    |
-|                |           |                  | medical consultation slots   |
-|                |           |                  | via the Campus Wellness      |
-|                |           |                  | Portal.                      |
-|                +-----------+------------------+------------------------------+
-|                | 4.2       | Associated       | - G1.1 -- CLiC Integration   |
-|                |           | Goal(s)          |                              |
-|                +-----------+------------------+------------------------------+
-|                | 4.3       | Primary Actor(s) | Student                      |
-|                +-----------+------------------+------------------------------+
-|                | 4.4       | Other Actor(s)   | Admins                       |
-|                +-----------+------------------+------------------------------+
-|                | 4.5       | Precondition(s)  | \- Student is logged in and  |
-|                |           |                  | authenticated via the Campus |
-|                |           |                  | Wellness Portal.\            |
-|                |           |                  | - Backend appointment        |
-|                |           |                  | service is accessible and    |
-|                |           |                  | operational.                 |
-|                +-----------+------------------+------------------------------+
-|                | 4.6       | Postcondition(s) | \- Student views an          |
-|                |           |                  | up-to-date list of available |
-|                |           |                  | slots, filtered as per       |
-|                |           |                  | chosen criteria.             |
-|                +-----------+------------------+------------------------------+
-|                | 4.7       | Result           | The system displays a list   |
-|                |           |                  | of available medical slots   |
-|                |           |                  | with date, time, and doctor  |
-|                |           |                  | details to be viewed by the  |
-|                |           |                  | user.                        |
-|                +-----------+------------------+------------------------------+
-|                | 4.8       | Main Scenario    | 1\. Student accesses the     |
-|                |           |                  | "View Medical Slots"         |
-|                |           |                  | interface.\                  |
-|                |           |                  | 2. System validates the user |
-|                |           |                  | session via the              |
-|                |           |                  | Authentication Service.\     |
-|                |           |                  | 3. System queries the        |
-|                |           |                  | Appointment Service to       |
-|                |           |                  | retrieve available slots     |
-|                |           |                  | (date, time, doctor,         |
-|                |           |                  | consultation type).\         |
-|                |           |                  | 4. System presents slots in  |
-|                |           |                  | a structured, user-friendly  |
-|                |           |                  | format.\                     |
-|                |           |                  | 5. Student optionally        |
-|                |           |                  | applies filters (e.g., date, |
-|                |           |                  | provider, type).\            |
-|                |           |                  | 6. System updates the        |
-|                |           |                  | displayed list based on      |
-|                |           |                  | selected filters.\           |
-|                |           |                  | 7. Student may proceed to    |
-|                |           |                  | initiate a booking (triggers |
-|                |           |                  | UC03).                       |
-|                +-----------+------------------+------------------------------+
-|                | 4.9       | Alternative      | \- 5a. No Filters Applied:\  |
-|                |           | Scenario(s)      |  5a1. System defaults to     |
-|                |           |                  | showing all slots available  |
-|                |           |                  | in the next 7 days.\         |
-|                |           |                  | - 6a. No Slots Available:\   |
-|                |           |                  |  6a1. System displays a      |
-|                |           |                  | message: "No available       |
-|                |           |                  | appointments at this time."\ |
-|                |           |                  | - 7a. Backend Unavailable or |
-|                |           |                  | Timeout:\                    |
-|                |           |                  |  7a1. System displays an     |
-|                |           |                  | error message indicating     |
-|                |           |                  | connectivity or service      |
-|                |           |                  | maintenance issues.          |
-+----------------+-----------+------------------+------------------------------+
+| Section                 | Field                       | Details                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
+| ----------------------- | --------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **ID**                  | 1.1 Use Case ID             | UC02                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
+|                         | 1.2 Name                    | View Available Medical Slots                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
+| **Management**          | 2.1 Author(s)               | Mohammed Yousef Mohammed Abdulkarem                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
+|                         | 2.2 Version                 | 1.0                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
+| **Context**             | 3.1 Source(s)               | Questionnaire (Microsoft Forms), Observation                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
+| **Use Case Definition** | 4.1 Short Description       | Enables students to view real-time availability of medical consultation slots via the Campus Wellness Portal.                                                                                                                                                                                                                                                                                                                                                                                                                   |
+|                         | 4.2 Associated Goal(s)      | - G1.1 -- CLiC Integration                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
+|                         | 4.3 Primary Actor(s)        | Student                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
+|                         | 4.4 Other Actor(s)          | Admins                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
+|                         | 4.5 Precondition(s)         | - Student is logged in and authenticated via the Campus Wellness Portal.<br>- Backend appointment service is accessible and operational.                                                                                                                                                                                                                                                                                                                                                                                        |
+|                         | 4.6 Postcondition(s)        | - Student views an up-to-date list of available slots, filtered as per chosen criteria.                                                                                                                                                                                                                                                                                                                                                                                                                                         |
+|                         | 4.7 Result                  | The system displays a list of available medical slots with date, time, and doctor details to be viewed by the user.                                                                                                                                                                                                                                                                                                                                                                                                             |
+|                         | 4.8 Main Scenario           | 1. Student accesses the "View Medical Slots" interface.<br>2. System validates the user session via the Authentication Service.<br>3. System queries the Appointment Service to retrieve available slots (date, time, doctor, consultation type).<br>4. System presents slots in a structured, user-friendly format.<br>5. Student optionally applies filters (e.g., date, provider, type).<br>6. System updates the displayed list based on selected filters.<br>7. Student may proceed to initiate a booking (triggers UC03). |
+|                         | 4.9 Alternative Scenario(s) | - **5a. No Filters Applied:**<br>  5a1. System defaults to showing all slots available in the next 7 days.<br>- **6a. No Slots Available:**<br>  6a1. System displays a message: "No available appointments at this time."<br>- **7a. Backend Unavailable or Timeout:**<br>  7a1. System displays an error message indicating connectivity or service maintenance issues.                                                                                                                                                       |
 
 : []{#_Toc199101179 .anchor}Table 4.2 - View Available Medical Slots Use
 Case
@@ -1369,22 +988,7 @@ alt="A diagram of a diagram AI-generated content may be incorrect." />
 - View Available Medical Slots Sequence Diagram</p></figcaption>
 </figure>
 
-**Figure 4.4** presents the sequence diagram that describes the
-operational flow for the \"View Medical Slots\" use case within the
-Campus Wellness Portal. The sequence begins when the Student accesses
-the relevant page, prompting the Campus Wellness Portal to verify the
-login status via the Authentication Service. Upon successful
-authentication, the portal sends a request to the Medical Center Service
-for available medical slots, which then queries the MedicalDB and
-returns the data. If available slots are found, they are displayed to
-the Student; otherwise, an appropriate notification message is shown.
-The diagram also depicts an optional interaction where the Student
-applies filters to narrow down the slot list. In such cases, the portal
-forwards the filter parameters to the Medical Center Service, which
-performs a filtered query against the MedicalDB and returns the refined
-results for presentation. This sequence diagram effectively illustrates
-the step-by-step communication and system responsibilities required to
-support the viewing of medical slot availability.
+**Figure 4.4** presents the sequence diagram that describes the operational flow for the \"View Medical Slots\" use case within the Campus Wellness Portal. The sequence begins when the Student accesses the relevant page, prompting the Campus Wellness Portal to verify the login status via the Authentication Service. Upon successful authentication, the portal sends a request to the Medical Center Service for available medical slots, which then queries the MedicalDB and returns the data. If available slots are found, they are displayed to the Student; otherwise, an appropriate notification message is shown. The diagram also depicts an optional interaction where the Student applies filters to narrow down the slot list. In such cases, the portal forwards the filter parameters to the Medical Center Service, which performs a filtered query against the MedicalDB and returns the refined results for presentation. This sequence diagram effectively illustrates the step-by-step communication and system responsibilities required to support the viewing of medical slot availability.
 
 ##### Activity Diagram
 
@@ -1396,22 +1000,7 @@ alt="A screenshot of a computer AI-generated content may be incorrect." />
 - View Available Medical Slots Activity Diagram</p></figcaption>
 </figure>
 
-**Figure 4.5** presents an activity diagram that outlines the workflow
-for a Student to \"View Medical Slots\" within the Campus Wellness
-Portal, detailing interactions with the Medical Centre Service and the
-Medical Database. The process begins when the Student opens the relevant
-page, prompting the Campus Wellness Portal to verify the login status;
-if the user is not authenticated, the system redirects to the login
-page. Upon successful authentication, the portal initiates a request to
-the Medical Service Centre to retrieve available appointment slots,
-which queries the Medical Database and returns the slot data. The Campus
-Wellness Portal then displays the available slots to the Student. The
-Student may optionally apply filters such as time or doctor, in which
-case the system processes the criteria and updates the results
-accordingly. If no matching slots are found based on the selected
-filters, the system displays an appropriate error message. This diagram
-captures the key decision points, data flow, and system responsibilities
-involved in supporting medical slot visibility for students.
+**Figure 4.5** presents an activity diagram that outlines the workflow for a Student to \"View Medical Slots\" within the Campus Wellness Portal, detailing interactions with the Medical Centre Service and the Medical Database. The process begins when the Student opens the relevant page, prompting the Campus Wellness Portal to verify the login status; if the user is not authenticated, the system redirects to the login page. Upon successful authentication, the portal initiates a request to the Medical Service Centre to retrieve available appointment slots, which queries the Medical Database and returns the slot data. The Campus Wellness Portal then displays the available slots to the Student. The Student may optionally apply filters such as time or doctor, in which case the system processes the criteria and updates the results accordingly. If no matching slots are found based on the selected filters, the system displays an appropriate error message. This diagram captures the key decision points, data flow, and system responsibilities involved in supporting medical slot visibility for students.
 
 #### Book Medical Counselling Appointment
 
