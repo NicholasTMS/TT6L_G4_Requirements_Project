@@ -1070,38 +1070,27 @@ alt="A screenshot of a computer AI-generated content may be incorrect." />
 
 #### Reschedule Appointment
 
-+---------------------------+------------------+---------------------------------+
 | **No.**                   | **Section**      | **Context/Explanation**         |
-+:===============+:=========+:=================+:================================+
+| ----- | ----- | ----- |
 | **ID**         | 1.1      | Use Case ID      | UC05                            |
-|                +----------+------------------+---------------------------------+
 |                | 1.2      | Name             | Reschedule Appointment          |
-+----------------+----------+------------------+---------------------------------+
 | **Management** | 2.1      | Author(s)        | Mohammed Yousef Mohammed        |
 |                |          |                  | Abdulkarem                      |
-|                +----------+------------------+---------------------------------+
 |                | 2.2      | Version          | 1.0                             |
-+----------------+----------+------------------+---------------------------------+
 | **Context**    | 3.1      | Source(s)        | Questionnaire (Microsoft Forms) |
-+----------------+----------+------------------+---------------------------------+
 | **Use Case     | 4.1      | Short            | Allows students to change an    |
 | Definition**   |          | Description      | existing appointment to a       |
 |                |          |                  | different available slot.       |
-|                +----------+------------------+---------------------------------+
 |                | 4.2      | Associated       | - G1.1 -- CLiC Integration      |
 |                |          | Goal(s)          |                                 |
 |                |          |                  | - G1.2 -- Manage Appointments   |
-|                +----------+------------------+---------------------------------+
 |                | 4.3      | Primary Actor(s) | Student                         |
-|                +----------+------------------+---------------------------------+
 |                | 4.4      | Other Actor(s)   | Admin                           |
-|                +----------+------------------+---------------------------------+
 |                | 4.5      | Precondition(s)  | - Student is authenticated via  |
 |                |          |                  |   the portal.                   |
 |                |          |                  |                                 |
 |                |          |                  | - At least one valid upcoming   |
 |                |          |                  |   appointment exists.           |
-|                +----------+------------------+---------------------------------+
 |                | 4.6      | Postcondition(s) | - Original appointment is       |
 |                |          |                  |   cancelled.                    |
 |                |          |                  |                                 |
@@ -1109,13 +1098,11 @@ alt="A screenshot of a computer AI-generated content may be incorrect." />
 |                |          |                  |                                 |
 |                |          |                  | - Student is notified of the    |
 |                |          |                  |   updated appointment.          |
-|                +----------+------------------+---------------------------------+
 |                | 4.7      | Result           | The system updates the          |
 |                |          |                  | appointment to the new selected |
 |                |          |                  | date and time, replacing the    |
 |                |          |                  | previous schedule, and updates  |
 |                |          |                  | its availability on the system. |
-|                +----------+------------------+---------------------------------+
 |                | 4.8      | Main Scenario    | 1\. Student accesses "My        |
 |                |          |                  | Appointments" dashboard.\       |
 |                |          |                  | 2. System validates session and |
@@ -1139,17 +1126,15 @@ alt="A screenshot of a computer AI-generated content may be incorrect." />
 |                |          |                  | updated confirmation email.\    |
 |                |          |                  | 9. System displays rescheduling |
 |                |          |                  | success message.                |
-|                +----------+------------------+---------------------------------+
 |                | 4.9      | Alternative      | \- 4a. No Suitable Slots        |
 |                |          | Scenario(s)      | Available:\                     |
-|                |          |                  |  4a1. System displays: "No      |
+|                |          |                  |  4a1. System displays: "No     |
 |                |          |                  | suitable slots found---please   |
 |                |          |                  | try again later."\              |
 |                |          |                  | - 6a. Time Conflict with        |
 |                |          |                  | Another Appointment:\           |
 |                |          |                  |  6a1. System prompts student to |
 |                |          |                  | select an alternative slot.     |
-+----------------+----------+------------------+---------------------------------+
 
 : []{#_Toc199101182 .anchor}Table 4.5 - Reschedule Appointment Use Case
 
@@ -1163,22 +1148,7 @@ alt="A diagram of a diagram AI-generated content may be incorrect." />
 4.10 - Reschedule Appointment Sequence Diagram</p></figcaption>
 </figure>
 
-**Figure 4.10** shows a sequence diagram for the Student rescheduling an
-appointment via the Campus Wellness Portal. The Student accesses the
-\"My Appointments\" page, triggering session validation by the
-Authentication Service. After successful validation, the Student selects
-\"Reschedule Appointment.\" The portal requests the current appointment
-details from the Medical Center Service, which retrieves them from the
-MedicalDB and returns the data. The portal then displays the reschedule
-form, and the Student submits a new date and time. If slots are
-available, the Medical Center Service updates the appointment in the
-MedicalDB, confirms the update to the portal, and the Notification
-Service sends a confirmation email. The portal then displays a
-confirmation message to the Student. If no slots are available, the
-Medical Center Service notifies the portal, which informs the Student
-that the selected slot is unavailable and requests a new selection. This
-diagram details the sequence of interactions and system decisions in the
-rescheduling process.
+**Figure 4.10** shows a sequence diagram for the Student rescheduling an appointment via the Campus Wellness Portal. The Student accesses the \"My Appointments\" page, triggering session validation by theAuthentication Service. After successful validation, the Student selects \"Reschedule Appointment.\" The portal requests the current appointment details from the Medical Center Service, which retrieves them from the MedicalDB and returns the data. The portal then displays the reschedule form, and the Student submits a new date and time. If slots are available, the Medical Center Service updates the appointment in the MedicalDB, confirms the update to the portal, and the Notification Service sends a confirmation email. The portal then displays a confirmation message to the Student. If no slots are available, the Medical Center Service notifies the portal, which informs the Student that the selected slot is unavailable and requests a new selection. This diagram details the sequence of interactions and system decisions in the rescheduling process.
 
 ##### Activity Diagram
 
@@ -1190,39 +1160,15 @@ alt="A diagram of a company AI-generated content may be incorrect." />
 4.11 - Reschedule Appointment Activity Diagram</p></figcaption>
 </figure>
 
-**Figure 4.11** presents an activity diagram outlining the workflow for
-a Student to reschedule an appointment via the Campus Wellness Portal,
-involving the Medical Center Service and the Appointment Database. The
-process starts with the Student opening the \"My Appointment\" page. The
-Campus Wellness Portal requests and displays upcoming appointments by
-querying the Medical Center Service, which retrieves data from the
-Appointment Database. The Student selects an appointment to reschedule,
-prompting the portal to request alternative available slots from the
-Medical Center Service. These slots are fetched from the Appointment
-Database and displayed to the Student. Upon selecting a new slot, the
-Student submits a reschedule request, which the portal forwards to the
-Medical Center Service. The Medical Center Service updates the
-appointment in the Appointment Database by replacing the old slot with
-the new one. The database confirms success or failure, and this status
-is returned to the portal. The portal then displays either a
-confirmation message for a successful update or an error message if the
-update fails, completing the process.
-
+**Figure 4.11** presents an activity diagram outlining the workflow fora Student to reschedule an appointment via the Campus Wellness Portal, involving the Medical Center Service and the Appointment Database. The process starts with the Student opening the \"My Appointment\" page. The Campus Wellness Portal requests and displays upcoming appointments byquerying the Medical Center Service, which retrieves data from the Appointment Database. The Student selects an appointment to reschedule, prompting the portal to request alternative available slots from the Medical Center Service. These slots are fetched from the Appointment Database and displayed to the Student. Upon selecting a new slot, the Student submits a reschedule request, which the portal forwards to theMedical Center Service. The Medical Center Service updates the appointment in the Appointment Database by replacing the old slot with the new one. The database confirms success or failure, and this status is returned to the portal. The portal then displays either a confirmation message for a successful update or an error message if the update fails, completing the process.
 #### View Counselling History
 
-+-----------------------------+------------------+---------------------------------------------------------------------------+
 | **No.**                     | **Section**      | **Context/Explanation**                                                   |
-+:===============+:===========+:=================+:==========================================================================+
 | **ID**         | 1.1        | Use Case ID      | UC06                                                                      |
-|                +------------+------------------+---------------------------------------------------------------------------+
 |                | 1.2        | Name             | View Counselling History                                                  |
-+----------------+------------+------------------+---------------------------------------------------------------------------+
 | **Management** | 2.1        | Author(s)        | Farah Hanim binti Mohd Zamri                                              |
-|                +------------+------------------+---------------------------------------------------------------------------+
 |                | 2.2        | Version          | 1.0                                                                       |
-+----------------+------------+------------------+---------------------------------------------------------------------------+
 | **Context**    | 3.1        | Source(s)        | Questionnaire (Microsoft Forms)                                           |
-+----------------+------------+------------------+---------------------------------------------------------------------------+
 | **Use Case     | 4.1        | Short            |   ----------------------------------------------------------------------- |
 | Definition**   |            | Description      |                                                                           |
 |                |            |                  |   ----------------------------------------------------------------------- |
@@ -1254,13 +1200,10 @@ update fails, completing the process.
 |                |            |                  | 3.  System queries counselling records for the selected date range.       |
 |                |            |                  |                                                                           |
 |                |            |                  | 4.  System displays the results.                                          |
-|                +------------+------------------+---------------------------------------------------------------------------+
 |                | 4.9        | Alternate        | - No records found: A message is shown.                                   |
 |                |            | Scenario(s)      |                                                                           |
-|                +------------+------------------+---------------------------------------------------------------------------+
 |                | 4.10       | Exception        | - Student is not authenticated: Prompted to log in first.                 |
 |                |            | Scenario(s)      |                                                                           |
-+----------------+------------+------------------+---------------------------------------------------------------------------+
 
 : []{#_Toc199101183 .anchor}Table 4.6 - View Counselling History Use
 Case
@@ -1275,17 +1218,7 @@ alt="A diagram of a diagram AI-generated content may be incorrect." />
 4.12 - View Counselling History Sequence Diagram</p></figcaption>
 </figure>
 
-**Figure 4.12** illustrates the sequence diagram by defining the
-interaction between the student, user interface, SSO authentication
-module, counselling module, and database. The student\'s request is
-first validated for authentication. On failure, it shows an error. On
-success, the user interface proceeds to fetch the counselling history
-data by querying the database through the counselling module. The system
-then verifies whether records exist---if yes, it fetches and shows them
-to the student; otherwise, it shows an appropriate message. The diagram
-includes alternate flows for both authenticated and unauthenticated
-users, and for when no records are available, covering all possible
-outcomes.
+**Figure 4.12** illustrates the sequence diagram by defining the interaction between the student, user interface, SSO authentication module, counselling module, and database. The student\'s request is first validated for authentication. On failure, it shows an error. On success, the user interface proceeds to fetch the counselling history data by querying the database through the counselling module. The system then verifies whether records exist---if yes, it fetches and shows them to the student; otherwise, it shows an appropriate message. The diagram includes alternate flows for both authenticated and unauthenticated users, and for when no records are available, covering all possible outcomes.
 
 ##### Activity Diagram
 
@@ -1297,36 +1230,18 @@ alt="A diagram of a program AI-generated content may be incorrect." />
 4.13 - View Counselling History Activity Diagram</p></figcaption>
 </figure>
 
-**Figure 4.13** shows the View Counselling Activity Diagram that
-illustrates the action a student performs in order to view his/her past
-counselling session history through the Campus Wellness Portal. In the
-activity diagram, the student initiates use case by selecting \"View
-Counselling History\" and a facultative date range. The system validates
-whether the student is authenticated by the Single Sign-On (SSO)
-service. If the student is not logged in, a prompt is displayed to ask
-the student to login. In case of authentication, the system will attempt
-to retrieve the counselling records for the entered date range. Based on
-whether there are records or not, the system displays the session
-details (date, counsellor, and summary) or notifies the student that
-there are no records for the chosen date range.
+**Figure 4.13** shows the View Counselling Activity Diagram that illustrates the action a student performs in order to view his/her past counselling session history through the Campus Wellness Portal. In the activity diagram, the student initiates use case by selecting \"View Counselling History\" and a facultative date range. The system validates whether the student is authenticated by the Single Sign-On (SSO) service. If the student is not logged in, a prompt is displayed to ask the student to login. In case of authentication, the system will attempt to retrieve the counselling records for the entered date range. Based on whether there are records or not, the system displays the session details (date, counsellor, and summary) or notifies the student that there are no records for the chosen date range.
 
 #### View Gym Available Sessions
 
-+---------------------------+------------------+-------------------------------+
 | No.                       | Section          | Context/Explanation           |
-+:==============+:==========+:=================+:==============================+
 | ID            | 1.1       | Use Case ID      | UC07                          |
-|               +-----------+------------------+-------------------------------+
 |               | 1.2       | Name             | View Gym Available Sessions   |
-+---------------+-----------+------------------+-------------------------------+
 | Management    | 2.1       | Author(s)        | Mohammed Aamena Mohammed      |
 |               |           |                  | Abdulkarem                    |
-|               +-----------+------------------+-------------------------------+
 |               | 2.2       | Version          | 1.0                           |
-+---------------+-----------+------------------+-------------------------------+
 | Context       | 3.1       | Source(s)        | Questionnaire (Microsoft      |
 |               |           |                  | Forms)                        |
-+---------------+-----------+------------------+-------------------------------+
 | Use Case      | 4.1       | Short            | Enables a student to view     |
 | Definition    |           | Description      | real-time gym session         |
 |               |           |                  | availability through the      |
@@ -1334,32 +1249,25 @@ there are no records for the chosen date range.
 |               |           |                  | including capacity, timing,   |
 |               |           |                  | and gender-specific           |
 |               |           |                  | constraints.                  |
-|               +-----------+------------------+-------------------------------+
 |               | 4.2       | Associated       | - G3.2 -- Gym Schedules       |
 |               |           | Goal(s)          |                               |
-|               +-----------+------------------+-------------------------------+
 |               | 4.3       | Primary Actor(s) | Student                       |
-|               +-----------+------------------+-------------------------------+
 |               | 4.4       | Other Actor(s)   | Admin                         |
-|               +-----------+------------------+-------------------------------+
 |               | 4.5       | Precondition(s)  | \- Student is successfully    |
 |               |           |                  | authenticated through the     |
 |               |           |                  | Campus Wellness Portal.\      |
 |               |           |                  | - Gym session data is         |
 |               |           |                  | available from backend        |
 |               |           |                  | fitness services.             |
-|               +-----------+------------------+-------------------------------+
 |               | 4.6       | Postcondition(s) | \- Student successfully views |
 |               |           |                  | available sessions with       |
 |               |           |                  | real-time status and          |
 |               |           |                  | constraints.                  |
-|               +-----------+------------------+-------------------------------+
 |               | 4.7       | Result           | The system displays a list of |
 |               |           |                  | available gym sessions with   |
 |               |           |                  | date, time, and session type  |
 |               |           |                  | details to be viewed by the   |
 |               |           |                  | user.                         |
-|               +-----------+------------------+-------------------------------+
 |               | 4.8       | Main Scenario    | 1\. Student accesses the      |
 |               |           |                  | "View Gym Schedule"           |
 |               |           |                  | interface.\                   |
@@ -1387,7 +1295,6 @@ there are no records for the chosen date range.
 |               |           |                  | optionally selects a session  |
 |               |           |                  | to book, triggering UC08:     |
 |               |           |                  | Book Fitness Class.           |
-|               +-----------+------------------+-------------------------------+
 |               | 4.9       | Alternative      | - 5a. No Filters Applied\     |
 |               |           | Scenario(s)      |    5a1. System defaults to    |
 |               |           |                  |   displaying all sessions     |
@@ -1406,7 +1313,6 @@ there are no records for the chosen date range.
 |               |           |                  |   selected criteria. Please   |
 |               |           |                  |   adjust filters and try      |
 |               |           |                  |   again."                     |
-+---------------+-----------+------------------+-------------------------------+
 
 : []{#_Toc199101184 .anchor}Table 4.7 - View Gym Available Sessions Use
 Case
@@ -1421,22 +1327,7 @@ alt="A diagram of a project AI-generated content may be incorrect." />
 4.14 - View Gym Available Sessions Sequence Diagram</p></figcaption>
 </figure>
 
-**Figure 4.14** presents a sequence diagram that outlines the process
-for a Student to view the gym schedule via the Campus Wellness Portal,
-involving the Authentication Service, Fitness Center Service, and
-FitnessDB. The sequence begins when the Student accesses the \"View Gym
-Schedule\" page, prompting the portal to validate the session through
-the Authentication Service. Upon successful authentication, the flow
-branches based on whether the Student applies filters. If filters are
-applied---such as gender or date---the Campus Wellness Portal sends a
-filtered session request to the Fitness Center Service, which queries
-the FitnessDB and returns the matched sessions. If no filters are
-applied, the portal requests the full weekly schedule, and the Fitness
-Center Service returns all current sessions from the FitnessDB. In both
-cases, the Campus Wellness Portal delivers the resulting session list
-and displays the available gym sessions to the Student. The diagram
-captures all relevant interactions and system responsibilities for
-viewing gym schedules.
+**Figure 4.14** presents a sequence diagram that outlines the process for a Student to view the gym schedule via the Campus Wellness Portal, involving the Authentication Service, Fitness Center Service, and FitnessDB. The sequence begins when the Student accesses the \"View Gym Schedule\" page, prompting the portal to validate the session through the Authentication Service. Upon successful authentication, the flow branches based on whether the Student applies filters. If filters are applied---such as gender or date---the Campus Wellness Portal sends a filtered session request to the Fitness Center Service, which queries the FitnessDB and returns the matched sessions. If no filters are applied, the portal requests the full weekly schedule, and the Fitness Center Service returns all current sessions from the FitnessDB. In both cases, the Campus Wellness Portal delivers the resulting session list and displays the available gym sessions to the Student. The diagram captures all relevant interactions and system responsibilities for viewing gym schedules.
 
 ##### Activity Diagram
 
@@ -1448,57 +1339,29 @@ alt="A diagram of a workflow AI-generated content may be incorrect." />
 4.15 - View Gym Available Sessions Activity Diagram</p></figcaption>
 </figure>
 
-**Figure 4.15** presents an activity diagram outlining the workflow for
-a Student to view gym sessions through the Campus Wellness Portal,
-integrated with the Fitness Center Service and the Fitness Database. The
-process begins when the Student selects the \"View Gym Sessions\"
-option. The system verifies the user\'s login status; if not
-authenticated, the Student is redirected to the login page. Upon
-successful login, the portal requests the weekly session data from the
-Fitness Center Service, which queries the Fitness Database and returns
-the results. If sessions are available, they are displayed to the
-Student; otherwise, a \"No sessions available\" message is shown. The
-Student may then apply filters such as date or gender. If filters are
-applied, the portal sends a filtered request to the Fitness Center
-Service, which queries the database and returns any matching sessions.
-The portal updates the display accordingly or shows a \"No matching
-sessions found\" message if no filtered results are available. This
-diagram captures the conditional logic and interactions that ensure
-dynamic, filtered access to gym session data.
+**Figure 4.15** presents an activity diagram outlining the workflow for a Student to view gym sessions through the Campus Wellness Portal, integrated with the Fitness Center Service and the Fitness Database. The process begins when the Student selects the \"View Gym Sessions\" option. The system verifies the user\'s login status; if not authenticated, the Student is redirected to the login page. Upon successful login, the portal requests the weekly session data from the Fitness Center Service, which queries the Fitness Database and returns the results. If sessions are available, they are displayed to the Student; otherwise, a \"No sessions available\" message is shown. The Student may then apply filters such as date or gender. If filters are applied, the portal sends a filtered request to the Fitness Center Service, which queries the database and returns any matching sessions. The portal updates the display accordingly or shows a \"No matching sessions found\" message if no filtered results are available. This diagram captures the conditional logic and interactions that ensure dynamic, filtered access to gym session data.
 
 #### Book Fitness Session
 
-+---------------------------+------------------+---------------------------------+
 | **No.**                   | **Section**      | **Context/Explanation**         |
-+:===============+:=========+:=================+:================================+
 | **ID**         | 1.1      | Use Case ID      | UC08                            |
-|                +----------+------------------+---------------------------------+
 |                | 1.2      | Name             | Book Fitness Session            |
-+----------------+----------+------------------+---------------------------------+
 | **Management** | 2.1      | Author(s)        | Mohammed Aamena Mohammed        |
 |                |          |                  | Abdulkarem                      |
-|                +----------+------------------+---------------------------------+
 |                | 2.2      | Version          | 1.0                             |
-+----------------+----------+------------------+---------------------------------+
 | **Context**    | 3.1      | Source(s)        | Questionnaire (Microsoft Forms) |
-+----------------+----------+------------------+---------------------------------+
 | **Use Case     | 4.1      | Short            | Allows a student to reserve a   |
 | Definition**   |          | Description      | slot in an available fitness    |
 |                |          |                  | session through the Campus      |
 |                |          |                  | Wellness Portal.                |
-|                +----------+------------------+---------------------------------+
 |                | 4.2      | Associated       | - G3.1 -- Class Booking         |
 |                |          | Goal(s)          |                                 |
-|                +----------+------------------+---------------------------------+
 |                | 4.3      | Primary Actor(s) | Student                         |
-|                +----------+------------------+---------------------------------+
 |                | 4.4      | Other Actor(s)   | Admin                           |
-|                +----------+------------------+---------------------------------+
 |                | 4.5      | Precondition(s)  | \- Student is authenticated via |
 |                |          |                  | the Campus Wellness Portal.\    |
 |                |          |                  | - Real-time fitness class       |
 |                |          |                  | schedule is accessible.         |
-|                +----------+------------------+---------------------------------+
 |                | 4.6      | Postcondition(s) | \- Success: Student is          |
 |                |          |                  | registered for the selected     |
 |                |          |                  | session.\                       |
@@ -1506,13 +1369,11 @@ dynamic, filtered access to gym session data.
 |                |          |                  | feedback regarding errors       |
 |                |          |                  | (e.g., session full, schedule   |
 |                |          |                  | conflict).                      |
-|                +----------+------------------+---------------------------------+
 |                | 4.7      | Result           | The system confirms and records |
 |                |          |                  | the user's booking for the      |
 |                |          |                  | selected fitness session and    |
 |                |          |                  | updates its availability in the |
 |                |          |                  | system.                         |
-|                +----------+------------------+---------------------------------+
 |                | 4.8      | Main Scenario    | 1\. Student accesses the "Book  |
 |                |          |                  | Fitness Class" interface.\      |
 |                |          |                  | 2. System displays current      |
@@ -1531,7 +1392,6 @@ dynamic, filtered access to gym session data.
 |                |          |                  | email.\                         |
 |                |          |                  | 7. System displays a success    |
 |                |          |                  | message to the student.         |
-|                +----------+------------------+---------------------------------+
 |                | 4.9      | Alternative      | \- 3a. Class Full:\             |
 |                |          | Scenario(s)      |  3a1. System notifies: "Class   |
 |                |          |                  | is full -- join waitlist?"\     |
@@ -1541,7 +1401,6 @@ dynamic, filtered access to gym session data.
 |                |          |                  |  4a1. System alerts user about  |
 |                |          |                  | the conflict with an existing   |
 |                |          |                  | booking.                        |
-+----------------+----------+------------------+---------------------------------+
 
 : []{#_Toc199101185 .anchor}Table 4.8 - Book Fitness Session Use Case
 
@@ -1555,24 +1414,7 @@ alt="A diagram of a class AI-generated content may be incorrect." />
 4.16 - Book Fitness Session Sequence Diagram</p></figcaption>
 </figure>
 
-**Figure 4.16** presents a sequence diagram detailing the process for a
-Student to book a fitness class through the Campus Wellness Portal. The
-workflow begins when the Student selects \"Book Fitness
-Class\" prompting the portal to validate the login session via the
-Authentication Service. Upon successful authentication, the portal
-requests available class schedules from the Fitness Center Service,
-which queries the Fitness Database and returns a list of upcoming weekly
-classes. The Student then selects a class and time slot, and the portal
-submits a booking request to the Fitness Center Service. The service
-checks slot availability with the Fitness Database. If a slot is
-available, the Student is registered, the slot is reserved, and a
-confirmation is returned to the portal and emailed to the Student via
-the Notification Service. The portal then displays a booking
-confirmation message. If the selected class is full, the Fitness Center
-Service notifies the portal, which displays a \"Class full!\" message
-and offers the Student the option to join a waitlist. This sequence
-diagram captures the complete interaction flow and decision points
-involved in the fitness class booking process.
+**Figure 4.16** presents a sequence diagram detailing the process for a Student to book a fitness class through the Campus Wellness Portal. The workflow begins when the Student selects \"Book Fitness Class\" prompting the portal to validate the login session via the Authentication Service. Upon successful authentication, the portal requests available class schedules from the Fitness Center Service, which queries the Fitness Database and returns a list of upcoming weekly classes. The Student then selects a class and time slot, and the portal submits a booking request to the Fitness Center Service. The service checks slot availability with the Fitness Database. If a slot is available, the Student is registered, the slot is reserved, and a confirmation is returned to the portal and emailed to the Student via the Notification Service. The portal then displays a booking confirmation message. If the selected class is full, the Fitness Center Service notifies the portal, which displays a \"Class full!\" message and offers the Student the option to join a waitlist. This sequence diagram captures the complete interaction flow and decision points involved in the fitness class booking process.
 
 ##### Activity Diagram
 
@@ -1584,72 +1426,40 @@ alt="A diagram of a company AI-generated content may be incorrect." />
 4.17 - Book Fitness Session Activity Diagram</p></figcaption>
 </figure>
 
-**Figure 4.17** illustrates the activity diagram for the process of
-booking a fitness class through the Campus Wellness Portal. The sequence
-begins when the student selects the \"Book Fitness Class\" option. The
-system verifies the student\'s login status; if the student is not
-authenticated, they are redirected to the login page. Once logged in,
-the portal requests available fitness classes from the Fitness Center
-Service, which retrieves class schedules and capacity data from the
-Fitness Database. If classes are available, the portal displays the list
-for the student to select from; otherwise, a \"No classes available\"
-message is shown. Upon selecting a desired class, the student submits a
-booking request, which the portal forwards to the Fitness Center
-Service. The service checks availability in the Fitness Database and, if
-a slot is free and there are no conflicts, reserves the slot, sends
-confirmation back to the portal, and triggers the Notification Service
-to email a booking confirmation to the student. The portal then displays
-a \"Booking Successful\" message. If the class is full or a conflict
-exists, the request is rejected, and the portal informs the student with
-a relevant error message and the option to join a waitlist. This process
-ensures efficient interaction and clear communication at each decision
-point.
+**Figure 4.17** illustrates the activity diagram for the process of booking a fitness class through the Campus Wellness Portal. The sequence begins when the student selects the \"Book Fitness Class\" option. The system verifies the student\'s login status; if the student is not authenticated, they are redirected to the login page. Once logged in, the portal requests available fitness classes from the Fitness Center Service, which retrieves class schedules and capacity data from the Fitness Database. If classes are available, the portal displays the list for the student to select from; otherwise, a \"No classes available\" message is shown. Upon selecting a desired class, the student submits a booking request, which the portal forwards to the Fitness Center Service. The service checks availability in the Fitness Database and, if a slot is free and there are no conflicts, reserves the slot, sends confirmation back to the portal, and triggers the Notification Service to email a booking confirmation to the student. The portal then displays a \"Booking Successful\" message. If the class is full or a conflict exists, the request is rejected, and the portal informs the student with a relevant error message and the option to join a waitlist. This process ensures efficient interaction and clear communication at each decision point.
 
 #### Track Wellness Progress
 
-+----------------------------+------------------+-------------------------------+
 | **No.**                    | **Section**      | **Context/Explanation**       |
-+:===============+:==========+:=================+:==============================+
+| ---- | ---- | ---- |
 | **ID**         | 1.1       | Use Case ID      | UC09                          |
-|                +-----------+------------------+-------------------------------+
 |                | 1.2       | Name             | Track Wellness Progress       |
-+----------------+-----------+------------------+-------------------------------+
 | **Management** | 2.1       | Author(s)        | Mohammed Aamena Mohammed      |
 |                |           |                  | Abdulkarem                    |
-|                +-----------+------------------+-------------------------------+
 |                | 2.2       | Version          | 1.0                           |
-+----------------+-----------+------------------+-------------------------------+
 | **Context**    | 3.1       | Source(s)        | Questionnaire (Microsoft      |
 |                |           |                  | Forms)                        |
-+----------------+-----------+------------------+-------------------------------+
 | **Use Case     | 4.1       | Short            | Enables students to monitor   |
 | Definition**   |           | Description      | their wellness trends through |
 |                |           |                  | interactive dashboards that   |
 |                |           |                  | visualize participation,      |
 |                |           |                  | goals, and appointments.      |
-|                +-----------+------------------+-------------------------------+
 |                | 4.2       | Associated       | - G3.3 -- Fitness Tracking    |
 |                |           | Goal(s)          |                               |
-|                +-----------+------------------+-------------------------------+
 |                | 4.3       | Primary Actor(s) | Student                       |
-|                +-----------+------------------+-------------------------------+
 |                | 4.4       | Other Actor(s)   | Admins                        |
-|                +-----------+------------------+-------------------------------+
 |                | 4.5       | Precondition(s)  | \- Student is authenticated   |
 |                |           |                  | via the Campus Wellness       |
 |                |           |                  | Portal.\                      |
 |                |           |                  | - System and data sources are |
 |                |           |                  | operational and up to date.   |
-|                +-----------+------------------+-------------------------------+
 |                | 4.6       | Postcondition(s) | \- Student receives a visual  |
 |                |           |                  | summary of wellness           |
 |                |           |                  | activities and progress.      |
-|                +-----------+------------------+-------------------------------+
 |                | 4.7       | Result           | The system displays the       |
 |                |           |                  | user's wellness data and      |
 |                |           |                  | progress over time in a       |
 |                |           |                  | clear, summarized format.     |
-|                +-----------+------------------+-------------------------------+
 |                | 4.8       | Main Scenario    | 1\. Student opens "Track      |
 |                |           |                  | Wellness Progress"            |
 |                |           |                  | interface.\                   |
@@ -1665,13 +1475,11 @@ point.
 |                |           |                  | 5. System displays wellness   |
 |                |           |                  | insights using charts and     |
 |                |           |                  | progress bars.                |
-|                +-----------+------------------+-------------------------------+
 |                | 4.9       | Alternative      | \- 4a. Milestone Achieved:\   |
 |                |           | Scenario(s)      |  4a1. If a milestone is       |
 |                |           |                  | achieved, the Notification    |
 |                |           |                  | Service sends a motivational  |
 |                |           |                  | email message to the student. |
-+----------------+-----------+------------------+-------------------------------+
 
 : []{#_Toc199101186 .anchor}Table 4.9 - Track Wellness Progress Use Case
 
@@ -1685,22 +1493,7 @@ alt="A screenshot of a diagram AI-generated content may be incorrect." />
 4.18 - Track Wellness Progress Sequence Diagram</p></figcaption>
 </figure>
 
-**Figure 4.18** presents a sequence diagram that outlines the process by
-which a student tracks their wellness progress through the Campus
-Wellness Portal, integrating multiple backend services. The process
-begins when the student accesses the \"Track Wellness Progress\"
-section, prompting the portal to authenticate the session via the
-Authentication Service. Upon successful validation, the portal retrieves
-data sequentially: weekly fitness activities from the FitnessDB, medical
-appointments and counseling session records from the MedicalDB, and
-goal-related metrics from the WellnessDB. This aggregated data is then
-processed, with support from the Analytics Service, to calculate the
-student's overall wellness progress and generate visual performance
-summaries. If the system detects that a goal has been achieved, it
-triggers the Notification Service to send a congratulatory email and
-display a motivational message. The portal concludes by presenting a
-detailed progress dashboard to the student, displaying activity trends,
-milestones, and goal completion status in a user-friendly interface.
+**Figure 4.18** presents a sequence diagram that outlines the process by which a student tracks their wellness progress through the Campus Wellness Portal, integrating multiple backend services. The process begins when the student accesses the \"Track Wellness Progress\" section, prompting the portal to authenticate the session via the Authentication Service. Upon successful validation, the portal retrieves data sequentially: weekly fitness activities from the FitnessDB, medical appointments and counseling session records from the MedicalDB, and goal-related metrics from the WellnessDB. This aggregated data is then processed, with support from the Analytics Service, to calculate the student's overall wellness progress and generate visual performance summaries. If the system detects that a goal has been achieved, it triggers the Notification Service to send a congratulatory email and display a motivational message. The portal concludes by presenting a detailed progress dashboard to the student, displaying activity trends, milestones, and goal completion status in a user-friendly interface.
 
 ##### Activity Diagram
 
@@ -1712,23 +1505,7 @@ alt="A diagram of a computer AI-generated content may be incorrect." />
 4.19 - Track Wellness Progress Activity Diagram</p></figcaption>
 </figure>
 
-**Figure 4.19** presents an activity diagram detailing the workflow for
-a student to track their wellness progress using the Campus Wellness
-Portal, which integrates several backend systems. The process initiates
-when the student selects the \"Track Wellness Progress\" feature. The
-portal first verifies the user\'s authentication status---redirecting to
-the login page if necessary. Upon successful authentication, the portal
-retrieves fitness activity data from the Fitness Center System, medical
-and counselling data from the Medical Center System, and goal progress
-data from the Wellness Database. This data is aggregated and forwarded
-to the Analytics Service, which processes the inputs to identify trends,
-evaluate goal completion, and generate insights. The system then
-displays key wellness indicators---such as charts, KPIs, and progress
-levels---on the portal interface. If a wellness goal has been achieved,
-the Notification Service is triggered to deliver a motivational message
-to the student. This activity diagram illustrates a seamless and
-data-driven workflow that empowers students to monitor and celebrate
-their wellness achievements.
+**Figure 4.19** presents an activity diagram detailing the workflow for a student to track their wellness progress using the Campus Wellness Portal, which integrates several backend systems. The process initiates when the student selects the \"Track Wellness Progress\" feature. The portal first verifies the user\'s authentication status---redirecting to the login page if necessary. Upon successful authentication, the portal retrieves fitness activity data from the Fitness Center System, medical and counselling data from the Medical Center System, and goal progress data from the Wellness Database. This data is aggregated and forwarded to the Analytics Service, which processes the inputs to identify trends, evaluate goal completion, and generate insights. The system then displays key wellness indicators---such as charts, KPIs, and progress levels---on the portal interface. If a wellness goal has been achieved, the Notification Service is triggered to deliver a motivational message to the student. This activity diagram illustrates a seamless and data-driven workflow that empowers students to monitor and celebrate their wellness achievements.
 
 #### Set Wellness Goals
 
@@ -1810,24 +1587,7 @@ alt="A diagram of a company AI-generated content may be incorrect." />
 4.20 - Set Wellness Goals Sequence Diagram</p></figcaption>
 </figure>
 
-**Figure 4.20** illustrates a sequence diagram representing the process
-for a student to set a wellness goal through the Campus Wellness Portal,
-involving interactions with the Authentication Service, Goal Management
-Service, and WellnessDB. The process begins when the student clicks the
-\"Set Wellness Goal\" button, prompting the portal to verify the
-student's session via the Authentication Service. Once the session is
-confirmed as valid, the student enters goal details---such as target
-steps, workouts, or duration---which are then submitted to the Goal
-Management Service. This service first validates the format and
-completeness of the goal data. If the goal is valid, the system proceeds
-to save the data into the WellnessDB, returning a success response to
-the portal. The portal then displays a confirmation message and a
-summary of the configured goal to the student. Alternatively, if the
-submitted goal is invalid---due to missing or incorrect data---a
-validation error is returned, and the portal presents an error message
-with suggested corrections. This diagram captures both the standard and
-alternative flows involved in ensuring robust goal-setting functionality
-with real-time feedback.
+**Figure 4.20** illustrates a sequence diagram representing the process for a student to set a wellness goal through the Campus Wellness Portal, involving interactions with the Authentication Service, Goal Management Service, and WellnessDB. The process begins when the student clicks the \"Set Wellness Goal\" button, prompting the portal to verify the student's session via the Authentication Service. Once the session is confirmed as valid, the student enters goal details---such as target steps, workouts, or duration---which are then submitted to the Goal Management Service. This service first validates the format and completeness of the goal data. If the goal is valid, the system proceeds to save the data into the WellnessDB, returning a success response to the portal. The portal then displays a confirmation message and a summary of the configured goal to the student. Alternatively, if the submitted goal is invalid---due to missing or incorrect data---a validation error is returned, and the portal presents an error message with suggested corrections. This diagram captures both the standard and alternative flows involved in ensuring robust goal-setting functionality with real-time feedback.
 
 ##### Activity Diagram
 
@@ -1839,19 +1599,7 @@ alt="A diagram of a workflow AI-generated content may be incorrect." />
 4.21 - Set Wellness Goals Activity Diagram</p></figcaption>
 </figure>
 
-**Figure 4.21** illustrates the activity diagram for the "Set Wellness
-Goal" use case in the Campus Wellness Portal. The process begins when
-the student selects the "Set Wellness Goal" interface and enters goal
-parameters such as goal type, frequency, and duration. The system
-verifies the student's session using the Authentication Service. If the
-session is invalid, the student is redirected to the login page. If
-valid, the system validates the format and content of the goal input. If
-the input is invalid, the system returns validation errors and prompts
-the student to revise the goal details. Upon successful validation, the
-system stores the goal in the Wellness Database and confirms the setup.
-A goal summary is displayed to the student, and the Notification Service
-issues a confirmation message. This process ensures authenticated
-access, proper goal formatting, reliable data storage, and timely
+**Figure 4.21** illustrates the activity diagram for the "Set Wellness Goal" use case in the Campus Wellness Portal. The process begins when the student selects the "Set Wellness Goal" interface and enters goal parameters such as goal type, frequency, and duration. The system verifies the student's session using the Authentication Service. If the session is invalid, the student is redirected to the login page. If valid, the system validates the format and content of the goal input. If the input is invalid, the system returns validation errors and prompts the student to revise the goal details. Upon successful validation, the system stores the goal in the Wellness Database and confirms the setup. A goal summary is displayed to the student, and the Notification Service issues a confirmation message. This process ensures authenticated access, proper goal formatting, reliable data storage, and timely
 feedback to the user.
 
 #### Get AI Wellness Tips
@@ -1937,16 +1685,7 @@ feedback to the user.
 Diagram](./images/media/image24.jpeg){width="6.268055555555556in"
 height="4.183926071741032in"}
 
-**Figure 4.22** illustrates the sequence diagram for the "Get AI
-Wellness Tips" use case in the Campus Wellness Portal. The interaction
-begins when a student clicks the "Get Tips" button. The system requests
-the student's wellness goals and activity data from the Wellness Data
-Service. If data is available, it is forwarded to the AI Wellness Engine
-to generate a personalized wellness tip, which is then displayed to the
-student. The student may choose to save or dismiss the tip. If no data
-is found, the system prompts the student to set their wellness goals
-first. This ensures that tips are tailored and relevant to each user's
-wellness journey.
+**Figure 4.22** illustrates the sequence diagram for the "Get AI Wellness Tips" use case in the Campus Wellness Portal. The interaction begins when a student clicks the "Get Tips" button. The system requests the student's wellness goals and activity data from the Wellness Data Service. If data is available, it is forwarded to the AI Wellness Engine to generate a personalized wellness tip, which is then displayed to the student. The student may choose to save or dismiss the tip. If no data is found, the system prompts the student to set their wellness goals first. This ensures that tips are tailored and relevant to each user's wellness journey.
 
 ##### Activity Diagram
 
@@ -1958,19 +1697,7 @@ alt="A screenshot of a computer AI-generated content may be incorrect." />
 4.23 - Get AI Wellness Tips Activity Diagram</p></figcaption>
 </figure>
 
-**Figure 4.23** illustrates the activity diagram for the "Get AI
-Wellness Tips" use case in the Campus Wellness Portal. The process
-begins when the student logs into the system via MMU's Single Sign-On
-(SSO). Once authenticated, the student navigates to the AI Tips section
-and clicks the "Get Tips" button. The system retrieves the student's
-wellness data and checks for completeness. If the data is insufficient
---- for example, if no goals have been set --- the system displays a
-message prompting the student to configure their goals. If sufficient
-data is available, the system invokes the AI Engine to generate a
-personalized tip. If the generation is successful, the tip is displayed
-to the student. If the AI fails to generate a tip, an error message is
-shown instead. The student then has the option to either save the tip or
-exit the interface.
+**Figure 4.23** illustrates the activity diagram for the "Get AI Wellness Tips" use case in the Campus Wellness Portal. The process begins when the student logs into the system via MMU's Single Sign-On (SSO). Once authenticated, the student navigates to the AI Tips section and clicks the "Get Tips" button. The system retrieves the student's wellness data and checks for completeness. If the data is insufficient --- for example, if no goals have been set --- the system displays a message prompting the student to configure their goals. If sufficient data is available, the system invokes the AI Engine to generate a personalized tip. If the generation is successful, the tip is displayed to the student. If the AI fails to generate a tip, an error message is shown instead. The student then has the option to either save the tip or exit the interface.
 
 #### Receive Notification
 
@@ -2090,20 +1817,7 @@ exit the interface.
 Diagram](./images/media/image26.jpeg){width="3.9529549431321085in"
 height="8.870588363954505in"}
 
-**Figure 4.24** illustrates the sequence diagram for the "Receive
-Notification" use case in the Campus Wellness Portal. The process is
-initiated by the system Scheduler, which triggers a background
-notification job. The Notification Service checks for upcoming
-student-specific events. If no events are found, the process terminates.
-If relevant events exist, the system checks whether notifications are
-enabled for the respective student. If notifications are active, the
-system generates a personalized message and sends it. The student
-receives and views the notification. Depending on its content, the
-student may choose to take further action---such as opening the portal
-to reschedule or cancel an event---or dismiss it entirely. If
-notifications are disabled or message delivery fails, the process is
-logged or skipped to prevent unnecessary disruption. This sequence
-ensures timely, relevant, and personalized communication with students.
+**Figure 4.24** illustrates the sequence diagram for the "Receive Notification" use case in the Campus Wellness Portal. The process is initiated by the system Scheduler, which triggers a background notification job. The Notification Service checks for upcoming student-specific events. If no events are found, the process terminates. If relevant events exist, the system checks whether notifications are enabled for the respective student. If notifications are active, the system generates a personalized message and sends it. The student receives and views the notification. Depending on its content, the student may choose to take further action---such as opening the portal to reschedule or cancel an event---or dismiss it entirely. If notifications are disabled or message delivery fails, the process is logged or skipped to prevent unnecessary disruption. This sequence ensures timely, relevant, and personalized communication with students.
 
 ##### Activity Diagram
 
@@ -2115,19 +1829,7 @@ alt="A screenshot of a computer AI-generated content may be incorrect." />
 4.25 - Receive Notification Activity Diagram</p></figcaption>
 </figure>
 
-**Figure 4.25** illustrates the activity diagram for the "Receive
-Notification" use case in the Campus Wellness Portal. The process begins
-when the system triggers a daily notification job to check for upcoming
-student events. If no events are found, the process ends. If events are
-detected, the system verifies whether notifications are enabled for the
-corresponding student. If enabled, it generates the notification content
-and sends it to the student. Upon receiving the notification, the
-student views it and decides whether to act. If the student chooses to
-act, they are redirected to the scheduling interface to open,
-reschedule, or cancel the event. If no action is taken, the student
-dismisses the notification. This activity flow ensures that only
-students with valid upcoming events and enabled preferences receive
-timely and actionable notifications.
+**Figure 4.25** illustrates the activity diagram for the "Receive Notification" use case in the Campus Wellness Portal. The process begins when the system triggers a daily notification job to check for upcoming student events. If no events are found, the process ends. If events are detected, the system verifies whether notifications are enabled for the corresponding student. If enabled, it generates the notification content and sends it to the student. Upon receiving the notification, the student views it and decides whether to act. If the student chooses to act, they are redirected to the scheduling interface to open, reschedule, or cancel the event. If no action is taken, the student dismisses the notification. This activity flow ensures that only students with valid upcoming events and enabled preferences receive timely and actionable notifications.
 
 #### Manage Notification
 
@@ -2212,20 +1914,7 @@ timely and actionable notifications.
 Diagram](./images/media/image28.jpeg){width="6.257070209973754in"
 height="6.810416666666667in"}
 
-**Figure 4.26** illustrates the sequence diagram for the "Manage
-Notification" use case in the Campus Wellness Portal. The process begins
-when the student logs in via MMU's Single Sign-On (SSO). The system
-verifies the session with the Authentication Service. Once
-authenticated, the student navigates to the Notification Settings page.
-The portal then fetches the current notification preferences by
-requesting them from the Notification Service, which retrieves them from
-the Preferences Database. After the preferences are displayed, the
-student may choose to submit updated preferences. The system validates
-the input and, if valid, saves the new settings to the database and
-returns a confirmation message. If the input is invalid, an error
-message is shown, and the student is prompted to revise the form. If no
-changes are submitted, the session concludes without updates. This
-process ensures students can personalize how they receive wellness
+**Figure 4.26** illustrates the sequence diagram for the "Manage Notification" use case in the Campus Wellness Portal. The process begins when the student logs in via MMU's Single Sign-On (SSO). The system verifies the session with the Authentication Service. Once authenticated, the student navigates to the Notification Settings page. The portal then fetches the current notification preferences by requesting them from the Notification Service, which retrieves them from the Preferences Database. After the preferences are displayed, the student may choose to submit updated preferences. The system validates the input and, if valid, saves the new settings to the database and returns a confirmation message. If the input is invalid, an error message is shown, and the student is prompted to revise the form. If no changes are submitted, the session concludes without updates. This process ensures students can personalize how they receive wellness
 notifications.
 
 ##### Activity Diagram
@@ -2238,20 +1927,7 @@ alt="A black background with white text AI-generated content may be incorrect." 
 4.27 - Manage Notification Activity Diagram</p></figcaption>
 </figure>
 
-**Figure 4.27** illustrates the activity diagram for the "Manage
-Notification" use case in the Campus Wellness Portal. The activity
-begins when the student logs in via MMU Single Sign-On. The system
-authenticates the session and allows the student to access the
-Notification Settings interface. The portal retrieves and displays the
-student's current notification preferences. The student may then choose
-to update their preferences. If no changes are made, the process ends
-without modification. If the student submits updated preferences, the
-system validates the input. If the input is valid, the preferences are
-saved to the database, and a confirmation message is displayed. The
-student then views the confirmation. If the input is invalid, the system
-presents an error message and prompts the student to correct their
-submission. This workflow ensures secure, accurate, and user-driven
-management of notification preferences.
+**Figure 4.27** illustrates the activity diagram for the "Manage Notification" use case in the Campus Wellness Portal. The activity begins when the student logs in via MMU Single Sign-On. The system authenticates the session and allows the student to access the Notification Settings interface. The portal retrieves and displays the student's current notification preferences. The student may then choose to update their preferences. If no changes are made, the process ends without modification. If the student submits updated preferences, the system validates the input. If the input is valid, the preferences are saved to the database, and a confirmation message is displayed. The student then views the confirmation. If the input is invalid, the system presents an error message and prompts the student to correct their submission. This workflow ensures secure, accurate, and user-driven management of notification preferences.
 
 #### View Student Wellness Report
 
@@ -2321,21 +1997,7 @@ alt="A diagram of a computer program AI-generated content may be incorrect." />
 4.28 - View Student Wellness Report Sequence Diagram</p></figcaption>
 </figure>
 
-**Figure 4.28** is the sequence diagram that shows the sequential system
-component communication in which an admin is viewing a student wellness
-report view. This process starts with the admin requesting it by
-selecting the report function and entering a student ID and date range.
-The User Interface sends an authentication request via the SSO
-Authentication Module. On success, the system proceeds to send a request
-to the Wellness Module, which then requests the database for matching
-records. The database returns the records (if any) to the Wellness
-Module, and the module displays the report with student name, metrics,
-and summary or the no records found message. If the admin is
-unauthenticated, the system immediately rejects the process and displays
-an error message for login. Conditional flows are illustrated through
-alt blocks to control record availability and authentication results to
-make the diagram understandable in displaying both successful and failed
-lines.
+**Figure 4.28** is the sequence diagram that shows the sequential system component communication in which an admin is viewing a student wellness report view. This process starts with the admin requesting it by selecting the report function and entering a student ID and date range. The User Interface sends an authentication request via the SSO Authentication Module. On success, the system proceeds to send a request to the Wellness Module, which then requests the database for matching records. The database returns the records (if any) to the Wellness Module, and the module displays the report with student name, metrics, and summary or the no records found message. If the admin is unauthenticated, the system immediately rejects the process and displays an error message for login. Conditional flows are illustrated through alt blocks to control record availability and authentication results to make the diagram understandable in displaying both successful and failed lines.
 
 ##### Activity Diagram
 
@@ -2347,18 +2009,7 @@ alt="A diagram of a program AI-generated content may be incorrect." />
 4.29 - View Student Wellness Report Activity Diagram</p></figcaption>
 </figure>
 
-**Figure 4.29** is the activity diagram showing the logical flow of an
-admin to view a student\'s wellness report through the Campus Wellness
-Portal. It is where it begins when the admin selects the \"View Student
-Wellness Report\" from the menu. The admin inputs the student\'s ID or
-name and the needed date range and clicks on \"Generate Report.\" The
-system checks whether the admin is SSO authenticated. If admin is not
-logged in, it shows an error message to log in. If logged in, the system
-proceeds further to retrieve the wellness data of the student. The
-system checks whether records for the specified student and date range
-are saved or not. If records have been saved, the student's name,
-wellness measures, and summary report is shown. Otherwise, it will give
-a message that no records exist for the given parameters.
+**Figure 4.29** is the activity diagram showing the logical flow of an admin to view a student\'s wellness report through the Campus Wellness Portal. It is where it begins when the admin selects the \"View Student Wellness Report\" from the menu. The admin inputs the student\'s ID or name and the needed date range and clicks on \"Generate Report.\" The system checks whether the admin is SSO authenticated. If admin is not logged in, it shows an error message to log in. If logged in, the system proceeds further to retrieve the wellness data of the student. The system checks whether records for the specified student and date range are saved or not. If records have been saved, the student's name, wellness measures, and summary report is shown. Otherwise, it will give a message that no records exist for the given parameters.
 
 #### Manage Fitness Class
 
@@ -2431,17 +2082,7 @@ alt="A diagram with text and images AI-generated content may be incorrect." />
 4.30 - Manage Fitness Class Sequence Diagram</p></figcaption>
 </figure>
 
-**Figure 4.30** outlines the step-by-step interaction needed in managing
-fitness classes. It starts with the Admin initiating the management
-request via the user interface. The system first checks if the Admin is
-authenticated via the SSO Authentication Module. When authentication
-fails, it shows an error message. When authenticated, the Admin can add,
-edit, or delete a class. The action is relayed to the Fitness Class
-Module, which interacts with the database to execute the insert, update,
-or delete operation. The system returns success or
-failure. The corresponding messages, for instance, \"Class Successfully
-Added,\" \"Updated,\" or \"Removed,\" are then shown to the Admin based
-on the outcome.
+**Figure 4.30** outlines the step-by-step interaction needed in managing fitness classes. It starts with the Admin initiating the management request via the user interface. The system first checks if the Admin is authenticated via the SSO Authentication Module. When authentication fails, it shows an error message. When authenticated, the Admin can add, edit, or delete a class. The action is relayed to the Fitness Class Module, which interacts with the database to execute the insert, update, or delete operation. The system returns success or failure. The corresponding messages, for instance, \"Class Successfully Added,\" \"Updated,\" or \"Removed,\" are then shown to the Admin based on the outcome.
 
 ##### Activity Diagram
 
@@ -2453,18 +2094,7 @@ alt="A diagram of a company AI-generated content may be incorrect." />
 4.31 - Manage Fitness Class Activity Diagram</p></figcaption>
 </figure>
 
-**Figure 4.31** illustrates how an Admin is managing fitness class
-records in the Campus Wellness Portal. The process begins when the Admin
-selects the \"Manage Fitness Class\" menu option. The Admin
-then determines whether they need to add, edit, or delete a
-class. To add, the Admin enters class details and clicks \"Add
-Class.\" To edit, they change the existing class and click \"Save
-Changes.\" To delete, the Admin selects the class and clicks \"Delete
-Class.\" Each of these sends a request to the Campus Wellness Portal.
-The portal checks if the Admin is authenticated via SSO. If not, it
-shows an error message. If the authentication is successful, the
-portal performs the request. Depending on the success of the operation,
-a confirmation message is displayed, or an error is returned if the
+**Figure 4.31** illustrates how an Admin is managing fitness class records in the Campus Wellness Portal. The process begins when the Admin selects the \"Manage Fitness Class\" menu option. The Admin then determines whether they need to add, edit, or delete a class. To add, the Admin enters class details and clicks \"Add Class.\" To edit, they change the existing class and click \"Save Changes.\" To delete, the Admin selects the class and clicks \"Delete Class.\" Each of these sends a request to the Campus Wellness Portal. The portal checks if the Admin is authenticated via SSO. If not, it shows an error message. If the authentication is successful, the portal performs the request. Depending on the success of the operation, a confirmation message is displayed, or an error is returned if the
 operation fails.
 
 #### Manage Medical Schedule 
@@ -2553,20 +2183,7 @@ Sequence
 Diagram](./images/media/image34.jpeg){width="6.264818460192476in"
 height="8.465972222222222in"}
 
-**Figure 4.32** illustrates the sequence diagram for the "Manage Medical
-Schedule" use case in the Campus Wellness Portal. The process begins
-when a staff member logs into the portal via MMU Single Sign-On. The
-system verifies the session through the Authentication Service. Once
-authenticated, the staff navigates to the Medical Schedule Module. The
-portal requests and displays the current appointment schedule, which is
-retrieved from the Schedule Database via the ScheduleService. The staff
-may then submit updates by adding, editing, or removing time slots. The
-system validates the input. If the data is valid, the system attempts to
-update the database. A confirmation message is sent back to the staff
-upon successful update. If the input is invalid or the database update
-fails, the system displays an appropriate error message and prompts the
-staff to retry or correct the input. This ensures secure, real-time
-management of medical schedules.
+**Figure 4.32** illustrates the sequence diagram for the "Manage Medical Schedule" use case in the Campus Wellness Portal. The process begins when a staff member logs into the portal via MMU Single Sign-On. The system verifies the session through the Authentication Service. Once authenticated, the staff navigates to the Medical Schedule Module. The portal requests and displays the current appointment schedule, which is retrieved from the Schedule Database via the ScheduleService. The staff may then submit updates by adding, editing, or removing time slots. The system validates the input. If the data is valid, the system attempts to update the database. A confirmation message is sent back to the staff upon successful update. If the input is invalid or the database update fails, the system displays an appropriate error message and prompts the staff to retry or correct the input. This ensures secure, real-time management of medical schedules.
 
 ##### Activity Diagram
 
@@ -2578,21 +2195,7 @@ alt="A black background with white dots AI-generated content may be incorrect." 
 4.33 - Manage Medical Schedule Activity Diagram</p></figcaption>
 </figure>
 
-**Figure 4.33** illustrates the activity diagram for the "Manage Medical
-Schedule" use case.\
-The process begins when a staff member logs into the portal, and the
-system authenticates the session. After accessing the Medical Schedule
-Module, the current schedule is displayed. The staff chooses to modify
-an appointment slot and submits the updated slot details. The system
-validates the input format and content. If the input is invalid --- for
-example, missing date or time --- the system presents an error message
-and prompts the staff to correct the entry. If valid, the system
-attempts to save the updated schedule. If the update operation is
-successful, a confirmation message is shown to the staff. If a system
-error occurs and the database fails to process the update, an error is
-shown, and the staff is returned to the form to retry. This flow ensures
-staff can reliably manage scheduling tasks while maintaining input
-accuracy and system integrity.
+**Figure 4.33** illustrates the activity diagram for the "Manage Medical Schedule" use case.\ The process begins when a staff member logs into the portal, and the system authenticates the session. After accessing the Medical Schedule Module, the current schedule is displayed. The staff chooses to modify an appointment slot and submits the updated slot details. The system validates the input format and content. If the input is invalid --- for example, missing date or time --- the system presents an error message and prompts the staff to correct the entry. If valid, the system attempts to save the updated schedule. If the update operation is successful, a confirmation message is shown to the staff. If a system error occurs and the database fails to process the update, an error is shown, and the staff is returned to the form to retry. This flow ensures staff can reliably manage scheduling tasks while maintaining input accuracy and system integrity.
 
 ## Interface Requirements 
 
@@ -3030,11 +2633,7 @@ verification:
 
 ## Testing Strategy
 
-The Testing Strategy describes how the Campus Wellness Portal shall be
-thoroughly tested to ensure that it meets all documented functional and
-non-functional requirements. Testing shall be performed on a structured,
-iterative basis in accordance with the Agile development lifecycle, with
-each sprint providing testable features and components.
+The Testing Strategy describes how the Campus Wellness Portal shall be thoroughly tested to ensure that it meets all documented functional and non-functional requirements. Testing shall be performed on a structured, iterative basis in accordance with the Agile development lifecycle, with each sprint providing testable features and components.
 
 ### Test Levels and Scope
 
@@ -3362,13 +2961,7 @@ Wellness Portal
 
 ### Purpose and Scope
 
-The class diagram in *Figure 6.1* models the core domain entities and
-their static relationships within the Campus Wellness Portal system. It
-defines the system's static structure by illustrating key classes, their
-attributes, operations, and the associations, generalizations, and
-dependencies among them. This diagram and its description serve as
-foundational artifacts to support requirements specification, and to
-guide system design, implementation, and verification activities.
+The class diagram in *Figure 6.1* models the core domain entities and their static relationships within the Campus Wellness Portal system. It defines the system's static structure by illustrating key classes, their attributes, operations, and the associations, generalizations, and dependencies among them. This diagram and its description serve as foundational artifacts to support requirements specification, and to guide system design, implementation, and verification activities.
 
 ### Classes and Responsibilities
 
@@ -4016,25 +3609,7 @@ alt="A graph of different colored lines AI-generated content may be incorrect." 
 6.27 - Kano Model Diagram</p></figcaption>
 </figure>
 
-**Figure 6.27:** Presents a Kano Analysis chart that maps the functional
-requirements of the Campus Wellness Portal based on their impact on user
-satisfaction (y-axis) and their level of implementation (x-axis). Each
-requirement is plotted according to its classification derived from
-structured Kano questionnaire responses, stakeholder brainstorming, and
-contextual observations. Features classified as *Must-be*---such
-as Secure SSO Login, Book Medical Appointment, and Real-time Medical
-Slot Viewing---are positioned along the baseline of user expectations,
-where their absence would result in strong
-dissatisfaction. *One-Dimensional* features such as Reschedule
-Appointment, Track Wellness Progress, and Book Fitness Session exhibit a
-linear relationship between performance and satisfaction, indicating
-that better implementation directly improves user experience.
-Finally, *Attractive* features---such as AI Wellness Tips, Manage
-Notification Preferences, and View Wellness Report---occupy the
-upper-right quadrant, highlighting their potential to delight users even
-though they are not expected by default. This visualization supports
-strategic prioritization by clearly distinguishing between essential,
-performance-based, and value-adding features within the system.
+**Figure 6.27:** Presents a Kano Analysis chart that maps the functional requirements of the Campus Wellness Portal based on their impact on user satisfaction (y-axis) and their level of implementation (x-axis). Each requirement is plotted according to its classification derived from structured Kano questionnaire responses, stakeholder brainstorming, and contextual observations. Features classified as *Must-be*---such as Secure SSO Login, Book Medical Appointment, and Real-time Medical Slot Viewing---are positioned along the baseline of user expectations, where their absence would result in strong dissatisfaction. *One-Dimensional* features such as Reschedule Appointment, Track Wellness Progress, and Book Fitness Session exhibit a linear relationship between performance and satisfaction, indicating that better implementation directly improves user experience. Finally, *Attractive* features---such as AI Wellness Tips, Manage Notification Preferences, and View Wellness Report---occupy the upper-right quadrant, highlighting their potential to delight users even though they are not expected by default. This visualization supports strategic prioritization by clearly distinguishing between essential, performance-based, and value-adding features within the system.
 
 #### Must-be (Basic) Requirements
 
@@ -4236,103 +3811,42 @@ Sun, May 18, 2025
 
 Summary:
 
-The session focused on brainstorming AI functionalities to enhance the
-student experience within the campus wellness portal. Participants
-discussed the structure of the session, including the order of
-presentations and the necessity for a rehearsal. Farah expressed her
-readiness to present first, while Mohammed Aamena proposed a
-collaborative discussion format. The team agreed to concentrate on
-specific areas of interest and planned to rehearse prior to the actual
-presentation.
+The session focused on brainstorming AI functionalities to enhance the student experience within the campus wellness portal. Participants discussed the structure of the session, including the order of presentations and the necessity for a rehearsal. Farah expressed her readiness to present first, while Mohammed Aamena proposed a collaborative discussion format. The team agreed to concentrate on specific areas of interest and planned to rehearse prior to the actual presentation.
 
-During the brainstorming, Farah introduced several AI-driven features,
-such as secure login enhancements, AI-assisted counseling history
-analysis, and personalized notifications for wellness activities. Aamina
-contributed ideas on tracking wellness progress and streamlining gym
-booking processes, while Taiba emphasized the importance of generating
-personalized wellness tips and ensuring data privacy. The group aimed to
-compile a refined list of features that directly address student needs,
-with a focus on integrating AI effectively into the portal.
+During the brainstorming, Farah introduced several AI-driven features, such as secure login enhancements, AI-assisted counseling history analysis, and personalized notifications for wellness activities. Aamina contributed ideas on tracking wellness progress and streamlining gym booking processes, while Taiba emphasized the importance of generating personalized wellness tips and ensuring data privacy. The group aimed to compile a refined list of features that directly address student needs, with a focus on integrating AI effectively into the portal.
 
-The discussion then shifted to prioritizing features for the initial
-implementation phase. Farah highlighted the critical need for data
-security, particularly concerning health information. There was some
-confusion regarding the discussion structure, prompting Nur to seek
-clarification. Mohammed Aamena suggested a more interactive approach to
-enhance engagement, leading to an acknowledgment of the need for a
-dynamic dialogue to address implementation effectively.
+The discussion then shifted to prioritizing features for the initial implementation phase. Farah highlighted the critical need for data security, particularly concerning health information. There was some confusion regarding the discussion structure, prompting Nur to seek clarification. Mohammed Aamena suggested a more interactive approach to enhance engagement, leading to an acknowledgment of the need for a dynamic dialogue to address implementation effectively.
 
-The team concluded by agreeing on the importance of tailoring AI fitness
-suggestions to student activities and preferences. Farah proposed
-strategies for managing incorrect AI suggestions, including user
-feedback and customization options. Mohammed Yousef emphasized the
-necessity of providing students with control over AI features to foster
-trust and privacy. The session wrapped up with plans to prepare a
-validation survey for student feedback, ensuring that the proposed
-functionalities align with user expectations.
+The team concluded by agreeing on the importance of tailoring AI fitness suggestions to student activities and preferences. Farah proposed strategies for managing incorrect AI suggestions, including user feedback and customization options. Mohammed Yousef emphasized the necessity of providing students with control over AI features to foster trust and privacy. The session wrapped up with plans to prepare a validation survey for student feedback, ensuring that the proposed functionalities align with user expectations.
 
 Chapters & Topics:
 
 Focused Brainstorming Session on AI Functionalities for Student Wellness
 Portal
 
-Mohammed Yousef Mohammed Abdulkarem led a brainstorming session focused
-on defining AI functionalities for the campus wellness portal. The group
-discussed the session\'s format, including who would present and in what
-order. Farah Hanim Binti Mohd Zamri and Mohammed Aamena Mohammed
-Abdulkarem contributed to the planning of the session, emphasizing the
-importance of rehearsing before the actual presentation.
+Mohammed Yousef Mohammed Abdulkarem led a brainstorming session focused on defining AI functionalities for the campus wellness portal. The group discussed the session\'s format, including who would present and in what order. Farah Hanim Binti Mohd Zamri and Mohammed Aamena Mohammed Abdulkarem contributed to the planning of the session, emphasizing the importance of rehearsing before the actual presentation.
 
 AI-Driven Enhancements for Campus Wellness Portal
 
-Mohammed Yousef initiated the discussion on enhancing the campus
-wellness portal with AI functionalities aimed at improving student
-experiences. Farah highlighted key areas such as secure logins,
-AI-driven counseling analysis, and personalized wellness notifications.
-Amina focused on wellness tracking, goal setting, and gym booking
-suggestions, while Taiba emphasized the importance of personalized
-wellness tips, smart notifications, and privacy controls. Each speaker
-contributed to a collaborative effort to refine potential AI features.
+Mohammed Yousef initiated the discussion on enhancing the campus wellness portal with AI functionalities aimed at improving student experiences. Farah highlighted key areas such as secure logins, AI-driven counseling analysis, and personalized wellness notifications. Amina focused on wellness tracking, goal setting, and gym booking suggestions, while Taiba emphasized the importance of personalized wellness tips, smart notifications, and privacy controls. Each speaker contributed to a collaborative effort to refine potential AI features.
 
 \* Secure login and authentication enhancements
 
 Collaborative Discussion on Phase One Features
 
-Mohammed Yousef prompted a discussion regarding the features that should
-be prioritized for phase one implementation. Farah highlighted the
-critical need for data security and privacy, especially concerning
-health-related information. The dialogue included some confusion about
-the collaborative format, with participants expressing a desire for a
-more interactive discussion before moving to a summary.
+Mohammed Yousef prompted a discussion regarding the features that should be prioritized for phase one implementation. Farah highlighted the critical need for data security and privacy, especially concerning health-related information. The dialogue included some confusion about the collaborative format, with participants expressing a desire for a more interactive discussion before moving to a summary.
 
 Collaborative Discussion on AI Features and Implementation
 
-Mohammed Yousef highlighted the necessity of AI-driven booking
-suggestions and the integration of AI tips. The team discussed the
-terminology for their project, leaning towards calling their ideas
-features rather than use cases. Farah suggested structuring their
-collaborative discussion around specific agenda items, while the group
-prepared questions for each other to facilitate the discussion.
+Mohammed Yousef highlighted the necessity of AI-driven booking suggestions and the integration of AI tips. The team discussed the terminology for their project, leaning towards calling their ideas features rather than use cases. Farah suggested structuring their collaborative discussion around specific agenda items, while the group prepared questions for each other to facilitate the discussion.
 
 AI-Driven Fitness Recommendations and User Control
 
-Aamina outlined methods to make AI fitness suggestions relevant to
-students\' activities, including allowing users to select how often they
-receive tips and ensuring messages are concise. Nur added that
-recommendations should consider both user preferences and performance
-data to enhance personalization. Farah suggested implementing user
-feedback mechanisms and automated monitoring to address inappropriate
-suggestions, emphasizing the need for transparency and user control over
-AI features.
+Aamina outlined methods to make AI fitness suggestions relevant to students\' activities, including allowing users to select how often they receive tips and ensuring messages are concise. Nur added that recommendations should consider both user preferences and performance data to enhance personalization. Farah suggested implementing user feedback mechanisms and automated monitoring to address inappropriate suggestions, emphasizing the need for transparency and user control over AI features.
 
 AI-Driven Functionalities for Campus Wellness Portal
 
-Mohammed Yousef initiated a brainstorming session focused on AI
-functionalities for the campus wellness portal, emphasizing the
-importance of aligning features with student needs. Farah Hanim and
-Mohammed Aamina supported the proposed ideas, which included smart
-scheduling and adaptive wellness suggestions. The group agreed to create
-a validation survey for student feedback as a follow-up action.
+Mohammed Yousef initiated a brainstorming session focused on AI functionalities for the campus wellness portal, emphasizing the importance of aligning features with student needs. Farah Hanim and Mohammed Aamina supported the proposed ideas, which included smart scheduling and adaptive wellness suggestions. The group agreed to create a validation survey for student feedback as a follow-up action.
 
 \* AI-assisted counseling and wellness tracking
 
@@ -4341,56 +3855,29 @@ wellness portal
 
 AI-Enhanced Wellness System Features Presentation
 
-Farah outlined key features for the AI-Enhanced Wellness System,
-including secure login with multi-factor authentication and AI risk
-detection. She highlighted the use of natural language processing for
-analyzing counseling histories, personalized notifications for wellness
-activities, and automated reporting to track student progress.
-Additionally, she proposed smart fitness class management that adjusts
-based on demand and user preferences.
+Farah outlined key features for the AI-Enhanced Wellness System, including secure login with multi-factor authentication and AI risk detection. She highlighted the use of natural language processing for analyzing counseling histories, personalized notifications for wellness activities, and automated reporting to track student progress. Additionally, she proposed smart fitness class management that adjusts based on demand and user preferences.
 
 \* Personalized notifications and reminders
 
 Enhancing Student Wellness and Goal Setting through AI
 
-Mohammed Aameena Mohammed AbdulKarem outlined strategies to enhance
-student wellness through AI. The proposed features include tracking
-wellness habits, suggesting realistic goals based on past behavior,
-providing daily wellness tips, and recommending gym booking slots
-tailored to students\' schedules. These initiatives aim to keep students
-engaged and motivated in their wellness journeys.
+Mohammed Aameena Mohammed AbdulKarem outlined strategies to enhance student wellness through AI. The proposed features include tracking wellness habits, suggesting realistic goals based on past behavior, providing daily wellness tips, and recommending gym booking slots tailored to students\' schedules. These initiatives aim to keep students engaged and motivated in their wellness journeys.
 
 Enhancing the Campus Wellness Portal with AI
 
-Mohammed Aameena discussed the potential of making the campus wellness
-portal more supportive for students, especially during exams and
-assignments. Taiba presented suggestions for AI-driven wellness tips
-tailored to student habits, improved notification management, and strong
-privacy controls. These enhancements aim to create a more personalized
-and trustworthy experience for users.
+Mohammed Aameena discussed the potential of making the campus wellness portal more supportive for students, especially during exams and assignments. Taiba presented suggestions for AI-driven wellness tips tailored to student habits, improved notification management, and strong privacy controls. These enhancements aim to create a more personalized and trustworthy experience for users.
 
 \* Privacy and transparency in AI data usage
 
 Collaborative Discussion on Project Documentation
 
-The team discussed the best approach for managing project documentation,
-particularly the SRS, with suggestions to use both GitHub and Word.
-Mohammed Aamena emphasized the need for collaboration and sharing files
-before pushing them to GitHub, while Farah Hanim expressed concerns
-about ensuring proper comments and commits to meet the lecturer\'s
-expectations. Mohammed Yousef supported the idea of using GitHub for
-tracking contributions.
+The team discussed the best approach for managing project documentation, particularly the SRS, with suggestions to use both GitHub and Word. Mohammed Aamena emphasized the need for collaboration and sharing files before pushing them to GitHub, while Farah Hanim expressed concerns about ensuring proper comments and commits to meet the lecturer\'s expectations. Mohammed Yousef supported the idea of using GitHub for tracking contributions.
 
 \* Division of responsibilities for the SRS document.
 
 Discussion on Elicitation Plan and SRS Diagrams
 
-Farah and Mohammed reviewed the elicitation plan, with Farah asking for
-it once completed. They confirmed the requirement for at least two
-diagrams for each use case and discussed the need to identify a
-consistent table format for the use case diagram. They agreed to finish
-the initial documents before moving on to the Software Requirements
-Specification (SRS).
+Farah and Mohammed reviewed the elicitation plan, with Farah asking for it once completed. They confirmed the requirement for at least two diagrams for each use case and discussed the need to identify a consistent table format for the use case diagram. They agreed to finish the initial documents before moving on to the Software Requirements Specification (SRS).
 
 \* Elicitation plan and its timeline for sharing.
 
