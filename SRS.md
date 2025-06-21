@@ -18,19 +18,22 @@ height="2.138885608048994in"}
 
 **GROUP MEMBERS:**
 
-  ------------------------------------------------------------------------
-     **ROLE**                    **NAME**                  **STUDENT ID**
-  -------------- ----------------------------------------- ---------------
-   Group Leader        Farah Hanim Binti Mohd Zamri          1221305625
+| Role         | Name                                | Student ID |
+| ------------ | ----------------------------------- | ---------- |
+| Group Leader | Farah Hanim Binti Mohd Zamri        | 1221305625 |
+| Group Member | Nur Thayiebah Binti Hamdan          | 1221305552 |
+| Group Member | Mohammed Aamena Mohammed Abdulkarem | 1221305728 |
+| Group Member | Mohammed Yousef Mohammed Abdulkarem | 1221305727 |
+**REVISED BY:**
 
-   Group Member         Nur Thayiebah Binti Hamdan           1221305552
+| Role         | Name                            | Student ID |
+| ------------ | ------------------------------- | ---------- |
+| Group Leader | Muhammad Anas bin Khairul Azman | 241UC2401Z |
+| Group Member | Nicholas Thong Meng Shui        |            |
+| Group Member |                                 |            |
 
-   Group Member     Mohammed Aamena Mohammed Abdulkarem      1221305728
 
-   Group Member     Mohammed Yousef Mohammed Abdulkarem      1221305727
-  ------------------------------------------------------------------------
-
-Table of Contents
+# Table of Contents
 
 [Table of Tables [5](#table-of-tables)](#table-of-tables)
 
@@ -490,82 +493,54 @@ Satisfaction-Functionality with Results
 
 ## Purpose
 
-> This Software Requirements Specification (SRS) defines the functional
-> and non-functional requirements for the Campus Wellness Portal to be
-> developed by Multimedia University (MMU). The primary purpose of this
-> document is to provide a complete and consistent reference for all
-> stakeholders ---including developers, testers, designers, and
-> evaluators ---throughout the system development lifecycle.
->
-> This system aims to address the fragmentation and inefficiency
-> currently experienced by students when accessing wellness-related
-> services such as medical bookings, counselling sessions, and fitness
-> activities. By introducing a centralized and integrated digital
-> platform, the Campus Wellness Portal will unify service scheduling,
-> enhance user experience through personalized wellness insights, and
-> ensure secure access via MMU's Single Sign-On (SSO).
->
-> The specification of these requirements ensures that the resulting
-> software aligns with MMU's strategic goal of promoting holistic
-> student well-being and preventive care, while adhering to
-> internationally recognized standards outlined in ISO/IEC/IEEE
-> 29148:2018.
+This Software Requirements Specification (SRS) defines the functional and non functional requirements for the Campus Wellness Portal to be developed by Multimedia University (MMU). The primary purpose of this document is to provide a complete and consistent reference for all stakeholders - including developers, testers, designers, and evaluators - throughout the system development lifecycle.
+
+This system aims to address the fragmentation and inefficiency currently experienced by students when accessing wellness-related services such as medical bookings, counselling sessions, and fitness activities. By introducing a centralized and integrated digital platform, the Campus Wellness Portal will unify service scheduling, enhance user experience through personalized wellness insights, and ensure secure access via MMU's Single Sign-On (SSO).
+
+The specification of these requirements ensures that the resulting software aligns with MMU's strategic goal of promoting holistic student well-being and preventive care, while adhering to internationally recognized standards outlined in ISO/IEC/IEEE 29148:2018.
 
 ## Scope
 
-> This document defines the scope of the Campus Wellness Portal (CWP), a
-> software platform developed to centralize and streamline student
-> access to health, counselling, and fitness services at Multimedia
-> University (MMU).
->
-> The CWP provides an integrated interface that connects with existing
-> university infrastructure, including the CLiC Health and Counselling
-> modules, the MMU Online Portal (Single Sign-On via OAuth 2.0), and the
-> Campus Fitness Centre's scheduling systems. Designed for
-> cross-platform use on desktop and mobile devices, the portal empowers
-> users to manage wellness activities from a unified, responsive
-> dashboard.
->
-> The system's core functionality is driven by real student feedback and
-> prioritization, ensuring alignment with authentic wellness needs and
-> digital service expectations.
->
-> The primary users of the CWP are MMU students. System administrators
-> act as secondary users, overseeing appointment visibility and basic
-> edits within the scheduling modules.
->
-> In-scope features include:
->
-> • Secure SSO authentication via the MMU Online Portal
->
-> • Booking of medical appointments via CLiC Health
->
-> • Counselling session scheduling and history access through CLiC
-> Counselling
->
-> • Real-time slot visibility for both health and counselling
-> appointments
->
-> • Booking and cancellation of fitness classes via the Campus Fitness
-> Centre
->
-> • Goal tracking modules for hydration, sleep, and physical activity
->
-> • AI-generated wellness recommendations based on user data
->
-> • Notifications and reminders via push and in-app alerts
->
-> • Responsive web-based user interface, accessible across platforms
->
-> Out-of-scope for this development phase:
->
-> • Payment handling for services
->
-> • Emergency or crisis medical features (e.g., ambulance requests)
->
-> • Real-time chat with medical or counselling staff
->
-> • Full administrative dashboards beyond appointments viewing/editing
+This document defines the scope of the Campus Wellness Portal (CWP), a software platform developed to centralize and streamline student access to health, counselling, and fitness services at Multimedia University (MMU).
+
+The CWP provides an integrated interface that connects with existing university infrastructure, including the CLiC Health and Counselling modules, the MMU Online Portal (Single Sign-On via OAuth 2.0), and the Campus Fitness Centre's scheduling systems. Designed for cross-platform use on desktop and mobile devices, the portal empowers users to manage wellness activities from a unified, responsive dashboard.
+
+The system's core functionality is driven by real student feedback and prioritization, ensuring alignment with authentic wellness needs and digital service expectations.
+
+The primary users of the CWP are MMU students. System administrators act as secondary users, overseeing appointment visibility and basic edits within the scheduling modules.
+
+In-scope features include:
+
+• Secure SSO authentication via the MMU Online Portal
+
+• Booking of medical appointments via CLiC Health
+
+• Counselling session scheduling and history access through CLiC
+Counselling
+
+• Real-time slot visibility for both health and counselling
+appointments
+
+• Booking and cancellation of fitness classes via the Campus Fitness
+Centre
+
+• Goal tracking modules for hydration, sleep, and physical activity
+
+• AI-generated wellness recommendations based on user data
+
+• Notifications and reminders via push and in-app alerts
+
+• Responsive web-based user interface, accessible across platforms
+
+Out-of-scope for this development phase:
+
+• Payment handling for services
+
+• Emergency or crisis medical features (e.g., ambulance requests)
+
+• Real-time chat with medical or counselling staff
+
+• Full administrative dashboards beyond appointments viewing/editing
 
 ## Product Overview
 
@@ -988,7 +963,7 @@ alt="A diagram of a diagram AI-generated content may be incorrect." />
 - View Available Medical Slots Sequence Diagram</p></figcaption>
 </figure>
 
-**Figure 4.4** presents the sequence diagram that describes the operational flow for the \"View Medical Slots\" use case within the Campus Wellness Portal. The sequence begins when the Student accesses the relevant page, prompting the Campus Wellness Portal to verify the login status via the Authentication Service. Upon successful authentication, the portal sends a request to the Medical Center Service for available medical slots, which then queries the MedicalDB and returns the data. If available slots are found, they are displayed to the Student; otherwise, an appropriate notification message is shown. The diagram also depicts an optional interaction where the Student applies filters to narrow down the slot list. In such cases, the portal forwards the filter parameters to the Medical Center Service, which performs a filtered query against the MedicalDB and returns the refined results for presentation. This sequence diagram effectively illustrates the step-by-step communication and system responsibilities required to support the viewing of medical slot availability.
+**Figure 4.4** presents the sequence diagram that describes the operational flow for the "View Medical Slots" use case within the Campus Wellness Portal. The sequence begins when the Student accesses the relevant page, prompting the Campus Wellness Portal to verify the login status via the Authentication Service. Upon successful authentication, the portal sends a request to the Medical Center Service for available medical slots, which then queries the MedicalDB and returns the data. If available slots are found, they are displayed to the Student; otherwise, an appropriate notification message is shown. The diagram also depicts an optional interaction where the Student applies filters to narrow down the slot list. In such cases, the portal forwards the filter parameters to the Medical Center Service, which performs a filtered query against the MedicalDB and returns the refined results for presentation. This sequence diagram effectively illustrates the step-by-step communication and system responsibilities required to support the viewing of medical slot availability.
 
 ##### Activity Diagram
 
@@ -1004,95 +979,22 @@ alt="A screenshot of a computer AI-generated content may be incorrect." />
 
 #### Book Medical Counselling Appointment
 
-+----------------------------+------------------+------------------------------+
-| **No.**                    | **Section**      | **Context/Explanation**      |
-+:===============+:==========+:=================+:=============================+
-| **ID**         | 1.1       | Use Case ID      | UC03                         |
-|                +-----------+------------------+------------------------------+
-|                | 1.2       | Name             | Book Medical Counselling     |
-|                |           |                  | Appointment                  |
-+----------------+-----------+------------------+------------------------------+
-| **Management** | 2.1       | Author(s)        | Mohammed Yousef Mohammed     |
-|                |           |                  | Abdulkarem                   |
-|                +-----------+------------------+------------------------------+
-|                | 2.2       | Version          | 1.0                          |
-+----------------+-----------+------------------+------------------------------+
-| **Context**    | 3.1       | Source(s)        | Questionnaire (Microsoft     |
-|                |           |                  | Forms), Observation          |
-+----------------+-----------+------------------+------------------------------+
-| **Use Case     | 4.1       | Short            | Allows students to reserve a |
-| Definition**   |           | Description      | medical or counselling       |
-|                |           |                  | consultation slot through    |
-|                |           |                  | the portal.                  |
-|                +-----------+------------------+------------------------------+
-|                | 4.2       | Associated       | - G1.1 -- CLiC Integration   |
-|                |           | Goal(s)          |                              |
-|                |           |                  | - G1.2 -- Manage             |
-|                |           |                  |   Appointments               |
-|                |           |                  |                              |
-|                |           |                  | - G2.1 -- Request            |
-|                |           |                  |   Counselling Session        |
-|                +-----------+------------------+------------------------------+
-|                | 4.3       | Primary Actor(s) | Student                      |
-|                +-----------+------------------+------------------------------+
-|                | 4.4       | Other Actor(s)   | Admins                       |
-|                +-----------+------------------+------------------------------+
-|                | 4.5       | Precondition(s)  | \- Student is authenticated  |
-|                |           |                  | via the portal.\             |
-|                |           |                  | - Selected slot is confirmed |
-|                |           |                  | available in real-time.      |
-|                +-----------+------------------+------------------------------+
-|                | 4.6       | Postcondition(s) | \- Appointment is            |
-|                |           |                  | successfully booked and      |
-|                |           |                  | confirmed.\                  |
-|                |           |                  | - Student receives           |
-|                |           |                  | confirmation via email and   |
-|                |           |                  | system notification.         |
-|                +-----------+------------------+------------------------------+
-|                | 4.7       | Result           | The system confirms and      |
-|                |           |                  | records the user's medical   |
-|                |           |                  | counselling appointment in   |
-|                |           |                  | the schedule.                |
-|                +-----------+------------------+------------------------------+
-|                | 4.8       | Main Scenario    | 1\. Student navigates to     |
-|                |           |                  | "Book Medical Appointment"   |
-|                |           |                  | interface.\                  |
-|                |           |                  | 2. System verifies the       |
-|                |           |                  | session via Authentication   |
-|                |           |                  | Service.\                    |
-|                |           |                  | 3. System displays updated   |
-|                |           |                  | available consultation       |
-|                |           |                  | slots.\                      |
-|                |           |                  | 4. Student selects a         |
-|                |           |                  | preferred slot.\             |
-|                |           |                  | 5. System checks for         |
-|                |           |                  | conflicts and confirms       |
-|                |           |                  | availability.\               |
-|                |           |                  | 6. System reserves the slot  |
-|                |           |                  | and updates the backend      |
-|                |           |                  | Appointment Service.\        |
-|                |           |                  | 7. Notification Service      |
-|                |           |                  | sends a booking confirmation |
-|                |           |                  | email.\                      |
-|                |           |                  | 8. Student sees a success    |
-|                |           |                  | message on the screen.       |
-|                +-----------+------------------+------------------------------+
-|                | 4.9       | Alternative      | \- 4a. Slot No Longer        |
-|                |           | Scenario(s)      | Available:\                  |
-|                |           |                  |  4a1. System notifies:       |
-|                |           |                  | "Selected slot is no longer  |
-|                |           |                  | available---please choose    |
-|                |           |                  | another."\                   |
-|                |           |                  | - 5a. Time Conflict with     |
-|                |           |                  | Existing Appointment:\       |
-|                |           |                  |  5a1. System prompts student |
-|                |           |                  | to resolve scheduling        |
-|                |           |                  | conflict.\                   |
-|                |           |                  | - 6a. Booking Failure        |
-|                |           |                  | (System Error):\             |
-|                |           |                  |  6a1. System alerts student  |
-|                |           |                  | and advises retry.           |
-+----------------+-----------+------------------+------------------------------+
+| Section                 | Field                       | Details                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
+| ----------------------- | --------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **ID**                  | 1.1 Use Case ID             | UC03                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
+|                         | 1.2 Name                    | Book Medical Counselling Appointment                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
+| **Management**          | 2.1 Author(s)               | Mohammed Yousef Mohammed Abdulkarem                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
+|                         | 2.2 Version                 | 1.0                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
+| **Context**             | 3.1 Source(s)               | Questionnaire (Microsoft Forms), Observation                                                                                                                                                                                                                                                                                                                                                                                                                                                |
+| **Use Case Definition** | 4.1 Short Description       | Allows students to reserve a medical or counselling consultation slot through the portal.                                                                                                                                                                                                                                                                                                                                                                                                   |
+|                         | 4.2 Associated Goal(s)      | - G1.1 -- CLiC Integration<br>- G1.2 -- Manage Appointments<br>- G2.1 -- Request Counselling Session                                                                                                                                                                                                                                                                                                                                                                                        |
+|                         | 4.3 Primary Actor(s)        | Student                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
+|                         | 4.4 Other Actor(s)          | Admins                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
+|                         | 4.5 Precondition(s)         | - Student is authenticated via the portal.<br>- Selected slot is confirmed available in real-time.                                                                                                                                                                                                                                                                                                                                                                                          |
+|                         | 4.6 Postcondition(s)        | - Appointment is successfully booked and confirmed.<br>- Student receives confirmation via email and system notification.                                                                                                                                                                                                                                                                                                                                                                   |
+|                         | 4.7 Result                  | The system confirms and records the user's medical counselling appointment in the schedule.                                                                                                                                                                                                                                                                                                                                                                                                 |
+|                         | 4.8 Main Scenario           | 1. Student navigates to "Book Medical Appointment" interface.<br>2. System verifies the session via Authentication Service.<br>3. System displays updated available consultation slots.<br>4. Student selects a preferred slot.<br>5. System checks for conflicts and confirms availability.<br>6. System reserves the slot and updates the backend Appointment Service.<br>7. Notification Service sends a booking confirmation email.<br>8. Student sees a success message on the screen. |
+|                         | 4.9 Alternative Scenario(s) | - **4a. Slot No Longer Available:**<br>  4a1. System notifies: "Selected slot is no longer available---please choose another."<br>- **5a. Time Conflict with Existing Appointment:**<br>  5a1. System prompts student to resolve scheduling conflict.<br>- **6a. Booking Failure (System Error):**<br>  6a1. System alerts student and advises retry.                                                                                                                                       |
 
 : []{#_Toc199101180 .anchor}Table 4.3 - Book Medical Counselling
 Appointment Use Case
@@ -1107,23 +1009,7 @@ alt="A diagram of a company AI-generated content may be incorrect." />
 - Book Medical Counselling Appointment Sequence Diagram</p></figcaption>
 </figure>
 
-**Figure 4.6** illustrates a detailed sequence diagram describing the
-process for a Student to book a medical appointment via the Campus
-Wellness Portal. The interaction begins when the Student initiates a
-booking request, prompting the portal to authenticate the user\'s
-credentials through the Authentication Service. Upon successful
-authentication, the portal retrieves and displays available medical
-slots by querying the Medical DB via the Medical Centre Service. Once
-the Student selects a preferred slot, the portal sends an appointment
-booking request to the Medical Center Service, which verifies the
-slot\'s availability. Two alternative flows are depicted: if the slot is
-available, it is reserved in the Medical DB, the booking is confirmed to
-the Student through the portal, and the Notification Service is
-triggered to send a confirmation email; if the slot is unavailable, the
-Student is notified accordingly and offered the option to join a
-waitlist. This sequence diagram effectively captures the complete flow,
-decision points, and system responsibilities involved in the medical
-appointment booking process.
+**Figure 4.6** illustrates a detailed sequence diagram describing the process for a Student to book a medical appointment via the Campus Wellness Portal. The interaction begins when the Student initiates a booking request, prompting the portal to authenticate the user's credentials through the Authentication Service. Upon successful authentication, the portal retrieves and displays available medical slots by querying the Medical DB via the Medical Centre Service. Once the Student selects a preferred slot, the portal sends an appointment booking request to the Medical Center Service, which verifies the slot's availability. Two alternative flows are depicted: if the slot is available, it is reserved in the Medical DB, the booking is confirmed to the Student through the portal, and the Notification Service is triggered to send a confirmation email; if the slot is unavailable, the Student is notified accordingly and offered the option to join a waitlist. This sequence diagram effectively captures the complete flow, decision points, and system responsibilities involved in the medical appointment booking process.
 
 ##### Activity Diagram
 
@@ -1135,103 +1021,26 @@ alt="A diagram of a flowchart AI-generated content may be incorrect." />
 - Book Medical Counselling Appointment Activity Diagram</p></figcaption>
 </figure>
 
-**Figure 4.7** presents an activity diagram that meticulously outlines
-the workflow for a Student to book an appointment via the Campus
-Wellness Portal, involving the Medical Center Service and the
-Appointment Database. The process begins with the Student opening the
-\"Book Appointment\" page, after which the Campus Wellness Portal
-verifies the user\'s login status, redirecting to a login page if the
-user is not authenticated. If logged in, the portal proceeds to retrieve
-available slots by prompting the Medical Center Service to query the
-Appointment Database, which then returns the available slot data back to
-the portal for display to the student. Following the display, the
-Student selects a preferred slot and confirms the booking, which
-triggers the Campus Wellness Portal to send a booking request to the
-Medical Center Service. The Medical Center Service then attempts to
-reserve the selected slot in the Appointment Database. The Medical
-Centre Service then makes a critical decision: if the reservation is
-successful, it sends a success confirmation back to the portal; if not,
-it sends an error. Before the procedure is finished, the Campus Wellness
-Portal assesses the booking outcome and displays an error message for
-unsuccessful efforts or a confirmation message for successful bookings.
+**Figure 4.7** presents an activity diagram that meticulously outlines the workflow for a Student to book an appointment via the Campus Wellness Portal, involving the Medical Center Service and the Appointment Database. The process begins with the Student opening the "Book Appointment" page, after which the Campus Wellness Portal verifies the user's login status, redirecting to a login page if the user is not authenticated. If logged in, the portal proceeds to retrieve available slots by prompting the Medical Center Service to query the Appointment Database, which then returns the available slot data back to the portal for display to the student. Following the display, the Student selects a preferred slot and confirms the booking, which triggers the Campus Wellness Portal to send a booking request to the Medical Center Service. The Medical Center Service then attempts to reserve the selected slot in the Appointment Database. The Medical Centre Service then makes a critical decision: if the reservation is successful, it sends a success confirmation back to the portal; if not, it sends an error. Before the procedure is finished, the Campus Wellness Portal assesses the booking outcome and displays an error message for unsuccessful efforts or a confirmation message for successful bookings.
 
 #### Cancel Appointment
 
-+--------------------------+------------------+----------------------------------+
-| **No.**                  | **Section**      | **Context/Explanation**          |
-+:===============+:========+:=================+:=================================+
-| **ID**         | 1.1     | Use Case ID      | UC04                             |
-|                +---------+------------------+----------------------------------+
-|                | 1.2     | Name             | Cancel Appointment               |
-+----------------+---------+------------------+----------------------------------+
-| **Management** | 2.1     | Author(s)        | Mohammed Yousef Mohammed         |
-|                |         |                  | Abdulkarem                       |
-|                +---------+------------------+----------------------------------+
-|                | 2.2     | Version          | 1.0                              |
-+----------------+---------+------------------+----------------------------------+
-| **Context**    | 3.1     | Source(s)        | Questionnaire (Microsoft Forms)  |
-+----------------+---------+------------------+----------------------------------+
-| **Use Case     | 4.1     | Short            | Enables students to cancel a     |
-| Definition**   |         | Description      | confirmed appointment and        |
-|                |         |                  | release the slot for others.     |
-|                +---------+------------------+----------------------------------+
-|                | 4.2     | Associated       | - G1.1 -- CLiC Integration       |
-|                |         | Goal(s)          |                                  |
-|                |         |                  | - G1.2 -- Manage Appointments    |
-|                +---------+------------------+----------------------------------+
-|                | 4.3     | Primary Actor(s) | Student                          |
-|                +---------+------------------+----------------------------------+
-|                | 4.4     | Other Actor(s)   | Admin                            |
-|                +---------+------------------+----------------------------------+
-|                | 4.5     | Precondition(s)  | \- Student is authenticated via  |
-|                |         |                  | the portal.\                     |
-|                |         |                  | - At least one upcoming          |
-|                |         |                  | appointment is present in the    |
-|                |         |                  | student's schedule.              |
-|                +---------+------------------+----------------------------------+
-|                | 4.6     | Postcondition(s) | \- Appointment is successfully   |
-|                |         |                  | cancelled.\                      |
-|                |         |                  | - Slot becomes available for     |
-|                |         |                  | others.\                         |
-|                |         |                  | - Student receives a             |
-|                |         |                  | cancellation confirmation        |
-|                |         |                  | notification.                    |
-|                +---------+------------------+----------------------------------+
-|                | 4.7     | Result           | The system removes the selected  |
-|                |         |                  | appointment from the user's      |
-|                |         |                  | schedule and updates the         |
-|                |         |                  | availability of that slot.       |
-|                +---------+------------------+----------------------------------+
-|                | 4.8     | Main Scenario    | 1\. Student accesses "My         |
-|                |         |                  | Appointments" dashboard.\        |
-|                |         |                  | 2. System validates the          |
-|                |         |                  | student's session.\              |
-|                |         |                  | 3. Student selects "Cancel"      |
-|                |         |                  | button on appointment to         |
-|                |         |                  | cancel.\                         |
-|                |         |                  | 4. System prompts for            |
-|                |         |                  | cancellation confirmation.\      |
-|                |         |                  | 5. Student confirms.\            |
-|                |         |                  | 6. System cancels the            |
-|                |         |                  | appointment and updates          |
-|                |         |                  | scheduling records.\             |
-|                |         |                  | 7. Notification Service sends    |
-|                |         |                  | cancellation confirmation        |
-|                |         |                  | email.\                          |
-|                |         |                  | 8. System displays confirmation  |
-|                |         |                  | message.                         |
-|                +---------+------------------+----------------------------------+
-|                | 4.9     | Alternative      | \- 3a. No Appointments to        |
-|                |         | Scenario(s)      | Cancel:\                         |
-|                |         |                  |  3a1. System displays: "You have |
-|                |         |                  | no upcoming appointments."\      |
-|                |         |                  | - 5a. Cancellation Within Short  |
-|                |         |                  | Notice Window (\<2 hours):\      |
-|                |         |                  |  5a1. System warns of            |
-|                |         |                  | short-notice cancellation.\      |
-|                |         |                  |  5a2. Student may proceed or     |
-|                |         |                  | abort cancellation.              |
-+----------------+---------+------------------+----------------------------------+
+| Section                 | Field                       | Details                                                                                                                                                                                                                                                                                                                                                                                                                       |
+| ----------------------- | --------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **ID**                  | 1.1 Use Case ID             | UC04                                                                                                                                                                                                                                                                                                                                                                                                                          |
+|                         | 1.2 Name                    | Cancel Appointment                                                                                                                                                                                                                                                                                                                                                                                                            |
+| **Management**          | 2.1 Author(s)               | Mohammed Yousef Mohammed Abdulkarem                                                                                                                                                                                                                                                                                                                                                                                           |
+|                         | 2.2 Version                 | 1.0                                                                                                                                                                                                                                                                                                                                                                                                                           |
+| **Context**             | 3.1 Source(s)               | Questionnaire (Microsoft Forms)                                                                                                                                                                                                                                                                                                                                                                                               |
+| **Use Case Definition** | 4.1 Short Description       | Enables students to cancel a confirmed appointment and release the slot for others.                                                                                                                                                                                                                                                                                                                                           |
+|                         | 4.2 Associated Goal(s)      | - G1.1 -- CLiC Integration<br>- G1.2 -- Manage Appointments                                                                                                                                                                                                                                                                                                                                                                   |
+|                         | 4.3 Primary Actor(s)        | Student                                                                                                                                                                                                                                                                                                                                                                                                                       |
+|                         | 4.4 Other Actor(s)          | Admin                                                                                                                                                                                                                                                                                                                                                                                                                         |
+|                         | 4.5 Precondition(s)         | - Student is authenticated via the portal.<br>- At least one upcoming appointment is present in the student's schedule.                                                                                                                                                                                                                                                                                                       |
+|                         | 4.6 Postcondition(s)        | - Appointment is successfully cancelled.<br>- Slot becomes available for others.<br>- Student receives a cancellation confirmation notification.                                                                                                                                                                                                                                                                              |
+|                         | 4.7 Result                  | The system removes the selected appointment from the user's schedule and updates the availability of that slot.                                                                                                                                                                                                                                                                                                               |
+|                         | 4.8 Main Scenario           | 1. Student accesses "My Appointments" dashboard.<br>2. System validates the student's session.<br>3. Student selects "Cancel" button on appointment to cancel.<br>4. System prompts for cancellation confirmation.<br>5. Student confirms.<br>6. System cancels the appointment and updates scheduling records.<br>7. Notification Service sends cancellation confirmation email.<br>8. System displays confirmation message. |
+|                         | 4.9 Alternative Scenario(s) | - **3a. No Appointments to Cancel:**<br>  3a1. System displays: "You have no upcoming appointments."<br>- **5a. Cancellation Within Short Notice Window (<2 hours):**<br>  5a1. System warns of short-notice cancellation.<br>  5a2. Student may proceed or abort cancellation.                                                                                                                                               |
 
 : []{#_Toc199101181 .anchor}Table 4.4 - Cancel Appointment Use Case
 
@@ -1245,23 +1054,7 @@ alt="A diagram of a project AI-generated content may be incorrect." />
 - Cancelling Appointment Sequence Diagram</p></figcaption>
 </figure>
 
-**Figure 4.8** presents a sequence diagram illustrating the process for
-a Student to cancel an appointment via the Campus Wellness Portal. The
-sequence begins when the Student navigates to the \"My Appointments\"
-page, prompting the Campus Wellness Portal to validate the session
-through the Authentication Service. Once authenticated, the Student
-selects an appointment and initiates a cancellation request, which the
-portal forwards---along with the appointment ID---to the Medical Center
-Service. The Medical Center Service then performs a cancellation
-operation in the MedicalDB. Two flows are depicted: if the appointment
-is found and is eligible for cancellation, the MedicalDB confirms the
-cancellation, the Medical Center Service triggers the Notification
-Service to send a cancellation email, and a success message is returned
-to the portal for display. If the appointment is not found or cannot be
-cancelled (e.g., it is in the past), the Medical Center Service returns
-an error, and the portal displays an appropriate message to the Student.
-This diagram captures the full operational flow, conditional logic, and
-system responsibilities involved in cancelling an appointment.
+**Figure 4.8** presents a sequence diagram illustrating the process for a Student to cancel an appointment via the Campus Wellness Portal. The sequence begins when the Student navigates to the \"My Appointments\" page, prompting the Campus Wellness Portal to validate the session through the Authentication Service. Once authenticated, the Student selects an appointment and initiates a cancellation request, which the portal forwards---along with the appointment ID---to the Medical Center Service. The Medical Center Service then performs a cancellation operation in the MedicalDB. Two flows are depicted: if the appointment is found and is eligible for cancellation, the MedicalDB confirms the cancellation, the Medical Center Service triggers the Notification Service to send a cancellation email, and a success message is returned to the portal for display. If the appointment is not found or cannot be cancelled (e.g., it is in the past), the Medical Center Service returns an error, and the portal displays an appropriate message to the Student. This diagram captures the full operational flow, conditional logic, and system responsibilities involved in cancelling an appointment.
 
 ##### Activity Diagram
 
@@ -1273,26 +1066,7 @@ alt="A screenshot of a computer AI-generated content may be incorrect." />
 - Cancelling Appointment Activity Diagram</p></figcaption>
 </figure>
 
-**Figure 4.9** presents an activity diagram that outlines the workflow
-for a Student to cancel an appointment within the Campus Wellness
-Portal, involving interactions with the Medical Center Service and the
-Appointment Database. The process begins when the Student navigates to
-the \"My Appointments\" page. The system first checks whether the
-Student is authenticated; if not, it redirects the user to the login
-page for authentication. Upon successful login, the portal retrieves the
-Student's list of upcoming appointments. The Student then selects an
-appointment to cancel, prompting the Campus Wellness Portal to send a
-cancellation request to the Medical Center Service. This service
-attempts to delete the specified appointment from the Appointment
-Database. A decision point follows: if the deletion is successful, the
-system confirms the cancellation and sends this confirmation to the
-Campus Wellness Portal, which then displays a \"Cancellation
-Confirmation\" message to the Student. If the deletion fails---due to
-reasons such as the appointment not being found or being in the
-past---the system sends an error message, and the portal displays a
-\"Cancellation Failed\" notification. This diagram captures the complete
-set of actions, conditions, and system responses associated with the
-appointment cancellation functionality.
+**Figure 4.9** presents an activity diagram that outlines the workflow for a Student to cancel an appointment within the Campus Wellness Portal, involving interactions with the Medical Center Service and the Appointment Database. The process begins when the Student navigates to the \"My Appointments\" page. The system first checks whether the Student is authenticated; if not, it redirects the user to the login page for authentication. Upon successful login, the portal retrieves the Student's list of upcoming appointments. The Student then selects an appointment to cancel, prompting the Campus Wellness Portal to send a cancellation request to the Medical Center Service. This service attempts to delete the specified appointment from the Appointment Database. A decision point follows: if the deletion is successful, the system confirms the cancellation and sends this confirmation to the Campus Wellness Portal, which then displays a \"Cancellation Confirmation\" message to the Student. If the deletion fails---due to reasons such as the appointment not being found or being in the past---the system sends an error message, and the portal displays a \"Cancellation Failed\" notification. This diagram captures the complete set of actions, conditions, and system responses associated with the appointment cancellation functionality.
 
 #### Reschedule Appointment
 
