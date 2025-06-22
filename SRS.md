@@ -844,9 +844,9 @@ Each of these functions is supported by secure communication protocols (HTTPS/TL
 ### Use Case Diagram
 
 <figure>
-<img src="./images/media/image3.png"
+<img src="./images/media/image47.png"
 style="width:6.01667in;height:5.61667in"
-alt="A diagram of a health care system AI-generated content may be incorrect." />
+alt="Use case diagram." />
 <figcaption><p><span id="_Toc199101115" class="anchor"></span>Figure 4.1
 - Use Case Diagram</p></figcaption>
 </figure>
