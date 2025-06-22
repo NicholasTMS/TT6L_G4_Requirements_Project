@@ -859,12 +859,12 @@ This diagram provides a visual representation of system functionality and actor 
 
 ### Use Case Descriptions
 
-#### Login
+#### Login to CWP system
 
 | Section                 | Field                      | Details                                                                                                                                                                                                                                                      |
 | ----------------------- | -------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | **ID**                  | 1.1 Use Case ID            | UC01                                                                                                                                                                                                                                                         |
-|                         | 1.2 Name                   | Login                                                                                                                                                                                                                                                        |
+|                         | 1.2 Name                   | Login to CWP system                                                                                                                                                                                                                                          |
 | **Management**          | 2.1 Author(s)              | Farah Hanim binti Mohd Zamri                                                                                                                                                                                                                                 |
 |                         | 2.2 Version                | 1.0                                                                                                                                                                                                                                                          |
 | **Context**             | 3.1 Source(s)              | Questionnaire (Microsoft Forms)                                                                                                                                                                                                                              |
@@ -884,7 +884,7 @@ This diagram provides a visual representation of system functionality and actor 
 #####  Sequence Diagram
 
 ![[]{#_Toc199101116 .anchor}Figure 4.2 - Login Sequence
-Diagram](./images/media/image4.png){width="6.268055555555556in"
+Diagram](./images/media/image48.png){width="6.268055555555556in"
 height="3.94375in"}
 
 **Figure 4.2** is the sequence diagram for Login portraying the dialogue among various entities taking part in the logging process, i.e., the Student, Login Page, SSO Module, MMU Online Portal, and Dashboard. The process begins with the inputting of the student\'s credentials on the login page, which are verified. The alt block is used to verify if the input is complete or not. When the input is complete, then the credentials are forwarded to the SSO module, which further passes them to the MMU Online Portal for verification. Once a response token is received, access is provided, and the user is redirected to the dashboard or an error page if something goes wrong. If there's partial input, the system will bypass the authentication call and immediately return with a request for completion of missing fields. This diagram is perfect in specifying data flow and decision-making during the login, and all the various scenarios are covered.
@@ -1128,12 +1128,12 @@ alt="A diagram of a program AI-generated content may be incorrect." />
 
 **Figure 4.13** shows the View Counselling Activity Diagram that illustrates the action a student performs in order to view his/her past counselling session history through the Campus Wellness Portal. In the activity diagram, the student initiates use case by selecting \"View Counselling History\" and a facultative date range. The system validates whether the student is authenticated by the Single Sign-On (SSO) service. If the student is not logged in, a prompt is displayed to ask the student to login. In case of authentication, the system will attempt to retrieve the counselling records for the entered date range. Based on whether there are records or not, the system displays the session details (date, counsellor, and summary) or notifies the student that there are no records for the chosen date range.
 
-#### View Gym Available Sessions
+#### View Available Sessions
 
 | **No.**                 | **Section** | **Context/Explanation**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
 | ----------------------- | ----------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | **ID**                  | 1.1         | Use Case ID: UC07                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
-|                         | 1.2         | Name: View Gym Available Sessions                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
+|                         | 1.2         | Name: View Available Sessions                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
 | **Management**          | 2.1         | Author(s): Mohammed Aamena Mohammed Abdulkarem                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
 |                         | 2.2         | Version: 1.0                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
 | **Context**             | 3.1         | Source(s): Questionnaire (Microsoft Forms)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
@@ -1147,7 +1147,7 @@ alt="A diagram of a program AI-generated content may be incorrect." />
 |                         | 4.8         | Main Scenario: <br>1. Student accesses the "View Gym Schedule" interface.<br>2. System validates user session via the Authentication Service.<br>3. System retrieves real-time gym schedule data, including session timing, capacity, gender restrictions, and current availability.<br>4. System displays the data in an organized calendar or list format.<br>5. Student applies filters (e.g., by date, gender, session type) to narrow down the displayed options _(optional)_.<br>6. System processes the filters and retrieves updated session data.<br>7. System reviews the filtered sessions and optionally selects a session to book, triggering UC08: Book Fitness Class. |
 |                         | 4.9         | Alternative Scenario(s): <br>- 5a. No Filters Applied<br> 5a1. System defaults to displaying all sessions scheduled within the current week.<br><br>- 6a. No Sessions Available<br> 6a1. System displays: "No available sessions at this time."<br><br>- 6b. Filtered Results Yield No Matches<br> 6b1. System displays: "No sessions match your selected criteria. Please adjust filters and try again."                                                                                                                                                                                                                                                                            |
 
-: []{#_Toc199101184 .anchor}Table 4.7 - View Gym Available Sessions Use
+: []{#_Toc199101184 .anchor}Table 4.7 - View Available Gym Sessions Use
 Case
 
 ##### Sequence Diagram
@@ -1157,7 +1157,7 @@ Case
 style="width:6.26806in;height:3.32986in"
 alt="A diagram of a project AI-generated content may be incorrect." />
 <figcaption><p><span id="_Toc199101128" class="anchor"></span>Figure
-4.14 - View Gym Available Sessions Sequence Diagram</p></figcaption>
+4.14 - View Available Gym Sessions Sequence Diagram</p></figcaption>
 </figure>
 
 **Figure 4.14** presents a sequence diagram that outlines the process for a Student to view the gym schedule via the Campus Wellness Portal, involving the Authentication Service, Fitness Center Service, and FitnessDB. The sequence begins when the Student accesses the \"View Gym Schedule\" page, prompting the portal to validate the session through the Authentication Service. Upon successful authentication, the flow branches based on whether the Student applies filters. If filters are applied---such as gender or date---the Campus Wellness Portal sends a filtered session request to the Fitness Center Service, which queries the FitnessDB and returns the matched sessions. If no filters are applied, the portal requests the full weekly schedule, and the Fitness Center Service returns all current sessions from the FitnessDB. In both cases, the Campus Wellness Portal delivers the resulting session list and displays the available gym sessions to the Student. The diagram captures all relevant interactions and system responsibilities for viewing gym schedules.
@@ -1169,7 +1169,7 @@ alt="A diagram of a project AI-generated content may be incorrect." />
 style="width:6.26806in;height:5.07847in"
 alt="A diagram of a workflow AI-generated content may be incorrect." />
 <figcaption><p><span id="_Toc199101129" class="anchor"></span>Figure
-4.15 - View Gym Available Sessions Activity Diagram</p></figcaption>
+4.15 - View Available Gym Sessions Activity Diagram</p></figcaption>
 </figure>
 
 **Figure 4.15** presents an activity diagram outlining the workflow for a Student to view gym sessions through the Campus Wellness Portal, integrated with the Fitness Center Service and the Fitness Database. The process begins when the Student selects the \"View Gym Sessions\" option. The system verifies the user\'s login status; if not authenticated, the Student is redirected to the login page. Upon successful login, the portal requests the weekly session data from the Fitness Center Service, which queries the Fitness Database and returns the results. If sessions are available, they are displayed to the Student; otherwise, a \"No sessions available\" message is shown. The Student may then apply filters such as date or gender. If filters are applied, the portal sends a filtered request to the Fitness Center Service, which queries the database and returns any matching sessions. The portal updates the display accordingly or shows a \"No matching sessions found\" message if no filtered results are available. This diagram captures the conditional logic and interactions that ensure dynamic, filtered access to gym session data.
@@ -1670,12 +1670,12 @@ This section outlines the key interfaces that enable interaction between the Cam
 The system shall meet the following performance goals to ensure responsiveness, scalability, and real-time interaction quality under academic load conditions:
 
 
-|  **ID**  |  **Performance Requirement**  |   **Description** |
+|  **ID**  |  **Performance Requirement**  | **Description**                                                                                                                                                   |
 | ---- | ----- | ----- |
-| PR-01   | **System Response Time** | The system shall respond to 95% of user actions (e.g., booking, viewing data) within 2 seconds under normal load conditions. |
-| PR-02 |   **Concurrent Users** |    The system shall support at least 300 concurrent users without performance degradation during peak hours (e.g., enrolment and registration periods). |
-| PR-03  |  **Real-time Updates**  |    Availability data for medical slots and gym sessions shall be refreshed every 5 minutes to ensure accurate user-facing information. |
-|  PR-04 |   **Notification Latency**  |   Confirmation emails and SMS notifications shall be dispatched within 30 seconds of completing booking, rescheduling, or cancellation operations. |
+| PR-01   | **System Response Time** | The system shall respond to 95% of user actions (e.g., booking, viewing data) within 2 seconds under normal load conditions.                                      |
+| PR-02 |   **Concurrent Users** | The system shall support at least 300 concurrent users without performance degradation during peak hours (e.g., enrollment and registration periods).             |
+| PR-03  |  **Real-time Updates**  | Availability data for medical slots and gym sessions shall be refreshed every 5 minutes to ensure accurate user-facing information.                               |
+|  PR-04 |   **Notification Latency**  | Confirmation emails and SMS notifications shall be dispatched within 30 seconds of completing booking, rescheduling, or cancellation operations.                  |
 |  PR-05 |   **Scalability** | The system architecture shall be scalable to support a projected 20% annual increase in concurrent users and transactions without requiring full system redesign. |
 
   : []{#_Toc199101194 .anchor}Table 4.17 - Performance Requirements
@@ -1877,7 +1877,7 @@ verification:
 | UC04            | Cancel Appointment                   | Record must be updated; cancelled slot reappears in availability.                         |
 | UC05            | Reschedule Appointment               | Old appointment is removed, new one added; double-booking is not allowed.                 |
 | UC06            | View Counselling History             | History is retrieved securely and accurately per student ID.                              |
-| UC07            | View Gym Available Sessions          | Gym session data must be displayed with date, time, and quota info.                       |
+| UC07            | View Available Gym Sessions          | Gym session data must be displayed with date, time, and quota info.                       |
 | UC08            | Book Fitness Session                 | Session booking must update availability count correctly.                                 |
 | UC09            | Track Wellness Progress              | Metrics shown must match backend calculations (e.g., weight goals, sleep logs).           |
 | UC10            | Set Wellness Goals                   | Goal inputs must be stored and retrieved correctly.                                       |
@@ -1972,11 +1972,11 @@ The Testing Strategy describes how the Campus Wellness Portal shall be thoroughl
 
 ### Test Entry and Exit Criteria
 
-| **Entry Criteria**                             | **Exit Criteria**                            |
-| ---------------------------------------------- | -------------------------------------------- |
-| All planned features and functionally complete | All test cases executed with ≥ 90% pass rate |
-| Test environment is properly set up            | All critical defects resolved or mitigated   |
-| Unit and integration tests are completed       | UAT feedback collected and incorporated      |
+| **Entry Criteria**                             | **Exit Criteria**                                |
+| ---------------------------------------------- | ------------------------------------------------ |
+| All planned features are functionally complete | All test cases are executed with ≥ 90% pass rate |
+| Test environment is properly set up            | All critical defects are resolved or mitigated   |
+| Unit and integration tests are completed       | UAT feedback collected and incorporated          |
 
   : []{#_Toc199101197 .anchor}Table 5.2 - Test Entry And Exit Criteria
 
