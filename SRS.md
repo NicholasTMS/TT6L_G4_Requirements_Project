@@ -1381,11 +1381,11 @@ Case
 ##### Sequence Diagram
 
 <figure>
-<img src="./images/media/image16.png"
+<img src="./images/media/uc07.png"
 style="width:6.26806in;height:3.32986in"
 alt="A diagram of a project AI-generated content may be incorrect." />
 <figcaption><p><span id="_Toc199101128" class="anchor"></span>Figure
-4.14 - View Available Gym Sessions Sequence Diagram</p></figcaption>
+4.14 - View Fitness Session including gender specific options Sequence Diagram</p></figcaption>
 </figure>
 
 **Figure 4.14** presents a sequence diagram that outlines the process for a Student to view the gym schedule via the Campus Wellness Portal, involving the Authentication Service, Fitness Center Service, and FitnessDB. The sequence begins when the Student accesses the \"View Fitness Session\" page, prompting the portal to validate the session through the Authentication Service. Upon successful authentication, the flow branches based on whether the Student applies filters. If filters are applied---such as gender or date---the Campus Wellness Portal sends a filtered session request to the Fitness Center Service, which queries the FitnessDB and returns the matched sessions. If no filters are applied, the portal requests the full weekly schedule, and the Fitness Center Service returns all current sessions from the FitnessDB. In both cases, the Campus Wellness Portal delivers the resulting session list and displays the available gym sessions to the Student. The diagram captures all relevant interactions and system responsibilities for viewing gym schedules.
