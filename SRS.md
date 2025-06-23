@@ -879,6 +879,7 @@ The following constraints apply to the system's development and deployment:
 | Req ID/Conflict ID | Validation Description/Stakeholder Concern                                                                                      | Mismatch                                                                            | Detected By | Session ID | Severity (1-5) |
 | ------------------ | ------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------- | ---------- | -------------- |
 | Page 19            | Inconsistent/unclear naming of external systems. "Counselling Service" and "Medical Appointment" both refer to the same system. | Nicholas disagrees on the defect. Naming of external systems is clear and distinct. | Anas        | S01        | 2              |
+| REQ-06 / UC06 (page 39, 40, 92(class diagram)) / C03           | Goals vs SRS Scope Creep, Option to apply a date range filter when viewing counselling records not mentioned through task1-4. | Anas disagrees on this defect. Option is implied. | Nicholas       | S04        | 3             |
 
 ### Conflict Analysis
 
