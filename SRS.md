@@ -786,15 +786,15 @@ The following constraints apply to the system's development and deployment:
 
 ### Validation Session
 
-| Session ID | Date and Time         | Technique  | Section Reviewed                                                | Participant & Role                                                                                            | No. of Defect |
-| ---------- | --------------------- | ---------- | --------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- | ------------- |
-| S01        | 21 June 2025, 8:00 PM | Inspection | Introduction                                                    | Anas (Moderator, Inspector, Reader), Nicholas (Author, Inspector, Reader), Fikrul (Author, Inspector, Reader) | -             |
-| S02        | 21 June 2025, 8:10 PM | Inspection | References                                                      | Anas (Moderator, Inspector, Reader), Nicholas (Author, Inspector, Reader), Fikrul (Author, Inspector, Reader) | 1             |
-| S03        | 21 June 2025, 8:30 PM | Inspection | Functional Requirements - 4.1.3.1 to 4.1.3.5                    | Anas (Moderator, Inspector, Reader), Nicholas (Author, Inspector, Reader), Fikrul (Author, Inspector, Reader) | 5             |
-| S04        | 21 June 2025, 9:00 PM | Inspection | Functional Requirements - 4.1.3.6 to 4.1.3.10                   | Anas (Moderator, Inspector, Reader), Nicholas (Author, Inspector, Reader), Fikrul (Author, Inspector, Reader) | 31            |
-| S05        | 21 June 2025, 9:30 PM | Inspection | Functional Requirements - 4.1.3.11 to 4.1.3.16                  | Anas (Moderator, Inspector, Reader), Nicholas (Author, Inspector, Reader), Fikrul (Author, Inspector, Reader) | 2             |
-| S06        | 22 June 2025, 5:00 PM | Inspection | 4.2 Interface Requirements to 4.7 Logical Database Requirements | Anas (Moderator, Inspector, Reader), Nicholas (Author, Inspector, Reader), Fikrul (Author, Inspector, Reader) | 7             |
-| S07        | 22 June 2025, 6:00 PM | Inspection | 5.0 Verification to 6.0 Appendices                              | Anas (Moderator, Inspector, Reader), Nicholas (Author, Inspector, Reader), Fikrul (Author, Inspector, Reader) | 5             |
+| Session ID | Date and Time         | Technique  | Section Reviewed                                                | Participant & Role                                                                            | No. of Defect |
+| ---------- | --------------------- | ---------- | --------------------------------------------------------------- | --------------------------------------------------------------------------------------------- | ------------- |
+| S01        | 21 June 2025, 8:00 PM | Inspection | Introduction                                                    | Anas (Moderator, Inspector, Reader), Nicholas (Inspector, Reader), Fikrul (Inspector, Reader) | -             |
+| S02        | 21 June 2025, 8:10 PM | Inspection | References                                                      | Anas (Moderator, Inspector, Reader), Nicholas (Inspector, Reader), Fikrul (Inspector, Reader) | 1             |
+| S03        | 21 June 2025, 8:30 PM | Inspection | Functional Requirements - 4.1.3.1 to 4.1.3.5                    | Anas (Moderator, Inspector, Reader), Nicholas (Inspector, Reader), Fikrul (Inspector, Reader) | 5             |
+| S04        | 21 June 2025, 9:00 PM | Inspection | Functional Requirements - 4.1.3.6 to 4.1.3.10                   | Anas (Moderator, Inspector, Reader), Nicholas (Inspector, Reader), Fikrul (Inspector, Reader) | 31            |
+| S05        | 21 June 2025, 9:30 PM | Inspection | Functional Requirements - 4.1.3.11 to 4.1.3.16                  | Anas (Moderator, Inspector, Reader), Nicholas (Inspector, Reader), Fikrul (Inspector, Reader) | 2             |
+| S06        | 22 June 2025, 5:00 PM | Inspection | 4.2 Interface Requirements to 4.7 Logical Database Requirements | Anas (Moderator, Inspector, Reader), Nicholas (Inspector, Reader), Fikrul (Inspector, Reader) | 7             |
+| S07        | 22 June 2025, 6:00 PM | Inspection | 5.0 Verification to 6.0 Appendices                              | Anas (Moderator, Inspector, Reader), Nicholas (Inspector, Reader), Fikrul (Inspector, Reader) | 5             |
 
 ### Defect Summary
 
