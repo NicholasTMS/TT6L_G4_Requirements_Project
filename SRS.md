@@ -1998,34 +1998,23 @@ The Campus Wellness Portal shall utilize a secure, relational database managemen
 - **CounsellingSession**: Contains confidential session notes,
   participant ID, and assigned counsellor.
 
-- **FitnessClass**: Includes session time, capacity, gender-tag, and
+- **FitnessSession**: Includes session time, capacity, gender-tag, and
   real-time availability.
 
-- **Goal**: Represents personalized health and wellness goals (e.g.,
+- **WellnessGoal**: Represents personalized health and wellness goals (e.g.,
   hydration, steps, sleep hours).
 
 - **Notification**: Logs sent messages (email/SMS) for reminders,
   confirmations, and alerts.
 
-- **Feedback**: Captures post-session satisfaction ratings and free-text
-  comments.
-
-- **AI_Tip**: Stores generated health insights for user dashboards based
+- **AIWellnessEngine**: Stores generated health insights for user dashboards based
   on tracked metrics.
 
 ### Relationships
 
 - **One-to-Many**:
 
-  - User → Appointment, Notification, Feedback
-
-- **Many-to-Many**:
-
-  - User ↔ FitnessClass (via a linking table FitnessBooking)
-
-- **Optional One-to-One**:
-
-  - Appointment → CounsellingSession (if appointment is counselling-related)
+  - User → Appointment, Notification
 
 ### Data Integrity Constraints
 
@@ -2045,7 +2034,7 @@ The Campus Wellness Portal shall utilize a secure, relational database managemen
   using AES-256.
 
 - Role-Based Access Control (RBAC) policies shall govern field-level
-  access, ensuring that only authorized roles (Counsellor, Admin) can
+  access, ensuring that only authorized roles (Student, Admin) can
   access protected data.
 
 - Access logs must be maintained to audit database interactions
