@@ -2101,13 +2101,13 @@ verification:
 | UC07            | View Available Gym Sessions          | Gym session data must be displayed with date, time, and quota info.                       |
 | UC08            | Book Fitness Session                 | Session booking must update availability count correctly.                                 |
 | UC09            | Track Wellness Progress              | Metrics shown must match backend calculations (e.g., weight goals, sleep logs).           |
-| UC10            | Set Wellness Goals                   | Goal inputs must be stored and retrieved correctly.                                       |
-| UC11            | Get AI Wellness Tips                 | AI-generated tip is displayed within 2 seconds and is relevant to user profile.           |
-| UC12            | Receive Notification                 | Notification appears within 3 seconds of trigger condition (e.g., 24h before session).    |
-| UC13            | Manage Notification                  | User preferences are saved and respected in subsequent notifications.                     |
-| UC14            | View Student Wellness Report         | Data must aggregate accurately across goals, sessions, and counselling logs.              |
-| UC15            | Manage Fitness Class                 | Admin can create, update, and delete sessions with real-time effect on  student view.     |
-| UC16            | Manage Medical Schedule              | Admin can add/edit slots and the frontend reflects changes within 5 seconds.              |
+| UC10            | Set Wellness Goals                   | Goal inputs must be stored and retrieved correctly,Confirmation notification sent within 3 seconds,Goal present in user’s profile                                      |
+| UC11            | Get AI Wellness Tips                 | AI-generated tip is displayed within 2 seconds and is relevant to user profile by at least 80%.           |
+| UC12            | Receive Notification                 | Notification appears within 3 seconds of trigger condition such as 24h before session.    |
+| UC13            | Manage Notification                  | User preferences are saved and respected in subsequent notifications,Only preferred channels used per 3 tests.                  |
+| UC14            | View Student Wellness Report         | Data must aggregate accurately across goals, sessions, and counselling logs, Numeric consistency must total within ±2%.              |
+| UC15            | Manage Fitness Class                 | Admin can create, update, and delete sessions with real-time effect on  student view, UI reflects admin changes within 5 seconds.     |
+| UC16            | Manage Medical Schedule              | Admin can add/edit slots and the frontend reflects changes within 5 seconds of DB update.              |
 
 
 : []{#_Toc199101196 .anchor}Table 5.1 - Verification Criteria
