@@ -511,41 +511,28 @@ The primary users of the CWP are MMU students. System administrators act as seco
 
 In-scope features include:
 
-• Secure SSO authentication via the MMU Online Portal
-
-• Booking of medical appointments via CLiC Health
-
-• Counselling session scheduling and history access through CLiC
-Counselling
-
-• Real-time slot visibility for both health and counselling
-appointments
-
-• Booking and cancellation of fitness classes via the Campus Fitness
-Centre
-
-• Goal tracking modules for hydration, sleep, and physical activity
-
-• AI-generated wellness recommendations based on user data
-
-• Notifications and reminders via push and in-app alerts
-
-• Responsive web-based user interface, accessible across platforms
+- Secure SSO authentication via the MMU Online Portal
+- Booking of medical appointments via CLiC Health
+- Counselling session scheduling and history access through CLiC Counselling
+- Real-time slot visibility for both health and counselling appointments
+- Booking and cancellation of fitness classes via the Campus Fitness Centre
+- Goal tracking modules for hydration, sleep, and physical activity
+- AI-generated wellness recommendations based on user data
+- Notifications and reminders via push and in-app alerts
+- Responsive web-based user interface, accessible across platforms
+- Unified student dashboard that displays appointments, progress charts and wellness summaries
+- Cross-platform user interface optimized for web and mobile access.
 
 Out-of-scope for this development phase:
 
-• Payment handling for services
-
-• Emergency or crisis medical features (e.g., ambulance requests)
-
-• Real-time chat with medical or counselling staff
-
-• Full administrative dashboards beyond appointments viewing/editing
+- Payment handling for services
+- Emergency or crisis medical features (e.g., ambulance requests)
+- Real-time chat with medical or counselling staff
+- Full administrative dashboards beyond appointments viewing/editing
 
 ## Product Overview
 
-The Campus Wellness Portal is a cross-platform software system that provides Multimedia University (MMU) students with centralized, seamless access to campus health, counselling, and fitness services. It enables users to book and manage medical appointments, counselling sessions, and fitness classes while tracking personalized wellness goals and receiving AI-generated health insights. The portal
-integrates with MMU's Single Sign-On (SSO) for secure access and interfaces with the CLiC Health and Counselling modules as well as the Campus Fitness Centre's scheduling system. Designed for accessibility across both desktop and mobile devices, the platform delivers a unified, real-time dashboard that simplifies and enhances student engagement with wellness resources.
+The Campus Wellness Portal is a cross-platform software system that provides Multimedia University (MMU) students with centralized, seamless access to campus health, counselling, and fitness services. It enables users to book and manage medical appointments, counselling sessions, and fitness classes while tracking personalized wellness goals and receiving AI-generated health insights. The portal integrates with MMU's Single Sign-On (SSO) for secure access and interfaces with the CLiC Health and Counselling modules as well as the Campus Fitness Centre's scheduling system. Designed for accessibility across both desktop and mobile devices, the platform delivers a unified, real-time dashboard that simplifies and enhances student engagement with wellness resources.
 
 ### Product Perspective (Relationship to Other Systems)
 
@@ -661,60 +648,58 @@ throughout this document:
 
 # Technical Glossary
 
-| Term                    | Definition                                                                                    |
-| ----------------------- | --------------------------------------------------------------------------------------------- |
-| SRS                     | Software Requirement Specification                                                            |
-| MMU                     | Multimedia University                                                                         |
-| SSO                     | Single Sign-On -- A secure method of accessing multiple systems with one login                |
-| OAuth 2.0               | An open standard for token-based authorization                                                |
-| AI                      | Artificial Intelligence -- Automated algorithms that generate insights or recommendations     |
-| UI                      | User Interface -- The visual components a user interacts with                                 |
-| UX                      | User Experience -- The overall experience and usability of a system                           |
-| CWP                     | Campus Wellness Portal                                                                        |
-| UC                      | Use Case -- A specific scenario of system interaction                                         |
-| HTTPS                   | Hypertext Transfer Protocol Secure -- Secure communication protocol                           |
-| TLS                     | Transport Layer Security -- Cryptographic protocol for data security                          |
-| REST API                | Representational State Transfer API -- A web standard for system communication                |
-| HTML                    | HyperText Markup Language -- Language used to create web pages                                |
-| CSS                     | Cascading Style Sheets -- Used for styling HTML content                                       |
-| JS                      | JavaScript -- A scripting language for dynamic content on the web                             |
-| LDAP                    | Lightweight Directory Access Protocol -- Used for directory services authentication           |
-| SIS                     | Student Information System -- Contains academic and enrolment data                            |
-| DB                      | Database -- Structured data storage used by backend systems                                   |
-| KPI                     | Key Performance Indicator -- A metric to evaluate system success or user goals                |
-| RBAC                    | Role-Based Access Control -- Authorization mechanism based on user roles                      |
-| OTP                     | One-Time Password -- A secure, time-limited code used for login or verification               |
-| OTA                     | One-Time Authentication -- Used for sensitive or privileged user actions                      |
-| PDPA                    | Personal Data Protection Act -- Malaysian data privacy legislation                            |
-| UAT                     | User Acceptance Testing -- Final testing done by actual users                                 |
-| MVC                     | Model-View-Controller -- A software architecture pattern                                      |
-| UUID                    | Universally Unique Identifier -- A unique string used as a database key                       |
-| WCAG                    | Web Content Accessibility Guidelines -- Standards for making content accessible               |
-| API                     | Application Programming Interface -- Set of rules for system-to-system communication          |
-| DBMS                    | Database Management System -- Software for managing databases                                 |
-| PII                     | Personally Identifiable Information -- Data that can identify an individual                   |
-| PHI                     | Personal Health Information -- Sensitive health-related data of individuals                   |
-| ReactJS                 | JavaScript library for building user interfaces                                               |
-| PostgreSQL              | Open-source relational database management system                                             |
-| HTML5                   | Version 5 of the HyperText Markup Language                                                    |
-| CSS3                    | Version 3 of Cascading Style Sheets                                                           |
-| CD                      | Class Diagram -- A visual representation of object relationships in software design           |
-| ISO/IEC/IEEE 29148:2018 | ISO/IEC/IEEE 29148:2018                                                                       |
-| MedicalDB               | Backend database containing medical appointments and records                                  |
-| FitnessDB               | Backend database for gym class schedules and bookings                                         |
-| WellnessDB              | Database storing personal goals and health analytics                                          |
-| PEP-8                   | Python Enhancement Proposal 8 -- Official Python code style guide                             |
-| MVP                     | Minimum Viable Product -- Basic version of the product with essential features                |
-| SSL                     | Secure Sockets Layer -- cryptographic protocol for securing internet connections              |
-| AES-256                 | Advanced Encryption Standard (256-bit key) -- strong data encryption algorithm                |
-| GDPR                    | General Data Protection Regulation -- European law on personal data protection                |
-| QA                      | Quality Assurance -- practices ensuring software meets requirements and standards             |
-| JSON                    | JavaScript Object Notation -- lightweight format for data exchange                            |
-| SMS                     | Short Message Service -- text messaging protocol for mobile communication                     |
-| VPN                     | Virtual Private Network -- encrypted connection for secure remote access                      |
-| SMART                   | Specific, Measurable, Achievable, Relevant, Time-bound -- goal-setting framework              |
-| HTTP                    | Hypertext Transfer Protocol -- protocol used for web data transmission                        |
-| UML                     | Unified Modelling Language - diagramming language used to model system structure and behavior |
+| Term                    | Definition                                                                                                       |
+| ----------------------- | ---------------------------------------------------------------------------------------------------------------- |
+| SRS                     | Software Requirement Specification                                                                               |
+| MMU                     | Multimedia University                                                                                            |
+| SSO                     | Single Sign-On -- A secure method of accessing multiple systems with one login                                   |
+| OAuth 2.0               | An open standard for token-based authorization                                                                   |
+| AI                      | Artificial Intelligence -- Automated algorithms that generate insights or recommendations                        |
+| UI                      | User Interface -- The visual components a user interacts with                                                    |
+| UX                      | User Experience -- The overall experience and usability of a system                                              |
+| CWP                     | Campus Wellness Portal                                                                                           |
+| UC                      | Use Case -- A specific scenario of system interaction                                                            |
+| HTTPS                   | Hypertext Transfer Protocol Secure -- Secure communication protocol                                              |
+| TLS                     | Transport Layer Security -- Cryptographic protocol for data security                                             |
+| REST API                | Representational State Transfer API -- A web standard for system communication                                   |
+| HTML5                   | HyperText Markup Language -- Language used to create web pages. Specifically, HTML5 refers version 5 language.   |
+| CSS3                    | Cascading Style Sheets -- Used for styling HTML content. Specifically, CSS3 refers to version 3 of the language. |
+| JS                      | JavaScript -- A scripting language for dynamic content on the web                                                |
+| LDAP                    | Lightweight Directory Access Protocol -- Used for directory services authentication                              |
+| SIS                     | Student Information System -- Contains academic and enrolment data                                               |
+| DB                      | Database -- Structured data storage used by backend systems                                                      |
+| KPI                     | Key Performance Indicator -- A metric to evaluate system success or user goals                                   |
+| RBAC                    | Role-Based Access Control -- Authorization mechanism based on user roles                                         |
+| OTP                     | One-Time Password -- A secure, time-limited code used for login or verification                                  |
+| OTA                     | One-Time Authentication -- Used for sensitive or privileged user actions                                         |
+| PDPA                    | Personal Data Protection Act -- Malaysian data privacy legislation                                               |
+| UAT                     | User Acceptance Testing -- Final testing done by actual users                                                    |
+| MVC                     | Model-View-Controller -- A software architecture pattern                                                         |
+| UUID                    | Universally Unique Identifier -- A unique string used as a database key                                          |
+| WCAG                    | Web Content Accessibility Guidelines -- Standards for making content accessible                                  |
+| API                     | Application Programming Interface -- Set of rules for system-to-system communication                             |
+| DBMS                    | Database Management System -- Software for managing databases                                                    |
+| PII                     | Personally Identifiable Information -- Data that can identify an individual                                      |
+| PHI                     | Personal Health Information -- Sensitive health-related data of individuals                                      |
+| ReactJS                 | JavaScript library for building user interfaces                                                                  |
+| PostgreSQL              | Open-source relational database management system                                                                |
+| CD                      | Class Diagram -- A visual representation of object relationships in software design                              |
+| ISO/IEC/IEEE 29148:2018 | ISO/IEC/IEEE 29148:2018                                                                                          |
+| MedicalDB               | Backend database containing medical appointments and records                                                     |
+| FitnessDB               | Backend database for gym class schedules and bookings                                                            |
+| WellnessDB              | Database storing personal goals and health analytics                                                             |
+| PEP-8                   | Python Enhancement Proposal 8 -- Official Python code style guide                                                |
+| MVP                     | Minimum Viable Product -- Basic version of the product with essential features                                   |
+| SSL                     | Secure Sockets Layer -- cryptographic protocol for securing internet connections                                 |
+| AES-256                 | Advanced Encryption Standard (256-bit key) -- strong data encryption algorithm                                   |
+| GDPR                    | General Data Protection Regulation -- European law on personal data protection                                   |
+| QA                      | Quality Assurance -- practices ensuring software meets requirements and standards                                |
+| JSON                    | JavaScript Object Notation -- lightweight format for data exchange                                               |
+| SMS                     | Short Message Service -- text messaging protocol for mobile communication                                        |
+| VPN                     | Virtual Private Network -- encrypted connection for secure remote access                                         |
+| SMART                   | Specific, Measurable, Achievable, Relevant, Time-bound -- goal-setting framework                                 |
+| HTTP                    | Hypertext Transfer Protocol -- protocol used for web data transmission                                           |
+| UML                     | Unified Modelling Language - diagramming language used to model system structure and behavior                    |
 
   : []{#_Toc199101175 .anchor}Table 1.1 -- Definitions, Acronyms, and
   Abbreviations
@@ -999,7 +984,7 @@ alt="A diagram of a flowchart AI-generated content may be incorrect." />
 |                         | 2.2 Version                 | 1.0                                                                                                                                                                                                                                                                                                                                                                                                                           |
 | **Context**             | 3.1 Source(s)               | Questionnaire (Microsoft Forms)                                                                                                                                                                                                                                                                                                                                                                                               |
 | **Use Case Definition** | 4.1 Short Description       | Enables students to cancel a confirmed appointment and release the slot for others.                                                                                                                                                                                                                                                                                                                                           |
-|                         | 4.2 Associated Goal(s)      | - G1.1 -- CLiC Integration<br>- G1.2 -- Manage Appointments                                                                                                                                                                                                                                                                                                                                                                   |
+|                         | 4.2 Associated Goal(s)      | - G1.1 -- CLiC Integration<br>- G1.2 -- Manage Appointments <br>- G2.1 -- Request Session                                                                                                                                                                                                                                                                                                                                     |
 |                         | 4.3 Primary Actor(s)        | Student                                                                                                                                                                                                                                                                                                                                                                                                                       |
 |                         | 4.4 Other Actor(s)          | Admin                                                                                                                                                                                                                                                                                                                                                                                                                         |
 |                         | 4.5 Precondition(s)         | - Student is authenticated via the portal.<br>- At least one upcoming appointment is present in the student's schedule.                                                                                                                                                                                                                                                                                                       |
@@ -1044,7 +1029,7 @@ alt="A screenshot of a computer AI-generated content may be incorrect." />
 |                         | 2.2         | Version: 1.0                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
 | **Context**             | 3.1         | Source(s): Questionnaire (Microsoft Forms)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
 | **Use Case Definition** | 4.1         | Short Description: Allows students to change an existing appointment to a different available slot.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
-|                         | 4.2         | Associated Goal(s): <br>- G1.1 -- CLiC Integration<br>- G1.2 -- Manage Appointments                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+|                         | 4.2         | Associated Goal(s): <br>- G1.1 -- CLiC Integration<br>- G1.2 -- Manage Appointments <br>- G2.1 -- Request Session                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
 |                         | 4.3         | Primary Actor(s): Student                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
 |                         | 4.4         | Other Actor(s): Admin                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
 |                         | 4.5         | Precondition(s): <br>- Student is authenticated via the portal.<br>- At least one valid upcoming appointment exists.                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
@@ -1531,8 +1516,6 @@ operation fails.
 
 #### Manage Medical Schedule 
 
-# Use Case UC16 - Manage Medical Schedule
-
 | **Section**             | **No.** | **Field**          | **Details**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
 | ----------------------- | ------- | ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **ID**                  | 1.1     | Use Case ID        | UC16                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
@@ -1705,8 +1688,6 @@ The system shall meet the following performance goals to ensure responsiveness, 
 ## Usability Requirements
 
 These requirements define the system's ease of use, accessibility, and user support capabilities. Usability expectations are guided by ISO 9241-210 for user-centred design and WCAG 2.1 Level AA for digital accessibility compliance. All key features must be accessible within a minimal interaction path (ideally 3 steps) and provide inclusive interaction experiences for diverse users.
-
-# Usability Requirements
 
 | **ID** | **Usability Requirement**    | **Description**                                                                                                                  |
 | ------ | ---------------------------- | -------------------------------------------------------------------------------------------------------------------------------- |
