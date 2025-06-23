@@ -1334,7 +1334,7 @@ Case
 ##### Sequence Diagram
 
 <figure>
-<img src="./images/media/image14.png"
+<img src="./images/media/uc06.png"
 style="width:6.26806in;height:4.28958in"
 alt="A diagram of a diagram AI-generated content may be incorrect." />
 <figcaption><p><span id="_Toc199101126" class="anchor"></span>Figure
