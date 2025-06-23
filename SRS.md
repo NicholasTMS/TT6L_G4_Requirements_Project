@@ -1017,7 +1017,10 @@ The following constraints apply to the system's development and deployment:
 
 #### project-part-2-anas branch commit history
 
-
+| Hash    | Author | Date       | Description                                               |
+| ------- | ------ | ---------- | --------------------------------------------------------- |
+| 66919ff | Anas   | 2025-06-23 | Appended user roles in Validation Sessions                |
+| b03617a | Anas   | 2025-06-23 | Added commit history table for main project part 2 branch |
 
 # Requirements 
 
