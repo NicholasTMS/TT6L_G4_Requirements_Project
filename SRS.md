@@ -1428,7 +1428,7 @@ alt="A diagram of a workflow AI-generated content may be incorrect." />
 ##### Sequence Diagram
 
 <figure>
-<img src="./images/media/image18.png"
+<img src="./images/media/uc08.png"
 style="width:6.26806in;height:3.02292in"
 alt="A diagram of a class AI-generated content may be incorrect." />
 <figcaption><p><span id="_Toc199101130" class="anchor"></span>Figure
