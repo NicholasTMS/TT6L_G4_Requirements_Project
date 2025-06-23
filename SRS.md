@@ -799,8 +799,8 @@ The following constraints apply to the system's development and deployment:
 | Session | Session Links |
 | ------------- | ------------- |
 |S01 - S04| ["https://mmuedumy-my.sharepoint.com/:f:/g/personal/muhammad_anas_khairul_student_mmu_edu_my/EnIDoMMoer9LtdOFNdXxE6gB8HTBOamangrS-ZeOIxU6mA?e=7arBSf"] |
-|S05| ["https://mmuedumy-my.sharepoint.com/:v:/g/personal/nicholas_thong_meng_student_mmu_edu_my/ESYuIqh92LZLg4kA7b7OgTsBb2SrB97jtMRWPQJK_o0HFw?e=0Y5vT2&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D"] |
-|S06| ["https://mmuedumy-my.sharepoint.com/:v:/g/personal/nicholas_thong_meng_student_mmu_edu_my/EWpcWexpSVdPu349meCQDYsB9OsfLJvA2X6l64YQDWBKvQ?e=yUJy0G&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D"] |
+|S06| ["https://mmuedumy-my.sharepoint.com/:v:/g/personal/nicholas_thong_meng_student_mmu_edu_my/ESYuIqh92LZLg4kA7b7OgTsBb2SrB97jtMRWPQJK_o0HFw?e=0Y5vT2&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D"] |
+|S07| ["https://mmuedumy-my.sharepoint.com/:v:/g/personal/nicholas_thong_meng_student_mmu_edu_my/EWpcWexpSVdPu349meCQDYsB9OsfLJvA2X6l64YQDWBKvQ?e=yUJy0G&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D"] |
 
 ### Defect Summary
 
