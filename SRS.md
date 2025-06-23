@@ -1522,7 +1522,7 @@ alt="A diagram of a computer AI-generated content may be incorrect." />
 ##### Sequence Diagram
 
 <figure>
-<img src="./images/media/image22.png"
+<img src="./images/media/uc10.png"
 style="width:6.26806in;height:2.99306in"
 alt="A diagram of a company AI-generated content may be incorrect." />
 <figcaption><p><span id="_Toc199101134" class="anchor"></span>Figure
