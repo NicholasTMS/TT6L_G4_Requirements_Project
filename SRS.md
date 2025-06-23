@@ -1428,7 +1428,7 @@ alt="A diagram of a workflow AI-generated content may be incorrect." />
 ##### Sequence Diagram
 
 <figure>
-<img src="./images/media/image18.png"
+<img src="./images/media/uc08.png"
 style="width:6.26806in;height:3.02292in"
 alt="A diagram of a class AI-generated content may be incorrect." />
 <figcaption><p><span id="_Toc199101130" class="anchor"></span>Figure
@@ -1458,20 +1458,22 @@ alt="A diagram of a company AI-generated content may be incorrect." />
 |                         | 2.2         | Version                 | 1.0                                                                                                                                                                                                                                                                                                                                           |
 | **Context**             | 3.1         | Source(s)               | Questionnaire (Microsoft Forms)                                                                                                                                                                                                                                                                                                               |
 | **Use Case Definition** | 4.1         | Short Description       | Enables students to monitor their wellness trends through interactive dashboards that visualize participation, goals, and appointments.                                                                                                                                                                                                       |
-|                         | 4.2         | Associated Goal(s)      | - G3.3 -- Fitness Tracking                                                                                                                                                                                                                                                                                                                    |
+|                         | 4.2         | Associated Goal(s)      | - G3.3 -- Fitness Tracking  <br> - G4.1 goal tracking                                                                                                                                                                                                                                                                                                                  |
 |                         | 4.3         | Primary Actor(s)        | Student                                                                                                                                                                                                                                                                                                                                       |
 |                         | 4.4         | Other Actor(s)          | Admins                                                                                                                                                                                                                                                                                                                                        |
 |                         | 4.5         | Precondition(s)         | - Student is authenticated via the Campus Wellness Portal.<br>- System and data sources are operational and up to date.                                                                                                                                                                                                                       |
 |                         | 4.6         | Postcondition(s)        | - Student receives a visual summary of wellness activities and progress.                                                                                                                                                                                                                                                                      |
 |                         | 4.7         | Result                  | The system displays the user's wellness data and progress over time in a clear, summarized format.                                                                                                                                                                                                                                            |
-|                         | 4.8         | Main Scenario           | 1. Student opens "Track Wellness Progress" interface.<br>2. System validates the session.<br>3. System retrieves data from the Medical Centre, Fitness Centre, and Wellness Goals database.<br>4. Analytics Service analyses trends, achievements, and participation.<br>5. System displays wellness insights using charts and progress bars. |
+|                         | 4.8         | Main Scenario           | 1. Student opens "Track Wellness Progress" interface.<br>2. System validates the session.<br>3. System retrieves data from the MedicalDB, FitnessDB, and WellnessDB.<br>4. Analytics Service analyses trends, achievements, and participation.<br>5. System displays wellness insights using charts and progress bars. |
 |                         | 4.9         | Alternative Scenario(s) | - 4a. Milestone Achieved:<br> 4a1. If a milestone is achieved, the Notification Service sends a motivational email message to the student.                                                                                                                                                                                                    |
+|                         | 4.10         | Exception Scenario(s) | - 2a. Not Authenticated: <br>  2a1.If the session is invalid or expired, the system prompts the student to log in again. <br> 3a. Database Unavailable:
+ 3a1. If any of the required databases (MedicalDB, FitnessDB, WellnessDB) are unavailable, the system displays a relevant error message indicating which data could not be retrieved and suggests retrying later.                                                                                                                                                                                              |
 : []{#_Toc199101186 .anchor}Table 4.9 - Track Wellness Progress Use Case
 
 ##### Sequence Diagram
 
 <figure>
-<img src="./images/media/image20.png"
+<img src="./images/media/uc09.png"
 style="width:6.26806in;height:2.87431in"
 alt="A screenshot of a diagram AI-generated content may be incorrect." />
 <figcaption><p><span id="_Toc199101132" class="anchor"></span>Figure
@@ -1508,15 +1510,19 @@ alt="A diagram of a computer AI-generated content may be incorrect." />
 ||4.5|Precondition(s)|- Student is authenticated and has access to goal-setting functionality.|
 ||4.6|Postcondition(s)|- Success: Goal is saved and tracked by the system.<br>- Failure: Input error is presented to the student for correction.|
 ||4.7|Result|The system saves the user's personalized wellness goals and updates the progress tracking accordingly.|
-||4.8|Main Scenario|1. Student navigates to the "Set Wellness Goal" interface.<br>2. System authenticates the session.<br>3. Student enters goal details, including activity type (e.g., steps, workout, gym sessions), target frequency (e.g., 3 times/week), and duration (e.g., 30 minutes/session).<br>4. System validates the goal format.<br>5. System stores the goal in the database.<br>6. Notification Service sends a confirmation message.<br>7. System displays the success message and summary.|
+||4.8|Main Scenario|1. Student navigates to the "Set Wellness Goal" interface.<br>2. System authenticates the session.<br>3. Student enters goal details, including activity type such as steps, workout, gym sessions, target frequency such as 3 times/week, and duration such as 30 minutes/session .<br>4. System validates the goal format.<br>5. System stores the goal in the database.<br>6. Notification Service sends a confirmation message.<br>7. System displays the success message and summary.|
 ||4.9|Alternative Scenario(s)|- 4a. Invalid Input Format:<br> 4a1. System highlights input error and prompts for correction.|
+||4.10|Exception Scenario(s)|- 2a. Not Authenticated: <br> 2a1. If the session is invalid or expired, the system prompts the student to log in again. <br> 5a. WellnessDC Unavailable:
+ <br> 5a1. If the WellnessDB is unavailable, the system displays an error message (“Wellness goals data currently unavailable. Please try again later.”) and suggests retrying later.
+
+|
 
 : []{#_Toc199101187 .anchor}Table 4.10 - Set Wellness Goals Use Case
 
 ##### Sequence Diagram
 
 <figure>
-<img src="./images/media/image22.png"
+<img src="./images/media/uc10.png"
 style="width:6.26806in;height:2.99306in"
 alt="A diagram of a company AI-generated content may be incorrect." />
 <figcaption><p><span id="_Toc199101134" class="anchor"></span>Figure
@@ -1992,34 +1998,23 @@ The Campus Wellness Portal shall utilize a secure, relational database managemen
 - **CounsellingSession**: Contains confidential session notes,
   participant ID, and assigned counsellor.
 
-- **FitnessClass**: Includes session time, capacity, gender-tag, and
+- **FitnessSession**: Includes session time, capacity, gender-tag, and
   real-time availability.
 
-- **Goal**: Represents personalized health and wellness goals (e.g.,
+- **WellnessGoal**: Represents personalized health and wellness goals (e.g.,
   hydration, steps, sleep hours).
 
 - **Notification**: Logs sent messages (email/SMS) for reminders,
   confirmations, and alerts.
 
-- **Feedback**: Captures post-session satisfaction ratings and free-text
-  comments.
-
-- **AI_Tip**: Stores generated health insights for user dashboards based
+- **AIWellnessEngine**: Stores generated health insights for user dashboards based
   on tracked metrics.
 
 ### Relationships
 
 - **One-to-Many**:
 
-  - User → Appointment, Notification, Feedback
-
-- **Many-to-Many**:
-
-  - User ↔ FitnessClass (via a linking table FitnessBooking)
-
-- **Optional One-to-One**:
-
-  - Appointment → CounsellingSession (if appointment is counselling-related)
+  - User → Appointment, Notification
 
 ### Data Integrity Constraints
 
@@ -2039,7 +2034,7 @@ The Campus Wellness Portal shall utilize a secure, relational database managemen
   using AES-256.
 
 - Role-Based Access Control (RBAC) policies shall govern field-level
-  access, ensuring that only authorized roles (Counsellor, Admin) can
+  access, ensuring that only authorized roles (Student, Admin) can
   access protected data.
 
 - Access logs must be maintained to audit database interactions
