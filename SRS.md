@@ -1510,8 +1510,12 @@ alt="A diagram of a computer AI-generated content may be incorrect." />
 ||4.5|Precondition(s)|- Student is authenticated and has access to goal-setting functionality.|
 ||4.6|Postcondition(s)|- Success: Goal is saved and tracked by the system.<br>- Failure: Input error is presented to the student for correction.|
 ||4.7|Result|The system saves the user's personalized wellness goals and updates the progress tracking accordingly.|
-||4.8|Main Scenario|1. Student navigates to the "Set Wellness Goal" interface.<br>2. System authenticates the session.<br>3. Student enters goal details, including activity type (e.g., steps, workout, gym sessions), target frequency (e.g., 3 times/week), and duration (e.g., 30 minutes/session).<br>4. System validates the goal format.<br>5. System stores the goal in the database.<br>6. Notification Service sends a confirmation message.<br>7. System displays the success message and summary.|
+||4.8|Main Scenario|1. Student navigates to the "Set Wellness Goal" interface.<br>2. System authenticates the session.<br>3. Student enters goal details, including activity type such as steps, workout, gym sessions, target frequency such as 3 times/week, and duration such as 30 minutes/session .<br>4. System validates the goal format.<br>5. System stores the goal in the database.<br>6. Notification Service sends a confirmation message.<br>7. System displays the success message and summary.|
 ||4.9|Alternative Scenario(s)|- 4a. Invalid Input Format:<br> 4a1. System highlights input error and prompts for correction.|
+||4.10|Exception Scenario(s)|- 2a. Not Authenticated: <br> 2a1. If the session is invalid or expired, the system prompts the student to log in again. <br> 5a. WellnessDC Unavailable:
+ <br> 5a1. If the WellnessDB is unavailable, the system displays an error message (“Wellness goals data currently unavailable. Please try again later.”) and suggests retrying later.
+
+|
 
 : []{#_Toc199101187 .anchor}Table 4.10 - Set Wellness Goals Use Case
 
