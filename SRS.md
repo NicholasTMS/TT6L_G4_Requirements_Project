@@ -796,6 +796,10 @@ The following constraints apply to the system's development and deployment:
 | S06        | 22 June 2025, 5:00 PM | Inspection | 4.2 Interface Requirements to 4.7 Logical Database Requirements | Anas (Moderator, Inspector, Reader), Nicholas (Inspector, Reader), Fikrul (Inspector, Reader) | 7             |
 | S07        | 22 June 2025, 6:00 PM | Inspection | 5.0 Verification to 6.0 Appendices                              | Anas (Moderator, Inspector, Reader), Nicholas (Inspector, Reader), Fikrul (Inspector, Reader) | 5             |
 
+| Session Links |
+| ------------- |
+| https://mmuedumy-my.sharepoint.com/:f:/g/personal/muhammad_anas_khairul_student_mmu_edu_my/EnIDoMMoer9LtdOFNdXxE6gB8HTBOamangrS-ZeOIxU6mA?e=7arBSf |
+
 ### Defect Summary
 
 #### Content Defect
