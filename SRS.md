@@ -1322,10 +1322,11 @@ querying the Medical Center Service, which retrieves data from the Appointment D
 ||4.4|Other Actor(s): |
 ||4.5|Precondition(s): <br>- Student must be logged in via SSO<br>- The system is connected to the counselling database.|
 ||4.6|Postcondition(s): <br>- Student sees a list of past sessions or a message that no records were found.|
-||4.7|Result: Counselling records are retrieved and displayed based on the selected date range.|
-||4.8|Main Scenario: <br>1. Student selects "View Counselling History".<br>2. System checks authentication.<br>3. System queries counselling records for the selected date range.<br>4. System displays the results.|
+||4.7|Result: Counselling records are retrieved and displayed.|
+||4.8|Main Scenario: <br>1. Student selects "View Counselling History".<br>2. System checks authentication.<br>3. System queries counselling records.<br>4. System displays the results.|
 ||4.9|Alternate Scenario(s): <br>- No records found: A message is shown.|
-||4.10|Exception Scenario(s): <br>- Student is not authenticated: Prompted to log in first.|                                                                 |
+||4.10|Exception Scenario(s): <br>- Student is not authenticated: Prompted to log in first.|       
+||4.11|Exception Scenario(s): <br>- HealthDB unavailable: System will display an error message stating, “Service temporarily unavailable. Please try again later”.|                      |
 
 : []{#_Toc199101183 .anchor}Table 4.6 - View Counselling History Use
 Case
