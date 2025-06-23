@@ -2294,33 +2294,6 @@ vocabulary used throughout the document.
 
   : []{#_Toc199101198 .anchor}Table 6.1 - Glossary
 
-## Acronyms and Abbreviations
-
-| **Acronym** | **Full Term**                           |
-| ----------- | --------------------------------------- |
-| **API**     | Application Programming Interface       |
-| **AI**      | Artificial Intelligence                 |
-| **CD**      | Class Diagram                           |
-| **DB**      | Database                                |
-| **DBMS**    | Database Management System              |
-| **HTTPS**   | Hypertext Transfer Protocol Secure      |
-| **KPI**     | Key Performance Indicator               |
-| **MMU**     | Multimedia University                   |
-| **MVP**     | Minimum Viable Product                  |
-| **OTA**     | One-Time Authentication                 |
-| **OTP**     | One-Time Password                       |
-| **PDPA**    | Personal Data Protection Act (Malaysia) |
-| **RBAC**    | Role-Based Access Control               |
-| **RTM**     | Requirements Traceability Matrix        |
-| **SRS**     | Software Requirements Specification     |
-| **SSO**     | Single Sign-On                          |
-| **TLS**     | Transport Layer Security                |
-| **UAT**     | User Acceptance Testing                 |
-| **UC**      | Use Case                                |
-| **UI/UX**   | User Interface / User Experience        |
-
-  : []{#_Toc199101199 .anchor}Table 6.2 - Acronyms and Abbreviations
-
 ## User Stories
 
 User stories offer a simple but powerful way to understand what users
@@ -2445,7 +2418,7 @@ modeled in UML with the {complete, disjoint} notation.
 
   - **Student** is associated with multiple **Appointment**, **FitnessSession**, and **WellnessGoal** instances, representing the student's interactions with wellness services.
 
-  - **Appointment** is linked to a single **User** (either Student or Admin), indicating booking ownership and administrative oversight.
+  - **Appointment** is linked to a single **User** (Student), indicating booking ownership and administrative oversight.
 
   - **Notification** is associated with **User**, representing communication channels to individual users.
 
