@@ -1319,7 +1319,7 @@ querying the Medical Center Service, which retrieves data from the Appointment D
 |**Use Case Definition**|4.1|Short Description: <br>The student views their past counselling sessions by selecting a date range|
 ||4.2|Associated Goal(s): <br>- G2.2 -- View Counselling History|
 ||4.3|Primary Actor(s): Student|
-||4.4|Other Actor(s): Health Center System, MMU Online Portal|
+||4.4|Other Actor(s): |
 ||4.5|Precondition(s): <br>- Student must be logged in via SSO<br>- The system is connected to the counselling database.|
 ||4.6|Postcondition(s): <br>- Student sees a list of past sessions or a message that no records were found.|
 ||4.7|Result: Counselling records are retrieved and displayed based on the selected date range.|
