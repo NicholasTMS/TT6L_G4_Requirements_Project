@@ -1473,7 +1473,7 @@ alt="A diagram of a company AI-generated content may be incorrect." />
 ##### Sequence Diagram
 
 <figure>
-<img src="./images/media/image20.png"
+<img src="./images/media/uc09.png"
 style="width:6.26806in;height:2.87431in"
 alt="A screenshot of a diagram AI-generated content may be incorrect." />
 <figcaption><p><span id="_Toc199101132" class="anchor"></span>Figure
