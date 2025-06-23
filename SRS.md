@@ -1563,7 +1563,7 @@ feedback to the user.
 ##### Sequence Diagram
 
 ![[]{#_Toc199101136 .anchor}Figure 4.22 - Get AI Wellness Tips Sequence
-Diagram](./images/media/image24.jpeg){width="6.268055555555556in"
+Diagram](./images/media/image24.png){width="6.268055555555556in"
 height="4.183926071741032in"}
 
 **Figure 4.22** illustrates the sequence diagram for the "Get AI Wellness Tips" use case in the Campus Wellness Portal. The interaction begins when a student clicks the "Get Tips" button. The system requests the student's wellness goals and activity data from the Wellness Data Service. If data is available, it is forwarded to the AI Wellness Engine to generate a personalized wellness tip, which is then displayed to the student. The student may choose to save or dismiss the tip. If no data is found, the system prompts the student to set their wellness goals first. This ensures that tips are tailored and relevant to each user's wellness journey.
