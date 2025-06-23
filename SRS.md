@@ -925,6 +925,100 @@ The following constraints apply to the system's development and deployment:
 
 ### Version Control & Configuration Summary
 
+#### project-part-2 branch commit history
+
+| Hash    | Author      | Date       | Message                                                                                                                                     |
+| ------- | ----------- | ---------- | ------------------------------------------------------------------------------------------------------------------------------------------- |
+| 8707e07 | NicholasTMS | 2025-04-17 | Initial commit                                                                                                                              |
+| 6e8301e | NicholasTMS | 2025-04-22 | Add files via upload                                                                                                                        |
+| 4ec9dde | NicholasTMS | 2025-04-22 | Added TeamFormation folder                                                                                                                  |
+| f5e9b6e | NicholasTMS | 2025-04-22 | Delete TT6L_G6_TeamFormation.docx                                                                                                           |
+| c265d5d | NicholasTMS | 2025-04-22 | Add files via upload                                                                                                                        |
+| 9215eed | NicholasTMS | 2025-04-22 | Added ProjectPreliminary Folder                                                                                                             |
+| 8239efb | NicholasTMS | 2025-04-22 | Added ContextObjects folder                                                                                                                 |
+| dee1714 | NicholasTMS | 2025-04-22 | Added Elicitation folder                                                                                                                    |
+| f626033 | NicholasTMS | 2025-04-22 | Create  placeholder.txt                                                                                                                     |
+| eb3a2de | NicholasTMS | 2025-04-22 | Create TT6L_G4_VersionControl.md                                                                                                            |
+| e1156d1 | NicholasTMS | 2025-04-22 | Add files via upload                                                                                                                        |
+| 5439d6e | NicholasTMS | 2025-04-22 | Delete ContextObjects/placeholder.txt                                                                                                       |
+| 70ea99b | NicholasTMS | 2025-04-22 | Added ContextObjects folder                                                                                                                 |
+| 1ada240 | NicholasTMS | 2025-04-22 | Updated the Readme section to provide more project context                                                                                  |
+| 6a96f55 | NicholasTMS | 2025-04-24 | Renamed TeamFormation file                                                                                                                  |
+| d91e989 | NicholasTMS | 2025-04-24 | Deleted old team formation file                                                                                                             |
+| 610406f | NicholasTMS | 2025-04-24 | Added ProjectVision document                                                                                                                |
+| 3bf060c | NicholasTMS | 2025-04-24 | Added the Context Object document                                                                                                           |
+| 4865f77 | NicholasTMS | 2025-04-24 | Added the Elicitation Plan document                                                                                                         |
+| ca8f259 | NicholasTMS | 2025-04-24 | Added the Kano Model document                                                                                                               |
+| 7469d57 | NicholasTMS | 2025-04-24 | Updated some file names and their descriptions                                                                                              |
+| c666377 | NicholasTMS | 2025-04-24 | Moved to SRS folder                                                                                                                         |
+| 3cc6750 | NicholasTMS | 2025-04-24 | Create TT6L_G4_VersionControl.md                                                                                                            |
+| 1ff1c31 | NicholasTMS | 2025-05-10 | Delete SRS/placeholder.txt                                                                                                                  |
+| d780621 | NicholasTMS | 2025-05-10 | Add files via upload                                                                                                                        |
+| 8cf965f | NicholasTMS | 2025-05-10 | Update README.md                                                                                                                            |
+| 7b284e0 | NicholasTMS | 2025-05-12 | Update README.md                                                                                                                            |
+| 812914e | NicholasTMS | 2025-05-12 | Added v1.1                                                                                                                                  |
+| fa14cfb | NicholasTMS | 2025-05-13 | Updated SRS to v1.2                                                                                                                         |
+| 9d86ed8 | Anas        | 2025-05-13 | Updated SRS document to v1.3. Added content to 1.3.2 Product Functions                                                                      |
+| 2f75a61 | NicholasTMS | 2025-05-14 | Updated SRS to v1.4                                                                                                                         |
+| 91d246d | NicholasTMS | 2025-05-16 | Updated SRS to v1.5                                                                                                                         |
+| 9cb8dc9 | Anas        | 2025-05-17 | Added Product Limitations in 1.3.4 and pretext for Performance Requirements                                                                 |
+| 4aab6dd | Anas        | 2025-05-17 | Updated SRS to v1.5.2. Added the performance requirements for 3.2.5 Cancel Health Centre Appointments. Added the User Case Table for 3.2.5. |
+| c51676f | Anas        | 2025-05-17 | Added functional requirement and use case table for 3.2.6, 3.2.7 and 3.2.9                                                                  |
+| 95cd6ba | Anas        | 2025-05-17 | Added sequence diagrams to 3.2.5, 3.2.6, 3.2.7, 3.2.9                                                                                       |
+| f96ad9e | Anas        | 2025-05-17 | Updated README.md                                                                                                                           |
+| f48a1e2 | Anas        | 2025-05-17 | Fixed numbering for functional requirements                                                                                                 |
+| 5663e85 | NicholasTMS | 2025-05-17 | Create placeholder.txt                                                                                                                      |
+| 09ced10 | NicholasTMS | 2025-05-17 | Create placeholder.txt                                                                                                                      |
+| 7dc299d | NicholasTMS | 2025-05-17 | Create  placeholder.txt                                                                                                                     |
+| c1a3f9d | NicholasTMS | 2025-05-17 | Create placeholder.txt                                                                                                                      |
+| 342f622 | NicholasTMS | 2025-05-17 | Create  placeholder.txt                                                                                                                     |
+| 288385f | NicholasTMS | 2025-05-18 | updated to v1.5.6                                                                                                                           |
+| ca314f6 | Anas        | 2025-05-18 | Updated SRS to v1.5.7. Added cover page. Added proper table of contents. Fixed numbering                                                    |
+| 7578ef1 | Anas        | 2025-05-18 | Added 3.2 Performance Requirements and 3.7 Software System Attributes                                                                       |
+| 40d4a5c | Anas        | 2025-05-20 | Added 3.4 Interface Requirements: login interface and appointment interface                                                                 |
+| 9584404 | NicholasTMS | 2025-05-21 | Updated SRS to v1.6.1                                                                                                                       |
+| f550b26 | Fikrul A.   | 2025-05-21 | Added functional requirements 3.1.1, 3.1.2, 3.1.3, 3.1.4                                                                                    |
+| b934701 | NicholasTMS | 2025-05-23 | Updated SRS to v1.6.3                                                                                                                       |
+| c328209 | NicholasTMS | 2025-05-23 | Delete SRS/TT6L_G4_SRS_v1.6.3.docx                                                                                                          |
+| c16cfa9 | NicholasTMS | 2025-05-23 | Updated SRS to v1.6.3                                                                                                                       |
+| b78c0ce | NicholasTMS | 2025-05-23 | Delete SRS/TT6L_G4_SRS_v1.6.3.docx                                                                                                          |
+| 9ffc8e2 | NicholasTMS | 2025-05-23 | Updated SRS to v1.6.3                                                                                                                       |
+| 32b96f8 | Anas Azman  | 2025-05-25 | Add files via upload                                                                                                                        |
+| 277f7c2 | Anas Azman  | 2025-05-25 | Add files via upload                                                                                                                        |
+| bb05b83 | Anas Azman  | 2025-05-25 | Add files via upload                                                                                                                        |
+| 77b3daf | Anas Azman  | 2025-05-25 | Add files via upload                                                                                                                        |
+| 3b2e1c6 | Anas Azman  | 2025-05-25 | Add files via upload                                                                                                                        |
+| d6625c8 | Anas Azman  | 2025-05-25 | Delete ContextObjects directory                                                                                                             |
+| 8b233bd | Anas Azman  | 2025-05-25 | Delete Elicitation directory                                                                                                                |
+| d586366 | Anas Azman  | 2025-05-25 | Delete ProjectPreliminary directory                                                                                                         |
+| 9e41fa9 | Anas        | 2025-05-25 | Added latest files for Task 1 to 4                                                                                                          |
+| 9d4a909 | Anas        | 2025-05-25 | Commit message                                                                                                                              |
+| 5f44386 | Anas        | 2025-05-25 | Removed TeamFormation directory                                                                                                             |
+| 6f91641 | Anas        | 2025-06-01 | Init commit project part 2                                                                                                                  |
+| 1e19227 | Anas        | 2025-06-20 | Added images file extracted from Pandoc                                                                                                     |
+| 940369a | Anas        | 2025-06-20 | Changed SRS.md to the one with images                                                                                                       |
+| e192bee | Anas Azman  | 2025-06-20 | Update SRS.md                                                                                                                               |
+| 3d1819f | Anas Azman  | 2025-06-20 | Delete Task 2 directory from part 2 branch                                                                                                  |
+| 6148f7a | Anas Azman  | 2025-06-20 | Delete Task 1 directory from part 2 branch                                                                                                  |
+| afa44d3 | Anas Azman  | 2025-06-20 | Delete Task 3 directory from part 2 branch                                                                                                  |
+| 5083f3e | Anas Azman  | 2025-06-20 | Delete Task 4 directory from part 2 branch                                                                                                  |
+| 54f3d08 | Anas Azman  | 2025-06-20 | Delete Task 5 directory from part 2 branch                                                                                                  |
+| 1cc9190 | Anas Azman  | 2025-06-20 | Delete SRS directory from part 2 branch                                                                                                     |
+| 5debe66 | Anas        | 2025-06-21 | Fixed various formatting issues from .doc to .md conversion                                                                                 |
+| 9e907a4 | Anas        | 2025-06-21 | Merge remote-tracking branch 'refs/remotes/origin/project-part-2' into project-part-2                                                       |
+| 2a7856b | Anas        | 2025-06-21 | Fixed formatting issues until Cancel Appointment                                                                                            |
+| f75285b | Anas        | 2025-06-21 | Fixed more odd newline character breaks from doc to md conversion                                                                           |
+| 31052c8 | Anas        | 2025-06-21 | Fixed most of the inconsistent formatting                                                                                                   |
+| f2e89c5 | Anas        | 2025-06-23 | Resolved first 3 content defects                                                                                                            |
+| f4b3ddf | Anas        | 2025-06-23 | Fixed sequence diagram of UC01                                                                                                              |
+| 0c8e3e4 | Anas        | 2025-06-23 | Fixed image48                                                                                                                               |
+| 423cf06 | Anas        | 2025-06-23 | Added missing associated goals in UC04 and UC05. Added missing in-scope features from TT6L_G2_ProjectPreliminary to SRS.                    |
+| b12347f | Anas        | 2025-06-23 | Added the table from the validation negotiation template                                                                                    |
+
+#### project-part-2-anas branch commit history
+
+
+
 # Requirements 
 
 This section describes the detailed system requirements needed to develop the Campus Wellness Portal. These requirements follow the ISO/IEC/IEEE 29148:2018 standards and meet stakeholders needs. The list includes functional, interface, and non-functional needs. Each requirement ensures clarity, traceability, completeness, and the ability to test it during the entire system lifecycle.
