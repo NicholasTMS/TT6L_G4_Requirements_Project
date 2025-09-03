@@ -796,6 +796,12 @@ The following constraints apply to the system's development and deployment:
 | S06        | 22 June 2025, 5:00 PM | Inspection | 4.2 Interface Requirements to 4.7 Logical Database Requirements | Anas (Moderator, Inspector, Reader), Nicholas (Inspector, Reader), Fikrul (Inspector, Reader) | 7             |
 | S07        | 22 June 2025, 6:00 PM | Inspection | 5.0 Verification to 6.0 Appendices                              | Anas (Moderator, Inspector, Reader), Nicholas (Inspector, Reader), Fikrul (Inspector, Reader) | 5             |
 
+| Session | Session Links |
+| ------------- | ------------- |
+|S01 - S05| ["https://mmuedumy-my.sharepoint.com/:f:/g/personal/muhammad_anas_khairul_student_mmu_edu_my/EnIDoMMoer9LtdOFNdXxE6gB8HTBOamangrS-ZeOIxU6mA?e=7arBSf"] |
+|S06| ["https://mmuedumy-my.sharepoint.com/:v:/g/personal/nicholas_thong_meng_student_mmu_edu_my/ESYuIqh92LZLg4kA7b7OgTsBb2SrB97jtMRWPQJK_o0HFw?e=0Y5vT2&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D"] |
+|S07| ["https://mmuedumy-my.sharepoint.com/:v:/g/personal/nicholas_thong_meng_student_mmu_edu_my/EWpcWexpSVdPu349meCQDYsB9OsfLJvA2X6l64YQDWBKvQ?e=yUJy0G&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D"] |
+
 ### Defect Summary
 
 #### Content Defect
@@ -845,8 +851,6 @@ The following constraints apply to the system's development and deployment:
 | Section 4.7.2 (page 82, 83, 84)                 | Relationship between Appointment → CounsellingSession is described as one-to-one optional, but in class diagram, CounsellingSession links to Student, not Appointment                                                                                                 | Nicholas    | Remove this association from 4.7.2                                                                                                                                  | S06        | 2              |
 | Section 4.7.2 (page 82, 83, 84)                 | Describes User ↔ FitnessClass via linking table FitnessBooking, but this linking table is not modeled in the class diagram                                                                                                                                            | Nicholas    | Remove this association from 4.7.2                                                                                                                                  | S06        | 2              |
 | Section 6.5.3 - Associations (page 92,93,94,95) | Describes Appointment → User as "either Student or Admin," but the class diagram links Appointment only to Student.                                                                                                                                                   | Nicholas    | Update the description to say "linked only to Student."                                                                                                             | S07        | 3              |
-| Section 6.5.4 - Goal (page 92,93,94,95)         | WellnessGoal class must enforce frequency per week as positive integer but the class diagram's WellnessGoal has no frequency attribute or related constraint.                                                                                                         | Nicholas    | Add a frequency: Int attribute (or rename targetValue) to class diagram                                                                                             | S07        | 4              |
-| Section 6.5.4 - Capacity (page 92,93,94,95)     | "Overbooking is prevented" is claimed yet neither FitnessSession nor FitnessController define any method or constraint to enforce capacity limits in the model.                                                                                                       | Nicholas    | Add method to enforce capacity limits                                                                                                                               | S07        | 4              |
 | Section 6.5.4 - Notification (page 92,93,94,95) | "Automated retry attempts" and "confirmation of receipt logged" are described but Notification class has no attributes or operations supporting retries or logging.                                                                                                   | Nicholas    | Extend Notification with attributes like retryCount: Int, lastAttempt: DateTime, and operations retrySend(), logReceipt().                                          | S07        | 4              |
 
 #### Documentation Defect
@@ -879,21 +883,21 @@ The following constraints apply to the system's development and deployment:
 | Req ID/Conflict ID | Validation Description/Stakeholder Concern                                                                                      | Mismatch                                                                            | Detected By | Session ID | Severity (1-5) |
 | ------------------ | ------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------- | ---------- | -------------- |
 | Page 19            | Inconsistent/unclear naming of external systems. "Counselling Service" and "Medical Appointment" both refer to the same system. | Nicholas disagrees on the defect. Naming of external systems is clear and distinct. | Anas        | S01        | 2              |
-| REQ-06 / UC06 (page 39, 40, 92(class diagram)) / C03           | Goals vs SRS Scope Creep, Option to apply a date range filter when viewing counselling records not mentioned through task1-4. | Anas disagrees on this defect. Option is implied. | Nicholas       | S04        | 3             |
+| REQ-06 / UC06 (page 39, 40, 92(class diagram)) / C02           | Goals vs SRS Scope Creep, Option to apply a date range filter when viewing counselling records not mentioned through task1-4. | Anas disagrees on this defect. Option is implied. | Nicholas       | S04        | 3             |
 
 ### Conflict Analysis
 
-| Conflict ID | Conflict Description                                                                          | Conflict Analysis                                                                                                                                                          | Stakeholders Involved | Session ID |
-| ----------- | --------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------- | ---------- |
-| C01         | Disagreement on the inconsistent naming of external systems.                                  | Anas believes that Counselling Service and Medical Appointment refer to the same object. Nicholas disagrees and it is not a defect.                                        | Anas, Nicholas        | S01        |
-| C02         | Disagreement on content defect regarding no mention of wearables support in the requirements. | Anas says that wearable support needs to be mentioned in the requirements as it is mentioned in the interface requirements. Nicholas disagrees and says it is not a defect | Anas, Nicholas        | S06        |
+| Conflict ID | Conflict Description                                                                          | Conflict Analysis                                                                                                                                                                         | Stakeholders Involved | Session ID |
+| ----------- | --------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------- | ---------- |
+| C01         | Disagreement on the inconsistent naming of external systems.                                  | Anas believes that Counselling Service and Medical Appointment refer to the same object. Nicholas disagrees and it is not a defect.                                                       | Developers, Students  | S01        |
+| C02        | Disagreement on scope of a use case                                                           | Nicholas believes that the option to apply date range filter when viewing counselling records is beyond the project scope. Anas disagrees and believes that it is implied in the use case | Developers, Students  | S04        |
 
 ### Conflict Resolution
 
-| Conflict ID | Conflict Resolution Strategy                             | Resolved (Y/N) | Outcome (If Resolved) | Justification                                                      |
-| ----------- | -------------------------------------------------------- | -------------- | --------------------- | ------------------------------------------------------------------ |
-| C01         | Maintain the current naming already in the document.     | Y              | Document is unchanged | Counselling Service and Medical Appointment are separate entities. |
-| C02         | No need to mention wearable support in the requirements. | N              | -                     | -                                                                  |
+| Conflict ID | Conflict Resolution Strategy                                                                                                                                                  | Resolved (Y/N) | Outcome (If Resolved)                                                     | Justification                                                                                |
+| ----------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------- | ------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| C01         | Maintain the current naming already in the document.                                                                                                                          | Y              | Document is unchanged                                                     | Counselling Service and Medical Appointment are separate entities.                           |                                                                                    |
+| C02         | Remove option to apply date range filter when viewing counselling records but move to an appendix section labelled "Future enhancements ideas"(Create if not already created) | Y              | Remove option to apply date range filter when viewing counselling records | Option is not implemented or modelled anywhere else in the SRS making implementation harder. |
 ### Change Log
 
 ### Requirements Traceability Matrix
@@ -931,98 +935,78 @@ The following constraints apply to the system's development and deployment:
 
 | Hash    | Author      | Date       | Message                                                                                                                                     |
 | ------- | ----------- | ---------- | ------------------------------------------------------------------------------------------------------------------------------------------- |
-| 8707e07 | NicholasTMS | 2025-04-17 | Initial commit                                                                                                                              |
-| 6e8301e | NicholasTMS | 2025-04-22 | Add files via upload                                                                                                                        |
-| 4ec9dde | NicholasTMS | 2025-04-22 | Added TeamFormation folder                                                                                                                  |
-| f5e9b6e | NicholasTMS | 2025-04-22 | Delete TT6L_G6_TeamFormation.docx                                                                                                           |
-| c265d5d | NicholasTMS | 2025-04-22 | Add files via upload                                                                                                                        |
-| 9215eed | NicholasTMS | 2025-04-22 | Added ProjectPreliminary Folder                                                                                                             |
-| 8239efb | NicholasTMS | 2025-04-22 | Added ContextObjects folder                                                                                                                 |
-| dee1714 | NicholasTMS | 2025-04-22 | Added Elicitation folder                                                                                                                    |
-| f626033 | NicholasTMS | 2025-04-22 | Create  placeholder.txt                                                                                                                     |
-| eb3a2de | NicholasTMS | 2025-04-22 | Create TT6L_G4_VersionControl.md                                                                                                            |
-| e1156d1 | NicholasTMS | 2025-04-22 | Add files via upload                                                                                                                        |
-| 5439d6e | NicholasTMS | 2025-04-22 | Delete ContextObjects/placeholder.txt                                                                                                       |
-| 70ea99b | NicholasTMS | 2025-04-22 | Added ContextObjects folder                                                                                                                 |
-| 1ada240 | NicholasTMS | 2025-04-22 | Updated the Readme section to provide more project context                                                                                  |
-| 6a96f55 | NicholasTMS | 2025-04-24 | Renamed TeamFormation file                                                                                                                  |
-| d91e989 | NicholasTMS | 2025-04-24 | Deleted old team formation file                                                                                                             |
-| 610406f | NicholasTMS | 2025-04-24 | Added ProjectVision document                                                                                                                |
-| 3bf060c | NicholasTMS | 2025-04-24 | Added the Context Object document                                                                                                           |
-| 4865f77 | NicholasTMS | 2025-04-24 | Added the Elicitation Plan document                                                                                                         |
-| ca8f259 | NicholasTMS | 2025-04-24 | Added the Kano Model document                                                                                                               |
-| 7469d57 | NicholasTMS | 2025-04-24 | Updated some file names and their descriptions                                                                                              |
-| c666377 | NicholasTMS | 2025-04-24 | Moved to SRS folder                                                                                                                         |
-| 3cc6750 | NicholasTMS | 2025-04-24 | Create TT6L_G4_VersionControl.md                                                                                                            |
-| 1ff1c31 | NicholasTMS | 2025-05-10 | Delete SRS/placeholder.txt                                                                                                                  |
-| d780621 | NicholasTMS | 2025-05-10 | Add files via upload                                                                                                                        |
-| 8cf965f | NicholasTMS | 2025-05-10 | Update README.md                                                                                                                            |
-| 7b284e0 | NicholasTMS | 2025-05-12 | Update README.md                                                                                                                            |
-| 812914e | NicholasTMS | 2025-05-12 | Added v1.1                                                                                                                                  |
-| fa14cfb | NicholasTMS | 2025-05-13 | Updated SRS to v1.2                                                                                                                         |
-| 9d86ed8 | Anas        | 2025-05-13 | Updated SRS document to v1.3. Added content to 1.3.2 Product Functions                                                                      |
-| 2f75a61 | NicholasTMS | 2025-05-14 | Updated SRS to v1.4                                                                                                                         |
-| 91d246d | NicholasTMS | 2025-05-16 | Updated SRS to v1.5                                                                                                                         |
-| 9cb8dc9 | Anas        | 2025-05-17 | Added Product Limitations in 1.3.4 and pretext for Performance Requirements                                                                 |
-| 4aab6dd | Anas        | 2025-05-17 | Updated SRS to v1.5.2. Added the performance requirements for 3.2.5 Cancel Health Centre Appointments. Added the User Case Table for 3.2.5. |
-| c51676f | Anas        | 2025-05-17 | Added functional requirement and use case table for 3.2.6, 3.2.7 and 3.2.9                                                                  |
-| 95cd6ba | Anas        | 2025-05-17 | Added sequence diagrams to 3.2.5, 3.2.6, 3.2.7, 3.2.9                                                                                       |
-| f96ad9e | Anas        | 2025-05-17 | Updated README.md                                                                                                                           |
-| f48a1e2 | Anas        | 2025-05-17 | Fixed numbering for functional requirements                                                                                                 |
-| 5663e85 | NicholasTMS | 2025-05-17 | Create placeholder.txt                                                                                                                      |
-| 09ced10 | NicholasTMS | 2025-05-17 | Create placeholder.txt                                                                                                                      |
-| 7dc299d | NicholasTMS | 2025-05-17 | Create  placeholder.txt                                                                                                                     |
-| c1a3f9d | NicholasTMS | 2025-05-17 | Create placeholder.txt                                                                                                                      |
-| 342f622 | NicholasTMS | 2025-05-17 | Create  placeholder.txt                                                                                                                     |
-| 288385f | NicholasTMS | 2025-05-18 | updated to v1.5.6                                                                                                                           |
-| ca314f6 | Anas        | 2025-05-18 | Updated SRS to v1.5.7. Added cover page. Added proper table of contents. Fixed numbering                                                    |
-| 7578ef1 | Anas        | 2025-05-18 | Added 3.2 Performance Requirements and 3.7 Software System Attributes                                                                       |
-| 40d4a5c | Anas        | 2025-05-20 | Added 3.4 Interface Requirements: login interface and appointment interface                                                                 |
-| 9584404 | NicholasTMS | 2025-05-21 | Updated SRS to v1.6.1                                                                                                                       |
-| f550b26 | Fikrul A.   | 2025-05-21 | Added functional requirements 3.1.1, 3.1.2, 3.1.3, 3.1.4                                                                                    |
-| b934701 | NicholasTMS | 2025-05-23 | Updated SRS to v1.6.3                                                                                                                       |
-| c328209 | NicholasTMS | 2025-05-23 | Delete SRS/TT6L_G4_SRS_v1.6.3.docx                                                                                                          |
-| c16cfa9 | NicholasTMS | 2025-05-23 | Updated SRS to v1.6.3                                                                                                                       |
-| b78c0ce | NicholasTMS | 2025-05-23 | Delete SRS/TT6L_G4_SRS_v1.6.3.docx                                                                                                          |
-| 9ffc8e2 | NicholasTMS | 2025-05-23 | Updated SRS to v1.6.3                                                                                                                       |
-| 32b96f8 | Anas Azman  | 2025-05-25 | Add files via upload                                                                                                                        |
-| 277f7c2 | Anas Azman  | 2025-05-25 | Add files via upload                                                                                                                        |
-| bb05b83 | Anas Azman  | 2025-05-25 | Add files via upload                                                                                                                        |
-| 77b3daf | Anas Azman  | 2025-05-25 | Add files via upload                                                                                                                        |
-| 3b2e1c6 | Anas Azman  | 2025-05-25 | Add files via upload                                                                                                                        |
-| d6625c8 | Anas Azman  | 2025-05-25 | Delete ContextObjects directory                                                                                                             |
-| 8b233bd | Anas Azman  | 2025-05-25 | Delete Elicitation directory                                                                                                                |
-| d586366 | Anas Azman  | 2025-05-25 | Delete ProjectPreliminary directory                                                                                                         |
-| 9e41fa9 | Anas        | 2025-05-25 | Added latest files for Task 1 to 4                                                                                                          |
-| 9d4a909 | Anas        | 2025-05-25 | Commit message                                                                                                                              |
-| 5f44386 | Anas        | 2025-05-25 | Removed TeamFormation directory                                                                                                             |
-| 6f91641 | Anas        | 2025-06-01 | Init commit project part 2                                                                                                                  |
-| 1e19227 | Anas        | 2025-06-20 | Added images file extracted from Pandoc                                                                                                     |
-| 940369a | Anas        | 2025-06-20 | Changed SRS.md to the one with images                                                                                                       |
-| e192bee | Anas Azman  | 2025-06-20 | Update SRS.md                                                                                                                               |
-| 3d1819f | Anas Azman  | 2025-06-20 | Delete Task 2 directory from part 2 branch                                                                                                  |
-| 6148f7a | Anas Azman  | 2025-06-20 | Delete Task 1 directory from part 2 branch                                                                                                  |
-| afa44d3 | Anas Azman  | 2025-06-20 | Delete Task 3 directory from part 2 branch                                                                                                  |
-| 5083f3e | Anas Azman  | 2025-06-20 | Delete Task 4 directory from part 2 branch                                                                                                  |
-| 54f3d08 | Anas Azman  | 2025-06-20 | Delete Task 5 directory from part 2 branch                                                                                                  |
-| 1cc9190 | Anas Azman  | 2025-06-20 | Delete SRS directory from part 2 branch                                                                                                     |
-| 5debe66 | Anas        | 2025-06-21 | Fixed various formatting issues from .doc to .md conversion                                                                                 |
-| 9e907a4 | Anas        | 2025-06-21 | Merge remote-tracking branch 'refs/remotes/origin/project-part-2' into project-part-2                                                       |
-| 2a7856b | Anas        | 2025-06-21 | Fixed formatting issues until Cancel Appointment                                                                                            |
-| f75285b | Anas        | 2025-06-21 | Fixed more odd newline character breaks from doc to md conversion                                                                           |
-| 31052c8 | Anas        | 2025-06-21 | Fixed most of the inconsistent formatting                                                                                                   |
-| f2e89c5 | Anas        | 2025-06-23 | Resolved first 3 content defects                                                                                                            |
-| f4b3ddf | Anas        | 2025-06-23 | Fixed sequence diagram of UC01                                                                                                              |
-| 0c8e3e4 | Anas        | 2025-06-23 | Fixed image48                                                                                                                               |
-| 423cf06 | Anas        | 2025-06-23 | Added missing associated goals in UC04 and UC05. Added missing in-scope features from TT6L_G2_ProjectPreliminary to SRS.                    |
-| b12347f | Anas        | 2025-06-23 | Added the table from the validation negotiation template                                                                                    |
+| 6da4343 | Anas Azman | 2025-06-23 | Merge pull request #3 from NicholasTMS/project-part-2-anas |
+| d11e0be | NicholasTMS | 2025-06-23 | Updated Use case diagram |
+| 6c13f41 | NicholasTMS | 2025-06-23 | added use case diagram picture |
+| f2e06da | NicholasTMS | 2025-06-23 | Updated Use Case Diagram |
+| 4295511 | NicholasTMS | 2025-06-23 | remove toerh actors from UC06 |
+| 33fdbfa | NicholasTMS | 2025-06-23 | Cleared the other actors section from UC06 |
+| 97311ca | NicholasTMS | 2025-06-23 | UC06 db failure exception flow added |
+| cad7d83 | NicholasTMS | 2025-06-23 | UC06 DB failure exception flow added |
+| f20365c | NicholasTMS | 2025-06-23 | updated UC06 use case diagram |
+| 9c2eb80 | NicholasTMS | 2025-06-23 | Updated UC06 use case diagram |
+| d17d711 | NicholasTMS | 2025-06-23 | Updated UC06 use case diagram |
+| a7efd5e | NicholasTMS | 2025-06-23 | Reupdated UC06 use case diagram |
+| 7fb2d37 | NicholasTMS | 2025-06-23 | Reupdated UC06 use case diagram |
+| 9dc3997 | Fikrul A. | 2025-06-23 | UC10 Sequence diagram fix + added 'AI engine failure' |
+| dab39b3 | Fikrul A. | 2025-06-23 | Update SRS.md |
+| fbc569d | Fikrul A. | 2025-06-23 | Fixed image24 |
+| 8947d30 | NicholasTMS | 2025-06-23 | Updated UC07 use case table |
+| 31e8786 | NicholasTMS | 2025-06-23 | Pull latest |
+| 8c6327a | Fikrul A. | 2025-06-23 | Fixed image34 |
+| 450b551 | Fikrul A. | 2025-06-23 | Fixed image34 |
+| 74154fe | Fikrul A. | 2025-06-23 | Delete images/media/image34.jpg |
+| 000b525 | Fikrul A. | 2025-06-23 | Delete images/media/image24.jpeg |
+| 7265b3e | NicholasTMS | 2025-06-23 | Updated UC07 use case diagram |
+| 3cea669 | NicholasTMS | 2025-06-23 | Updated UC07 use case diagram |
+| 153b17c | NicholasTMS | 2025-06-23 | Updated UC07 use case diagram |
+| 3f375be | Fikrul A. | 2025-06-23 | Merge pull request #11 from NicholasTMS/project-part-2-fikrul |
+| 9cffe35 | NicholasTMS | 2025-06-23 | Updated UC08 use case table |
+| 64fdbd4 | NicholasTMS | 2025-06-23 | Updated UC08 Use case table |
+| 5ca5915 | NicholasTMS | 2025-06-23 | Updated UC08 Use case table |
+| fc8b2c7 | NicholasTMS | 2025-06-23 | Updated UC08 sequence diagram |
+| 4732751 | NicholasTMS | 2025-06-23 | Updated UC08 sequence diagram |
+| 4648bd3 | NicholasTMS | 2025-06-23 | Updated UC08 sequence diagram |
+| 603b0c4 | NicholasTMS | 2025-06-23 | Updated UC09 |
+| 2f78dc3 | NicholasTMS | 2025-06-23 | Updated UC09 use case table |
+| 6e95680 | NicholasTMS | 2025-06-23 | Updated UC09 sequence diagram |
+| 8a02e01 | NicholasTMS | 2025-06-23 | updated use case 09 sequence diagram |
+| 489b602 | NicholasTMS | 2025-06-23 | Updated UC09 sequence diagram |
+| c7ee40c | NicholasTMS | 2025-06-23 | Updated UC10 use case table |
+| 86cbf65 | NicholasTMS | 2025-06-23 | Updated UC10 use case table |
+| 7a49a75 | Anas | 2025-06-23 | Converted the SRS.md to SRS.docx |
+| 2b479a9 | NicholasTMS | 2025-06-23 | Updated UC10 sequence diagram |
+| f9e3d6a | NicholasTMS | 2025-06-23 | Updated UC10 sequence diagram |
+| cf3b11e | NicholasTMS | 2025-06-23 | Updated UC10 sequence diagram |
+| 2bfa022 | NicholasTMS | 2025-06-23 | Updated section 4.7 |
+| fe77a97 | NicholasTMS | 2025-06-23 | Updated section 4.7 |
+| 63a8a9c | Anas | 2025-06-23 | Merge branch 'project-part-2' of https://github.com/NicholasTMS/TT6L_G4_Requirements_Project into project-part-2 |
+| f83bbf1 | NicholasTMS | 2025-06-23 | Updated Section 4.7 and 6.5.3 and 6.5.4 |
+| 74001b7 | NicholasTMS | 2025-06-23 | Updated Section 4.7 and 6.5.3 and 6.5.4 and merged acronym table from 6.2 |
+| 772f4ef | Anas | 2025-06-23 | Added C03 to conflict resolution and analysis table |
+| 74ab43d | Anas | 2025-06-23 | Merge branch 'project-part-2' of https://github.com/NicholasTMS/TT6L_G4_Requirements_Project into project-part-2 |
+| d3d3649 | NicholasTMS | 2025-06-23 | Updated Section 5.2 |
+| 9b15218 | NicholasTMS | 2025-06-23 | Updated Section 5.2 |
+| ded06c5 | NicholasTMS | 2025-06-23 | Updated 3.8 agreement defects |
+| 3db6bd1 | NicholasTMS | 2025-06-23 | Updated 3.8 agreement defects |
+| 5110d4f | NicholasTMS | 2025-06-23 | Update section 3.8 |
+| 7a49a75 | Anas | 2025-06-23 | Converted the SRS.md to SRS.docx |
+| 2b479a9 | NicholasTMS | 2025-06-23 | Updated UC10 sequence diagram |
+| f9e3d6a | NicholasTMS | 2025-06-23 | Updated UC10 sequence diagram |
+| cf3b11e | NicholasTMS | 2025-06-23 | Updated UC10 sequence diagram |
+| 2bfa022 | NicholasTMS | 2025-06-23 | Updated section 4.7 |
+| fe77a97 | NicholasTMS | 2025-06-23 | Updated section 4.7 |
+| 63a8a9c | Anas | 2025-06-23 | Merge branch 'project-part-2' of https://github.com/NicholasTMS/TT6L_G4_Requirements_Project into project-part-2 |
+| f83bbf1 | NicholasTMS | 2025-06-23 | Updated Section 4.7 and 6.5.3 and 6.5.4 |
+| 74001b7 | NicholasTMS | 2025-06-23 | Updated Section 4.7 and 6.5.3 and 6.5.4 and merged acronym table from 6.2 |
+| 772f4ef | Anas | 2025-06-23 | Added C03 to conflict resolution and analysis table |
+| 74ab43d | Anas | 2025-06-23 | Merge branch 'project-part-2' of https://github.com/NicholasTMS/TT6L_G4_Requirements_Project into project-part-2 |
+| d3d3649 | NicholasTMS | 2025-06-23 | Updated Section 5.2 |
+| 9b15218 | NicholasTMS | 2025-06-23 | Updated Section 5.2 |
+| ded06c5 | NicholasTMS | 2025-06-23 | Updated 3.8 agreement defects |
+| 3db6bd1 | NicholasTMS | 2025-06-23 | Updated 3.8 agreement defects |
+| 5110d4f | NicholasTMS | 2025-06-23 | Update section 3.8 |
 
-#### project-part-2-anas branch commit history
-
-| Hash    | Author | Date       | Description                                               |
-| ------- | ------ | ---------- | --------------------------------------------------------- |
-| 66919ff | Anas   | 2025-06-23 | Appended user roles in Validation Sessions                |
-| b03617a | Anas   | 2025-06-23 | Added commit history table for main project part 2 branch |
 
 # Requirements 
 
@@ -1572,7 +1556,7 @@ feedback to the user.
 ##### Sequence Diagram
 
 ![[]{#_Toc199101136 .anchor}Figure 4.22 - Get AI Wellness Tips Sequence
-Diagram](./images/media/image24.jpeg){width="6.268055555555556in"
+Diagram](./images/media/image24.png){width="6.268055555555556in"
 height="4.183926071741032in"}
 
 **Figure 4.22** illustrates the sequence diagram for the "Get AI Wellness Tips" use case in the Campus Wellness Portal. The interaction begins when a student clicks the "Get Tips" button. The system requests the student's wellness goals and activity data from the Wellness Data Service. If data is available, it is forwarded to the AI Wellness Engine to generate a personalized wellness tip, which is then displayed to the student. The student may choose to save or dismiss the tip. If no data is found, the system prompts the student to set their wellness goals first. This ensures that tips are tailored and relevant to each user's wellness journey.
